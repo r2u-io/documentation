@@ -2,8 +2,12 @@
 
 # Real2U Integration  
 
-SKU de integração do UPlace em sites  
-Um exemple de implementação pode ser visto na pasta **examples**.
+SKU de integração do UPlace em sites.
+Para utilizar adicione a seguinte script tag no HTML de seu site:  
+```
+<script src="https://real2u-ignition-scripts.s3.amazonaws.com/b2w/script.js"></script>
+```
+Um exemple de implementação pode ser visto na pasta **examples**.  
 
 ## Abrir AR  
 Recomendado para Mobile por meio de um botão.  
