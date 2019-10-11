@@ -1,4 +1,4 @@
-<img src="https://www.real2u.com.br/static/media/real2u.d8b1b394.png" title="logo" width="250"/>
+<img src="https://www.real2u.com.br/static/media/logoDark2.2ff8cf38.png" title="logo" width="250"/>
 
 # Real2U Integration
 
