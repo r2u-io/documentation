@@ -28,7 +28,7 @@ const arButton = document.getElementById('ar-buton')
 const sku = '123456'
 const name = 'Cadeira Preta'
 
-arButton.onclick = () => openAR({sku, name})
+arButton.onclick = () => Real2U.openAR({sku, name})
 ```
 
 *iOS*
