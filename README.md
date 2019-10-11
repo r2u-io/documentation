@@ -14,7 +14,10 @@ Real2U.openAR = function ({ sku, name })
 ### Exemplo
 ```
 const arButton = document.getElementById('ar-buton')
-arButton.onclick = () => openAR({'42198124', 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
+const sku = '42198124'
+const name = 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'
+
+arButton.onclick = () => openAR({sku, name})
 ```
 
 ## Criar visualizador 3D
@@ -26,5 +29,8 @@ Real2U.create3DViewer = function ({ element, sku, name })
 ### Exemplo
 ```
 const element = document.getElementById('3d-viewer')
-create3DViewer({element, '42198124', 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
+const sku = '42198124'
+const name = 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'
+
+create3DViewer({element, sku, name})
 ```
