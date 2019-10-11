@@ -26,7 +26,7 @@ const name = 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'
 arButton.onclick = () => openAR({sku, name})
 ```
 
-Visualizador 3D  
+### Visualizador 3D  
 Recomendado para Desktop.  
 Cria um visualizador 3D na posição do elemento HTML indicado na entrada.  
 ```
