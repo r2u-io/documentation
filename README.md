@@ -5,19 +5,24 @@
 Real2U Integration SKU
 
 ## Abrir AR
+
 ```
-openAR({sku, name})
+Real2U.openAR = function ({ sku, name }) 
 ```
 ### Exemplo
 ```
-openAR({42198124, Puff Bonjour})
+const arButton = document.getElementById('id')
+arButton.onclick = () => openAR({42198124, 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
 ```
 
 ## Criar visualizador 3D
+Recomendado para Desktop
+Cria um visualizador 3D conforme a imagem
 ```
-create3DViewer({sku, name})
+Real2U.create3DViewer = function ({ element, sku, name })
 ```
 ### Exemplo
 ```
-create3DViewer({42198124, Puff Bonjour})
+const element = document.getElementById('id')
+create3DViewer({element, 42198124, 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
 ```
