@@ -2,8 +2,6 @@
 
 # Real2U Integration  
 
-<img src="https://www.real2u.com.br/static/media/placeInput.af01c880.png" title="logo" width="250"/>  
-
 SKU de integração do UPlace em sites.
 Para utilizar adicione a seguinte script tag no HTML de seu site:  
 ```
