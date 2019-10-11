@@ -32,14 +32,16 @@ arButton.onclick = () => openAR({sku, name})
 ```
 
 *iOS*
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="logo" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-2.png" title="logo" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="logo" width="250"/>  
+
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="250"/>  
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-2.png" title="iOS 2" width="250"/>  
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="250"/>  
 
 *Android*
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="logo" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="logo" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="logo" width="250"/>  
+
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="250"/>  
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="250"/>  
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="250"/>  
 
 ### Visualizador 3D 
 Recomendado para Desktop.  
@@ -50,7 +52,8 @@ Real2U.create3DViewer ({ element, sku, name })
 ```
 
 *Desktop*
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/desktop-1.png" title="logo" width="250"/>  
+
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/desktop-1.png" title="Desktop 1" width="250"/>  
 
 #### Exemplo  
 ```javascript
