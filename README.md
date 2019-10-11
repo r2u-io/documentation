@@ -2,27 +2,29 @@
 
 # Real2U Integration
 
-Real2U Integration SKU
+SKU de integração do UPlace em sites
 
 ## Abrir AR
-
+Recomendado para Mobile por meio de um botão
+Quando a função é chamada, abre o visualizador AR fullscreen.
+Reconhece se o aparelho é Android ou iOS.
 ```
 Real2U.openAR = function ({ sku, name }) 
 ```
 ### Exemplo
 ```
-const arButton = document.getElementById('id')
-arButton.onclick = () => openAR({42198124, 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
+const arButton = document.getElementById('ar-buton')
+arButton.onclick = () => openAR({'42198124', 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
 ```
 
 ## Criar visualizador 3D
 Recomendado para Desktop
-Cria um visualizador 3D conforme a imagem
+Cria um visualizador 3D na posição do elemento HTML indicado na entrada.
 ```
 Real2U.create3DViewer = function ({ element, sku, name })
 ```
 ### Exemplo
 ```
-const element = document.getElementById('id')
-create3DViewer({element, 42198124, 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
+const element = document.getElementById('3d-viewer')
+create3DViewer({element, '42198124', 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'})
 ```
