@@ -3,6 +3,7 @@
 # Real2U Integration  
 
 SKU de integração do UPlace em sites  
+Um exemple de implementação pode ser visto na pasta **examples**.
 
 ## Abrir AR  
 Recomendado para Mobile por meio de um botão.  
