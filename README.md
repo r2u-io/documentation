@@ -2,7 +2,7 @@
 
 # Real2U Integration  
 
-SKU de integração da plataforma de Realidade Aumentada Real2U.
+SDK de integração da plataforma de Realidade Aumentada Real2U.
 Para utilizar, adicione a seguinte script tag no HTML do site:
 
 ```html
