@@ -2,7 +2,7 @@
 
 # Real2U Integration  
 
-SKU de integração da plataforma de Realidade Aumentada Real2U.
+SDK de integração da plataforma de Realidade Aumentada Real2U.
 Para utilizar, adicione a seguinte script tag no HTML do site:
 
 ```html
@@ -23,12 +23,12 @@ Real2U.openAR ({ sku, name })
 ```
 
 #### Exemplo  
-```
+```javascript
 const arButton = document.getElementById('ar-buton')
 const sku = '123456'
 const name = 'Cadeira Preta'
 
-arButton.onclick = () => openAR({sku, name})
+arButton.onclick = () => Real2U.openAR({sku, name})
 ```
 
 *iOS*
