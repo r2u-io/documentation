@@ -1,4 +1,4 @@
-const sku = '42198124'
+const sku = '0409595'
 const name = 'Cadeira Eames Iii Madeira/fibra Sintetica Preto Etna'
 
 const element = document.getElementById('3d-viewer')
