@@ -13,6 +13,21 @@ Um exemplo de implementação pode ser visto na pasta **examples**.
 
 ## Funções
 
+### Produto Ativo  
+Verifica se um produto está disponível na plataforma para Realidade Aumentada.
+
+```javascript
+Real2U.isActive(sku)
+```
+
+#### Exemplo  
+```javascript
+const sku = '123456'
+Real2U.isActive(sku).then(isActive => {
+  // ...
+})
+```
+
 ### Abrir AR  
 Recomendado para Mobile por meio de um botão.  
 Quando a função é chamada, abre o visualizador AR fullscreen diretamente a partir do browser.
