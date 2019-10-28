@@ -31,10 +31,11 @@ Real2U.isActive(sku).then(isActive => {
 ### Abrir AR  
 Recomendado para Mobile por meio de um botão.  
 Quando a função é chamada, abre o visualizador AR fullscreen diretamente a partir do browser.
+O parâmetro `resize` determina se o objeto pode ser redimensionad ou não (apenas iOS). Por padrão, seu valor é `true` e o objeto pode ser aumentado ou diminuido pelo gesto to usuário.
 
 Reconhece se o aparelho é Android ou iOS.
 ```javascript
-Real2U.openAR ({ sku, name }) 
+Real2U.openAR ({ sku, name, resize })
 ```
 
 #### Exemplo  
