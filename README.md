@@ -20,7 +20,7 @@ Verifica se um produto está disponível na plataforma para Realidade Aumentada.
 Real2U.isActive(sku)
 ```
 
-#### Exemplo  
+##### Exemplo
 ```javascript
 const sku = '123456'
 Real2U.isActive(sku).then(isActive => {
@@ -38,7 +38,7 @@ Reconhece se o aparelho é Android ou iOS.
 Real2U.openAR ({ sku, name, resize })
 ```
 
-#### Exemplo  
+##### Exemplo
 ```javascript
 const arButton = document.getElementById('ar-buton')
 const sku = '123456'
@@ -71,11 +71,19 @@ Real2U.create3DViewer ({ element, sku, name })
 
 <img src="https://scripts-ignition.real2u.com.br/real2u-integration/desktop-1.png" title="Desktop 1" width="250"/>  
 
-#### Exemplo  
+##### Exemplo
 ```javascript
 const element = document.getElementById('3d-viewer')
 const sku = '123456'
 const name = 'Cadeira Preta'
 
 Real2U.create3DViewer({element, sku, name})
+```
+
+### Integração com aplicativos
+
+Em casos de integração com aplicativos, a Script Tag pode servir como redirecionador para o modelo 3D e visualização do produto em Realidade Aumentada.
+
+```javascript
+Real2U.serve ()
 ```
