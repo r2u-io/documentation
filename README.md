@@ -12,7 +12,7 @@ Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
 
-Exemplos de implementação podem ser vistos na pasta [**examples**](./examples/).
+Um exemplo de implementação pode ser visto na nossa [live demo](https://real2u.gitlab.io/real2u-integration), que usa o código da pasta [**public**](./public/)
 
 ### Métodos
 
@@ -40,6 +40,7 @@ interface Real2U {
 ##### `Real2U.init`
 
 ```javascript
+// cliente de teste -- lembre de substituir pelo seu `customerId`
 Real2U.init({customerId: '5e8e7580404328000882f4ae'})
   .then(() => console.log('Cliente ativo'))
   .catch(err => console.error('Cliente inativo'))
@@ -55,6 +56,7 @@ Real2U.isActive('RE000001')
 ##### `Real2U.openAR`
 
 ```javascript
+// SKU de teste -- lembre de substituir pelas informações do seu produto
 const arButton = document.getElementById('ar-buton')
 const sku = 'RE000001'
 const name = 'Cadeira Eames'
@@ -81,6 +83,7 @@ arButton.onclick = () => Real2U.openAR({
 ##### `Real2U.create3DViewer`
 
 ```javascript
+// SKU de teste -- lembre de substituir pelas informações do seu produto
 const element = document.getElementById('3d-viewer')
 const sku = 'RE000001'
 const name = 'Cadeira Eames'

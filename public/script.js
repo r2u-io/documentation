@@ -1,3 +1,4 @@
+// customerId e sku de teste -- lembre de substituir pelas suas informações
 const customerId = '5e8e7580404328000882f4ae'
 const sku = 'RE000001'
 const name = 'Cadeira Eames'
