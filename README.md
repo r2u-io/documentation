@@ -1,77 +1,85 @@
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/logo.png" title="logo" width="250"/>  
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/logo.png" title="logo" width="250" style="display:block; margin: auto"/>
 
 # Real2U Integration  
 
-SDK de integração da plataforma de Realidade Aumentada Real2U.
-Para utilizar, adicione a seguinte script tag no HTML do site:
+SDK de integração da biblioteca de Realidade Aumentada da Real2U.
+
+Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://real2u-ignition-scripts.s3.amazonaws.com/<CLIENT_SLUG>/script.js"></script>
+<script src="https://unpkg.com/@real2u/javascript-ar-sdk@0.0.3/build/dist/index.js"></script>
 ```
 
-Um exemplo de implementação pode ser visto na pasta **examples**.  
+Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
 
-## Funções
+Exemplos de implementação podem ser vistos na pasta [**examples**](./examples/).
 
-### Produto Ativo  
-Verifica se um produto está disponível na plataforma para Realidade Aumentada.
+### Métodos
+
+Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto global chamado `Real2U`
+
+| função | descrição | plataforma |
+| ------ | --------- | ---------- |
+| `init` | inicializa a biblioteca e se conecta com o servidor Real2U para a disponibilização dos modelos 3D | |
+| `isActive` | indica se o produto está disponível na plataforma para Realidade Aumentada |  |
+| `openAR` | abre o visualizador nativo de realidade aumentada no dispositivo móvel | mobile |
+| `create3DViewer` | cria um visualizador 3D na posição do elemento HTML indicado | **desktop** / mobile |
+
+
+```typescript
+interface Real2U {
+  init: (params: {customerId: string}) => Promise<void>,
+  isActive: (sku: string) => Promise<boolean>,
+  openAR: (params: { sku: string, name: string, resize: boolean }) => void,
+  create3DViewer: (params: { element: HTMLElement, sku: string, name: string }) => void
+}
+```
+
+### Exemplos
+
+##### `Real2U.init`
 
 ```javascript
-Real2U.isActive(sku)
+Real2U.init({customerId: '5e8e7580404328000882f4ae'})
+  .then(() => console.log('Cliente ativo'))
+  .catch(err => console.error('Cliente inativo'))
 ```
 
-##### Exemplo
+##### `Real2U`
+
 ```javascript
-const sku = '123456'
-Real2U.isActive(sku).then(isActive => {
-  // ...
-})
+Real2U.isActive('123456')
+  .then(isActive => console.log(`SKU ativo? ${isActive ? '✓' : '✗'}`))
 ```
 
-### Abrir AR  
-Recomendado para Mobile por meio de um botão.  
-Quando a função é chamada, abre o visualizador AR fullscreen diretamente a partir do browser.
-O parâmetro `resize` determina se o objeto pode ser redimensionad ou não (apenas iOS). Por padrão, seu valor é `true` e o objeto pode ser aumentado ou diminuido pelo gesto to usuário.
+##### `Real2U.openAR`
 
-Reconhece se o aparelho é Android ou iOS.
-```javascript
-Real2U.openAR ({ sku, name, resize })
-```
-
-##### Exemplo
 ```javascript
 const arButton = document.getElementById('ar-buton')
 const sku = '123456'
 const name = 'Cadeira Preta'
 
-arButton.onclick = () => Real2U.openAR({sku, name})
+arButton.onclick = () => Real2U.openAR({
+  sku,
+  name
+  /* resize defaults to `false` */
+})
 ```
 
 *iOS*
 
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-2.png" title="iOS 2" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="250"/>  
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="200"/>
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-2.png" title="iOS 2" width="200"/>
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="200"/>
 
 *Android*
 
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="250"/>  
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="250"/>  
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="200"/>
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
 
-### Visualizador 3D 
-Recomendado para Desktop.  
-Cria um visualizador 3D na posição do elemento HTML indicado na entrada. O visualizador ocupa 100% da largura onde ele está posicionado e, após o clique, abre um popup para a interação com o objeto.
+##### `Real2U.create3DViewer`
 
-```javascript
-Real2U.create3DViewer ({ element, sku, name })
-```
-
-*Desktop*
-
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/desktop-1.png" title="Desktop 1" width="250"/>  
-
-##### Exemplo
 ```javascript
 const element = document.getElementById('3d-viewer')
 const sku = '123456'
@@ -80,10 +88,9 @@ const name = 'Cadeira Preta'
 Real2U.create3DViewer({element, sku, name})
 ```
 
-### Integração com aplicativos
+*Desktop*
 
-Em casos de integração com aplicativos, a Script Tag pode servir como redirecionador para o modelo 3D e visualização do produto em Realidade Aumentada.
+<img src="https://scripts-ignition.real2u.com.br/real2u-integration/desktop-1.png" title="Desktop 1" width="250"/>
 
-```javascript
-Real2U.serve ()
-```
+
+
