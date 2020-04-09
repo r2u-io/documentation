@@ -45,10 +45,10 @@ Real2U.init({customerId: '5e8e7580404328000882f4ae'})
   .catch(err => console.error('Cliente inativo'))
 ```
 
-##### `Real2U`
+##### `Real2U.isActive`
 
 ```javascript
-Real2U.isActive('123456')
+Real2U.isActive('RE000001')
   .then(isActive => console.log(`SKU ativo? ${isActive ? '✓' : '✗'}`))
 ```
 
@@ -56,8 +56,8 @@ Real2U.isActive('123456')
 
 ```javascript
 const arButton = document.getElementById('ar-buton')
-const sku = '123456'
-const name = 'Cadeira Preta'
+const sku = 'RE000001'
+const name = 'Cadeira Eames'
 
 arButton.onclick = () => Real2U.openAR({
   sku,
@@ -82,8 +82,8 @@ arButton.onclick = () => Real2U.openAR({
 
 ```javascript
 const element = document.getElementById('3d-viewer')
-const sku = '123456'
-const name = 'Cadeira Preta'
+const sku = 'RE000001'
+const name = 'Cadeira Eames'
 
 Real2U.create3DViewer({element, sku, name})
 ```
