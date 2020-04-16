@@ -7,7 +7,7 @@ SDK de integração da biblioteca de Realidade Aumentada da Real2U.
 Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@real2u/javascript-ar-sdk@0.3.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@real2u/javascript-ar-sdk@0.3.2/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -23,7 +23,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 | `init` | inicializa a biblioteca e se conecta com o servidor Real2U para a disponibilização dos modelos 3D | |
 | `isActive` | indica se o produto está disponível na plataforma para Realidade Aumentada |  |
 | `openAR` | abre o visualizador nativo de realidade aumentada no dispositivo móvel | mobile |
-| `create3DViewer` | cria um visualizador 3D na posição do elemento HTML indicado | **desktop** / mobile |
+| `create3DViewer` | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup | **desktop** / mobile |
 
 
 ```typescript
@@ -31,7 +31,7 @@ interface Real2U {
   init: (params: {customerId: string}) => Promise<void>,
   isActive: (sku: string) => Promise<boolean>,
   openAR: (params: { sku: string, name: string, resize: boolean }) => void,
-  create3DViewer: (params: { element: HTMLElement, sku: string, name: string }) => void
+  create3DViewer: (params: { element: HTMLElement, sku: string, name: string, popup: boolean }) => void
 }
 ```
 
@@ -87,8 +87,9 @@ arButton.onclick = () => Real2U.openAR({
 const element = document.getElementById('3d-viewer')
 const sku = 'RE000001'
 const name = 'Cadeira Eames'
+const popup = false
 
-Real2U.create3DViewer({element, sku, name})
+Real2U.create3DViewer({element, sku, name, popup})
 ```
 
 *Desktop*
