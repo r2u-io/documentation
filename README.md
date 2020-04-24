@@ -7,7 +7,7 @@ SDK de integração da biblioteca de Realidade Aumentada da Real2U.
 Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@real2u/javascript-ar-sdk@0.3.2/build/dist/index.js"></script>
+<script src="https://unpkg.com/@real2u/javascript-ar-sdk@0.4.2/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -28,10 +28,10 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 
 ```typescript
 interface Real2U {
-  init: (params: {customerId: string}) => Promise<void>,
-  isActive: (sku: string) => Promise<boolean>,
-  openAR: (params: { sku: string, name: string, resize: boolean }) => void,
-  create3DViewer: (params: { element: HTMLElement, sku: string, name: string, popup: boolean }) => void
+  init: (params: {customerId: string}) => Promise<void>;
+  isActive: (sku: string) => Promise<boolean>;
+  openAR: (params: { sku: string; name: string; resize: boolean }) => Promise<void>;
+  create3DViewer: (params: { element: HTMLElement; sku: string; name: string; popup: boolean }) => Promise<void>;
 }
 ```
 
