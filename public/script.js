@@ -6,9 +6,14 @@ const popup = false
 
 Real2U.init({customerId})
   .then(() => {
-    const element = document.getElementById('3d-viewer')
-    Real2U.create3DViewer({element, sku, name, popup})
+    Real2U.isActive(sku).then(isActive => {
+      console.log(`[Real2U] sku ${sku} ativo? ${isActive}`)
+      if(isActive) {
+        const element = document.getElementById('3d-viewer')
+        Real2U.create3DViewer({element, sku, name, popup})
 
-    const arButton = document.getElementById('ar-button')
-    arButton.onclick = () => Real2U.openAR({sku, name})
+        const arButton = document.getElementById('ar-button')
+        arButton.onclick = () => Real2U.openAR({sku, name})
+      }
+    })
   })
