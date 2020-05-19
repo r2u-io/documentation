@@ -101,7 +101,8 @@ Real2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
 | `name` | nome do produto que será renderizado | `''` |
 | `popup` | habilita e desabilita o botão para abrir um popup com o modelo | `true`
 | `progressBarPosition` | define a posição do *progress bar* (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`
-| `poster` | possibilita a definição de uma imagem que será exibida durante o carregamento do modelo | `null`
+| `poster` | possibilita a definição de uma imagem que será exibida durante o carregamento do modelo | `null` |
+
 *Desktop*
 
 <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-top.png" title="Progress bar top" height="150"/>
