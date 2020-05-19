@@ -31,8 +31,7 @@ interface Real2U {
   init: (params: {customerId: string}) => Promise<void>;
   isActive: (sku: string) => Promise<boolean>;
   openAR: (params: { sku: string; name: string; resize: boolean }) => Promise<void>;
-  create3DViewer: (params: { element: HTMLElement; sku: string; name: string; popup: boolean }) => Promise<void>;
-}
+  create3DViewer: (params: { element: HTMLElement; sku: string; name: string; popup: boolean, progressBarPosition: "top / middle / bottom", poster: "img url" }) => Promise<void>;}
 ```
 
 ### Exemplos
