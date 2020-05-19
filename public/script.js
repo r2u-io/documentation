@@ -3,8 +3,8 @@ const customerId = '5e8e7580404328000882f4ae'
 const sku = 'RE000001'
 const name = 'Cadeira Eames'
 const popup = false
-const progressBarPosition = 'middle' // top | middle | bottom
-const poster = 'cadeira.png'
+const progressBarPosition = 'top' // top | middle | bottom
+const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
 Real2U.init({customerId})
   .then(() => {
