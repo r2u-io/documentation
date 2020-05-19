@@ -7,7 +7,7 @@ SDK de integração da biblioteca de Realidade Aumentada da Real2U.
 Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@real2u/javascript-ar-sdk@0.4.3/build/dist/index.js"></script>
+<script src="https://unpkg.com/@real2u/javascript-ar-sdk@0.5.3/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -31,7 +31,8 @@ interface Real2U {
   init: (params: {customerId: string}) => Promise<void>;
   isActive: (sku: string) => Promise<boolean>;
   openAR: (params: { sku: string; name: string; resize: boolean }) => Promise<void>;
-  create3DViewer: (params: { element: HTMLElement; sku: string; name: string; popup: boolean, progressBarPosition: "top / middle / bottom", poster: "img url" }) => Promise<void>;}
+  create3DViewer: (params: { element: HTMLElement; sku: string; name: string; popup: boolean }) => Promise<void>;
+}
 ```
 
 ### Exemplos
@@ -87,13 +88,24 @@ const element = document.getElementById('3d-viewer')
 const sku = 'RE000001'
 const name = 'Cadeira Eames'
 const popup = false
+const progressBarPosition = 'middle'
+const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-Real2U.create3DViewer({element, sku, name, popup})
+Real2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
 ```
 
+| parâmetro | descrição | default |
+| ------ | --------- | ---------- |
+| `element` | elemento HTML que irá receber o modelo 3D | `''` |
+| `sku` | SKU do produto desejado | `''`  |
+| `name` | nome do produto que será renderizado | `''` |
+| `popup` | habilita e desabilita o botão para abrir um popup com o modelo | `true`
+| `progressBarPosition` | define a posição do *progress bar* (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`
+| `poster` | possibilita a definição de uma imagem que será exibida durante o carregamento do modelo | `null`
 *Desktop*
 
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/desktop-1.png" title="Desktop 1" width="250"/>
-
+<img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-top.png" title="Progress bar top" height="150"/>
+<img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-middle.png" title="Progress bar middle" height="150"/>
+<img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-bottom.png" title="Progress bar bottom" height="150"/>
 
 
