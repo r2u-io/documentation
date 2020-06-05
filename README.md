@@ -100,7 +100,8 @@ Real2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
 | `sku` | SKU do produto desejado | `''`  |
 | `name` | nome do produto que será renderizado | `''` |
 | `popup` | habilita e desabilita o botão para abrir um popup com o modelo | `true`
-| `progressBarPosition` | define a posição do *progress bar* (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`
+| `progressBarPosition` | define a posição do *progress bar* (`'top'`, ` 'middle'` or `'bottom'`) | `'top'` |
+| `progressBarColor` | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`) | `null` |
 | `poster` | possibilita a definição de uma imagem que será exibida durante o carregamento do modelo | `null` |
 
 *Desktop*
