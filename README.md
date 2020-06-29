@@ -7,7 +7,7 @@ SDK de integração da biblioteca de Realidade Aumentada da Real2U.
 Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@real2u/javascript-ar-sdk@2.0.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@real2u/javascript-ar-sdk@2.1.2/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -23,6 +23,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 | `init` | inicializa a biblioteca e se conecta com o servidor Real2U para a disponibilização dos modelos 3D | |
 | `isActive` | indica se o produto está disponível na plataforma para Realidade Aumentada |  |
 | `openAR` | abre o visualizador nativo de realidade aumentada no dispositivo móvel | mobile |
+| `getOpenARLink` | retorna uma URL de compartilhamento para a experiência de realidade aumentada  | desktop / mobile |
 | `create3DViewer` | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup | **desktop** / mobile |
 
 
@@ -31,7 +32,15 @@ interface Real2U {
   init: (params: {customerId: string}) => Promise<void>;
   isActive: (sku: string) => Promise<boolean>;
   openAR: (params: { sku: string; name: string; resize: boolean }) => Promise<void>;
-  create3DViewer: (params: { element: HTMLElement; sku: string; name: string; popup: boolean }) => Promise<void>;
+  getOpenARLink: (params: { customerId: string; sku: string }) => Promise<string>;
+  create3DViewer: (params: {
+    element: HTMLElement;
+    sku: string;
+    name: string;
+    popup: boolean;
+    progressBarPosition?: 'top' | 'middle' | 'bottom';
+    poster?: string | null;
+  }) => Promise<void>;
 }
 ```
 
@@ -79,6 +88,13 @@ arButton.onclick = () => Real2U.openAR({
 <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
 <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="200"/>
 <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
+
+##### `Real2U.getOpenARLink`
+
+```javascript
+Real2U.getOpenARLink({customerId: '5e8e7580404328000882f4ae', sku: 'RE000001'})
+  .then(url => console.log(url))
+```
 
 ##### `Real2U.create3DViewer`
 
