@@ -12,7 +12,7 @@ Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
 
-Um exemplo de implementação pode ser visto na nossa [live demo](https://real2u.gitlab.io/real2u-integration), que usa o código da pasta [**docs**](./docs/)
+Um exemplo de implementação pode ser visto na nossa [live demo](https://r2u-io.github.io/documentation/), que usa o código da pasta [**docs**](./docs/)
 
 ### Métodos
 
