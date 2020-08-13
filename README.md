@@ -1,8 +1,8 @@
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/logo.png" title="logo" width="250" style="display:block; margin: auto"/>
+<img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="250" style="display:block; margin: auto"/>
 
-# Real2U Integration  
+# R2U Documentation 
 
-SDK de integração da biblioteca de Realidade Aumentada da Real2U.
+SDK de integração da biblioteca de Realidade Aumentada da R2U.
 
 Para utilizar, adicione a tag abaixo no header do HTML do website.
 
@@ -12,7 +12,7 @@ Para utilizar, adicione a tag abaixo no header do HTML do website.
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
 
-Um exemplo de implementação pode ser visto na nossa [live demo](https://real2u.gitlab.io/real2u-integration), que usa o código da pasta [**public**](./public/)
+Um exemplo de implementação pode ser visto na nossa [live demo](https://real2u.gitlab.io/real2u-integration), que usa o código da pasta [**docs**](./docs/)
 
 ### Métodos
 
@@ -20,7 +20,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 
 | função | descrição | plataforma |
 | ------ | --------- | ---------- |
-| `init` | inicializa a biblioteca e se conecta com o servidor Real2U para a disponibilização dos modelos 3D | |
+| `init` | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D | |
 | `isActive` | indica se o produto está disponível na plataforma para Realidade Aumentada |  |
 | `openAR` | abre o visualizador nativo de realidade aumentada no dispositivo móvel | mobile |
 | `getOpenARLink` | retorna uma URL de compartilhamento para a experiência de realidade aumentada  | desktop / mobile |
