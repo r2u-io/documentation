@@ -2,21 +2,38 @@
 
 # R2U Documentation 
 
-SDK de integração da biblioteca de Realidade Aumentada da R2U.
+A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas maneiras equivalentes:
 
-Para utilizar, adicione a tag abaixo no header do HTML do website.
+1. Integração via JavaScript tag
+2. Integração via JavaScript package manager
+
+
+#### 1. Integração via JavaScript tag
+
+Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@real2u/javascript-ar-sdk@2.1.3/build/dist/index.js"></script>
+<script src="https://unpkg.com/@real2u/javascript-ar-sdk@2.1.4/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
-
 Um exemplo de implementação pode ser visto na nossa [live demo](https://r2u-io.github.io/documentation/), que usa o código da pasta [**docs**](./docs/)
+
+#### 2. Integração via JavaScript package manager
+
+Adicione o SDK através de `npm` ou `yarn` no seu projeto JavaScript.
+
+```
+# usando npm
+npm install @real2u/javascript-ar-sdk
+
+# usando yarn
+yarn add @real2u/javascript-ar-sdk
+```
 
 ### Métodos
 
-Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto global chamado `Real2U`
+Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto no escopo global chamado `Real2U`
 
 | função | descrição | plataforma |
 | ------ | --------- | ---------- |
@@ -88,9 +105,9 @@ arButton.onclick = () => Real2U.openAR({
 *Android*
 
 <p float="left">
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="200"/>
-<img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
 </p>
 
 ##### `Real2U.getOpenARLink`
