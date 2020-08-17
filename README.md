@@ -169,4 +169,5 @@ addToCartButton.addEventListener(
 | `add_to_cart` | Evento "adicionar ao carrinho" | `1` |
 | `price` | Preço do SKU | `number`  |
 | `client_id` | Identificador único do cliente na página | `string`  |
-| `sku` | SKU | enviado automaticamente  |
+
+Outras métricas e dimensões (tais como SKU, customerId, sistema operacional, etc.) são enviadas automaticamente e não precisam ser especificadas.
