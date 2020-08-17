@@ -13,7 +13,7 @@ A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas manei
 Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@real2u/javascript-ar-sdk@2.1.4/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.0.0/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -33,7 +33,7 @@ yarn add @real2u/javascript-ar-sdk
 
 ### Métodos
 
-Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto no escopo global chamado `Real2U`
+Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto no escopo global chamado `R2U`
 
 | função | descrição | plataforma |
 | ------ | --------- | ---------- |
@@ -45,7 +45,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 
 
 ```typescript
-interface Real2U {
+interface R2U {
   init: (params: {customerId: string}) => Promise<void>;
   isActive: (sku: string) => Promise<boolean>;
   openAR: (params: { sku: string; name: string; resize: boolean }) => Promise<void>;
@@ -63,23 +63,23 @@ interface Real2U {
 
 ### Exemplos
 
-##### `Real2U.init`
+##### `R2U.init`
 
 ```javascript
 // cliente de teste -- lembre de substituir pelo seu `customerId`
-Real2U.init({customerId: '5e8e7580404328000882f4ae'})
+R2U.init({customerId: '5e8e7580404328000882f4ae'})
   .then(() => console.log('Cliente ativo'))
   .catch(err => console.error('Cliente inativo'))
 ```
 
-##### `Real2U.isActive`
+##### `R2U.isActive`
 
 ```javascript
-Real2U.isActive('RE000001')
+R2U.isActive('RE000001')
   .then(isActive => console.log(`SKU ativo? ${isActive ? '✓' : '✗'}`))
 ```
 
-##### `Real2U.openAR`
+##### `R2U.openAR`
 
 ```javascript
 // SKU de teste -- lembre de substituir pelas informações do seu produto
@@ -87,7 +87,7 @@ const arButton = document.getElementById('ar-buton')
 const sku = 'RE000001'
 const name = 'Cadeira Eames'
 
-arButton.onclick = () => Real2U.openAR({
+arButton.onclick = () => R2U.openAR({
   sku,
   name
   /* resize defaults to `false` */
@@ -110,14 +110,14 @@ arButton.onclick = () => Real2U.openAR({
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
 </p>
 
-##### `Real2U.getOpenARLink`
+##### `R2U.getOpenARLink`
 
 ```javascript
-Real2U.getOpenARLink('RE000001')
+R2U.getOpenARLink('RE000001')
   .then(url => console.log(url))
 ```
 
-##### `Real2U.create3DViewer`
+##### `R2U.create3DViewer`
 
 ```javascript
 // SKU de teste -- lembre de substituir pelas informações do seu produto
@@ -128,7 +128,7 @@ const popup = false
 const progressBarPosition = 'middle'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-Real2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
+R2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
 ```
 
 | parâmetro | descrição | default |

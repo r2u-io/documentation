@@ -7,16 +7,16 @@ const progressBarPosition = 'top' // top | middle | bottom
 const progressBarColor='#c5c5c5'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-Real2U.init({customerId})
+R2U.init({customerId})
   .then(() => {
-    Real2U.isActive(sku).then(isActive => {
-      console.log(`[Real2U] sku ${sku} ativo? ${isActive}`)
+    R2U.isActive(sku).then(isActive => {
+      console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
       if(isActive) {
         const element = document.getElementById('3d-viewer')
-        Real2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster, progressBarColor})
+        R2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster, progressBarColor})
 
         const arButton = document.getElementById('ar-button')
-        arButton.onclick = () => Real2U.openAR({sku, name})
+        arButton.onclick = () => R2U.openAR({sku, name})
       }
     })
   })
