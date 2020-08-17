@@ -25,10 +25,10 @@ Adicione o SDK através de `npm` ou `yarn` no seu projeto JavaScript.
 
 ```
 # usando npm
-npm install @real2u/javascript-ar-sdk
+npm install @r2u/javascript-ar-sdk
 
 # usando yarn
-yarn add @real2u/javascript-ar-sdk
+yarn add @r2u/javascript-ar-sdk
 ```
 
 ### Métodos
