@@ -37,12 +37,12 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 
 | função | descrição | plataforma |
 | ------ | --------- | ---------- |
-| `init` | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D | |
-| `isActive` | indica se o produto está disponível na plataforma para Realidade Aumentada |  |
-| `openAR` | abre o visualizador nativo de realidade aumentada no dispositivo móvel | mobile |
-| `getOpenARLink` | retorna uma URL de compartilhamento para a experiência de realidade aumentada  | desktop / mobile |
-| `create3DViewer` | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup | **desktop** / mobile |
-| `analytics.send` | envia eventos para a plataforma de analytics da R2U |  |
+| [`init`](#r2uinit) | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D | |
+| [`isActive`](#r2iisactive) | indica se o produto está disponível na plataforma para Realidade Aumentada |  |
+| [`openAR`](#r2uopenar) | abre o visualizador nativo de realidade aumentada no dispositivo móvel | mobile |
+| [`getOpenARLink`](#r2ugetopenarlink) | retorna uma URL de compartilhamento para a experiência de realidade aumentada  | desktop / mobile |
+| [`create3DViewer`](#r2ucreate3dviewer) | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup | **desktop** / mobile |
+| [`analytics.send`](#r2uanalyticssend) | envia eventos para a plataforma de analytics da R2U |  |
 
 
 ```typescript
@@ -159,6 +159,14 @@ R2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener(
   'click',
-  () => R2U.analytics.send({add_to_cart: 1, price: 30, client_id: '11745016811425946'})
+  () => R2U.analytics.send({add_to_cart: 1, price: 30, client_id: '425946'})
 )
 ```
+
+
+| dimensão ou métrica | descrição | valor |
+| ------ | --------- | ---------- |
+| `add_to_cart` | Evento "adicionar ao carrinho" | `1` |
+| `price` | Preço do SKU | `number`  |
+| `client_id` | Identificador único do cliente na página | `string`  |
+| `sku` | SKU | enviado automaticamente  |
