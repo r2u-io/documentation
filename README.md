@@ -158,6 +158,7 @@ R2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
 ```javascript
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener(
+  'click',
   () => R2U.analytics.send({add_to_cart: 1, price: 30, client_id: '11745016811425946'})
 )
 ```
