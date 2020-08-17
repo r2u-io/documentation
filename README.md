@@ -161,21 +161,3 @@ addToCartButton.addEventListener(
   () => R2U.analytics.send({add_to_cart: 1, price: 30, client_id: '11745016811425946'})
 )
 ```
-
-| parâmetro | descrição | default |
-| ------ | --------- | ---------- |
-| `element` | elemento HTML que irá receber o modelo 3D | `''` |
-| `sku` | SKU do produto desejado | `''`  |
-| `name` | nome do produto que será renderizado | `''` |
-| `popup` | habilita e desabilita o botão para abrir um popup com o modelo | `true`
-| `progressBarPosition` | define a posição do *progress bar* (`'top'`, ` 'middle'` or `'bottom'`) | `'top'` |
-| `progressBarColor` | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`) | `null` |
-| `poster` | possibilita a definição de uma imagem que será exibida durante o carregamento do modelo | `null` |
-
-*Desktop*
-
-<p float="left">
-  <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-top.png" title="Progress bar top" height="150"/>
-  <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-middle.png" title="Progress bar middle" height="150"/>
-  <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-bottom.png" title="Progress bar bottom" height="150"/>
-</p>
