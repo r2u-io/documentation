@@ -13,50 +13,49 @@
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
 </h1>
 
-# R2U Documentation 
+# Documentação R2U
 
-This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
+A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas maneiras equivalentes:
 
-1. JavaScript tag integration
-2. JavaScript package manager integration
+1. Integração via JavaScript tag
+2. Integração via JavaScript package manager
 
 
-#### 1. JavaScript tag integration
+#### 1. Integração via JavaScript tag
 
-To use this SDK, add the tag below on the HTML header of your website.
+Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
 <script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.1.0/build/dist/index.js"></script>
 ```
 
-This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
+Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
+Um exemplo de implementação pode ser visto na nossa [live demo](https://r2u-io.github.io/documentation/), que usa o código da pasta [**docs**](./docs/)
 
-A sample implementation can be seen at our [live demo](https://r2u-io.github.io/documentation/), which uses the code from the folder [**docs**](./docs/)
+#### 2. Integração via JavaScript package manager
 
-#### 2. JavaScript package manager integration
-
-Add the SDK using `npm` or `yarn` on your JavaScript project
+Adicione o SDK através de `npm` ou `yarn` no seu projeto JavaScript.
 
 ```
-# using npm
+# usando npm
 npm install @r2u/javascript-ar-sdk
 
-# using yarn
+# usando yarn
 yarn add @r2u/javascript-ar-sdk
 ```
 
-### Methods
+### Métodos
 
-After adding the script tag on your website, the methods below will be available through a global `R2U` object
+Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto no escopo global chamado `R2U`
 
-| function | description | plataform |
+| função | descrição | plataforma |
 | ------ | --------- | ---------- |
-| [`init`](#r2uinit) | initializes the SDK and connects to the R2U server | |
-| [`isActive`](#r2iisactive) | indicates if a product is available on the Augmented Reality platform |  |
-| [`openAR`](#r2uopenar) | opens the native Augmented Reality viewer on the mobile device | mobile |
-| [`getOpenARLink`](#r2ugetopenarlink) | returns a shareable URL for the Augmented Reality experience  | desktop / mobile |
-| [`create3DViewer`](#r2ucreate3dviewer) | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
-| [`analytics.send`](#r2uanalyticssend) | send events to the R2U analytics platform |  |
+| [`init`](#r2uinit) | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D | |
+| [`isActive`](#r2iisactive) | indica se o produto está disponível na plataforma para Realidade Aumentada |  |
+| [`openAR`](#r2uopenar) | abre o visualizador nativo de realidade aumentada no dispositivo móvel | mobile |
+| [`getOpenARLink`](#r2ugetopenarlink) | retorna uma URL de compartilhamento para a experiência de realidade aumentada  | desktop / mobile |
+| [`create3DViewer`](#r2ucreate3dviewer) | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup | **desktop** / mobile |
+| [`analytics.send`](#r2uanalyticssend) | envia eventos para a plataforma de analytics da R2U |  |
 
 
 ```typescript
@@ -79,31 +78,31 @@ interface R2U {
 }
 ```
 
-### Example
+### Exemplos
 
 ##### `R2U.init`
 
 ```javascript
-// test client -- remember to use your own `customerId`
+// cliente de teste -- lembre de substituir pelo seu `customerId`
 R2U.init({customerId: '5e8e7580404328000882f4ae'})
-  .then(() => console.log('Client active'))
-  .catch(err => console.error('Client inactive'))
+  .then(() => console.log('Cliente ativo'))
+  .catch(err => console.error('Cliente inativo'))
 ```
 
 ##### `R2U.isActive`
 
 ```javascript
 R2U.isActive('RE000001')
-  .then(isActive => console.log(`SKU active? ${isActive ? '✓' : '✗'}`))
+  .then(isActive => console.log(`SKU ativo? ${isActive ? '✓' : '✗'}`))
 ```
 
 ##### `R2U.openAR`
 
 ```javascript
-// test SKU -- remember to use your product information
+// SKU de teste -- lembre de substituir pelas informações do seu produto
 const arButton = document.getElementById('ar-buton')
 const sku = 'RE000001'
-const name = 'Eames Chair'
+const name = 'Cadeira Eames'
 
 arButton.onclick = () => R2U.openAR({
   sku,
@@ -138,10 +137,10 @@ R2U.getOpenARLink('RE000001')
 ##### `R2U.create3DViewer`
 
 ```javascript
-// test SKU -- remember to use your product information
+// SKU de teste -- lembre de substituir pelas informações do seu produto
 const element = document.getElementById('3d-viewer')
 const sku = 'RE000001'
-const name = 'Eames Chair'
+const name = 'Cadeira Eames'
 const popup = false
 const progressBarPosition = 'middle'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
@@ -151,13 +150,13 @@ R2U.create3DViewer({element, sku, name, popup, progressBarPosition, poster})
 
 | parâmetro | descrição | default |
 | ------ | --------- | ---------- |
-| `element` | HTML element that will receive the 3D viewer | `''` |
-| `sku` | product SKU | `''`  |
-| `name` | product name | `''` |
-| `popup` | allows the 3D viewer to be expandable through a popup button | `true`
-| `progressBarPosition` | defines the *progress bar* position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'` |
+| `element` | elemento HTML que irá receber o modelo 3D | `''` |
+| `sku` | SKU do produto desejado | `''`  |
+| `name` | nome do produto que será renderizado | `''` |
+| `popup` | habilita e desabilita o botão para abrir um popup com o modelo | `true`
+| `progressBarPosition` | define a posição do *progress bar* (`'top'`, ` 'middle'` or `'bottom'`) | `'top'` |
 | `progressBarColor` | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`) | `null` |
-| `poster` | allows an image to be exhibited while the 3D model is loading | `null` |
+| `poster` | possibilita a definição de uma imagem que será exibida durante o carregamento do modelo | `null` |
 
 *Desktop*
 
@@ -178,10 +177,10 @@ addToCartButton.addEventListener(
 ```
 
 
-| dimension or metric | description | value |
+| dimensão ou métrica | descrição | valor |
 | ------ | --------- | ---------- |
-| `add_to_cart` | User clicked on a "add to cart" button | `1` |
-| `price` | SKU price | `number`  |
-| `client_id` | Client unique identifier | `string`  |
+| `add_to_cart` | Evento "adicionar ao carrinho" | `1` |
+| `price` | Preço do SKU | `number`  |
+| `client_id` | Identificador único do cliente na página | `string`  |
 
-Other metrics and dimensions (such as SKU, customerId, operating system, etc.) are sent by default and do not need to be specified.
+Outras métricas e dimensões (tais como SKU, customerId, sistema operacional, etc.) são enviadas automaticamente e não precisam ser especificadas.
