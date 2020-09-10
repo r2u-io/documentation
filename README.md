@@ -1,8 +1,8 @@
 <h1 align="center">
-    <a href="/tree/master/README.md">
+    <a href="/README.md">
         <img height="20px" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg">
     </a>
-    <a href="/tree/master/README_pt-br.md">
+    <a href="/README_pt-br.md">
         <img height="20px" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/br.svg">
     </a>
     <br>
