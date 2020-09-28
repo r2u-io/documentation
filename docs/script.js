@@ -10,6 +10,9 @@ R2U.init({ customerId }).then(() => {
   R2U.isActive(sku).then((isActive) => {
     console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
     if (isActive) {
+      const arButton = document.getElementById('ar-button')
+      arButton.onclick = () => R2U.openAR({ sku })
+
       const element = document.getElementById('viewer-3d')
       R2U.create3DViewer({
         element,
@@ -18,10 +21,17 @@ R2U.init({ customerId }).then(() => {
         progressBarPosition,
         poster,
         progressBarColor
-      })
+      }).then(() => {
 
-      const arButton = document.getElementById('ar-button')
-      arButton.onclick = () => R2U.openAR({ sku })
+        const button = document.createElement('button')
+        const img = document.createElement('img')
+        img.src = './ExpandButtonImage.png'
+        img.style = 'width:36px;'
+        button.appendChild(img)
+        button.style = 'bottom:0;right:0;position:fixed;padding:0;border:none;background:none;margin:12px;'
+        element.firstChild.appendChild(button)
+
+      })
     }
   })
 })
