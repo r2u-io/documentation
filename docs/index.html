@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>R2U Integration</title>
+  <head>
+    <title>R2U Integration</title>
 
-  <script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.3.0/build/dist/index.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
+    <script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.3.0/build/dist/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <div class="container">
-    <h1>
-      R2U Integration
-    </h1>
+  <body>
+    <div class="container">
+      <h1>R2U Integration</h1>
 
-    <h3>
-      3D Viewer
-    </h3>
-    <div id="3d-viewer" style="position: relative;"></div>
+      <h3>3D Viewer</h3>
+      <div id="viewer-3d">
+        <button>
+          <img src="./ExpandButtonImage.png" />
+        </button>
+      </div>
 
-    <h3>
-      AR Button (mobile)
-    </h3>
-    <button type="button" class="btn btn-primary" id="ar-button">
-      Open AR
-    </button>
-    <button type="button" class="btn btn-secondary" id="add-to-cart">
-      Add to cart
-    </button>
-  </div>
+      <h3>AR Button (mobile)</h3>
+      <button type="button" class="btn btn-primary" id="ar-button">Open AR</button>
+      <button type="button" class="btn btn-secondary" id="add-to-cart">Add to cart</button>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

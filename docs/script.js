@@ -10,8 +10,15 @@ R2U.init({ customerId }).then(() => {
   R2U.isActive(sku).then((isActive) => {
     console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
     if (isActive) {
-      const element = document.getElementById('3d-viewer')
-      R2U.create3DViewer({ element, sku, name, progressBarPosition, poster, progressBarColor })
+      const element = document.getElementById('viewer-3d')
+      R2U.create3DViewer({
+        element,
+        sku,
+        name,
+        progressBarPosition,
+        poster,
+        progressBarColor
+      })
 
       const arButton = document.getElementById('ar-button')
       arButton.onclick = () => R2U.openAR({ sku })
