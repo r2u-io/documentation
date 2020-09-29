@@ -7,6 +7,7 @@ const progressBarColor = '#c5c5c5'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
 const viewer = document.getElementById('viewer-3d')
+const expandViewer = document.getElementById('expand-viewer-3d')
 const modal = document.getElementById('modal')
 const expandButton = document.getElementsByClassName('expand-button')[0]
 const exitButton = document.getElementsByClassName('exit-button')[0]
@@ -18,9 +19,17 @@ R2U.init({ customerId }).then(() => {
       const arButton = document.getElementById('ar-button')
       arButton.onclick = () => R2U.openAR({ sku })
 
-      const element = document.getElementById('viewer-3d')
       R2U.create3DViewer({
-        element,
+        element: viewer,
+        sku,
+        name,
+        progressBarPosition,
+        poster,
+        progressBarColor
+      })
+
+      R2U.create3DViewer({
+        element: expandViewer,
         sku,
         name,
         progressBarPosition,
@@ -38,8 +47,6 @@ const initializeElements = () => {
   expandButton.onclick = onClickExpand
   exitButton.onclick = onClickExit
 
-  const expandViewer = viewer.cloneNode(true)
-  modal.appendChild(expandViewer)
   expandViewer.getElementsByTagName('model-viewer')[0].classList.add('big')
 
   viewer.firstChild.appendChild(expandButton)
