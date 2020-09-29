@@ -1,7 +1,7 @@
 model-viewer {
   opacity: 1 !important;
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: 300px;
 }
 
 .big {
@@ -17,31 +17,42 @@ model-viewer {
 }
 
 .expand-button {
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  padding: 0;
-  border: none;
-  background: none;
-  margin: 12px;
+  padding: 12px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 999999;
+  cursor: pointer;
+  background: none !important;
+  border: none !important;
+  outline: none;
+  transition: opacity 2s;
 }
 
 .expand-button > img {
-  width: 36px;
+  transition: 0.5s ease;
+  width: 24px;
+  height: 24px;
+  backface-visibility: hidden;
 }
 
 .exit-button {
+  width: 26px;
+  height: auto;
+  position: fixed;
   top: 0;
   right: 0;
-  position: fixed;
-  padding: 0;
-  border: none;
-  background: none;
+  z-index: 999999;
   margin: 12px;
+  padding: 3px;
+  cursor: pointer;
+  background: none !important;
+  border: none !important;
+  outline: none;
 }
 
 .exit-button > img {
-  width: 36px;
+  width: 100%;
 }
 
 .hide {
@@ -49,6 +60,7 @@ model-viewer {
 }
 
 .modal {
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;

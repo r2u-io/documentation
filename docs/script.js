@@ -7,7 +7,9 @@ const progressBarColor = '#c5c5c5'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
 const viewer = document.getElementById('viewer-3d')
-const expandViewer = document.getElementById('expand-viewer-3d')
+const viewerPopup = document.getElementById('viewer-3d-popup')
+const viewerCustom = document.getElementById('viewer-3d-custom')
+const expandViewer = document.getElementById('viewer-3d-expand')
 const modal = document.getElementById('modal')
 const expandButton = document.getElementsByClassName('expand-button')[0]
 const exitButton = document.getElementsByClassName('exit-button')[0]
@@ -21,6 +23,25 @@ R2U.init({ customerId }).then(() => {
 
       R2U.create3DViewer({
         element: viewer,
+        sku,
+        name,
+        progressBarPosition,
+        poster,
+        progressBarColor
+      })
+
+      R2U.create3DViewer({
+        element: viewerPopup,
+        sku,
+        name,
+        progressBarPosition,
+        popup: true,
+        poster,
+        progressBarColor
+      })
+
+      R2U.create3DViewer({
+        element: viewerCustom,
         sku,
         name,
         progressBarPosition,
@@ -49,8 +70,8 @@ const initializeElements = () => {
 
   expandViewer.getElementsByTagName('model-viewer')[0].classList.add('big')
 
-  viewer.firstChild.appendChild(expandButton)
-  expandViewer.firstChild.appendChild(exitButton)
+  viewerCustom.getElementsByTagName('model-viewer')[0].appendChild(expandButton)
+  expandViewer.getElementsByTagName('model-viewer')[0].appendChild(exitButton)
 
   modal.addEventListener('mousedown', onClickExit)
   expandViewer.addEventListener('mousedown', onClickViewer)

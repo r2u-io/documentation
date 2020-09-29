@@ -3,7 +3,7 @@
   <head>
     <title>R2U Integration</title>
 
-    <script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.3.0/build/dist/index.js"></script>
+    <script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.4.0/build/dist/index.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,7 +18,12 @@
       <h1>R2U Integration</h1>
 
       <h3>3D Viewer</h3>
+      <h4>Without Popup</h4>
       <div id="viewer-3d"></div>
+      <h4>With Popup</h4>
+      <div id="viewer-3d-popup"></div>
+      <h4>Custom Popup</h4>
+      <div id="viewer-3d-custom"></div>
       <button class="expand-button hide">
         <img src="./ExpandButtonImage.png" />
       </button>
@@ -26,7 +31,7 @@
         <img src="./ExitButtonImage.png" />
       </button>
       <div id="modal" class="modal">
-        <div id="expand-viewer-3d"></div>
+        <div id="viewer-3d-expand"></div>
       </div>
 
       <h3>AR Button (mobile)</h3>
@@ -34,6 +39,6 @@
       <button type="button" class="btn btn-secondary" id="add-to-cart">Add to cart</button>
     </div>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>
