@@ -8,7 +8,6 @@ const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png
 
 const viewer = document.getElementById('viewer-3d')
 const modal = document.getElementById('modal')
-const container = document.getElementById('viewer-container')
 const expandButton = document.getElementsByClassName('expand-button')[0]
 const exitButton = document.getElementsByClassName('exit-button')[0]
 
@@ -34,37 +33,28 @@ R2U.init({ customerId }).then(() => {
 
 const initializeElements = () => {
   expandButton.classList.remove('hide')
+  exitButton.classList.remove('hide')
 
   expandButton.onclick = onClickExpand
   exitButton.onclick = onClickExit
 
+  const expandViewer = viewer.cloneNode(true)
+  modal.appendChild(expandViewer)
+  expandViewer.getElementsByTagName('model-viewer')[0].classList.add('big')
+
   viewer.firstChild.appendChild(expandButton)
-  viewer.firstChild.appendChild(exitButton)
+  expandViewer.firstChild.appendChild(exitButton)
 
   modal.addEventListener('mousedown', onClickExit)
-  viewer.addEventListener('mousedown', onClickViewer)
+  expandViewer.addEventListener('mousedown', onClickViewer)
 }
 
 const onClickExpand = () => {
-  expandButton.classList.add('hide')
-  exitButton.classList.remove('hide')
-
   modal.style.display = 'block'
-
-  modal.appendChild(viewer)
-
-  document.getElementsByTagName('model-viewer')[0].classList.add('big')
 }
 
 const onClickExit = () => {
-  expandButton.classList.remove('hide')
-  exitButton.classList.add('hide')
-
   modal.style.display = 'none'
-
-  container.appendChild(viewer)
-
-  document.getElementsByTagName('model-viewer')[0].classList.remove('big')
 }
 
 const onClickViewer = (e) => {
