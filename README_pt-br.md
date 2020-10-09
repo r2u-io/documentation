@@ -25,7 +25,7 @@ A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas manei
 Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.1.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.4.0/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -53,19 +53,27 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 | [`isActive`](#r2iisactive)             | indica se o produto está disponível na plataforma para Realidade Aumentada                     |                      |
 | [`openAR`](#r2uopenar)                 | abre o visualizador nativo de realidade aumentada no dispositivo móvel                         | mobile               |
 | [`getOpenARLink`](#r2ugetopenarlink)   | retorna uma URL de compartilhamento para a experiência de realidade aumentada                  | desktop / mobile     |
-| [`create3DViewer`](#r2ucreate3dviewer) | cria um visualizador 3D na posição do elemento HTML indicado                                   | **desktop** / mobile |
+| [`create3DViewer`](#r2ucreate3dviewer) | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup  | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)  | envia eventos para a plataforma de analytics da R2U                                            |                      |
 
 ```typescript
 interface R2U {
   init: (params: { customerId: string }) => Promise<void>
   isActive: (sku: string) => Promise<boolean>
-  openAR: (params: { sku: string; resize?: boolean }) => Promise<void>
+  openAR: (params: {
+    sku: string
+    resize?: boolean
+    fallbackOptions?: {
+      alertMessage?: string
+      fallback?: 'viewer' | 'full'
+    }
+  }) => Promise<void>
   getOpenARLink: (sku: string) => Promise<string>
   create3DViewer: (params: {
     element: HTMLElement
     sku: string
     name: string
+    popup: boolean
     progressBarPosition?: 'top' | 'middle' | 'bottom'
     poster?: string | null
   }) => Promise<void>
@@ -95,16 +103,29 @@ R2U.isActive('RE000001').then((isActive) => console.log(`SKU ativo? ${isActive ?
 ##### `R2U.openAR`
 
 ```javascript
-// SKU de teste -- lembre de substituir pelas informações do seu produto
-const arButton = document.getElementById('ar-buton')
+// test SKU -- remember to use your product information
+const arButton = document.getElementById('ar-button')
 const sku = 'RE000001'
+const fallbackOptions = {
+  alertMessage: 'RA não suportada pelo dispositivo',
+  fallback: 'viewer'
+}
 
 arButton.onclick = () =>
   R2U.openAR({
-    sku
+    sku,
+    fallbackOptions
     /* resize defaults to `false` */
   })
 ```
+
+| parâmetro                      | descrição                                                                                              | default |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------ | ------- |
+| `sku`                          | SKU do produto desejado                                                                                | `''`    |
+| `resize`                       | Opção para redimensionar modelo 3D em experiência de RA                                                | `false` |
+| `fallbackOptions`              | Comportamento a ser reproduzido quando experiência de RA não for disponível no dispositivo             | `null`  |
+| `fallbackOptions.alertMessage` | Quando definido, alerta usuário com string escolhida                                                   | `null`  |
+| `fallbackOptions.fallback`     | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`'full'`) | `null`  |
 
 _iOS_
 
@@ -135,10 +156,11 @@ R2U.getOpenARLink('RE000001').then((url) => console.log(url))
 const element = document.getElementById('3d-viewer')
 const sku = 'RE000001'
 const name = 'Cadeira Eames'
+const popup = false
 const progressBarPosition = 'middle'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-R2U.create3DViewer({ element, sku, name, progressBarPosition, poster })
+R2U.create3DViewer({ element, sku, name, popup, progressBarPosition, poster })
 ```
 
 | parâmetro             | descrição                                                                               | default |
@@ -146,6 +168,7 @@ R2U.create3DViewer({ element, sku, name, progressBarPosition, poster })
 | `element`             | elemento HTML que irá receber o modelo 3D                                               | `''`    |
 | `sku`                 | SKU do produto desejado                                                                 | `''`    |
 | `name`                | nome do produto que será renderizado                                                    | `''`    |
+| `popup`               | habilita e desabilita o botão para abrir um popup com o modelo                          | `true`  |
 | `progressBarPosition` | define a posição do _progress bar_ (`'top'`, ` 'middle'` or `'bottom'`)                 | `'top'` |
 | `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)                   | `null`  |
 | `poster`              | possibilita a definição de uma imagem que será exibida durante o carregamento do modelo | `null`  |

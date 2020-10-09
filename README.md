@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.3.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.4.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -48,25 +48,33 @@ yarn add @r2u/javascript-ar-sdk
 
 After adding the script tag on your website, the methods below will be available through a global `R2U` object
 
-| function                               | description                                                             | plataform            |
-| -------------------------------------- | ----------------------------------------------------------------------- | -------------------- |
-| [`init`](#r2uinit)                     | initializes the SDK and connects to the R2U server                      |                      |
-| [`isActive`](#r2iisactive)             | indicates if a product is available on the Augmented Reality platform   |                      |
-| [`openAR`](#r2uopenar)                 | opens the native Augmented Reality viewer on the mobile device          | mobile               |
-| [`getOpenARLink`](#r2ugetopenarlink)   | returns a shareable URL for the Augmented Reality experience            | desktop / mobile     |
-| [`create3DViewer`](#r2ucreate3dviewer) | creates a 3D model viewer at the position of the HTML element indicated | **desktop** / mobile |
-| [`analytics.send`](#r2uanalyticssend)  | send events to the R2U analytics platform                               |                      |
+| function                               | description                                                                                              | plataform            |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------- |
+| [`init`](#r2uinit)                     | initializes the SDK and connects to the R2U server                                                       |                      |
+| [`isActive`](#r2iisactive)             | indicates if a product is available on the Augmented Reality platform                                    |                      |
+| [`openAR`](#r2uopenar)                 | opens the native Augmented Reality viewer on the mobile device                                           | mobile               |
+| [`getOpenARLink`](#r2ugetopenarlink)   | returns a shareable URL for the Augmented Reality experience                                             | desktop / mobile     |
+| [`create3DViewer`](#r2ucreate3dviewer) | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
+| [`analytics.send`](#r2uanalyticssend)  | send events to the R2U analytics platform                                                                |                      |
 
 ```typescript
 interface R2U {
   init: (params: { customerId: string }) => Promise<void>
   isActive: (sku: string) => Promise<boolean>
-  openAR: (params: { sku: string; resize?: boolean }) => Promise<void>
+  openAR: (params: {
+    sku: string
+    resize?: boolean
+    fallbackOptions?: {
+      alertMessage?: string
+      fallback?: 'viewer' | 'full'
+    }
+  }) => Promise<void>
   getOpenARLink: (sku: string) => Promise<string>
   create3DViewer: (params: {
     element: HTMLElement
     sku: string
     name: string
+    popup: boolean
     progressBarPosition?: 'top' | 'middle' | 'bottom'
     poster?: string | null
   }) => Promise<void>
@@ -97,15 +105,28 @@ R2U.isActive('RE000001').then((isActive) => console.log(`SKU active? ${isActive 
 
 ```javascript
 // test SKU -- remember to use your product information
-const arButton = document.getElementById('ar-buton')
+const arButton = document.getElementById('ar-button')
 const sku = 'RE000001'
+const fallbackOptions = {
+  alertMessage: 'AR not supported by device',
+  fallback: 'viewer'
+}
 
 arButton.onclick = () =>
   R2U.openAR({
-    sku
+    sku,
+    fallbackOptions
     /* resize defaults to `false` */
   })
 ```
+
+| parameter                      | description                                                                                  | default |
+| ------------------------------ | -------------------------------------------------------------------------------------------- | ------- |
+| `sku`                          | product SKU                                                                                  | `''`    |
+| `resize`                       | Option to resize 3D model on AR experience                                                   | `false` |
+| `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `null`  |
+| `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`  |
+| `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`  |
 
 _iOS_
 
@@ -136,17 +157,19 @@ R2U.getOpenARLink('RE000001').then((url) => console.log(url))
 const element = document.getElementById('3d-viewer')
 const sku = 'RE000001'
 const name = 'Eames Chair'
+const popup = false
 const progressBarPosition = 'middle'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-R2U.create3DViewer({ element, sku, name, progressBarPosition, poster })
+R2U.create3DViewer({ element, sku, name, popup, progressBarPosition, poster })
 ```
 
-| parâmetro             | descrição                                                                | default |
+| parameter             | description                                                              | default |
 | --------------------- | ------------------------------------------------------------------------ | ------- |
 | `element`             | HTML element that will receive the 3D viewer                             | `''`    |
 | `sku`                 | product SKU                                                              | `''`    |
 | `name`                | product name                                                             | `''`    |
+| `popup`               | allows the 3D viewer to be expandable through a popup button             | `true`  |
 | `progressBarPosition` | defines the _progress bar_ position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'` |
 | `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)    | `null`  |
 | `poster`              | allows an image to be exhibited while the 3D model is loading            | `null`  |

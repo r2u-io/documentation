@@ -6,21 +6,27 @@ const progressBarPosition = 'top' // top | middle | bottom
 const progressBarColor = '#c5c5c5'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-const viewer = document.getElementById('viewer-3d')
-const viewerPopup = document.getElementById('viewer-3d-popup')
-const viewerCustom = document.getElementById('viewer-3d-custom')
-const expandViewer = document.getElementById('viewer-3d-expand')
-const modal = document.getElementById('modal')
-const expandButton = document.getElementsByClassName('expand-button')[0]
-const exitButton = document.getElementsByClassName('exit-button')[0]
+const viewer = document.getElementById('viewer-default')
+const viewerNoPopup = document.getElementById('viewer-no-popup')
+
+const fallbackOptions2 = {
+  alertMessage: 'AR not supported'
+}
+const fallbackOptions3 = {
+  fallback: 'viewer'
+}
+const fallbackOptions4 = {
+  fallback: 'full'
+}
+const fallbackOptions5 = {
+  alertMessage: 'AR not supported',
+  fallback: 'viewer'
+}
 
 R2U.init({ customerId }).then(() => {
   R2U.isActive(sku).then((isActive) => {
     console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
     if (isActive) {
-      const arButton = document.getElementById('ar-button')
-      arButton.onclick = () => R2U.openAR({ sku })
-
       R2U.create3DViewer({
         element: viewer,
         sku,
@@ -31,63 +37,29 @@ R2U.init({ customerId }).then(() => {
       })
 
       R2U.create3DViewer({
-        element: viewerPopup,
+        element: viewerNoPopup,
         sku,
         name,
         progressBarPosition,
-        popup: true,
+        popup: false,
         poster,
         progressBarColor
       })
 
-      R2U.create3DViewer({
-        element: viewerCustom,
-        sku,
-        name,
-        progressBarPosition,
-        poster,
-        progressBarColor
-      })
+      const arButton1 = document.getElementById('ar-button-default')
+      arButton1.onclick = () => R2U.openAR({ sku })
 
-      R2U.create3DViewer({
-        element: expandViewer,
-        sku,
-        name,
-        progressBarPosition,
-        poster,
-        progressBarColor
-      }).then(initializeElements)
+      const arButton2 = document.getElementById('ar-button-alert')
+      arButton2.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions2 })
+
+      const arButton3 = document.getElementById('ar-button-viewer')
+      arButton3.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions3 })
+
+      const arButton4 = document.getElementById('ar-button-full')
+      arButton4.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions4 })
+
+      const arButton5 = document.getElementById('ar-button-alert-viewer')
+      arButton5.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions5 })
     }
   })
 })
-
-const initializeElements = () => {
-  expandButton.classList.remove('hide')
-  exitButton.classList.remove('hide')
-
-  expandButton.onclick = onClickExpand
-  exitButton.onclick = onClickExit
-
-  expandViewer.getElementsByTagName('model-viewer')[0].classList.add('big')
-
-  viewerCustom.getElementsByTagName('model-viewer')[0].appendChild(expandButton)
-  expandViewer.getElementsByTagName('model-viewer')[0].appendChild(exitButton)
-
-  modal.addEventListener('mousedown', onClickExit)
-  expandViewer.addEventListener('mousedown', onClickViewer)
-}
-
-const onClickExpand = () => {
-  modal.style.display = 'block'
-}
-
-const onClickExit = () => {
-  modal.style.display = 'none'
-}
-
-const onClickViewer = (e) => {
-  e.preventDefault()
-  e.stopPropagation()
-  e.stopImmediatePropagation()
-  return false
-}
