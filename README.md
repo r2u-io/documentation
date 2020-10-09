@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.4.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.4.3/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
