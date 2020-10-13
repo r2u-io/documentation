@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-3.1.0-green">
+        <img src="https://img.shields.io/badge/version-3.5.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.4.3/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.5.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -56,6 +56,7 @@ After adding the script tag on your website, the methods below will be available
 | [`getOpenARLink`](#r2ugetopenarlink)   | returns a shareable URL for the Augmented Reality experience                                             | desktop / mobile     |
 | [`create3DViewer`](#r2ucreate3dviewer) | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)  | send events to the R2U analytics platform                                                                |                      |
+| [`customizer.create`](#r2ucustomizercreate)  | creates a 3D customizer at the position of the HTML element indicated                                            |                      |
 
 ```typescript
 interface R2U {
@@ -198,3 +199,13 @@ addToCartButton.addEventListener('click', () =>
 | `client_id`         | Client unique identifier               | `string` |
 
 Other metrics and dimensions (such as SKU, customerId, operating system, etc.) are sent by default and do not need to be specified.
+
+##### `R2U.customizer.create`
+
+```javascript
+const element = document.getElementById('3d-customizer')
+const onConfirm = (productCustomization) => console.log('customization selected', productCustomization)
+R2U.customizer.create({element, onConfirm})
+```
+
+The `onConfirm` function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key "model" value "Eames chair", key "color" value "Black", etc.)
