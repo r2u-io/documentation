@@ -3,7 +3,7 @@
   <head>
     <title>R2U Integration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.5.0/build/dist/index.js"></script>
+    <script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.7.0/build/dist/index.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,13 +17,16 @@
   <body>
     <div class="container">
       <h1>R2U Integration</h1>
-
       <h3>3D Viewer</h3>
       <h4>Default</h4>
       <div id="viewer-default" class="viewer-3d"></div>
       <h4>Without Popup</h4>
       <div id="viewer-no-popup" class="viewer-3d"></div>
-
+      <h3>Customizer</h3>
+      <button type="button" class="btn btn-primary" id="open-customizer">Open Customization</button>
+      <div class="background hide" id="customizer-background">
+        <div id="customizer"></div>
+      </div>
       <h3>AR Button (mobile)</h3>
       <h4>Default</h4>
       <div>

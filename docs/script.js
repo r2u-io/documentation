@@ -9,6 +9,10 @@ const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png
 const viewer = document.getElementById('viewer-default')
 const viewerNoPopup = document.getElementById('viewer-no-popup')
 
+const openCustomizer = document.getElementById('open-customizer')
+const customizer = document.getElementById('customizer')
+const customizerBackground = document.getElementById('customizer-background')
+
 const fallbackOptions2 = {
   alertMessage: 'AR not supported'
 }
@@ -23,7 +27,31 @@ const fallbackOptions5 = {
   fallback: 'viewer'
 }
 
+const onClickExpand = () => {
+  customizerBackground.classList.remove('hide')
+}
+
+const onClickExit = () => {
+  customizerBackground.classList.add('hide')
+}
+
+const onClickViewer = (e) => {
+  e.preventDefault()
+  e.stopPropagation()
+  e.stopImmediatePropagation()
+  return false
+}
+
 R2U.init({ customerId }).then(() => {
+  openCustomizer.onclick = onClickExpand
+  customizerBackground.addEventListener('mousedown', onClickExit)
+  customizer.addEventListener('mousedown', onClickViewer)
+
+  R2U.customizer.create({
+    element: customizer,
+    onConfirm: (e) => console.log(e)
+  })
+
   R2U.isActive(sku).then((isActive) => {
     console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
     if (isActive) {
