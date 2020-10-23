@@ -24,10 +24,10 @@ const fallbackOptions5 = {
 }
 
 R2U.init({ customerId }).then(() => {
-  R2U.isActive(sku).then((isActive) => {
+  R2U.sku.isActive(sku).then((isActive) => {
     console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
     if (isActive) {
-      R2U.create3DViewer({
+      R2U.viewer.create({
         element: viewer,
         sku,
         name,
@@ -36,7 +36,7 @@ R2U.init({ customerId }).then(() => {
         progressBarColor
       })
 
-      R2U.create3DViewer({
+      R2U.viewer.create({
         element: viewerNoPopup,
         sku,
         name,
@@ -47,19 +47,19 @@ R2U.init({ customerId }).then(() => {
       })
 
       const arButton1 = document.getElementById('ar-button-default')
-      arButton1.onclick = () => R2U.openAR({ sku })
+      arButton1.onclick = () => R2U.ar.open({ sku })
 
       const arButton2 = document.getElementById('ar-button-alert')
-      arButton2.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions2 })
+      arButton2.onclick = () => R2U.ar.open({ sku, fallbackOptions: fallbackOptions2 })
 
       const arButton3 = document.getElementById('ar-button-viewer')
-      arButton3.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions3 })
+      arButton3.onclick = () => R2U.ar.open({ sku, fallbackOptions: fallbackOptions3 })
 
       const arButton4 = document.getElementById('ar-button-full')
-      arButton4.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions4 })
+      arButton4.onclick = () => R2U.ar.open({ sku, fallbackOptions: fallbackOptions4 })
 
       const arButton5 = document.getElementById('ar-button-alert-viewer')
-      arButton5.onclick = () => R2U.openAR({ sku, fallbackOptions: fallbackOptions5 })
+      arButton5.onclick = () => R2U.ar.open({ sku, fallbackOptions: fallbackOptions5 })
     }
   })
 })
