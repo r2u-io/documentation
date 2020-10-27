@@ -49,6 +49,7 @@ R2U.init({ customerId }).then(() => {
 
   R2U.customizer.create({
     element: customizer,
+    sku,
     onConfirm: (e) => console.log(e)
   })
 
