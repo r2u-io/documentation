@@ -51,6 +51,13 @@ import '@r2u/javascript-ar-sdk'
 const { R2U } = window
 ```
 
+### Events
+
+| event                                  | description                                                                                    |
+| -------------------------------------- | ------------------------------------- |
+| `R2USkdLoaded`                         | dispatched after SDK finishes loading |
+
+
 ### Methods
 
 After adding the script tag on your website, the methods below will be available through a global `R2U` object
