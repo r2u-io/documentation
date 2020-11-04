@@ -64,9 +64,9 @@ setupR2U = () => window.R2U.init({ customerId }).then(() => {
   })
 })
 
-try {
+if ('R2U' in window) {
   setupR2U()
 }
-catch(err) {
+else {
   document.addEventListener('R2USkdLoaded', setupR2U)
 }
