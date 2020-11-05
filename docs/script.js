@@ -23,7 +23,7 @@ const fallbackOptions5 = {
   fallback: 'viewer'
 }
 
-R2U.init({ customerId }).then(() => {
+setupR2U = () => window.R2U.init({ customerId }).then(() => {
   R2U.sku.isActive(sku).then((isActive) => {
     console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
     if (isActive) {
@@ -63,3 +63,10 @@ R2U.init({ customerId }).then(() => {
     }
   })
 })
+
+if ('R2U' in window) {
+  setupR2U()
+}
+else {
+  document.addEventListener('R2USkdLoaded', setupR2U)
+}
