@@ -226,7 +226,6 @@ _Desktop_
 </p>
 
 ##### `R2U.analytics.send`
-
 ```javascript
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener('click', () =>
@@ -237,12 +236,18 @@ addToCartButton.addEventListener('click', () =>
 )
 ```
 
-| parâmetro     | descrição                                    | valor    |
-| ------------- | -------------------------------------------- | -------- |
-| `event`       | Identificador do evento (ex: `add_to_cart`)  | `string` |
-| `data`        | Metadados do evento (ex: preço)              | `object` |
+| parâmetro     | descrição                                              | valor                                  |
+| ------------- | ------------------------------------------------------ | -------------------------------------- |
+| `event`       | Identificador do evento (e.g.: `add_to_cart`)            | `string`                               |
+| `data`        | Metadados do evento (e.g.: preço)                        | `object`                               |
+| `scope`       | Contexto do evento. (e.g.: Se for `'session'`, chamadas adicionais<br> de `.send` do mesmo evento em uma sessão são ignoradas) | `'event' | 'page' | 'session' | 'sku'` |
 
 Outras métricas e dimensões (tais como SKU, customerId, sistema operacional, etc.) são enviadas automaticamente e não precisam ser especificadas.
+
+Se `analyticsParams.dataLayerIntegration` for `true`, os seguintes eventos são enviados por padrão ao dataLayer:
+- `page_view`: Enviado em todo carregamento de página que carrega o SDK (incluindo produtos que não estão ativos para RA)
+- `impression`: Enviado uma até uma vez por visualização de página em que RA / 3D é mostrado
+- `click`: Enviado em todos os cliques em RA / visualização 3D
 
 ##### `R2U.customizer.create`
 
