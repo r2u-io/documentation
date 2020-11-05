@@ -224,15 +224,17 @@ _Desktop_
 ```javascript
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener('click', () =>
-  R2U.analytics.send({ add_to_cart: 1, price: 30, client_id: '425946' })
+  R2U.analytics.send({
+      event: 'add_to_cart',
+      data: { price: 30 },
+    })
 )
 ```
 
-| dimensão ou métrica | descrição                                | valor    |
-| ------------------- | ---------------------------------------- | -------- |
-| `add_to_cart`       | Evento "adicionar ao carrinho"           | `1`      |
-| `price`             | Preço do SKU                             | `number` |
-| `client_id`         | Identificador único do cliente na página | `string` |
+| parâmetro     | descrição                                    | valor    |
+| ------------- | -------------------------------------------- | -------- |
+| `event`       | Identificador do evento (ex: `add_to_cart`)  | `string` |
+| `data`        | Metadados do evento (ex: preço)              | `object` |
 
 Outras métricas e dimensões (tais como SKU, customerId, sistema operacional, etc.) são enviadas automaticamente e não precisam ser especificadas.
 
