@@ -127,7 +127,13 @@ interface R2U {
 
 ```javascript
 // cliente de teste -- lembre de substituir pelo seu `customerId`
-R2U.init({ customerId: '5e8e7580404328000882f4ae' })
+R2U.init({
+    customerId: '5e8e7580404328000882f4ae',
+    analyticsParams: {
+      dataLayerIntegration: true, // Ativar integração com "dataLayer" do Google Tag Manager (dafault: true)
+      sessionDurationMinutes: 30 // Duração máxima de inatividade em minutos dentro de uma sessão. Usar mesmo valor que no Google Analytics (default: 30)
+    }
+  })
   .then(() => console.log('Cliente ativo'))
   .catch((err) => console.error('Cliente inativo'))
 ```
@@ -141,7 +147,7 @@ R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU ativo? ${isActi
 ##### `R2U.ar.open`
 
 ```javascript
-// test SKU -- remember to use your product information
+// SKU teste -- lembre de usar informação do seu produto
 const arButton = document.getElementById('ar-button')
 const sku = 'RE000001'
 const fallbackOptions = {
