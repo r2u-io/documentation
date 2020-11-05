@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-3.7.7-green">
+        <img src="https://img.shields.io/badge/version-4.0.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.7.7/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.0.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -74,7 +74,13 @@ After adding the script tag on your website, the methods below will be available
 
 ```typescript
 interface R2U {
-  init: (params: { customerId: string }) => Promise<void>
+  init: (params: {
+    customerId: string
+    analyticsParams?: {
+      dataLayerIntegration?: boolean
+      sessionDurationMinutes?: number
+    }
+  }) => Promise<void>
   sku: {
     isActive: (sku: string) => Promise<boolean>
   }
@@ -100,7 +106,11 @@ interface R2U {
     }) => Promise<void>
   }
   analytics: {
-    send: (event: Record<string, string | number>) => Promise<void>
+    send: (params: {
+      event: string
+      data: Record<string, string | number>
+      scope?: 'event' | 'page' | 'session' | 'sku'
+    }) => Promise<void>
   }
   customizer: {
     create: (params: {
