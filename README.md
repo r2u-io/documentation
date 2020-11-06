@@ -131,7 +131,7 @@ R2U.init({
     customerId: '5e8e7580404328000882f4ae',
     analyticsParams: {
       dataLayerIntegration: true, // Activate integration with Google Tag Manager's dataLayer (dafault: true)
-      sessionDurationMinutes: 30 // Tempo máximo minutes de inatividade dentro de uma sessão. Usar valor do seu Google Analytics (default: 30)
+      sessionDurationMinutes: 30 // Maximum minutes of inactivity within a single session. Use same value as in Google Analytics (default: 30)
     }
   })
   .then(() => console.log('Client active'))
