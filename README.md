@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-3.7.7-green">
+        <img src="https://img.shields.io/badge/version-4.0.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.7.7/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.0.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -74,7 +74,13 @@ After adding the script tag on your website, the methods below will be available
 
 ```typescript
 interface R2U {
-  init: (params: { customerId: string }) => Promise<void>
+  init: (params: {
+    customerId: string
+    analyticsParams?: {
+      dataLayerIntegration?: boolean
+      sessionDurationMinutes?: number
+    }
+  }) => Promise<void>
   sku: {
     isActive: (sku: string) => Promise<boolean>
   }
@@ -100,7 +106,11 @@ interface R2U {
     }) => Promise<void>
   }
   analytics: {
-    send: (event: Record<string, string | number>) => Promise<void>
+    send: (params: {
+      event: string
+      data: Record<string, string | number>
+      scope?: 'event' | 'page' | 'session' | 'sku'
+    }) => Promise<void>
   }
   customizer: {
     create: (params: {
@@ -117,7 +127,13 @@ interface R2U {
 
 ```javascript
 // test client -- remember to use your own `customerId`
-R2U.init({ customerId: '5e8e7580404328000882f4ae' })
+R2U.init({
+    customerId: '5e8e7580404328000882f4ae',
+    analyticsParams: {
+      dataLayerIntegration: true, // Activate integration with Google Tag Manager's dataLayer (dafault: true)
+      sessionDurationMinutes: 30 // Maximum minutes of inactivity within a single session. Use same value as in Google Analytics (default: 30)
+    }
+  })
   .then(() => console.log('Client active'))
   .catch((err) => console.error('Client inactive'))
 ```
@@ -214,17 +230,26 @@ _Desktop_
 ```javascript
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener('click', () =>
-  R2U.analytics.send({ add_to_cart: 1, price: 30, client_id: '425946' })
+  R2U.analytics.send({
+      event: 'add_to_cart',
+      data: { price: 30 },
+    })
 )
 ```
 
-| dimension or metric | description                            | value    |
-| ------------------- | -------------------------------------- | -------- |
-| `add_to_cart`       | User clicked on a "add to cart" button | `1`      |
-| `price`             | SKU price                              | `number` |
-| `client_id`         | Client unique identifier               | `string` |
+| parameter     | description                           | value    |
+| ------------- | ------------------------------------- | -------- |
+| `event`       | Event identifier (e.g.: `add_to_cart`)  | `string` |
+| `data`        | Event metadata (e.g.: price)            | `object` |
+| `scope`       | Event's context. (e.g.: If `'session'`, additional `.send`<br>calls of same event within a session are ignored) | `'event' | 'page' | 'session' | 'sku'` |
+
 
 Other metrics and dimensions (such as SKU, customerId, operating system, etc.) are sent by default and do not need to be specified.
+If `analyticsParams.dataLayerIntegration` is set to `true`, the following events are sent by default to the dataLayer:
+- `page_view`: Triggers on all page views that loads the SDK (including product pages where SKU is not AR-ready)
+- `impression`: Triggers at most once per page view where AR / 3D viewer is shown
+- `click`: Measure all clicks on AR / 3D viewer
+
 
 ##### `R2U.customizer.create`
 

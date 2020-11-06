@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-3.7.7-green">
+        <img src="https://img.shields.io/badge/version-4.0.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas manei
 Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.7.7/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.0.0/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -74,7 +74,13 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 
 ```typescript
 interface R2U {
-  init: (params: { customerId: string }) => Promise<void>
+  init: (params: {
+    customerId: string
+    analyticsParams?: {
+      dataLayerIntegration?: boolean
+      sessionDurationMinutes?: number
+    }
+  }) => Promise<void>
   sku: {
     isActive: (sku: string) => Promise<boolean>
   }
@@ -100,7 +106,11 @@ interface R2U {
     }) => Promise<void>
   }
   analytics: {
-    send: (event: Record<string, string | number>) => Promise<void>
+    send: (params: {
+      event: string
+      data: Record<string, string | number>
+      scope?: 'event' | 'page' | 'session' | 'sku'
+    }) => Promise<void>
   }
   customizer: {
     create: (params: {
@@ -117,7 +127,13 @@ interface R2U {
 
 ```javascript
 // cliente de teste -- lembre de substituir pelo seu `customerId`
-R2U.init({ customerId: '5e8e7580404328000882f4ae' })
+R2U.init({
+    customerId: '5e8e7580404328000882f4ae',
+    analyticsParams: {
+      dataLayerIntegration: true, // Ativar integração com "dataLayer" do Google Tag Manager (dafault: true)
+      sessionDurationMinutes: 30 // Duração máxima de inatividade em minutos dentro de uma sessão. Usar mesmo valor que no Google Analytics (default: 30)
+    }
+  })
   .then(() => console.log('Cliente ativo'))
   .catch((err) => console.error('Cliente inativo'))
 ```
@@ -131,7 +147,7 @@ R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU ativo? ${isActi
 ##### `R2U.ar.open`
 
 ```javascript
-// test SKU -- remember to use your product information
+// SKU teste -- lembre de usar informação do seu produto
 const arButton = document.getElementById('ar-button')
 const sku = 'RE000001'
 const fallbackOptions = {
@@ -210,21 +226,28 @@ _Desktop_
 </p>
 
 ##### `R2U.analytics.send`
-
 ```javascript
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener('click', () =>
-  R2U.analytics.send({ add_to_cart: 1, price: 30, client_id: '425946' })
+  R2U.analytics.send({
+      event: 'add_to_cart',
+      data: { price: 30 },
+    })
 )
 ```
 
-| dimensão ou métrica | descrição                                | valor    |
-| ------------------- | ---------------------------------------- | -------- |
-| `add_to_cart`       | Evento "adicionar ao carrinho"           | `1`      |
-| `price`             | Preço do SKU                             | `number` |
-| `client_id`         | Identificador único do cliente na página | `string` |
+| parâmetro     | descrição                                              | valor                                  |
+| ------------- | ------------------------------------------------------ | -------------------------------------- |
+| `event`       | Identificador do evento (e.g.: `add_to_cart`)            | `string`                               |
+| `data`        | Metadados do evento (e.g.: preço)                        | `object`                               |
+| `scope`       | Contexto do evento. (e.g.: Se for `'session'`, chamadas adicionais<br> de `.send` do mesmo evento em uma sessão são ignoradas) | `'event' | 'page' | 'session' | 'sku'` |
 
 Outras métricas e dimensões (tais como SKU, customerId, sistema operacional, etc.) são enviadas automaticamente e não precisam ser especificadas.
+
+Se `analyticsParams.dataLayerIntegration` for `true`, os seguintes eventos são enviados por padrão ao dataLayer:
+- `page_view`: Enviado em todo carregamento de página que carrega o SDK (incluindo produtos que não estão ativos para RA)
+- `impression`: Enviado uma até uma vez por visualização de página em que RA / 3D é mostrado
+- `click`: Enviado em todos os cliques em RA / visualização 3D
 
 ##### `R2U.customizer.create`
 
