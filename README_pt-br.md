@@ -69,7 +69,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 | [`ar.getLink`](#r2uargetlink)               | retorna uma URL de compartilhamento para a experiência de realidade aumentada                  | desktop / mobile     |
 | [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup  | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                            |                      |
-| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                   |                      |
+| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                   | **desktop** / mobile |
 
 ```typescript
 interface R2U {
