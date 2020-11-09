@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-3.7.5-green">
+        <img src="https://img.shields.io/badge/version-4.1.1-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@3.7.5/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.1.1/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -51,23 +51,35 @@ import '@r2u/javascript-ar-sdk'
 const { R2U } = window
 ```
 
+### Events
+
+| event          | description                           |
+| -------------- | ------------------------------------- |
+| `R2USkdLoaded` | dispatched after SDK finishes loading |
+
 ### Methods
 
 After adding the script tag on your website, the methods below will be available through a global `R2U` object
 
-| function                               | description                                                                                              | plataform            |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------- |
-| [`init`](#r2uinit)                     | initializes the SDK and connects to the R2U server                                                       |                      |
-| [`sku.isActive`](#r2uskuisactive)             | indicates if a product is available on the Augmented Reality platform                                    |                      |
-| [`ar.open`](#r2uaropen)                 | opens the native Augmented Reality viewer on the mobile device                                           | mobile               |
-| [`ar.getLink`](#r2uargetlink)   | returns a shareable URL for the Augmented Reality experience                                             | desktop / mobile     |
-| [`viewer.create`](#r2uviewercreate) | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
-| [`analytics.send`](#r2uanalyticssend)  | send events to the R2U analytics platform                                                                |                      |
-| [`customizer.create`](#r2ucustomizercreate)  | creates a 3D customizer at the position of the HTML element indicated                                            |                      |
+| function                                    | description                                                                                              | plataform            |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------- |
+| [`init`](#r2uinit)                          | initializes the SDK and connects to the R2U server                                                       |                      |
+| [`sku.isActive`](#r2uskuisactive)           | indicates if a product is available on the Augmented Reality platform                                    |                      |
+| [`ar.open`](#r2uaropen)                     | opens the native Augmented Reality viewer on the mobile device                                           | mobile               |
+| [`ar.getLink`](#r2uargetlink)               | returns a shareable URL for the Augmented Reality experience                                             | desktop / mobile     |
+| [`viewer.create`](#r2uviewercreate)         | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
+| [`analytics.send`](#r2uanalyticssend)       | send events to the R2U analytics platform                                                                |                      |
+| [`customizer.create`](#r2ucustomizercreate) | creates a 3D customizer at the position of the HTML element indicated                                    |                      |
 
 ```typescript
 interface R2U {
-  init: (params: { customerId: string }) => Promise<void>
+  init: (params: {
+    customerId: string
+    analyticsParams?: {
+      dataLayerIntegration?: boolean
+      sessionDurationMinutes?: number
+    }
+  }) => Promise<void>
   sku: {
     isActive: (sku: string) => Promise<boolean>
   }
@@ -93,7 +105,11 @@ interface R2U {
     }) => Promise<void>
   }
   analytics: {
-    send: (event: Record<string, string | number>) => Promise<void>
+    send: (params: {
+      event: string
+      data: Record<string, string | number>
+      scope?: 'event' | 'page' | 'session' | 'sku'
+    }) => Promise<void>
   }
   customizer: {
     create: (params: {
@@ -110,7 +126,13 @@ interface R2U {
 
 ```javascript
 // test client -- remember to use your own `customerId`
-R2U.init({ customerId: '5e8e7580404328000882f4ae' })
+R2U.init({
+  customerId: '5e8e7580404328000882f4ae',
+  analyticsParams: {
+    dataLayerIntegration: true, // Activate integration with Google Tag Manager's dataLayer (dafault: true)
+    sessionDurationMinutes: 30 // Maximum minutes of inactivity within a single session. Use same value as in Google Analytics (default: 30)
+  }
+})
   .then(() => console.log('Client active'))
   .catch((err) => console.error('Client inactive'))
 ```
@@ -140,13 +162,15 @@ arButton.onclick = () =>
   })
 ```
 
-| parameter                      | description                                                                                  | default |
-| ------------------------------ | -------------------------------------------------------------------------------------------- | ------- |
-| `sku`                          | product SKU                                                                                  | `''`    |
-| `resize`                       | Option to resize 3D model on AR experience                                                   | `false` |
-| `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `null`  |
-| `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`  |
-| `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`  |
+| parameter                      | description                                                                                  | default              |
+| ------------------------------ | -------------------------------------------------------------------------------------------- | -------------------- |
+| `sku`                          | product SKU                                                                                  | `''`                 |
+| `resize`                       | Option to resize 3D model on AR experience                                                   | `false`              |
+| `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
+| `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`               |
+
+\* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
 _iOS_
 
@@ -184,15 +208,15 @@ const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png
 R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
 ```
 
-| parameter             | description                                                              | default |
-| --------------------- | ------------------------------------------------------------------------ | ------- |
-| `element`             | HTML element that will receive the 3D viewer                             | `''`    |
-| `sku`                 | product SKU                                                              | `''`    |
-| `name`                | product name                                                             | product name on R2U platform   |
-| `popup`               | allows the 3D viewer to be expandable through a popup button             | `true`  |
-| `progressBarPosition` | defines the _progress bar_ position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'` |
-| `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)    | `null`  |
-| `poster`              | allows an image to be exhibited while the 3D model is loading            | `null`  |
+| parameter             | description                                                              | default                      |
+| --------------------- | ------------------------------------------------------------------------ | ---------------------------- |
+| `element`             | HTML element that will receive the 3D viewer                             | `''`                         |
+| `sku`                 | product SKU                                                              | `''`                         |
+| `name`                | product name                                                             | product name on R2U platform |
+| `popup`               | allows the 3D viewer to be expandable through a popup button             | `true`                       |
+| `progressBarPosition` | defines the _progress bar_ position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`                      |
+| `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)    | `null`                       |
+| `poster`              | allows an image to be exhibited while the 3D model is loading            | `null`                       |
 
 _Desktop_
 
@@ -207,24 +231,33 @@ _Desktop_
 ```javascript
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener('click', () =>
-  R2U.analytics.send({ add_to_cart: 1, price: 30, client_id: '425946' })
+  R2U.analytics.send({
+    event: 'add_to_cart',
+    data: { price: 30 }
+  })
 )
 ```
 
-| dimension or metric | description                            | value    |
-| ------------------- | -------------------------------------- | -------- |
-| `add_to_cart`       | User clicked on a "add to cart" button | `1`      |
-| `price`             | SKU price                              | `number` |
-| `client_id`         | Client unique identifier               | `string` |
+| parameter | description                                                                                                     | value    |
+| --------- | --------------------------------------------------------------------------------------------------------------- | -------- |
+| `event`   | Event identifier (e.g.: `add_to_cart`)                                                                          | `string` |
+| `data`    | Event metadata (e.g.: price)                                                                                    | `object` |
+| `scope`   | Event's context. (e.g.: If `'session'`, additional `.send`<br>calls of same event within a session are ignored) | `'event' | 'page' | 'session' | 'sku'` |
 
 Other metrics and dimensions (such as SKU, customerId, operating system, etc.) are sent by default and do not need to be specified.
+If `analyticsParams.dataLayerIntegration` is set to `true`, the following events are sent by default to the dataLayer:
+
+- `page_view`: Triggers on all page views that loads the SDK (including product pages where SKU is not AR-ready)
+- `impression`: Triggers at most once per page view where AR / 3D viewer is shown
+- `click`: Measure all clicks on AR / 3D viewer
 
 ##### `R2U.customizer.create`
 
 ```javascript
 const element = document.getElementById('3d-customizer')
-const onConfirm = (productCustomization) => console.log('customization selected', productCustomization)
-R2U.customizer.create({element, onConfirm})
+const onConfirm = (productCustomization) =>
+  console.log('customization selected', productCustomization)
+R2U.customizer.create({ element, onConfirm })
 ```
 
 The `onConfirm` function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key "model" value "Eames chair", key "color" value "Black", etc.)

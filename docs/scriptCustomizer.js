@@ -18,7 +18,7 @@ const onClickViewer = (e) => {
   return false
 }
 
-R2U.init({ customerId }).then(() => {
+function addCustomizer() {
   openCustomizer.onclick = onClickExpand
   customizerBackground.addEventListener('mousedown', onClickExit)
   customizer.addEventListener('mousedown', onClickViewer)
@@ -28,4 +28,4 @@ R2U.init({ customerId }).then(() => {
     sku,
     onConfirm: (e) => console.log(e)
   })
-})
+}
