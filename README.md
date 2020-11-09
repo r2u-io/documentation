@@ -162,15 +162,15 @@ arButton.onclick = () =>
   })
 ```
 
-| parameter                      | description                                                                                  | default               |
-| ------------------------------ | -------------------------------------------------------------------------------------------- | --------------------- |
-| `sku`                          | product SKU                                                                                  | `''`                  |
-| `resize`                       | Option to resize 3D model on AR experience                                                   | `false`               |
-| `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage: * }` |
-| `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`                |
-| `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`                |
+| parameter                      | description                                                                                  | default              |
+| ------------------------------ | -------------------------------------------------------------------------------------------- | -------------------- |
+| `sku`                          | product SKU                                                                                  | `''`                 |
+| `resize`                       | Option to resize 3D model on AR experience                                                   | `false`              |
+| `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
+| `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`               |
 
-\* `'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
+\* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
 _iOS_
 
