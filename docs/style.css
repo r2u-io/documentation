@@ -3,10 +3,6 @@
   width: 50%;
   height: 500px;
   margin: auto;
-  border: black;
-  border-width: 2px;
-  border-radius: 10px;
-  border-style: solid;
 }
 
 html {
