@@ -17,13 +17,16 @@
   <body>
     <div class="container">
       <h1>R2U Integration</h1>
-
       <h3>3D Viewer</h3>
       <h4>Default</h4>
       <div id="viewer-default" class="viewer-3d"></div>
       <h4>Without Popup</h4>
       <div id="viewer-no-popup" class="viewer-3d"></div>
-
+      <h3>Customizer</h3>
+      <button type="button" class="btn btn-primary" id="open-customizer">Open Customization</button>
+      <div class="background hide" id="customizer-background">
+        <div id="customizer"></div>
+      </div>
       <h3>AR Button (mobile)</h3>
       <h4>Default</h4>
       <div>
@@ -53,5 +56,8 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="scriptArButton.js"></script>
+    <script src="scriptCustomizer.js"></script>
+    <script src="scriptViewer.js"></script>
   </body>
 </html>

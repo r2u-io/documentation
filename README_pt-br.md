@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-4.0.0-green">
+        <img src="https://img.shields.io/badge/version-4.1.1-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas manei
 Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.0.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.1.1/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -69,7 +69,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 | [`ar.getLink`](#r2uargetlink)               | retorna uma URL de compartilhamento para a experiência de realidade aumentada                  | desktop / mobile     |
 | [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup  | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                            |                      |
-| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                   |                      |
+| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                   | **desktop** / mobile |
 
 ```typescript
 interface R2U {
