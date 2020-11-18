@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-4.1.1-green">
+        <img src="https://img.shields.io/badge/version-4.3.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.1.1/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.3.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -90,6 +90,11 @@ interface R2U {
       fallbackOptions?: {
         alertMessage?: string
         fallback?: 'viewer' | 'full'
+        text?: {
+          title?: string
+          top?: string
+          bottom?: string
+        }
       }
     }) => Promise<void>
     getLink: (sku: string) => Promise<string>
@@ -169,6 +174,10 @@ arButton.onclick = () =>
 | `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
 | `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
 | `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`               |
+| `fallbackOptions.text`         | When defined, modifies fallback text on `'viewer'` mode                                      | `null`               |
+| `fallbackOptions.text.title`   | Changes the tittle on fallback page                                                          | `null`               |
+| `fallbackOptions.text.top`     | Changes the top text on fallback page                                                        | `null`               |
+| `fallbackOptions.text.bottom`  | Changes the bottom text on fallback page                                                     | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
