@@ -90,6 +90,11 @@ interface R2U {
       fallbackOptions?: {
         alertMessage?: string
         fallback?: 'viewer' | 'full'
+        text?: {
+          title?: string
+          top?: string
+          bottom?: string
+        }
       }
     }) => Promise<void>
     getLink: (sku: string) => Promise<string>
@@ -169,6 +174,10 @@ arButton.onclick = () =>
 | `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
 | `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
 | `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`               |
+| `fallbackOptions.text`         | When defined, modifies fallback text on `'viewer'` mode                                      | `null`               |
+| `fallbackOptions.text.title`   | Changes the tittle on fallback page                                                          | `null`               |
+| `fallbackOptions.text.top`     | Changes the top text on fallback page                                                        | `null`               |
+| `fallbackOptions.text.bottom`  | Changes the bottom text on fallback page                                                     | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 

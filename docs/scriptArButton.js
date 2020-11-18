@@ -37,7 +37,12 @@ function addARButtons() {
       sku,
       fallbackOptions: {
         alertMessage: 'AR not supported',
-        fallback: 'viewer'
+        fallback: 'viewer',
+        text: {
+          title: 'Oops 😢',
+          top: 'Infelizmente não conseguimos abrir a experiência de RA no seu dispositivo',
+          bottom: 'Mas aproveite o modelo acima para ver todos os lados do produto!'
+        }
       }
     })
 }
