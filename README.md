@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.3.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -65,7 +65,7 @@ After adding the script tag on your website, the methods below will be available
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------- |
 | [`init`](#r2uinit)                          | initializes the SDK and connects to the R2U server                                                       |                      |
 | [`sku.isActive`](#r2uskuisactive)           | indicates if a product is available on the Augmented Reality platform                                    |                      |
-| [`ar.open`](#r2uaropen)                     | opens the native Augmented Reality viewer on the mobile device                                           | mobile               |
+| [`ar.create`](#r2uarcreate)                 | configures an event to open the Augmented Reality experience (e.g.: on a button click)                   | mobile               |
 | [`ar.getLink`](#r2uargetlink)               | returns a shareable URL for the Augmented Reality experience                                             | desktop / mobile     |
 | [`viewer.create`](#r2uviewercreate)         | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | send events to the R2U analytics platform                                                                |                      |
@@ -84,7 +84,8 @@ interface R2U {
     isActive: (sku: string) => Promise<boolean>
   }
   ar: {
-    open: (params: {
+    create: (params: {
+      element: HTMLElement
       sku: string
       resize?: boolean
       fallbackOptions?: {
@@ -148,7 +149,7 @@ R2U.init({
 R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU active? ${isActive ? '✓' : '✗'}`))
 ```
 
-##### `R2U.ar.open`
+##### `R2U.ar.create`
 
 ```javascript
 // test SKU -- remember to use your product information
@@ -159,17 +160,19 @@ const fallbackOptions = {
   fallback: 'viewer'
 }
 
-arButton.onclick = () =>
-  R2U.ar.open({
-    sku,
-    fallbackOptions
-    /* resize defaults to `false` */
-  })
+R2U.ar.create({
+  element: arButton,
+  sku,
+  fallbackOptions
+  /* resize defaults to `false` */
+})
 ```
 
 | parameter                      | description                                                                                  | default              |
 | ------------------------------ | -------------------------------------------------------------------------------------------- | -------------------- |
+| `element`                      | element that will trigger AR                                                                 | `null`               |
 | `sku`                          | product SKU                                                                                  | `''`                 |
+| `event`                        | event that triggers AR                                                                       | `'click'`            |
 | `resize`                       | Option to resize 3D model on AR experience                                                   | `false`              |
 | `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
 | `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
