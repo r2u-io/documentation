@@ -65,7 +65,7 @@ After adding the script tag on your website, the methods below will be available
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------- |
 | [`init`](#r2uinit)                          | initializes the SDK and connects to the R2U server                                                       |                      |
 | [`sku.isActive`](#r2uskuisactive)           | indicates if a product is available on the Augmented Reality platform                                    |                      |
-| [`ar.create`](#r2uarcreate)                 | configures an event to open the Augmented Reality experience (e.g.: on a button click)                   | mobile               |
+| [`ar.attach`](#r2uarcreate)                 | attaches an event listener to open the Augmented Reality experience (e.g.: on a button click)            | mobile               |
 | [`ar.getLink`](#r2uargetlink)               | returns a shareable URL for the Augmented Reality experience                                             | desktop / mobile     |
 | [`viewer.create`](#r2uviewercreate)         | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | send events to the R2U analytics platform                                                                |                      |
@@ -149,7 +149,7 @@ R2U.init({
 R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU active? ${isActive ? '✓' : '✗'}`))
 ```
 
-##### `R2U.ar.create`
+##### `R2U.ar.attach`
 
 ```javascript
 // test SKU -- remember to use your product information
@@ -160,7 +160,7 @@ const fallbackOptions = {
   fallback: 'viewer'
 }
 
-R2U.ar.create({
+R2U.ar.attach({
   element: arButton,
   sku,
   fallbackOptions

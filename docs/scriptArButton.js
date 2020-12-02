@@ -6,9 +6,9 @@ const arButton4 = document.getElementById('ar-button-full')
 const arButton5 = document.getElementById('ar-button-all')
 
 function addARButtons() {
-  R2U.ar.create({ element: arButton1, sku })
+  R2U.ar.attach({ element: arButton1, sku })
 
-  R2U.ar.create({
+  R2U.ar.attach({
     element: arButton2,
     sku,
     fallbackOptions: {
@@ -16,7 +16,7 @@ function addARButtons() {
     }
   })
 
-  R2U.ar.create({
+  R2U.ar.attach({
     element: arButton3,
     sku,
     fallbackOptions: {
@@ -24,7 +24,7 @@ function addARButtons() {
     }
   })
 
-  R2U.ar.create({
+  R2U.ar.attach({
     element: arButton4,
     sku,
     fallbackOptions: {
@@ -32,7 +32,7 @@ function addARButtons() {
     }
   })
 
-  R2U.ar.create({
+  R2U.ar.attach({
     element: arButton5,
     sku,
     fallbackOptions: {

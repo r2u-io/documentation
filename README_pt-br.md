@@ -61,15 +61,15 @@ const { R2U } = window
 
 Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto no escopo global chamado `R2U`
 
-| função                                      | descrição                                                                                        | plataforma           |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
-| [`init`](#r2uinit)                          | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D   |                      |
-| [`sku.isActive`](#r2uskuisactive)           | indica se o produto está disponível na plataforma para Realidade Aumentada                       |                      |
-| [`ar.create`](#r2uarcreate)                 | configura um evento para abrir o visualizador de realidade aumentada (e.g.: clique de um botão)  | mobile               |
-| [`ar.getLink`](#r2uargetlink)               | retorna uma URL de compartilhamento para a experiência de realidade aumentada                    | desktop / mobile     |
-| [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup    | **desktop** / mobile |
-| [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                              |                      |
-| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                     | **desktop** / mobile |
+| função                                      | descrição                                                                                           | plataforma           |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------- | -------------------- |
+| [`init`](#r2uinit)                          | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D      |                      |
+| [`sku.isActive`](#r2uskuisactive)           | indica se o produto está disponível na plataforma para Realidade Aumentada                          |                      |
+| [`ar.attach`](#r2uarcreate)                 | cria um "eventListener" para abrir o visualizador de realidade aumentada (e.g.: clique de um botão) | mobile               |
+| [`ar.getLink`](#r2uargetlink)               | retorna uma URL de compartilhamento para a experiência de realidade aumentada                       | desktop / mobile     |
+| [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup       | **desktop** / mobile |
+| [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                                 |                      |
+| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                        | **desktop** / mobile |
 
 ```typescript
 interface R2U {
@@ -149,7 +149,7 @@ R2U.init({
 R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU ativo? ${isActive ? '✓' : '✗'}`))
 ```
 
-##### `R2U.ar.create`
+##### `R2U.ar.attach`
 
 ```javascript
 // SKU teste -- lembre de usar informação do seu produto
@@ -160,7 +160,7 @@ const fallbackOptions = {
   fallback: 'viewer'
 }
 
-R2U.ar.create({
+R2U.ar.attach({
   element: arButton,
   sku,
   fallbackOptions
