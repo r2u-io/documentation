@@ -1,45 +1,28 @@
-name: Code Style
+name: CI/CD
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  php-cs-fixer:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run PHP CS Fixer
-        uses: docker://oskarstark/php-cs-fixer-ga
-        with:
-          args: --config=.php_cs.dist --allow-risky=yes
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v2.3.0
-        with:
-          commit_message: Fix styling
-          branch: ${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   prettier:
+    name: Run Prettier
     runs-on: ubuntu-latest
-
+    if: github.actor != 'bot@r2u.io'
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Install NPM dependencies
-        run: npm ci
-
-      - name: Run Prettier
-        run: npm run format
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+      - name: Setup node
+        uses: actions/setup-node@v1
         with:
-          commit_message: Apply Prettier changes
-          branch: ${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: '12'
+      - name: Run Prettier
+        run: npx prettier --write .
+      - name: Commit changes
+        run: |
+          git config user.email 'bot@r2u.io'
+          git config user.name 'R2U Bot'
+          git add .
+          git commit -m 'Run Prettier - R2U Bot'
+          git push
