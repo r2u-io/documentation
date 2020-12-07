@@ -171,8 +171,8 @@ R2U.ar.attach({
 
 | parâmetro                      | descrição                                                                                              | default              |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------- |
-| `element`                      | elemento que irá ativa experiência de RA           | `null`               |
-| `sku`                          | SKU do produto desejado | `''`                 |
+| `element`                      | elemento que irá ativa experiência de RA                                                               | `null`               |
+| `sku`                          | SKU do produto desejado                                                                                | `''`                 |
 | `event`                        | evento que ativará experiência de RA                                                                   | `'click'`            |
 | `resize`                       | Opção para redimensionar modelo 3D em experiência de RA                                                | `false`              |
 | `fallbackOptions`              | Comportamento a ser reproduzido quando experiência de RA não for disponível no dispositivo             | `{ alertMessage }`\* |
