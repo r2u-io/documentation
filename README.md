@@ -251,11 +251,11 @@ addToCartButton.addEventListener('click', () =>
 )
 ```
 
-| parameter | description                                                                                                     | value    |
-| --------- | --------------------------------------------------------------------------------------------------------------- | -------- |
-| `event`   | Event identifier (e.g.: `add_to_cart`)                                                                          | `string` |
-| `data`    | Event metadata (e.g.: price)                                                                                    | `object` |
-| `scope`   | Event's context. (e.g.: If `'session'`, additional `.send`<br>calls of same event within a session are ignored) | `'event' | 'page' | 'session' | 'sku'` |
+| parameter | description                                                                                                     | value                                           |
+| --------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| `event`   | Event identifier (e.g.: `add_to_cart`)                                                                          | `string`                                        |
+| `data`    | Event metadata (e.g.: price)                                                                                    | `object`                                        |
+| `scope`   | Event's context. (e.g.: If `'session'`, additional `.send`<br>calls of same event within a session are ignored) | `'event'` \| `'page'` \| `'session'` \| `'sku'` |
 
 Other metrics and dimensions (such as SKU, customerId, operating system, etc.) are sent by default and do not need to be specified.
 If `analyticsParams.dataLayerIntegration` is set to `true`, the following events are sent by default to the dataLayer:

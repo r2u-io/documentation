@@ -1,0 +1,18 @@
+{
+  "extends": ["config:base", ":prImmediately"],
+  "prCreation": "immediate",
+  "groupName": "r2u",
+  "groupSlug": "r2u update deps",
+  "reviewers": ["FelipeR2U"],
+  "regexManagers": [
+    {
+      "fileMatch": ["README(_pt-br)?.md", "index.html"],
+      "matchStrings": [
+        "version-(?<currentValue>[^-]*?)",
+        "javascript-ar-sdk@(?<currentValue>[^/]*?)"
+      ],
+      "depNameTemplate": "@r2u/javascript-ar-sdk",
+      "dataSourceTemplate": "npm"
+    }
+  ]
+}
