@@ -171,7 +171,7 @@ R2U.ar.attach({
 
 | parâmetro                      | descrição                                                                                              | default              |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------- |
-| `element`                      | elemento que irá ativa experiência de RA                                                               | `null`               |
+| `element`                      | elemento que irá ativa experiência de RA | `null`               |
 | `sku`                          | SKU do produto desejado                                                                                | `''`                 |
 | `event`                        | evento que ativará experiência de RA                                                                   | `'click'`            |
 | `resize`                       | Opção para redimensionar modelo 3D em experiência de RA                                                | `false`              |
@@ -252,7 +252,7 @@ addToCartButton.addEventListener('click', () =>
 ```
 
 | parâmetro | descrição                                                                                                                      | valor    |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------ | -------- |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------ | -------- | ------ | --------- | ------ |
 | `event`   | Identificador do evento (e.g.: `add_to_cart`)                                                                                  | `string` |
 | `data`    | Metadados do evento (e.g.: preço)                                                                                              | `object` |
 | `scope`   | Contexto do evento. (e.g.: Se for `'session'`, chamadas adicionais<br> de `.send` do mesmo evento em uma sessão são ignoradas) | `'event' | 'page' | 'session' | 'sku'` |
