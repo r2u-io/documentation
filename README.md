@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-4.1.1-green">
+        <img src="https://img.shields.io/badge/version-4.4.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.1.1/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -65,7 +65,7 @@ After adding the script tag on your website, the methods below will be available
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------- |
 | [`init`](#r2uinit)                          | initializes the SDK and connects to the R2U server                                                       |                      |
 | [`sku.isActive`](#r2uskuisactive)           | indicates if a product is available on the Augmented Reality platform                                    |                      |
-| [`ar.open`](#r2uaropen)                     | opens the native Augmented Reality viewer on the mobile device                                           | mobile               |
+| [`ar.attach`](#r2uarattach)                 | attaches an event listener to open the Augmented Reality experience (e.g.: on a button click)            | mobile               |
 | [`ar.getLink`](#r2uargetlink)               | returns a shareable URL for the Augmented Reality experience                                             | desktop / mobile     |
 | [`viewer.create`](#r2uviewercreate)         | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | send events to the R2U analytics platform                                                                |                      |
@@ -84,12 +84,19 @@ interface R2U {
     isActive: (sku: string) => Promise<boolean>
   }
   ar: {
-    open: (params: {
+    attach: (params: {
+      element: HTMLElement
       sku: string
+      event?: string
       resize?: boolean
       fallbackOptions?: {
         alertMessage?: string
         fallback?: 'viewer' | 'full'
+        text?: {
+          title?: string
+          top?: string
+          bottom?: string
+        }
       }
     }) => Promise<void>
     getLink: (sku: string) => Promise<string>
@@ -143,7 +150,7 @@ R2U.init({
 R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU active? ${isActive ? '✓' : '✗'}`))
 ```
 
-##### `R2U.ar.open`
+##### `R2U.ar.attach`
 
 ```javascript
 // test SKU -- remember to use your product information
@@ -154,21 +161,27 @@ const fallbackOptions = {
   fallback: 'viewer'
 }
 
-arButton.onclick = () =>
-  R2U.ar.open({
-    sku,
-    fallbackOptions
-    /* resize defaults to `false` */
-  })
+R2U.ar.attach({
+  element: arButton,
+  sku,
+  fallbackOptions
+  /* resize defaults to `false` */
+})
 ```
 
 | parameter                      | description                                                                                  | default              |
 | ------------------------------ | -------------------------------------------------------------------------------------------- | -------------------- |
+| `element`                      | element that will trigger AR                                                                 | `null`               |
 | `sku`                          | product SKU                                                                                  | `''`                 |
+| `event`                        | event that triggers AR                                                                       | `'click'`            |
 | `resize`                       | Option to resize 3D model on AR experience                                                   | `false`              |
 | `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
 | `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
 | `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`               |
+| `fallbackOptions.text`         | When defined, modifies fallback text on `'viewer'` mode                                      | `null`               |
+| `fallbackOptions.text.title`   | Changes the tittle on fallback page                                                          | `null`               |
+| `fallbackOptions.text.top`     | Changes the top text on fallback page                                                        | `null`               |
+| `fallbackOptions.text.bottom`  | Changes the bottom text on fallback page                                                     | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 

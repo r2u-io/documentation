@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-4.1.1-green">
+        <img src="https://img.shields.io/badge/version-4.4.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas manei
 Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.1.1/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.0/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -61,15 +61,15 @@ const { R2U } = window
 
 Após a inclusão da script tag no website, os métodos abaixo estarão disponíveis em um objeto no escopo global chamado `R2U`
 
-| função                                      | descrição                                                                                      | plataforma           |
-| ------------------------------------------- | ---------------------------------------------------------------------------------------------- | -------------------- |
-| [`init`](#r2uinit)                          | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D |                      |
-| [`sku.isActive`](#r2uskuisactive)           | indica se o produto está disponível na plataforma para Realidade Aumentada                     |                      |
-| [`ar.open`](#r2uaropen)                     | abre o visualizador nativo de realidade aumentada no dispositivo móvel                         | mobile               |
-| [`ar.getLink`](#r2uargetlink)               | retorna uma URL de compartilhamento para a experiência de realidade aumentada                  | desktop / mobile     |
-| [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup  | **desktop** / mobile |
-| [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                            |                      |
-| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                   | **desktop** / mobile |
+| função                                      | descrição                                                                                           | plataforma           |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------- | -------------------- |
+| [`init`](#r2uinit)                          | inicializa a biblioteca e se conecta com o servidor R2U para a disponibilização dos modelos 3D      |                      |
+| [`sku.isActive`](#r2uskuisactive)           | indica se o produto está disponível na plataforma para Realidade Aumentada                          |                      |
+| [`ar.attach`](#r2uarattach)                 | cria um "eventListener" para abrir o visualizador de realidade aumentada (e.g.: clique de um botão) | mobile               |
+| [`ar.getLink`](#r2uargetlink)               | retorna uma URL de compartilhamento para a experiência de realidade aumentada                       | desktop / mobile     |
+| [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup       | **desktop** / mobile |
+| [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                                 |                      |
+| [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                        | **desktop** / mobile |
 
 ```typescript
 interface R2U {
@@ -84,12 +84,19 @@ interface R2U {
     isActive: (sku: string) => Promise<boolean>
   }
   ar: {
-    open: (params: {
+    attach: (params: {
+      element: HTMLElement
       sku: string
+      event?: string
       resize?: boolean
       fallbackOptions?: {
         alertMessage?: string
         fallback?: 'viewer' | 'full'
+        text?: {
+          title?: string
+          top?: string
+          bottom?: string
+        }
       }
     }) => Promise<void>
     getLink: (sku: string) => Promise<string>
@@ -143,7 +150,7 @@ R2U.init({
 R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU ativo? ${isActive ? '✓' : '✗'}`))
 ```
 
-##### `R2U.ar.open`
+##### `R2U.ar.attach`
 
 ```javascript
 // SKU teste -- lembre de usar informação do seu produto
@@ -154,21 +161,27 @@ const fallbackOptions = {
   fallback: 'viewer'
 }
 
-arButton.onclick = () =>
-  R2U.ar.open({
-    sku,
-    fallbackOptions
-    /* resize defaults to `false` */
-  })
+R2U.ar.attach({
+  element: arButton,
+  sku,
+  fallbackOptions
+  /* resize defaults to `false` */
+})
 ```
 
 | parâmetro                      | descrição                                                                                              | default              |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------- |
+| `element`                      | elemento que irá ativa experiência de RA                                                               | `null`               |
 | `sku`                          | SKU do produto desejado                                                                                | `''`                 |
+| `event`                        | evento que ativará experiência de RA                                                                   | `'click'`            |
 | `resize`                       | Opção para redimensionar modelo 3D em experiência de RA                                                | `false`              |
 | `fallbackOptions`              | Comportamento a ser reproduzido quando experiência de RA não for disponível no dispositivo             | `{ alertMessage }`\* |
 | `fallbackOptions.alertMessage` | Quando definido, alerta usuário com string escolhida                                                   | `null`               |
 | `fallbackOptions.fallback`     | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`'full'`) | `null`               |
+| `fallbackOptions.text`         | Quando definido, modifica o texto do fallback no modo `'viewer'`                                       | `null`               |
+| `fallbackOptions.text.title`   | Altera título da página de fallback                                                                    | `null`               |
+| `fallbackOptions.text.top`     | Altera texto superior da página de fallback                                                            | `null`               |
+| `fallbackOptions.text.bottom`  | Altera texto inferior da página de fallback                                                            | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
