@@ -12,7 +12,7 @@
         "javascript-ar-sdk@(?<currentValue>[^/]*?)"
       ],
       "depNameTemplate": "@r2u/javascript-ar-sdk",
-      "dataSourceTemplate": "npm"
+      "datasourceTemplate": "npm"
     }
   ]
 }
