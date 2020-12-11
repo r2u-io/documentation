@@ -265,7 +265,7 @@ If `analyticsParams.dataLayerIntegration` is set to `true`, the following events
 - `impression`: Triggers at most once per page view where AR / 3D viewer is shown
 - `click`: Measure all clicks on AR / 3D viewer
 
-The documentation to send the events in dataLayer to Google Analytics is [here](docs/Analytics_Setup.md)
+The documentation to send the events in dataLayer to Google Analytics is [here](gtm_setup/Analytics_Setup.md)
 
 ##### `R2U.customizer.create`
 
