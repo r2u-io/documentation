@@ -265,6 +265,8 @@ Se `analyticsParams.dataLayerIntegration` for `true`, os seguintes eventos são 
 - `impression`: Enviado uma até uma vez por visualização de página em que RA / 3D é mostrado
 - `click`: Enviado em todos os cliques em RA / visualização 3D
 
+A documentação para enviar os dados do dataLayer para o Google Analytics está [aqui](gtm_setup/Analytics_Setup_pt-br.md)
+
 ##### `R2U.customizer.create`
 
 ```javascript
