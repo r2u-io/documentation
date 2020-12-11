@@ -6,7 +6,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 
 #### 1. Configuração Google Tag Manager (GTM)
 
-- Faça download do arquivo de configuração [GTM-R2U-setup.json](files/GTM-R2U-setup.json)
+- Faça download do arquivo de configuração <a download href="https://raw.githubusercontent.com/r2u-io/documentation/master/gtm_setup/files/GTM-R2U-setup.json">GTM-R2U-setup.json</a>
 - Na aba **Administrador** clique em **Importar contêiner**
 
 ![](files/GTM-setup-screen-01-pt-br.png?raw=true 'Importar contêiner')

@@ -6,7 +6,7 @@ The necessary configuration steps are descibeg bellow such that the data is avai
 
 #### 1. Google Tag Manager setup
 
-- Download the setup file [GTM-R2U-setup.json](files/GTM-R2U-setup.json)
+- Download the setup file <a download href="https://raw.githubusercontent.com/r2u-io/documentation/master/gtm_setup/files/GTM-R2U-setup.json">GTM-R2U-setup.json</a>
 - In the **Admin** tab, click in **Import container**
 
 ![](files/GTM-setup-screen-01.png?raw=true 'Import container')
