@@ -25,4 +25,4 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 
 #### 2. Configuração Google Analytics (GA)
 
-- Importe os segmentos e report da R2U via este [link](https://analytics.google.com/analytics/web/template?uid=rjaTBYGiTRKUIH8dP-4Y6Q) e aplique na _view_ com os dados do site
+- Importe os segmentos e report da R2U via este [link](https://analytics.google.com/analytics/web/template?uid=-iO7xmcvTmazO7zlecWHIA) e aplique na _view_ com os dados do site

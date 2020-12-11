@@ -25,4 +25,4 @@ The necessary configuration steps are descibeg bellow such that the data is avai
 
 #### 2. Google Analytics setup
 
-- Import the R2U segments and report via this [link](https://analytics.google.com/analytics/web/template?uid=rjaTBYGiTRKUIH8dP-4Y6Q) and apply to the view with the website data
+- Import the R2U segments and report via this [link](https://analytics.google.com/analytics/web/template?uid=-iO7xmcvTmazO7zlecWHIA) and apply to the view with the website data
