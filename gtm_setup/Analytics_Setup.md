@@ -2,7 +2,7 @@
 
 The R2U Augmented Reality SDK by default generates usage events, such as impressions and clicks on 3D viewers.
 
-The necessary configuration steps are descibeg bellow such that the data is available in Google Analytics.
+The necessary configuration steps are described bellow such that the data is available in Google Analytics.
 
 #### 1. Google Tag Manager setup
 
