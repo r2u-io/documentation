@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-4.4.0-green">
+        <img src="https://img.shields.io/badge/version-4.4.1-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.1/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -260,7 +260,7 @@ addToCartButton.addEventListener('click', () =>
 Other metrics and dimensions (such as SKU, customerId, operating system, etc.) are sent by default and do not need to be specified.
 If `analyticsParams.dataLayerIntegration` is set to `true`, the following events are sent by default to the dataLayer:
 
-- `page_view`: Triggers on all page views that loads the SDK (including product pages where SKU is not AR-ready)
+- `product_page_view`: Triggers once per page when `sku.isActive` is called, to mark product page views
 - `impression`: Triggers at most once per page view where AR / 3D viewer is shown
 - `click`: Measure all clicks on AR / 3D viewer
 

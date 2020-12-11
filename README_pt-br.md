@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-4.4.0-green">
+        <img src="https://img.shields.io/badge/version-4.4.1-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas manei
 Para utilizar o SDK, adicione a tag abaixo no header do HTML do website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.0/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.1/build/dist/index.js"></script>
 ```
 
 Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -261,7 +261,7 @@ Outras métricas e dimensões (tais como SKU, customerId, sistema operacional, e
 
 Se `analyticsParams.dataLayerIntegration` for `true`, os seguintes eventos são enviados por padrão ao dataLayer:
 
-- `page_view`: Enviado em todo carregamento de página que carrega o SDK (incluindo produtos que não estão ativos para RA)
+- `product_page_view`: Enviado em uma vez por página quando `sku.isActive` é chamado, para marcar visualizações de página de produto
 - `impression`: Enviado uma até uma vez por visualização de página em que RA / 3D é mostrado
 - `click`: Enviado em todos os cliques em RA / visualização 3D
 
