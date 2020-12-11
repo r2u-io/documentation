@@ -5,11 +5,6 @@ const name = 'Cadeira Eames'
 
 setupR2U = () =>
   window.R2U.init({ customerId }).then(() => {
-
-
-
-
-
     R2U.sku.isActive(sku).then((isActive) => {
       console.log(`[R2U] sku ${sku} ativo? ${isActive}`)
       if (isActive) {
