@@ -1,3 +1,14 @@
+<h1 align="center">
+    <a href="Analytics_Setup.md">
+        <img height="20px" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/gb.svg">
+    </a>
+    <a href="Analytics_Setup_pt-br.md">
+        <img height="20px" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/br.svg">
+    </a>
+    <br/>
+    <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
+</h1>
+
 # Analytics Setup
 
 The R2U Augmented Reality SDK by default generates usage events, such as impressions and clicks on 3D viewers.
