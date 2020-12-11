@@ -258,11 +258,14 @@ addToCartButton.addEventListener('click', () =>
 | `scope`   | Event's context. (e.g.: If `'session'`, additional `.send`<br>calls of same event within a session are ignored) | `'event'` \| `'page'` \| `'session'` \| `'sku'` |
 
 Other metrics and dimensions (such as SKU, customerId, operating system, etc.) are sent by default and do not need to be specified.
+
 If `analyticsParams.dataLayerIntegration` is set to `true`, the following events are sent by default to the dataLayer:
 
 - `page_view`: Triggers on all page views that loads the SDK (including product pages where SKU is not AR-ready)
 - `impression`: Triggers at most once per page view where AR / 3D viewer is shown
 - `click`: Measure all clicks on AR / 3D viewer
+
+The documentation to send the events in dataLayer to Google Analytics is [here](docs/Analytics_Setup.md)
 
 ##### `R2U.customizer.create`
 
