@@ -23,3 +23,6 @@
 html {
   --fallback-font: proxima-nova;
 }
+.qrCode{
+  margin-top: 30px;
+}

@@ -11,6 +11,7 @@ setupR2U = () =>
         addARButtons()
         addCustomizer()
         addViewers()
+        addQRCode()
       }
     })
   })
