@@ -70,6 +70,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 | [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup       | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                                 |                      |
 | [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                        | **desktop** / mobile |
+| [`qrCode.create`](#r2uqrCodecreate)         | cria um QRCode na posição do elemento HTML indicado                                                 | **desktop** / mobile |
 
 ```typescript
 interface R2U {
@@ -123,6 +124,9 @@ interface R2U {
       element: HTMLElement
       onConfirm: (productCustomization: Record<string, string>) => void
     }) => Promise<void>
+  }
+  qrCode: {
+    create: (params: { element: HTMLElement; sku: string }) => Promise<void>
   }
 }
 ```
@@ -277,3 +281,10 @@ R2U.customizer.create({ element, onConfirm })
 ```
 
 A função `onConfirm` é acionada após o clique do usuário no botão "Confirmar" na tela do Customizador. Ela retorna um mapa chave-valor contendo a customização do produto (ex: chave "modelo" valor "Cadeira Eames", chave "cor" valor "Preto", etc.)
+
+##### `R2U.qrCode.create`
+
+```javascript
+const element = document.getElementById('qrCode')
+R2U.qrCode.create({ element, sku })
+```
