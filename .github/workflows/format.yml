@@ -9,6 +9,7 @@ jobs:
   prettier:
     name: Run Prettier
     runs-on: ubuntu-latest
+    if: github.actor != 'bot@r2u.io'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -18,11 +19,6 @@ jobs:
           node-version: '12'
       - name: Run Prettier
         run: npx prettier --write .
-  commit:
-    name: Commit Changes
-    runs-on: ubuntu-latest
-    if: github.actor != 'bot@r2u.io'
-    steps:
       - name: Commit changes
         run: |
           git config user.email 'bot@r2u.io'
