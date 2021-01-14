@@ -19,7 +19,7 @@ jobs:
       - name: Run Prettier
         run: npx prettier --write .
   commit:
-    name: Run Prettier
+    name: Commit Changes
     runs-on: ubuntu-latest
     if: github.actor != 'bot@r2u.io'
     steps:
