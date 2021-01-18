@@ -109,6 +109,7 @@ interface R2U {
       popup?: boolean
       progressBarPosition?: 'top' | 'middle' | 'bottom'
       poster?: string
+      variants?: Variant[]
     }) => Promise<void>
   }
   analytics: {
@@ -217,9 +218,20 @@ const name = 'Eames Chair'
 const popup = false
 const progressBarPosition = 'middle'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
+const buttonVariant = document.getElementById('button-variant1')
+const variants = [{ element: buttonVariant, sku: 'RE000002' }]
 
-R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
+R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster, variants})
 ```
+variants[]
+
+| parameter             | description                                                              | default                      |
+| --------------------- | ------------------------------------------------------------------------ | ---------------------------- |
+| `element`             | HTML element that will receive the 3D viewer                             | `''`                         |
+| `sku`                 | product SKU                                                              | `''`                         |
+| `event`               | click event (optional)                                                   | `click`                      |
+
+create
 
 | parameter             | description                                                              | default                      |
 | --------------------- | ------------------------------------------------------------------------ | ---------------------------- |
@@ -230,6 +242,8 @@ R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
 | `progressBarPosition` | defines the _progress bar_ position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`                      |
 | `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)    | `null`                       |
 | `poster`              | allows an image to be exhibited while the 3D model is loading            | `null`                       |
+| `variants`            | allows the 3D model to be exchanged for another SKU (optional)           | `[]`                         |
+
 
 _Desktop_
 
