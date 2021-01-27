@@ -126,7 +126,7 @@ interface R2U {
     }) => Promise<void>
   }
   qrCode: {
-    create: (params: { element: HTMLElement; sku: string }) => Promise<void>
+    create: (params: { element: HTMLElemen }) => Promise<void>
   }
 }
 ```
@@ -287,5 +287,5 @@ The `onConfirm` function is triggered after the user clicks on the "Confirm" but
 
 ```javascript
 const element = document.getElementById('qrCode')
-R2U.qrCode.create({ element, sku })
+R2U.qrCode.create({ element })
 ```
