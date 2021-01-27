@@ -70,7 +70,7 @@ After adding the script tag on your website, the methods below will be available
 | [`viewer.create`](#r2uviewercreate)         | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | send events to the R2U analytics platform                                                                |                      |
 | [`customizer.create`](#r2ucustomizercreate) | creates a 3D customizer at the position of the HTML element indicated                                    | **desktop** / mobile |
-| [`qrCode.create`](#r2uqrCodecreate)         | creates a qrCode at the position of the HTML element indicated                                           | **desktop** / mobile |
+| [`qrCode.create`](#r2uqrCodecreate)         | creates a QR Code linking to the AR experience  at the position of the HTML element indicated            | **desktop** / mobile |
 
 ```typescript
 interface R2U {
