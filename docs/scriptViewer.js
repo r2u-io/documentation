@@ -8,7 +8,12 @@ const viewer = document.getElementById('viewer-default')
 const viewerNoPopup = document.getElementById('viewer-no-popup')
 const viewerVariant = document.getElementById('viewer-variant')
 
-function addViewers() {
+let handle
+
+
+async function addViewers() {
+
+  
   R2U.viewer.create({
     element: viewer,
     sku,
@@ -27,16 +32,18 @@ function addViewers() {
     poster,
     progressBarColor
   })
-  const variants = [{ element: buttonVariant, sku: 'RE000002' }]
-  
-  
-  R2U.viewer.create({
-   element: viewerVariant,
-   sku,
-   name,
-   progressBarPosition,
-   poster,
-   progressBarColor,
-   variants,
+
+  handle = await R2U.viewer.create({
+    element: viewerVariant,
+    sku,
+    name,
+    progressBarPosition,
+    poster,
+    progressBarColor,
+    name,
   })
+  
 }
+buttonVariant.addEventListener('click', e => {handle.setSku('RE000002') 
+console.log('haha');
+})
