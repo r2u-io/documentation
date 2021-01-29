@@ -109,7 +109,6 @@ interface R2U {
       popup?: boolean
       progressBarPosition?: 'top' | 'middle' | 'bottom'
       poster?: string
-      variants?: Variant[]
     }) => Promise<void>
   }
   analytics: {
@@ -232,7 +231,6 @@ create
 | `progressBarPosition` | defines the _progress bar_ position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`                      |
 | `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)    | `null`                       |
 | `poster`              | allows an image to be exhibited while the 3D model is loading            | `null`                       |
-| `variants`            | allows the 3D model to be exchanged for another SKU (optional)           | `[]`                         |
 
 
 _Desktop_
@@ -242,6 +240,27 @@ _Desktop_
   <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-middle.png" title="Progress bar middle" height="150"/>
   <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-bottom.png" title="Progress bar bottom" height="150"/>
 </p>
+
+##### Change sku `R2U.viewer.create`
+
+```javascript
+// test SKU -- remember to use your product information
+const buttonChangeSku = document.getElementById('button-changeSku')
+const changeSku = document.getElementById('viewer-changeSku')
+
+// create will return a handler with function to change  sku
+const handler = R2U.viewer.create({ element: changeSku, sku, name, popup, progressBarPosition, poster})
+
+buttonChangeSku.addEventListener('click', () => {
+  handle.setSku('RE000002')
+})
+```
+
+change sku
+
+| parameter             | description                                                  | Return                                       | default                      |
+| --------------------- | ------------------------------------------------------------ | ---------------------------- | ---------------------------- |
+| `setSku(sku)` | updates the product SKU                                      | `void`                           | `''`                         |
 
 ##### `R2U.analytics.send`
 
@@ -283,38 +302,3 @@ R2U.customizer.create({ element, onConfirm })
 The `onConfirm` function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key "model" value "Eames chair", key "color" value "Black", etc.)
 
 
-
-##### Change variants`handler = R2U.viewer.create`
-
-```javascript
-// test SKU -- remember to use your product information
-const element = document.getElementById('3d-viewer')
-const sku = 'RE000001'
-const name = 'Eames Chair'
-const popup = false
-const progressBarPosition = 'middle'
-const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
-const buttonChangeSku = document.getElementById('button-variant')
-const viewerVariant = document.getElementById('viewer-variant')
-
-// create will return a handler with function to change  variants
-const handler = R2U.viewer.create({ element: viewerVariant, sku, name, popup, progressBarPosition, poster})
-
-buttonChangeSku.addEventListener('click', () => {
-  // you've to pass to setSku your new variants to set it.
-  handle.setSku('RE000002')
-})
-```
-
-change variants
-
-| parameter             | description                                                  | default                      |
-| --------------------- | ------------------------------------------------------------ | ---------------------------- |
-| `element`             | HTML element that will receive the 3D viewer                 | `''`                         |
-| `sku`                 | product SKU                                                  | `''`                         |
-| `name`                | product name                                                 | product name on R2U platform |
-| `popup`               | allows the 3D viewer to be expandable through a popup button | `true`                       |
-| `progressBarPosition` | defines the _progress bar_ position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`                      |
-| `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`) | `null`                       |
-| `poster`              | allows an image to be exhibited while the 3D model is loading | `null`                       |
-| `handler.setSku(sku)` | this is a method returned in R2U.viewer.create with receive as parameters a new sku | `''`                         |

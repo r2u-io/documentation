@@ -2,11 +2,11 @@
 const progressBarPosition = 'top' // top | middle | bottom
 const progressBarColor = '#c5c5c5'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
-const buttonChangeSku = document.getElementById('button-variant')
+const buttonChangeSku = document.getElementById('button-changeSku')
 
 const viewer = document.getElementById('viewer-default')
 const viewerNoPopup = document.getElementById('viewer-no-popup')
-const viewerVariant = document.getElementById('viewer-variant')
+const changeSku = document.getElementById('viewer-changeSku')
 
 let handle
 

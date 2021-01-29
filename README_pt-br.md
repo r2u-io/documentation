@@ -239,6 +239,28 @@ _Desktop_
   <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-bottom.png" title="Progress bar bottom" height="150"/>
 </p>
 
+##### Mudar sku `R2U.viewer.create`
+
+```javascript
+// SKU de teste -- lembre de substituir pelas informações do seu produto
+const buttonChangeSku = document.getElementById('button-changeSku')
+const changeSku = document.getElementById('viewer-changeSku')
+
+// O create irá retornar um objeto que terá o método setSku 
+const handler = R2U.viewer.create({ element: changeSku, sku, name, popup, progressBarPosition, poster})
+
+buttonChangeSku.addEventListener('click', () => {
+  handle.setSku('RE000002')
+})
+```
+
+change sku
+
+| parameter             | description                                                  | return                                            | default                      |
+| :-------------------- | ------------------------------------------------------------ | ---------------------------- | ---------------------------- |
+| `setSku(sku: string)` | updates the product SKU                                      | `void`                                | `''`                         |
+
+
 ##### `R2U.analytics.send`
 
 ```javascript
