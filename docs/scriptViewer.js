@@ -2,7 +2,7 @@
 const progressBarPosition = 'top' // top | middle | bottom
 const progressBarColor = '#c5c5c5'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
-const buttonVariant = document.getElementById('button-variant1')
+const buttonChangeSku = document.getElementById('button-variant')
 
 const viewer = document.getElementById('viewer-default')
 const viewerNoPopup = document.getElementById('viewer-no-popup')
@@ -12,8 +12,6 @@ let handle
 
 
 async function addViewers() {
-
-  
   R2U.viewer.create({
     element: viewer,
     sku,
@@ -44,6 +42,9 @@ async function addViewers() {
   })
   
 }
-buttonVariant.addEventListener('click', e => {handle.setSku('RE000002') 
-console.log('haha');
+
+let toggle = true
+buttonChangeSku.addEventListener('click', () => {
+  handle.setSku(toggle ? 'RE000002' : 'RE000001')
+  toggle = !toggle
 })

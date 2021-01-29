@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>R2U Integration</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.1/build/dist/index.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://use.typekit.net/vml3ezi.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <h1>R2U Integration</h1>
-      <h3>3D Viewer</h3>
-      <h4>Default</h4>
-      <div id="viewer-default" class="viewer-3d"></div>
-      <h4>Without Popup</h4>
-      <div id="viewer-no-popup" class="viewer-3d"></div>
-      <h4>Without variant</h4>
-      <button type="button" class="btn btn-primary" id="button-variant1">SKU 1 </button>
-      <div id="viewer-variant" class="viewer-3d"></div>
-      <h3>Customizer</h3>
-      <button type="button" class="btn btn-primary" id="open-customizer">Open Customization</button>
-      <div class="background hide" id="customizer-background">
-        <div id="customizer"></div>
-      </div>
-      <h3>AR Button (mobile)</h3>
-      <h4>Default</h4>
-      <div>
-        <button type="button" class="btn btn-primary" id="ar-button-default">Open AR</button>
-        <button type="button" class="btn btn-secondary">Add to cart</button>
-      </div>
-      <h4>With Alert Fallback</h4>
-      <div>
-        <button type="button" class="btn btn-primary" id="ar-button-alert">Open AR</button>
-        <button type="button" class="btn btn-secondary">Add to cart</button>
-      </div>
-      <h4>With Viewer Fallback</h4>
-      <div>
-        <button type="button" class="btn btn-primary" id="ar-button-viewer">Open AR</button>
-        <button type="button" class="btn btn-secondary">Add to cart</button>
-      </div>
-      <h4>With Full Viewer Fallback</h4>
-      <div>
-        <button type="button" class="btn btn-primary" id="ar-button-full">Open AR</button>
-        <button type="button" class="btn btn-secondary">Add to cart</button>
-      </div>
-      <h4>With Custom Fallback</h4>
-      <div>
-        <button type="button" class="btn btn-primary" id="ar-button-all">Open AR</button>
-        <button type="button" class="btn btn-secondary">Add to cart</button>
-      </div>
+<head>
+  <title>R2U Integration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="../build/dist/index.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.typekit.net/vml3ezi.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>R2U Integration</h1>
+    <h3>3D Viewer</h3>
+    <h4>Default</h4>
+    <div id="viewer-default" class="viewer-3d"></div>
+    <h4>Without Popup</h4>
+    <div id="viewer-no-popup" class="viewer-3d"></div>
+    <h4>With variants</h4>
+    <button type="button" class="btn btn-primary" id="button-variant">Change SKU</button>
+    <div id="viewer-variant" class="viewer-3d"></div>
+    <h3>Customizer</h3>
+    <button type="button" class="btn btn-primary" id="open-customizer">Open Customization</button>
+    <div class="background hide" id="customizer-background">
+      <div id="customizer"></div>
     </div>
+    <h3>AR Button (mobile)</h3>
+    <h4>Default</h4>
+    <div>
+      <button type="button" class="btn btn-primary" id="ar-button-default">Open AR</button>
+      <button type="button" class="btn btn-secondary">Add to cart</button>
+    </div>
+    <h4>With Alert Fallback</h4>
+    <div>
+      <button type="button" class="btn btn-primary" id="ar-button-alert">Open AR</button>
+      <button type="button" class="btn btn-secondary">Add to cart</button>
+    </div>
+    <h4>With Viewer Fallback</h4>
+    <div>
+      <button type="button" class="btn btn-primary" id="ar-button-viewer">Open AR</button>
+      <button type="button" class="btn btn-secondary">Add to cart</button>
+    </div>
+    <h4>With Full Viewer Fallback</h4>
+    <div>
+      <button type="button" class="btn btn-primary" id="ar-button-full">Open AR</button>
+      <button type="button" class="btn btn-secondary">Add to cart</button>
+    </div>
+    <h4>With Custom Fallback</h4>
+    <div>
+      <button type="button" class="btn btn-primary" id="ar-button-all">Open AR</button>
+      <button type="button" class="btn btn-secondary">Add to cart</button>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
-    <script src="scriptArButton.js"></script>
-    <script src="scriptCustomizer.js"></script>
-    <script src="scriptViewer.js"></script>
+  <script src="script.js"></script>
+  <script src="scriptArButton.js"></script>
+  <script src="scriptCustomizer.js"></script>
+  <script src="scriptViewer.js"></script>
 
-  </body>
+</body>
+
 </html>
