@@ -32,3 +32,6 @@
 html {
   --fallback-font: proxima-nova;
 }
+.qrcode{
+  width: fit-content;
+}
