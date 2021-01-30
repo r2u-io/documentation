@@ -1,4 +1,3 @@
-
 const qrCode = document.getElementById('r2u-qrcode')
 
 function addQRCode() {
