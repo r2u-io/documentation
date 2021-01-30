@@ -7,7 +7,7 @@
     </a>
     <br>
     <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
-        <img src="https://img.shields.io/badge/version-4.4.1-green">
+        <img src="https://img.shields.io/badge/version-4.6.0-green">
     </a>
     <br/>
     <img src="https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png" title="logo" width="200"/>
@@ -25,7 +25,7 @@ This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.4.1/build/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk@4.6.0/build/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
@@ -70,7 +70,7 @@ After adding the script tag on your website, the methods below will be available
 | [`viewer.create`](#r2uviewercreate)         | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | send events to the R2U analytics platform                                                                |                      |
 | [`customizer.create`](#r2ucustomizercreate) | creates a 3D customizer at the position of the HTML element indicated                                    | **desktop** / mobile |
-| [`qrCode.create`](#r2uqrCodecreate)         | creates a QR Code linking to the AR experience  at the position of the HTML element indicated            | **desktop** / mobile |
+| [`qrCode.create`](#r2uqrCodecreate)         | creates a QR Code linking to the AR experience at the position of the HTML element indicated            | **desktop** / mobile |
 
 ```typescript
 interface R2U {
@@ -289,3 +289,5 @@ The `onConfirm` function is triggered after the user clicks on the "Confirm" but
 const element = document.getElementById('qrCode')
 R2U.qrCode.create({ element })
 ```
+
+_Known issue_: Android users scanning the QR Code without having an opened browser will receive a fallback message stating that the device is not supported.
