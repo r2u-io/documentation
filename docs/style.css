@@ -16,10 +16,22 @@
   display: block;
 }
 
+.exit {
+  width: 30px;
+  height: 30px;
+  top: calc(50% - (75vh / 2));
+  left: calc(50% - (70vw / 2));
+  position: relative;
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }
 
 html {
   --fallback-font: proxima-nova;
+}
+.qrcode{
+  width: fit-content;
 }
