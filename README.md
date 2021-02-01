@@ -222,8 +222,9 @@ const popup = false
 const progressBarPosition = 'middle'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
+R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster})
 ```
+create
 
 | parameter             | description                                                              | default                      |
 | --------------------- | ------------------------------------------------------------------------ | ---------------------------- |
@@ -235,6 +236,7 @@ R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
 | `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)    | `null`                       |
 | `poster`              | allows an image to be exhibited while the 3D model is loading            | `null`                       |
 
+
 _Desktop_
 
 <p float="left">
@@ -242,6 +244,27 @@ _Desktop_
   <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-middle.png" title="Progress bar middle" height="150"/>
   <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-bottom.png" title="Progress bar bottom" height="150"/>
 </p>
+
+##### Change sku `R2U.viewer.create`
+
+```javascript
+// test SKU -- remember to use your product information
+const buttonChangeSku = document.getElementById('button-changeSku')
+const changeSku = document.getElementById('viewer-changeSku')
+
+// create will return a handler with function to change  sku
+const handler = R2U.viewer.create({ element: changeSku, sku, name, popup, progressBarPosition, poster})
+
+buttonChangeSku.addEventListener('click', () => {
+  handler.setSku('RE000002')
+})
+```
+
+change sku
+
+| parameter             | description                                                  | default                      |
+| --------------------- | ------------------------------------------------------------ | ---------------------------- |
+| `setSku(sku)` | updates the product SKU                                      | `void`             |
 
 ##### `R2U.analytics.send`
 
