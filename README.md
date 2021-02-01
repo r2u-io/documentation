@@ -252,15 +252,15 @@ const changeSku = document.getElementById('viewer-changeSku')
 const handler = R2U.viewer.create({ element: changeSku, sku, name, popup, progressBarPosition, poster})
 
 buttonChangeSku.addEventListener('click', () => {
-  handle.setSku('RE000002')
+  handler.setSku('RE000002')
 })
 ```
 
 change sku
 
-| parameter             | description                                                  | Return                                       | default                      |
-| --------------------- | ------------------------------------------------------------ | ---------------------------- | ---------------------------- |
-| `setSku(sku)` | updates the product SKU                                      | `void`                           | `''`                         |
+| parameter             | description                                                  | default                      |
+| --------------------- | ------------------------------------------------------------ | ---------------------------- |
+| `setSku(sku)` | updates the product SKU                                      | `null`                   |
 
 ##### `R2U.analytics.send`
 
