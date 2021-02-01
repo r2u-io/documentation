@@ -35,12 +35,10 @@ async function addViewers() {
     progressBarPosition,
     poster,
     progressBarColor,
-    name,
+    name
   })
-  
-  
+
   buttonChangeSku.addEventListener('click', () => {
     handler.setSku('RE000002')
   })
 }
-

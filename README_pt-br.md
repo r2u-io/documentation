@@ -70,7 +70,7 @@ Após a inclusão da script tag no website, os métodos abaixo estarão disponí
 | [`viewer.create`](#r2uviewercreate)         | cria um visualizador 3D na posição do elemento HTML indicado, por padrão expansível via popup       | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | envia eventos para a plataforma de analytics da R2U                                                 |                      |
 | [`customizer.create`](#r2ucustomizercreate) | cria um customizador 3D na posição do elemento HTML indicado                                        | **desktop** / mobile |
-| [`qrCode.create`](#r2uqrCodecreate)         | cria um QR Code apontando para a experiência de RA na posição do elemento HTML indicado                                                 | **desktop** / mobile |
+| [`qrCode.create`](#r2uqrCodecreate)         | cria um QR Code apontando para a experiência de RA na posição do elemento HTML indicado             | **desktop** / mobile |
 
 ```typescript
 interface R2U {
@@ -250,8 +250,15 @@ _Desktop_
 const buttonChangeSku = document.getElementById('button-changeSku')
 const changeSku = document.getElementById('viewer-changeSku')
 
-// O create irá retornar um objeto que terá o método setSku 
-const handler = R2U.viewer.create({ element: changeSku, sku, name, popup, progressBarPosition, poster})
+// O create irá retornar um objeto que terá o método setSku
+const handler = R2U.viewer.create({
+  element: changeSku,
+  sku,
+  name,
+  popup,
+  progressBarPosition,
+  poster
+})
 
 buttonChangeSku.addEventListener('click', () => {
   handler.setSku('RE000002')
@@ -263,7 +270,6 @@ change sku
 | parâmetro             | descrição                 | default |
 | :-------------------- | ------------------------- | ------- |
 | `setSku(sku: string)` | atualiza o SKU do produto | `void`  |
-
 
 ##### `R2U.analytics.send`
 

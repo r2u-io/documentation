@@ -70,7 +70,7 @@ After adding the script tag on your website, the methods below will be available
 | [`viewer.create`](#r2uviewercreate)         | creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup | **desktop** / mobile |
 | [`analytics.send`](#r2uanalyticssend)       | send events to the R2U analytics platform                                                                |                      |
 | [`customizer.create`](#r2ucustomizercreate) | creates a 3D customizer at the position of the HTML element indicated                                    | **desktop** / mobile |
-| [`qrCode.create`](#r2uqrCodecreate)         | creates a QR Code linking to the AR experience at the position of the HTML element indicated            | **desktop** / mobile |
+| [`qrCode.create`](#r2uqrCodecreate)         | creates a QR Code linking to the AR experience at the position of the HTML element indicated             | **desktop** / mobile |
 
 ```typescript
 interface R2U {
@@ -222,8 +222,9 @@ const popup = false
 const progressBarPosition = 'middle'
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster})
+R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
 ```
+
 create
 
 | parameter             | description                                                              | default                      |
@@ -235,7 +236,6 @@ create
 | `progressBarPosition` | defines the _progress bar_ position (`'top'`, ` 'middle'` or `'bottom'`) | `'top'`                      |
 | `progressBarColor`    | progress bar color (`'gray'`, `'rgba(89, 84, 84, 0.6)'`, `'#c5c5c5'`)    | `null`                       |
 | `poster`              | allows an image to be exhibited while the 3D model is loading            | `null`                       |
-
 
 _Desktop_
 
@@ -253,7 +253,14 @@ const buttonChangeSku = document.getElementById('button-changeSku')
 const changeSku = document.getElementById('viewer-changeSku')
 
 // create will return a handler with function to change  sku
-const handler = R2U.viewer.create({ element: changeSku, sku, name, popup, progressBarPosition, poster})
+const handler = R2U.viewer.create({
+  element: changeSku,
+  sku,
+  name,
+  popup,
+  progressBarPosition,
+  poster
+})
 
 buttonChangeSku.addEventListener('click', () => {
   handler.setSku('RE000002')
@@ -262,9 +269,9 @@ buttonChangeSku.addEventListener('click', () => {
 
 change sku
 
-| parameter             | description                                                  | default                      |
-| --------------------- | ------------------------------------------------------------ | ---------------------------- |
-| `setSku(sku)` | updates the product SKU                                      | `void`             |
+| parameter     | description             | default |
+| ------------- | ----------------------- | ------- |
+| `setSku(sku)` | updates the product SKU | `void`  |
 
 ##### `R2U.analytics.send`
 
@@ -304,7 +311,6 @@ R2U.customizer.create({ element, onConfirm })
 ```
 
 The `onConfirm` function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key "model" value "Eames chair", key "color" value "Black", etc.)
-
 
 ##### `R2U.qrCode.create`
 
