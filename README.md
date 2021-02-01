@@ -264,7 +264,7 @@ change sku
 
 | parameter             | description                                                  | default                      |
 | --------------------- | ------------------------------------------------------------ | ---------------------------- |
-| `setSku(sku)` | updates the product SKU                                      | `null`                   |
+| `setSku(sku)` | updates the product SKU                                      | `void`             |
 
 ##### `R2U.analytics.send`
 

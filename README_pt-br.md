@@ -260,9 +260,9 @@ buttonChangeSku.addEventListener('click', () => {
 
 change sku
 
-| parameter             | description             | default |
-| :-------------------- | ----------------------- | ------- |
-| `setSku(sku: string)` | updates the product SKU | `void`  |
+| parâmetro             | descrição                 | default |
+| :-------------------- | ------------------------- | ------- |
+| `setSku(sku: string)` | atualiza o SKU do produto | `void`  |
 
 
 ##### `R2U.analytics.send`
