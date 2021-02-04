@@ -6,7 +6,7 @@ const arButton4 = document.getElementById('ar-button-full')
 const arButton5 = document.getElementById('ar-button-all')
 
 function addARButtons() {
-  R2U.ar.attach({ element: arButton1, sku })
+  R2U.ar.attach({ element: arButton1, sku, showInstructions: true })
 
   R2U.ar.attach({
     element: arButton2,
