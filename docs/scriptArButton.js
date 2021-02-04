@@ -11,6 +11,7 @@ function addARButtons() {
   R2U.ar.attach({
     element: arButton2,
     sku,
+    showInstructions: true,
     fallbackOptions: {
       alertMessage: 'AR not supported'
     }
@@ -19,6 +20,7 @@ function addARButtons() {
   R2U.ar.attach({
     element: arButton3,
     sku,
+    showInstructions: true,
     fallbackOptions: {
       fallback: 'viewer'
     }
@@ -27,6 +29,7 @@ function addARButtons() {
   R2U.ar.attach({
     element: arButton4,
     sku,
+    showInstructions: true,
     fallbackOptions: {
       fallback: 'full'
     }
@@ -35,6 +38,7 @@ function addARButtons() {
   R2U.ar.attach({
     element: arButton5,
     sku,
+    showInstructions: true,
     fallbackOptions: {
       alertMessage: 'Oops, RA não suportada',
       fallback: 'viewer',

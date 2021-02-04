@@ -29,9 +29,19 @@
   display: none;
 }
 
+.container {
+  padding-bottom: 100px;
+}
+
 html {
   --fallback-font: proxima-nova;
 }
+
 .qrcode {
-  width: fit-content;
+  width: 200px;
+  height: 200px;
+}
+
+h3 {
+  margin: 20px 0 20px 0;
 }
