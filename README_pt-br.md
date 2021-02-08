@@ -90,6 +90,7 @@ interface R2U {
       sku: string
       event?: string
       resize?: boolean
+      showInstructions?: boolean
       fallbackOptions?: {
         alertMessage?: string
         fallback?: 'viewer' | 'full'
@@ -179,6 +180,7 @@ R2U.ar.attach({
 | `sku`                          | SKU do produto desejado                                                                                | `''`                 |
 | `event`                        | evento que ativará experiência de RA                                                                   | `'click'`            |
 | `resize`                       | Opção para redimensionar modelo 3D em experiência de RA                                                | `false`              |
+| `showInstructions`             | Opção para inserir instrução AR                                                                        | `false`              |
 | `fallbackOptions`              | Comportamento a ser reproduzido quando experiência de RA não for disponível no dispositivo             | `{ alertMessage }`\* |
 | `fallbackOptions.alertMessage` | Quando definido, alerta usuário com string escolhida                                                   | `null`               |
 | `fallbackOptions.fallback`     | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`'full'`) | `null`               |
