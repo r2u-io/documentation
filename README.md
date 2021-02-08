@@ -89,7 +89,7 @@ interface R2U {
       element: HTMLElement
       sku: string
       event?: string
-      resize?: boolean 
+      resize?: boolean
       showInstructions?: boolean
       fallbackOptions?: {
         alertMessage?: string
@@ -174,20 +174,20 @@ R2U.ar.attach({
 })
 ```
 
-| parameter                      | description                                                                                  | default              |
-| ------------------------------ | -------------------------------------------------------------------------------------------- | -------------------- |
-| `element`                      | element that will trigger AR                                                                 | `null`               |
-| `sku`                          | product SKU                                                                                  | `''`                 |
-| `event`                        | event that triggers AR                                                                       | `'click'`            |
-| `resize`                       | Option to resize 3D model on AR experience                                                   | `false`              |
-| [`showInstructions`](#Instruction)             | When true, shows an image in full-screen view explaining how to place and manipulate a 3D object on AR before proceeding to the camera experience                                                       | `false`              |
-| `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
-| `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
-| `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`               |
-| `fallbackOptions.text`         | When defined, modifies fallback text on `'viewer'` mode                                      | `null`               |
-| `fallbackOptions.text.title`   | Changes the tittle on fallback page                                                          | `null`               |
-| `fallbackOptions.text.top`     | Changes the top text on fallback page                                                        | `null`               |
-| `fallbackOptions.text.bottom`  | Changes the bottom text on fallback page                                                     | `null`               |
+| parameter                          | description                                                                                                                                       | default              |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `element`                          | element that will trigger AR                                                                                                                      | `null`               |
+| `sku`                              | product SKU                                                                                                                                       | `''`                 |
+| `event`                            | event that triggers AR                                                                                                                            | `'click'`            |
+| `resize`                           | Option to resize 3D model on AR experience                                                                                                        | `false`              |
+| [`showInstructions`](#Instruction) | When true, shows an image in full-screen view explaining how to place and manipulate a 3D object on AR before proceeding to the camera experience | `false`              |
+| `fallbackOptions`                  | Behavior to reproduce when AR experience is not available on device                                                                               | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage`     | When defined, alerts user with chosen string                                                                                                      | `null`               |
+| `fallbackOptions.fallback`         | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`)                                                      | `null`               |
+| `fallbackOptions.text`             | When defined, modifies fallback text on `'viewer'` mode                                                                                           | `null`               |
+| `fallbackOptions.text.title`       | Changes the tittle on fallback page                                                                                                               | `null`               |
+| `fallbackOptions.text.top`         | Changes the top text on fallback page                                                                                                             | `null`               |
+| `fallbackOptions.text.bottom`      | Changes the bottom text on fallback page                                                                                                          | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
@@ -212,7 +212,6 @@ Instruction screen on how to position and manipulate the 3D object in augmented 
 <p float="left">
   <img src="https://sdk.r2u.io/documentation/instructions.png" title="Instruction screen" width="200"/>
 </p>
-
 
 ##### `R2U.ar.getLink`
 
