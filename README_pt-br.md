@@ -210,7 +210,7 @@ _Android_
 Tela de instrução de como posicionar e manipular o objeto 3D em realidade aumentada
 
 <p float="left">
-  <img src="./images/instructions.png" title="Android 1" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/instructions.png" title="Android 1" width="200"/>
 </p>
 
 
