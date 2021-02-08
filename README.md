@@ -210,7 +210,7 @@ _Android_
 Instruction screen on how to position and manipulate the 3D object in augmented reality
 
 <p float="left">
-  <img src="https://sdk.r2u.io/documentation/instructions.png" title="Android 1" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/instructions.png" title="Instruction screen" width="200"/>
 </p>
 
 
