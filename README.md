@@ -89,7 +89,8 @@ interface R2U {
       element: HTMLElement
       sku: string
       event?: string
-      resize?: boolean
+      resize?: boolean 
+      showInstructions?: boolean
       fallbackOptions?: {
         alertMessage?: string
         fallback?: 'viewer' | 'full'
@@ -179,6 +180,7 @@ R2U.ar.attach({
 | `sku`                          | product SKU                                                                                  | `''`                 |
 | `event`                        | event that triggers AR                                                                       | `'click'`            |
 | `resize`                       | Option to resize 3D model on AR experience                                                   | `false`              |
+| `showInstructions`             | Option to enter instructions in the air                                                      | `false`              |
 | `fallbackOptions`              | Behavior to reproduce when AR experience is not available on device                          | `{ alertMessage }`\* |
 | `fallbackOptions.alertMessage` | When defined, alerts user with chosen string                                                 | `null`               |
 | `fallbackOptions.fallback`     | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`) | `null`               |
