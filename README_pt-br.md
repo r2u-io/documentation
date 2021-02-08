@@ -207,7 +207,7 @@ _Android_
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
 </p>
 
-`Instructions`
+Tela de instrução de como posicionar e manipular o objeto 3D em realidade aumentada
 
 <p float="left">
   <img src="./images/instructions.png" title="Android 1" width="200"/>
