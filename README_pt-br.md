@@ -174,20 +174,20 @@ R2U.ar.attach({
 })
 ```
 
-| parâmetro                      | descrição                                                                                              | default              |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------ | -------------------- |
-| `element`                      | elemento que irá ativa experiência de RA                                                               | `null`               |
-| `sku`                          | SKU do produto desejado                                                                                | `''`                 |
-| `event`                        | evento que ativará experiência de RA                                                                   | `'click'`            |
-| `resize`                       | Opção para redimensionar modelo 3D em experiência de RA                                                | `false`              |
-| `showInstructions`             | Opção para inserir instrução AR                                                                        | `false`              |
-| `fallbackOptions`              | Comportamento a ser reproduzido quando experiência de RA não for disponível no dispositivo             | `{ alertMessage }`\* |
-| `fallbackOptions.alertMessage` | Quando definido, alerta usuário com string escolhida                                                   | `null`               |
-| `fallbackOptions.fallback`     | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`'full'`) | `null`               |
-| `fallbackOptions.text`         | Quando definido, modifica o texto do fallback no modo `'viewer'`                                       | `null`               |
-| `fallbackOptions.text.title`   | Altera título da página de fallback                                                                    | `null`               |
-| `fallbackOptions.text.top`     | Altera texto superior da página de fallback                                                            | `null`               |
-| `fallbackOptions.text.bottom`  | Altera texto inferior da página de fallback                                                            | `null`               |
+| parâmetro                          | descrição                                                    | default              |
+| ---------------------------------- | ------------------------------------------------------------ | -------------------- |
+| `element`                          | elemento que irá ativa experiência de RA                     | `null`               |
+| `sku`                              | SKU do produto desejado                                      | `''`                 |
+| `event`                            | evento que ativará experiência de RA                         | `'click'`            |
+| `resize`                           | Opção para redimensionar modelo 3D em experiência de RA      | `false`              |
+| [`showInstructions`](#Instruction) | Quando verdadeiro, mostra uma imagem em tela cheia explicando como posicionar e manipular o objeto 3D em realidade aumentada antes de prosseguir para a experiência com a câmera | `false`              |
+| `fallbackOptions`                  | Comportamento a ser reproduzido quando experiência de RA não for disponível no dispositivo | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage`     | Quando definido, alerta usuário com string escolhida         | `null`               |
+| `fallbackOptions.fallback`         | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`'full'`) | `null`               |
+| `fallbackOptions.text`             | Quando definido, modifica o texto do fallback no modo `'viewer'` | `null`               |
+| `fallbackOptions.text.title`       | Altera título da página de fallback                          | `null`               |
+| `fallbackOptions.text.top`         | Altera texto superior da página de fallback                  | `null`               |
+| `fallbackOptions.text.bottom`      | Altera texto inferior da página de fallback                  | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
@@ -206,6 +206,12 @@ _Android_
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="200"/>
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
 </p>
+`Instructions`
+
+<p float="left">
+  <img src="./images/instructions.png" title="Android 1" width="200"/>
+</p>
+
 
 ##### `R2U.ar.getLink`
 
