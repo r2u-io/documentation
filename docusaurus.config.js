@@ -5,8 +5,8 @@ module.exports = {
   url: 'https://r2u-io.github.io',
   baseUrl: '/documentation/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'R2U', // Usually your GitHub org/user name.
+  projectName: 'codumentação', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'DOCUMENTAÇÂO ',
