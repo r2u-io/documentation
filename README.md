@@ -191,7 +191,7 @@ R2U.ar.attach({
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
-_iOS_
+### Modo iOS
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="200"/>
@@ -199,7 +199,7 @@ _iOS_
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="200"/>
 </p>
 
-_Android_
+### Modo Android
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
