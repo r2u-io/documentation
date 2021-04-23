@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/documentation/',
   favicon: 'img/favicon.ico',
   organizationName: 'R2U', // Usually your GitHub org/user name.
-  projectName: 'codumentação', // Usually your repo name.
+  projectName: 'documentação', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'DOCUMENTAÇÂO ',
