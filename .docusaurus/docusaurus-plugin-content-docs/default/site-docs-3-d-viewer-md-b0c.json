@@ -1,0 +1,20 @@
+{
+  "unversionedId": "3D-viewer",
+  "id": "3D-viewer",
+  "isDocsHomePage": false,
+  "title": "Visualizador 3D",
+  "description": "Depois de adicionar a tag de script em seu site, os métodos para criar o Visualizador 3D estarão disponíveis por meio do objeto global R2U.",
+  "source": "@site/docs/3D-viewer.md",
+  "slug": "/3D-viewer",
+  "permalink": "/docs/3D-viewer",
+  "version": "current",
+  "sidebar": "docs",
+  "previous": {
+    "title": "Inicialização",
+    "permalink": "/docs/"
+  },
+  "next": {
+    "title": "Realidade Aumentada",
+    "permalink": "/docs/augmented-reality"
+  }
+}

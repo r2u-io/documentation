@@ -1,0 +1,12 @@
+{
+  "unversionedId": "integration",
+  "id": "integration",
+  "isDocsHomePage": false,
+  "title": "Inicialização",
+  "description": "Depois de adicionar a tag de script em seu site, os métodos de inicialização do SDK estarão disponíveis por meio do objeto global R2U.",
+  "source": "@site/docs/integration.md",
+  "slug": "/",
+  "permalink": "/docs/",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/integration.md",
+  "version": "current"
+}

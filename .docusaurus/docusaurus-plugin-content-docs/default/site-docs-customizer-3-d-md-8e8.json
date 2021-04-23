@@ -1,0 +1,16 @@
+{
+  "unversionedId": "customizer-3D",
+  "id": "customizer-3D",
+  "isDocsHomePage": false,
+  "title": "Customizador 3D",
+  "description": "Depois de adicionar a tag de script em seu site, os métodos para criar o Customizador 3D estarão disponíveis por meio do objeto global R2U.",
+  "source": "@site/docs/customizer-3D.md",
+  "slug": "/customizer-3D",
+  "permalink": "/docs/customizer-3D",
+  "version": "current",
+  "sidebar": "docs",
+  "previous": {
+    "title": "Realidade Aumentada",
+    "permalink": "/docs/augmented-reality"
+  }
+}

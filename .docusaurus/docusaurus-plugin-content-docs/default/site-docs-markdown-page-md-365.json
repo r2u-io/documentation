@@ -1,0 +1,12 @@
+{
+  "unversionedId": "integrations",
+  "id": "integrations",
+  "isDocsHomePage": false,
+  "title": "Markdown page example",
+  "description": "Markdown page example",
+  "source": "@site/docs/integrations.md",
+  "slug": "/integrations",
+  "permalink": "/docs/integrations",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/integrations.md",
+  "version": "current"
+}

@@ -1,0 +1,16 @@
+{
+  "unversionedId": "integrations",
+  "id": "integrations",
+  "isDocsHomePage": false,
+  "title": "Integração",
+  "description": "Com o SDK da R2U integrado ao site, terá acesso ao Visualizador 3D,  Customizador 3D e a Experiência RA. Nossas aplicações podem ser visualizadas na nossa Live Demo.",
+  "source": "@site/docs/integrations.md",
+  "slug": "/integrations",
+  "permalink": "/docs/integrations",
+  "version": "current",
+  "sidebar": "docs",
+  "next": {
+    "title": "Inicialização",
+    "permalink": "/docs/"
+  }
+}

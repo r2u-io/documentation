@@ -1,0 +1,20 @@
+{
+  "unversionedId": "augmented-reality",
+  "id": "augmented-reality",
+  "isDocsHomePage": false,
+  "title": "Realidade Aumentada",
+  "description": "Depois de adicionar a tag de script em seu site, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis por meio do objeto global R2U.",
+  "source": "@site/docs/augmented-reality.md",
+  "slug": "/augmented-reality",
+  "permalink": "/docs/augmented-reality",
+  "version": "current",
+  "sidebar": "docs",
+  "previous": {
+    "title": "Visualizador 3D",
+    "permalink": "/docs/3D-viewer"
+  },
+  "next": {
+    "title": "Customizador 3D",
+    "permalink": "/docs/customizer-3D"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "inicialization",
+          "docs": [
+            {
+              "id": "3D-viewer",
+              "path": "/docs/3D-viewer",
+              "sidebar": "docs"
+            },
+            {
+              "id": "augmented-reality",
+              "path": "/docs/augmented-reality",
+              "sidebar": "docs"
+            },
+            {
+              "id": "customizer-3D",
+              "path": "/docs/customizer-3D",
+              "sidebar": "docs"
+            },
+            {
+              "id": "example",
+              "path": "/docs/example"
+            },
+            {
+              "id": "inicialization",
+              "path": "/docs/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "integrations",
+              "path": "/docs/integrations",
+              "sidebar": "docs"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

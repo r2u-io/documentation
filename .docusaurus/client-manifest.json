@@ -1,0 +1,208 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "1": [
+      0,
+      2,
+      4,
+      13,
+      1
+    ],
+    "styles": [
+      1,
+      2,
+      3,
+      4,
+      11,
+      12,
+      13,
+      0
+    ],
+    "@theme/NotFound": [
+      0,
+      1,
+      13,
+      2
+    ],
+    "@site/docs/example.md": [
+      0,
+      3
+    ],
+    "@theme/DocItem": [
+      0,
+      1,
+      4
+    ],
+    "@site/docs/augmented-reality.md": [
+      5
+    ],
+    "@site/docs/inicialization.md": [
+      6
+    ],
+    "@site/docs/customizer-3D.md": [
+      7
+    ],
+    "~docs/default/version-current-metadata-prop-751.json": [
+      8
+    ],
+    "@site/docs/3D-viewer.md": [
+      9
+    ],
+    "@site/docs/integrations.md": [
+      10
+    ],
+    "main": [
+      0,
+      12,
+      11
+    ],
+    "runtime~main": [
+      0,
+      11,
+      12
+    ],
+    "@theme/DocPage": [
+      0,
+      1,
+      2,
+      13
+    ]
+  },
+  "assets": {
+    "0": {
+      "css": [
+        {
+          "file": "assets/css/styles.3757304a.css",
+          "hash": "f861f04d39dfec67acb4",
+          "publicPath": "/assets/css/styles.3757304a.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "assets/js/styles.5286ec48.js",
+          "hash": "f861f04d39dfec67acb4",
+          "publicPath": "/assets/js/styles.5286ec48.js"
+        }
+      ]
+    },
+    "1": {
+      "js": [
+        {
+          "file": "assets/js/1.a08db960.js",
+          "hash": "7550b3b474c0c0e23419",
+          "publicPath": "/assets/js/1.a08db960.js"
+        }
+      ]
+    },
+    "2": {
+      "js": [
+        {
+          "file": "assets/js/2.a2a38cec.js",
+          "hash": "f347db427781fa96f452",
+          "publicPath": "/assets/js/2.a2a38cec.js"
+        }
+      ]
+    },
+    "3": {
+      "js": [
+        {
+          "file": "assets/js/17284fae.9640169b.js",
+          "hash": "e167d21a4618b82c157b",
+          "publicPath": "/assets/js/17284fae.9640169b.js"
+        }
+      ]
+    },
+    "4": {
+      "js": [
+        {
+          "file": "assets/js/17896441.0d621cd8.js",
+          "hash": "36eadb513b7f9589d330",
+          "publicPath": "/assets/js/17896441.0d621cd8.js"
+        }
+      ]
+    },
+    "5": {
+      "js": [
+        {
+          "file": "assets/js/4748aae9.700ebefa.js",
+          "hash": "9e728076992502ba572d",
+          "publicPath": "/assets/js/4748aae9.700ebefa.js"
+        }
+      ]
+    },
+    "6": {
+      "js": [
+        {
+          "file": "assets/js/84e6f614.3115e1d8.js",
+          "hash": "5048694f44bc1bce6b79",
+          "publicPath": "/assets/js/84e6f614.3115e1d8.js"
+        }
+      ]
+    },
+    "7": {
+      "js": [
+        {
+          "file": "assets/js/8e8d1299.8840e6b7.js",
+          "hash": "9228cae1f683f3f20ef1",
+          "publicPath": "/assets/js/8e8d1299.8840e6b7.js"
+        }
+      ]
+    },
+    "8": {
+      "js": [
+        {
+          "file": "assets/js/935f2afb.f810c231.js",
+          "hash": "32d7fbf8fead6c364001",
+          "publicPath": "/assets/js/935f2afb.f810c231.js"
+        }
+      ]
+    },
+    "9": {
+      "js": [
+        {
+          "file": "assets/js/b0cb8bb9.255a4adc.js",
+          "hash": "b0c979e4590d31713e44",
+          "publicPath": "/assets/js/b0cb8bb9.255a4adc.js"
+        }
+      ]
+    },
+    "10": {
+      "js": [
+        {
+          "file": "assets/js/fece9508.7e217100.js",
+          "hash": "eb73ac231d29f6d6f5e4",
+          "publicPath": "/assets/js/fece9508.7e217100.js"
+        }
+      ]
+    },
+    "11": {
+      "js": [
+        {
+          "file": "assets/js/main.5f26dc91.js",
+          "hash": "17d0208602516a2356da",
+          "publicPath": "/assets/js/main.5f26dc91.js"
+        }
+      ]
+    },
+    "12": {
+      "js": [
+        {
+          "file": "assets/js/runtime~main.6f1e8ca2.js",
+          "hash": "c046194ea40463154061",
+          "publicPath": "/assets/js/runtime~main.6f1e8ca2.js"
+        }
+      ]
+    },
+    "13": {
+      "js": [
+        {
+          "file": "assets/js/13.e155c818.js",
+          "hash": "f11fe1496578406d34b3",
+          "publicPath": "/assets/js/13.e155c818.js"
+        }
+      ]
+    }
+  }
+}

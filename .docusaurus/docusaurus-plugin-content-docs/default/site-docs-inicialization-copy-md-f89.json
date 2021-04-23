@@ -1,0 +1,12 @@
+{
+  "unversionedId": "inicialization copy",
+  "id": "inicialization copy",
+  "isDocsHomePage": false,
+  "title": "Inicialização",
+  "description": "Depois de adicionar a tag de script em seu site, os métodos de inicialização do SDK estarão disponíveis por meio do objeto global R2U.",
+  "source": "@site/docs/inicialization copy.md",
+  "slug": "/",
+  "permalink": "/docs/",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/inicialization copy.md",
+  "version": "current"
+}

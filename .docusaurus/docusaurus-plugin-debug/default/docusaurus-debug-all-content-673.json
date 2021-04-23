@@ -1,0 +1,174 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/docs",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/real2u/Mayara/Real2U/R2U/documentation-test/sidebars.js",
+          "contentPath": "/home/real2u/Mayara/Real2U/R2U/documentation-test/docs",
+          "contentPathLocalized": "/home/real2u/Mayara/Real2U/R2U/documentation-test/i18n/en/docusaurus-plugin-content-docs/current",
+          "mainDocId": "inicialization",
+          "sidebars": {
+            "docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Documentação R2U",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "integrations"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "inicialization"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "3D-viewer"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "augmented-reality"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "customizer-3D"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/docs/3D-viewer": "docs",
+            "/docs/augmented-reality": "docs",
+            "/docs/customizer-3D": "docs",
+            "/docs/": "docs",
+            "/docs/integrations": "docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "3D-viewer",
+              "id": "3D-viewer",
+              "isDocsHomePage": false,
+              "title": "Visualizador 3D",
+              "description": "Depois de adicionar a tag de script em seu site, os métodos para criar o Visualizador 3D estarão disponíveis por meio do objeto global R2U.",
+              "source": "@site/docs/3D-viewer.md",
+              "slug": "/3D-viewer",
+              "permalink": "/docs/3D-viewer",
+              "version": "current",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Inicialização",
+                "permalink": "/docs/"
+              },
+              "next": {
+                "title": "Realidade Aumentada",
+                "permalink": "/docs/augmented-reality"
+              }
+            },
+            {
+              "unversionedId": "augmented-reality",
+              "id": "augmented-reality",
+              "isDocsHomePage": false,
+              "title": "Realidade Aumentada",
+              "description": "Depois de adicionar a tag de script em seu site, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis por meio do objeto global R2U.",
+              "source": "@site/docs/augmented-reality.md",
+              "slug": "/augmented-reality",
+              "permalink": "/docs/augmented-reality",
+              "version": "current",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Visualizador 3D",
+                "permalink": "/docs/3D-viewer"
+              },
+              "next": {
+                "title": "Customizador 3D",
+                "permalink": "/docs/customizer-3D"
+              }
+            },
+            {
+              "unversionedId": "customizer-3D",
+              "id": "customizer-3D",
+              "isDocsHomePage": false,
+              "title": "Customizador 3D",
+              "description": "Depois de adicionar a tag de script em seu site, os métodos para criar o Customizador 3D estarão disponíveis por meio do objeto global R2U.",
+              "source": "@site/docs/customizer-3D.md",
+              "slug": "/customizer-3D",
+              "permalink": "/docs/customizer-3D",
+              "version": "current",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Realidade Aumentada",
+                "permalink": "/docs/augmented-reality"
+              }
+            },
+            {
+              "unversionedId": "example",
+              "id": "example",
+              "isDocsHomePage": false,
+              "title": "example",
+              "description": "<Tabs",
+              "source": "@site/docs/example.md",
+              "slug": "/example",
+              "permalink": "/docs/example",
+              "version": "current"
+            },
+            {
+              "unversionedId": "inicialization",
+              "id": "inicialization",
+              "isDocsHomePage": false,
+              "title": "Inicialização",
+              "description": "Depois de adicionar a tag de script em seu site, os métodos de inicialização do SDK estarão disponíveis por meio do objeto global R2U.",
+              "source": "@site/docs/inicialization.md",
+              "slug": "/",
+              "permalink": "/docs/",
+              "version": "current",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Integração",
+                "permalink": "/docs/integrations"
+              },
+              "next": {
+                "title": "Visualizador 3D",
+                "permalink": "/docs/3D-viewer"
+              }
+            },
+            {
+              "unversionedId": "integrations",
+              "id": "integrations",
+              "isDocsHomePage": false,
+              "title": "Integração",
+              "description": "Com o SDK da R2U integrado ao site, terá acesso ao Visualizador 3D,  Customizador 3D e a Experiência RA. Nossas aplicações podem ser visualizadas na nossa Live Demo.",
+              "source": "@site/docs/integrations.md",
+              "slug": "/integrations",
+              "permalink": "/docs/integrations",
+              "version": "current",
+              "sidebar": "docs",
+              "next": {
+                "title": "Inicialização",
+                "permalink": "/docs/"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": null
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": null
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  }
+}

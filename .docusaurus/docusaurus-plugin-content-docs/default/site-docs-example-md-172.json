@@ -1,0 +1,11 @@
+{
+  "unversionedId": "example",
+  "id": "example",
+  "isDocsHomePage": false,
+  "title": "example",
+  "description": "<Tabs",
+  "source": "@site/docs/example.md",
+  "slug": "/example",
+  "permalink": "/docs/example",
+  "version": "current"
+}

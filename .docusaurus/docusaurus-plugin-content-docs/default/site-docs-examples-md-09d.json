@@ -1,0 +1,15 @@
+{
+  "unversionedId": "examples",
+  "id": "examples",
+  "isDocsHomePage": false,
+  "title": "Exemplo",
+  "source": "@site/docs/examples.mdx",
+  "slug": "/examples",
+  "permalink": "/docs/examples",
+  "version": "current",
+  "sidebar": "docs",
+  "previous": {
+    "title": "Customizador 3D",
+    "permalink": "/docs/customizer-3D"
+  }
+}
