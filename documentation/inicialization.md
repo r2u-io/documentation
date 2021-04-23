@@ -1,6 +1,6 @@
 ---
 title: Inicialização
-slug: 
+slug: /
 ---
 Depois de adicionar a tag de script em seu site, os métodos de inicialização do SDK estarão disponíveis por meio do objeto global R2U.
 

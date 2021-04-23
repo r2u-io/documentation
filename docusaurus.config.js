@@ -3,7 +3,7 @@ module.exports = {
   title: 'Documentação R2U',
   tagline: 'O SDK de Realidade Aumentada da R2U permite exibir modelos 3D interativos na web e em Realidade Aumentada (RA).',
   url: 'https://r2u-io.github.io',
-  baseUrl: '/',
+  baseUrl: '/documentation/',
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
@@ -22,6 +22,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',
           // Please change this to your repo.
           
         },
