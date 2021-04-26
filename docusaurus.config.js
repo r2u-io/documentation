@@ -7,6 +7,10 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'R2U', // Usually your GitHub org/user name.
   projectName: 'documentação', // Usually your repo name.
+  i18n: {
+    defaultLocale: 'pt-br',
+    locales: ['pt-br', 'en'],
+  },
   themeConfig: {
     navbar: {
       title: 'DOCUMENTAÇÂO ',
@@ -14,6 +18,12 @@ module.exports = {
         src: 'https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png',
       },
     },
+    items: [
+      {
+        type: 'localeDropdown',
+        position: 'left',
+      },
+    ],
     
   },
   presets: [

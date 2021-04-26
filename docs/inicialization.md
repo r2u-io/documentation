@@ -35,7 +35,7 @@ O método sku.isActive indica se um produto está disponível na plataforma de R
 
 ## R2U.analytics.send
 
-O método analytics envia métricas e dimensões, para identificar o potencial da inserção das nossas soluções.
+O método analítico envia eventos para a plataforma analítica R2U, para identificar os resultados da integração do nosso SDK.
 
 
 ```typescript
@@ -63,10 +63,10 @@ interface R2U {
 
 Outras métricas e dimensões (tais como SKU, customerId, sistema operacional, etc.) são enviadas automaticamente e não precisam ser especificadas.
 
-Se analyticsParams.dataLayerIntegration for true, os seguintes eventos são enviados por padrão ao dataLayer:
+Se `analyticsParams.dataLayerIntegration` for `true`, os seguintes eventos são enviados por padrão ao dataLayer:
 
-- product_page_view: Enviado em uma vez por página quando sku.isActive é chamado, para marcar visualizações de página de produto
-- impression: Enviado uma até uma vez por visualização de página em que RA / 3D é mostrado
-- click: Enviado em todos os cliques em RA / visualização 3D
+- `product_page_view`: Enviado em uma vez por página quando `sku.isActive` é chamado, para marcar visualizações de página de produto
+- `impression`: Enviado uma até uma vez por visualização de página em que RA / 3D é mostrado
+- `click`: Enviado em todos os cliques em RA / visualização 3D
 
 A documentação para enviar os dados do dataLayer para o Google Analytics está  [aqui](https://github.com/r2u-io/documentation/blob/master/gtm_setup/Analytics_Setup_pt-br.md)

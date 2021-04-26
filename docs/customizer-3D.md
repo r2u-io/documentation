@@ -10,7 +10,7 @@ Depois de adicionar a tag de script em seu site, os métodos para criar o Custom
 :::tip `mobile` `desktop`
 :::
 
-É o método para inserir o customizador 3D no site de acordo com a posição do elemento HTML indicado. 
+É o método para criar o customizador 3D de acordo com a posição do elemento HTML indicado. 
 
 ```typescript
   const element = document.getElementById('3d-customizer')

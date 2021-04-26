@@ -6,7 +6,7 @@
         <img height="20px" src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/br.svg">
     </a>
     <br>
-    <a href="https://www.npmjs.com/package/@r2u/javascript-ar-sdk">
+    <a href="https://www.npmjs.com/package/@r2u/typescript-ar-sdk">
         <img src="https://img.shields.io/badge/version-5.3.1-green">
     </a>
     <br/>
@@ -15,39 +15,39 @@
 
 # R2U Documentation
 
-This JavaScript Augmented Reality SDK can be implemented in two equivalent ways:
+This typescript Augmented Reality SDK can be implemented in two equivalent ways:
 
-1. JavaScript tag integration
-2. JavaScript package manager integration
+1. typescript tag integration
+2. typescript package manager integration
 
-#### 1. JavaScript tag integration
+#### 1. typescript tag integration
 
 To use this SDK, add the tag below on the HTML header of your website.
 
 ```html
-<script src="https://unpkg.com/@r2u/javascript-ar-sdk@5.3.1/dist/index.js"></script>
+<script src="https://unpkg.com/@r2u/typescript-ar-sdk@5.3.1/dist/index.js"></script>
 ```
 
 This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
 
 A sample implementation can be seen at our [live demo](https://r2u-io.github.io/documentation/), which uses the code from the folder [**docs**](./docs/)
 
-#### 2. JavaScript package manager integration
+#### 2. typescript package manager integration
 
-Add the SDK using `npm` or `yarn` on your JavaScript project
+Add the SDK using `npm` or `yarn` on your typescript project
 
-```
+```typescript
 # using npm
-npm install @r2u/javascript-ar-sdk
+npm install @r2u/typescript-ar-sdk
 
 # using yarn
-yarn add @r2u/javascript-ar-sdk
+yarn add @r2u/typescript-ar-sdk
 ```
 
 Then use as
 
 ```typescript
-import '@r2u/javascript-ar-sdk'
+import '@r2u/typescript-ar-sdk'
 const { R2U } = window
 ```
 
@@ -136,7 +136,7 @@ interface R2U {
 
 ##### `R2U.init`
 
-```javascript
+```typescript
 // test client -- remember to use your own `customerId`
 R2U.init({
   customerId: '5e8e7580404328000882f4ae',
@@ -151,13 +151,13 @@ R2U.init({
 
 ##### `R2U.sku.isActive`
 
-```javascript
+```typescript
 R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU active? ${isActive ? '✓' : '✗'}`))
 ```
 
 ##### `R2U.ar.attach`
 
-```javascript
+```typescript
 // test SKU -- remember to use your product information
 const arButton = document.getElementById('ar-button')
 const sku = 'RE000001'
@@ -215,13 +215,13 @@ Instruction screen on how to position and manipulate the 3D object in augmented 
 
 ##### `R2U.ar.getLink`
 
-```javascript
+```typescript
 R2U.ar.getLink('RE000001').then((url) => console.log(url))
 ```
 
 ##### `R2U.viewer.create`
 
-```javascript
+```typescript
 // test SKU -- remember to use your product information
 const element = document.getElementById('3d-viewer')
 const sku = 'RE000001'
@@ -255,7 +255,7 @@ _Desktop_
 
 ##### Change sku `R2U.viewer.create`
 
-```javascript
+```typescript
 // test SKU -- remember to use your product information
 const buttonChangeSku = document.getElementById('button-changeSku')
 const changeSku = document.getElementById('viewer-changeSku')
@@ -283,7 +283,7 @@ change sku
 
 ##### `R2U.analytics.send`
 
-```javascript
+```typescript
 const addToCartButton = document.getElementById('add-to-cart')
 addToCartButton.addEventListener('click', () =>
   R2U.analytics.send({
@@ -311,7 +311,7 @@ The documentation to send the events in dataLayer to Google Analytics is [here](
 
 ##### `R2U.customizer.create`
 
-```javascript
+```typescript
 const element = document.getElementById('3d-customizer')
 const onConfirm = (productCustomization) =>
   console.log('customization selected', productCustomization)
@@ -322,7 +322,7 @@ The `onConfirm` function is triggered after the user clicks on the "Confirm" but
 
 ##### `R2U.qrCode.create`
 
-```javascript
+```typescript
 const element = document.getElementById('qrCode')
 R2U.qrCode.create({ element })
 ```

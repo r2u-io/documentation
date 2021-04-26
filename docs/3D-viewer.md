@@ -9,7 +9,7 @@ Depois de adicionar a tag de script em seu site, os métodos para criar o Visual
 :::tip `mobile` `desktop`
 :::
 
-É o método para inserir o visualizador 3D no site de acordo com a posição do elemento HTML indicado. 
+É o método para criar o visualizador 3D no site de acordo com a posição do elemento HTML indicado. 
 
 
 ```typescript

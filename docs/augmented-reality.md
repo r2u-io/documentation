@@ -17,7 +17,7 @@ O método ar.attach cria um "eventListener" para abrir o visualizador de RA em d
   const sku = 'RE000001'
   // cria um alerta de dispositivo não compatível
   const fallbackOptions = {
-    //inseri mensagem no alerta
+    //add mensagem no alerta
     alertMessage: 'RA não suportada pelo dispositivo',
     //abre um visualizador 3D na tela de aviso
     fallback: 'viewer'
@@ -125,7 +125,7 @@ interface R2U {
 
 
 ### fallbackOptions
-:::tip  A mensagem do alertMessage pode ser customizada
+:::tip  A mensagem do `alertMessage` pode ser customizada
 :::
 Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA. Se as instruções estiver inserida o fallback é visualizado apenas quando clicar no botão de "Veja na sua casa".
 
@@ -140,7 +140,7 @@ Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA.
         sku: string
         //aviso de dispositivo não compatível com RA
         fallbackOptions?: {
-          //inserir mensagem de alerta
+          //add mensagem de alerta
           alertMessage?: string
           //abre um visualizador 3D na tela de aviso
           fallback?: 'viewer' | 'full'

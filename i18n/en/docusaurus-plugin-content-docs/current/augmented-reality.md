@@ -1,7 +1,7 @@
 ---
-title: Realidade Aumentada
+title: Augmented Reality
 ---
-Depois de adicionar a tag de script em seu site, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis por meio do objeto global R2U.
+After adding the script tag to your website, methods for creating the Augmented Reality experience will be available through the global object R2U.
 
 
 ## R2U.ar.attach
@@ -9,17 +9,17 @@ Depois de adicionar a tag de script em seu site, os métodos para criar a experi
 :::tip `mobile`
 :::
 
-O método ar.attach cria um "eventListener" para abrir o visualizador de RA em dispositivos mobile (e.g.: clique de um botão).  
+The ar.attach method creates an "eventListener" to open the AR viewer on mobile devices (e.g.: on a button click).  
 
 ```typescript
-  // SKU teste -- lembre de usar informação do seu produto
+  // test SKU -- remember to use your product information
   const arButton = document.getElementById('ar-button')
   const sku = 'RE000001'
-  // cria um alerta de dispositivo não compatível
+  // creates an unsupported device alert
   const fallbackOptions = {
-    //inseri mensagem no alerta
-    alertMessage: 'RA não suportada pelo dispositivo',
-    //abre um visualizador 3D na tela de aviso
+    //add message in the alert
+    alertMessage: 'AR not supported by device',
+    //opens a 3D viewer on the warning screen
     fallback: 'viewer'
   }
 
@@ -33,7 +33,7 @@ O método ar.attach cria um "eventListener" para abrir o visualizador de RA em d
 
 ### element
 
-É o elemento que irá ativa experiência de RA através de algum evento.  
+It is the element that will activate the AR experience through an event.
 
 ```typescript
 interface R2U {
@@ -49,7 +49,7 @@ interface R2U {
 
 ### SKU
 
-É o SKU do produto que deseja ver em RA .
+It is the SKU of the product you want to see in AR.
 
 ```typescript
 interface R2U {
@@ -64,7 +64,7 @@ interface R2U {
 
 ### event
 
-É o	evento que ativará experiência de RA.
+It is the event that will activate the AR experience.
 
 ```typescript
 interface R2U {
@@ -79,7 +79,8 @@ interface R2U {
 ```
 
 ### resize 
-Opção para redimensionar modelo 3D em experiência de RA
+
+Option to resize 3D model on AR experience
 
 ```typescript
 interface R2U {
@@ -95,10 +96,10 @@ interface R2U {
 
 
 ### showInstructions
-:::tip  As intruções será visualizada apenas na primeira experiência de RA do usuário.
+:::tip  The instructions will be viewed only on the user's first AR experience.
 :::
 
-  Quando verdadeiro, mostra uma imagem em tela cheia explicando como posicionar e manipular o objeto 3D em realidade aumentada antes de prosseguir para a experiência com a câmera. 
+ When true, shows an image in full-screen view explaining how to place and manipulate a 3D object on AR before proceeding to the camera experience.
 <div >
 <div >
 
@@ -115,7 +116,7 @@ interface R2U {
   ```
 </div>
 <div>
-<strong> Exemplo das intruções: </strong> 
+<strong> Instructions example: </strong> 
 
 <p float="left">
   <img src="https://sdk.r2u.io/documentation/instructions.png" title="Instruction screen" width="200"/>
@@ -125,9 +126,9 @@ interface R2U {
 
 
 ### fallbackOptions
-:::tip  A mensagem do alertMessage pode ser customizada
+:::tip  The `alertMessage` message can be customized
 :::
-Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA. Se as instruções estiver inserida o fallback é visualizado apenas quando clicar no botão de "Veja na sua casa".
+Shows an image when the mobile device does not support the AR experience. If the instructions are entered, the fallback is displayed only when you click on the "See at your home" button.
 
 <div >
 <div >
@@ -138,19 +139,19 @@ Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA.
       attach: (params: {
         element: HTMLElement
         sku: string
-        //aviso de dispositivo não compatível com RA
+        //device warning not compatible with AR
         fallbackOptions?: {
-          //inserir mensagem de alerta
+          //add alert message
           alertMessage?: string
-          //abre um visualizador 3D na tela de aviso
+          //opens a 3D viewer on the warning screen
           fallback?: 'viewer' | 'full'
-          //modifica o texto do fallback
+          //modify the fallback text
           text?: {
-            //altera o título da página
+            //change the page title
             title?: string
-            //altera o texto superior da página
+            //changes the top text of the page
             top?: string
-            //altera texto inferior da página
+            //change bottom page text
             bottom?: string
           }
         }
@@ -160,7 +161,7 @@ Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA.
   ```
 </div>
 <div>
-<strong> Exemplo do fallback: </strong> 
+<strong> Fallback example: </strong> 
 
 <p float="left">
   <img src="../img/fallback-pt.png" title="Fallback" width="200"/>
@@ -170,7 +171,7 @@ Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA.
 </div>
 
 
-### Demostração da RA no _iOS_
+### AR demo on _iOS_
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="200"/>
@@ -178,7 +179,7 @@ Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA.
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="200"/>
 </p>
 
-### Desmonstração da RA no _Android_
+### AR demo on _Android_
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
@@ -190,10 +191,10 @@ Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA.
 :::tip `mobile` `desktop`
 :::
 
-É o método retorna a URL para compartilhamento na experiência de RA. 
+The method returns a shareable URL for the AR experience. 
 
 ```typescript
-  // Lembre de usar informação do seu produto
+  //remember to use your product information
   R2U.ar.getLink('RE000001').then((url) => console.log(url))
 ```
 
