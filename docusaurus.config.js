@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'O SDK de Realidade Aumentada da R2U permite exibir modelos 3D interativos na web e em Realidade Aumentada (RA).',
   url: 'https://r2u-io.github.io',
   baseUrl: '/documentation/',
-  favicon: 'img/favicon.ico',
+  favicon:'https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png',
   organizationName: 'R2U', // Usually your GitHub org/user name.
   projectName: 'documentação', // Usually your repo name.
   i18n: {
