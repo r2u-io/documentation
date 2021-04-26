@@ -163,7 +163,7 @@ Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA.
 <strong> Exemplo do fallback: </strong> 
 
 <p float="left">
-  <img src="../img/fallback-pt.png" title="Fallback" width="200"/>
+  <img src="../static/img/fallback-pt.png" title="Fallback" width="200"/>
 </p>
 </div>
 
