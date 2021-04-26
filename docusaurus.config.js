@@ -8,8 +8,16 @@ module.exports = {
   organizationName: 'R2U', // Usually your GitHub org/user name.
   projectName: 'documentação', // Usually your repo name.
   i18n: {
-    defaultLocale: 'pt-br',
-    locales: ['pt-br', 'en'],
+    defaultLocale: "pt",
+    locales: ["pt", "en"],
+    localeConfigs: {
+      pt: {
+        label: "Português",
+      },
+      en: {
+        label: "Inglês",
+      },
+    },
   },
   themeConfig: {
     navbar: {
