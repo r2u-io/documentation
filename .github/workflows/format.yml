@@ -21,6 +21,10 @@ jobs:
         run: npx prettier --write .
       - name: Commit changes
         run: |
+          git config user.email 'bot@r2u.io'
+          git config user.name 'R2U Bot'
+          git add .
+          git diff-index --quiet HEAD || (git commit -m 'Run Prettier - R2U Bot' && git push)
           yarn install
   build:
     name: Build
