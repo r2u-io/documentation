@@ -25,7 +25,7 @@ The onConfirm function is triggered after the user clicks on the "Confirm" butto
   <strong> Example of the 3D customizer: </strong> 
 
   <p float="left">
-    <img src="../static/img/customizer.gif" title="Fallback" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/customizer.gif" title="customizer" width="600"/>
   </p>
 
 </div>

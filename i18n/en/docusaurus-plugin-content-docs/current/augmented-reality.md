@@ -119,7 +119,7 @@ interface R2U {
 <strong> Instructions example: </strong> 
 
 <p float="left">
-  <img src="../static/img/instruction-en.png" title="Instruction screen" width="200"/>
+  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/instruction-en.png" title="Instruction screen" width="200"/>
 </p>
 </div>
 </div>
@@ -164,7 +164,7 @@ Shows an image when the mobile device does not support the AR experience. If the
 <strong> Fallback example: </strong> 
 
 <p float="left">
-  <img src="../static/img/fallback.png" title="Fallback" width="200"/>
+  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/fallback-pt.png" title="Fallback" width="200"/>
 </p>
 </div>
 

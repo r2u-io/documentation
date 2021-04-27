@@ -56,7 +56,7 @@ Habilita e desabilita o botão para abrir o visualizador 3D expansível com o mo
   <strong> Exemplo do popup: </strong> 
 
  <p float="left">
-    <img src="../static/img/3D-viewer-popup.gif" title="Fallback" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-popup.gif" title="popup" width="600"/>
   </p>
   </div>
 
@@ -151,7 +151,7 @@ Define uma imagem sobre o modelo 3D que será exibida durante o carregamento do 
 ### Demonstração do visualizador 3D
 
  <p float="left">
-    <img src="../static/img/3D-viewer.gif" title="Fallback" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D viewer" width="600"/>
   </p>
 
 ## Mudar sku R2U.viewer.create
@@ -185,7 +185,7 @@ O método setSku atualiza o SKU do produto.
   <strong> Exemplo do setSku: </strong> 
 
   <p float="left">
-    <img src="../static/img/3D-viewer-setSku.gif" title="Fallback" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setSku" width="600"/>
   </p>
   
   </div>
@@ -210,7 +210,7 @@ Cria um QRCode que ao scannear direciona o usuário para o modelo em RA.
 <div>
 
   <p float="left">
-    <img src="../static/img/3D-viewer-qrcode.png" title="Fallback" width="200"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
   </p>
   </div>
 
