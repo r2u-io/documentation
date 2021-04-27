@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build 
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,7 +32,8 @@ jobs:
           node-version: '12'
       - run: yarn install
       - run: yarn build
-      - run: |
-          git config user.email 'bot@r2u.io'
-          git config user.name 'R2U Bot'
-      - run: yarn deploy
+      - name: Configure GH credentials
+        uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.R2U_BOT_SSH_KEY }}
+      - run: yarn deployy
