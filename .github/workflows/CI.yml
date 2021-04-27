@@ -36,4 +36,4 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.0
         with:
           ssh-private-key: ${{ secrets.R2U_BOT_SSH_KEY }}
-      - run: yarn deploy
+        run: yarn deploy
