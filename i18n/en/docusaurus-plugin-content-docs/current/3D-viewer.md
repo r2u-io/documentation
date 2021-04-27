@@ -56,7 +56,7 @@ Enables and disables the button to open the expandable 3D viewer with the model.
   <strong> Popup example: </strong> 
 
  <p float="left">
-    <img src="../static/img/3D-viewer-popup.gif" title="popup" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-popup.gif" title="popup" width="600"/>
   </p>
   </div>
 
@@ -151,7 +151,7 @@ Define an image on top of the 3D model that will be displayed when loading the m
 ### Demonstration of the 3D viewer
 
  <p float="left">
-    <img src="../static/img/3D-viewer.gif" title="3dviewer" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
   </p>
 
 ## Change sku R2U.viewer.create
@@ -185,7 +185,7 @@ The setSku method updates the product SKU.
   <strong> SetSku example: </strong> 
 
   <p float="left">
-    <img src="../static/img/3D-viewer-setSku.gif" title="setsku" width="600"/>
+    <img src=".https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
   </p>
   
   </div>
@@ -210,7 +210,7 @@ Creates a QRCode that, when scanned, directs the user to the model in AR.
 <div>
 
   <p float="left">
-    <img src="../static/img/3D-viewer-qrcode.png" title="qrcode" width="200"/>
+    <img src=".https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
   </p>
   </div>
 
