@@ -185,7 +185,7 @@ The setSku method updates the product SKU.
   <strong> SetSku example: </strong> 
 
   <p float="left">
-    <img src=".https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
   </p>
   
   </div>
@@ -210,7 +210,7 @@ Creates a QRCode that, when scanned, directs the user to the model in AR.
 <div>
 
   <p float="left">
-    <img src=".https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
   </p>
   </div>
 
