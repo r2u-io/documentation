@@ -6,25 +6,6 @@ on:
       - master
 
 jobs:
-  prettier:
-    name: Run Prettier
-    runs-on: ubuntu-latest
-    if: github.actor != 'bot@r2u.io'
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '12'
-      - name: Run Prettier
-        run: npx prettier --write .
-      - name: Commit changes
-        run: |
-          git config user.email 'bot@r2u.io'
-          git config user.name 'R2U Bot'
-          git add .
-          git diff-index --quiet HEAD || (git commit -m 'Run Prettier - R2U Bot' && git push)
   build:
     name: Build 
     runs-on: ubuntu-latest
@@ -51,4 +32,7 @@ jobs:
           node-version: '12'
       - run: yarn install
       - run: yarn build
+      - run: |
+          git config user.email 'bot@r2u.io'
+          git config user.name 'R2U Bot'
       - run: yarn deploy
