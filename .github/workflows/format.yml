@@ -18,13 +18,7 @@ jobs:
         with:
           node-version: '12'
       - name: Run Prettier
-        run: npx prettier --write .
-      - name: Commit changes
-        run: |
-          git config user.email 'bot@r2u.io'
-          git config user.name 'R2U Bot'
-          git add .
-          git diff-index --quiet HEAD || (git commit -m 'Run Prettier - R2U Bot' && git push)
+        run: npx prettier --write
   build:
     name: Build 
     runs-on: ubuntu-latest
