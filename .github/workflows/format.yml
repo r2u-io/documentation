@@ -55,6 +55,6 @@ jobs:
         env:
           USE_SSH: true
           GIT_USER: git
-        - run: yarn install
-        - run: yarn build
-        - run: yarn deploy
+      - run: yarn install
+      - run: yarn build
+      - run: yarn deploy
