@@ -1,17 +1,16 @@
 ---
 title: Initialization
-slug: 
+slug:
 ---
-After adding the script tag to your site, the SDK's initialization methods will be available through the global R2U object.
 
+After adding the script tag to your site, the SDK's initialization methods will be available through the global R2U object.
 
 ## R2U.init
 
 The init method initializes the SDK and connects to the R2U server and checks whether the customerId exists in our database.
 
-
 ```typescript
- // test client -- remember to use your own `customerId`
+// test client -- remember to use your own `customerId`
 R2U.init({
   customerId: '5e8e7580404328000882f4ae',
   analyticsParams: {
@@ -23,20 +22,18 @@ R2U.init({
   .catch((err) => console.error('Client inactive'))
 ```
 
-
 ## R2U.sku.isActive
 
 The sku.isActive method indicates if a product is available on the Augmented Reality platform.
 
 ```typescript
-  // test client -- remember to use your own `sku`
-  R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU active? ${isActive ? '✓' : '✗'}`))
+// test client -- remember to use your own `sku`
+R2U.sku.isActive('RE000001').then((isActive) => console.log(`SKU active? ${isActive ? '✓' : '✗'}`))
 ```
 
 ## R2U.analytics.send
 
 The analytical method sends events to the R2U analytical platform, to identify the results of the integration of our SDK.
-
 
 ```typescript
 const addToCartButton = document.getElementById('add-to-cart')
@@ -47,7 +44,8 @@ addToCartButton.addEventListener('click', () =>
   })
 )
 ```
-### Parameters 
+
+### Parameters
 
 ```typescript
 interface R2U {

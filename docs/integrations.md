@@ -6,7 +6,6 @@ slug: /
 Com o SDK da R2U integrado ao site, terá acesso ao `Visualizador 3D`, ` Customizador 3D` e a `Experiência RA`. Nossas aplicações podem ser visualizadas na nossa **[Live Demo](https://r2u-io.github.io/documentation/)**.
 A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas maneiras equivalentes:
 
-
 ## Integração via JavaScript tag
 
 Para utilizar o SDK, adicione a tag no header do HTML do website. Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
@@ -15,15 +14,14 @@ Para utilizar o SDK, adicione a tag no header do HTML do website. Isso pode ser 
   <html lang=pt-br>
     <head>
       <title>Como fazer a integração do SDK da R2U</title>
-      <script src=https://unpkg.com/@r2u/javascript-ar-sdk@5.3.1/dist/index.js></script>
+      <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.2.4/dist/index.js'></script>
     </head>
-      
+
       <body> /*Seu código HTML*/ </body>
   </html>
 ```
 
 Um exemplo de implementação pode ser visto na nossa **[Live Demo](https://r2u-io.github.io/documentation/)**, que usa o código da pasta **[Docs](https://github.com/r2u-io/documentation/tree/master/docs)**.
-
 
 ## Integração via JavaScript Package manager
 
@@ -40,6 +38,6 @@ Adicione o SDK através de npm ou yarn no seu projeto JavaScript.
 Depois importe o sdk no seu projeto e desestruture o objeto R2U de dentro da window
 
 ```typescript
-  import '@r2u/javascript-ar-sdk'
-  const { R2U } = window
+import '@r2u/javascript-ar-sdk'
+const { R2U } = window
 ```
