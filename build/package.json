@@ -1,0 +1,86 @@
+{
+  "name": "@r2u/javascript-ar-sdk",
+  "version": "6.3.0",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/r2u-io/javascript-ar-sdk",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "webpack serve --mode=development",
+    "build:dev": "webpack --mode=development",
+    "build": "REACT_APP_VERSION=$(jq -r \".version\" package.json) webpack --mode=production",
+    "clean": "rm -rf dist/ public/dist/",
+    "test": "jest --config ./jest.config.js",
+    "prettier": "prettier --write src",
+    "lint": "eslint './src/**/*.{js,ts,tsx}'",
+    "eject": "rescripts eject"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@r2u/analytics": "^3.1.2",
+    "@r2u/customizer": "^1.0.3",
+    "@r2u/react-ar-components": "^5.0.0",
+    "i18next": "^20.2.1",
+    "i18next-chained-backend": "^2.1.0",
+    "i18next-http-backend": "^1.2.1",
+    "i18next-localstorage-backend": "^3.1.2",
+    "is_js": "^0.9.0",
+    "qrcode.react": "^1.0.1",
+    "querystring": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-i18next": "^11.8.13",
+    "react-shadow": "^19.0.2",
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^13.11.1",
+    "@types/qrcode.react": "^1.0.1",
+    "@types/react": "^16.9.33",
+    "@types/react-dom": "^16.9.6",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.9.0",
+    "prettier": "^2.1.2",
+    "process": "^0.11.10",
+    "ts-jest": "^26.4.4",
+    "ts-loader": "^8.0.17",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "typescript": "^3.8.3",
+    "util": "^0.12.3",
+    "webpack": "^5.24.3",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "3.10.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
