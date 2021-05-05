@@ -182,7 +182,7 @@ interface R2U {
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
 </p>
 
-## R2U.ar.getlink
+## R2U.ar.getLink
 
 :::tip `mobile` `desktop`
 :::
