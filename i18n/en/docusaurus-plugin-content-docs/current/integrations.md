@@ -3,7 +3,7 @@ title: Integration
 slug: /
 ---
 
-With the R2U SDK integrated into the website, you will have access to the `3D Viewer`,` 3D Customizer` and the `AR Experience`. Our applications can be viewed on our **[Live Demo](https://r2u-io.github.io/documentation/)**.
+With the R2U SDK integrated into the website, you will have access to the `3D Viewer`,` 3D Customizer` and the `AR Experience`.
 The integration of the R2U Augmented Reality SDK can be done in two equivalent ways:
 
 ## JavaScript tag integration
@@ -20,8 +20,6 @@ To use this SDK, add the tag below on the HTML header of your website. This can 
       <body> /* Your HTML code */ </body>
   </html>
 ```
-
-A sample implementation can be seen at our **[Live Demo](https://r2u-io.github.io/documentation/)**, which uses the code from the folder **[Docs](https://github.com/r2u-io/documentation/tree/master/docs)**.
 
 ## JavaScript package manager integration
 

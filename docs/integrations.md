@@ -3,7 +3,7 @@ title: Integração
 slug: /
 ---
 
-Com o SDK da R2U integrado ao site, terá acesso ao `Visualizador 3D`, ` Customizador 3D` e a `Experiência RA`. Nossas aplicações podem ser visualizadas na nossa **[Live Demo](https://r2u-io.github.io/documentation/)**.
+Com o SDK da R2U integrado ao site, terá acesso ao `Visualizador 3D`, ` Customizador 3D` e a `Experiência RA`.
 A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas maneiras equivalentes:
 
 ## Integração via JavaScript tag
@@ -20,8 +20,6 @@ Para utilizar o SDK, adicione a tag no header do HTML do website. Isso pode ser 
       <body> /*Seu código HTML*/ </body>
   </html>
 ```
-
-Um exemplo de implementação pode ser visto na nossa **[Live Demo](https://r2u-io.github.io/documentation/)**, que usa o código da pasta **[Docs](https://github.com/r2u-io/documentation/tree/master/docs)**.
 
 ## Integração via JavaScript Package manager
 
