@@ -21,7 +21,7 @@ module.exports = {
   },
   themeConfig: {
     navbar: {
-      title: 'DOCUMENTAÇÂO ',
+      title: 'DOCUMENTAÇÃO ',
       logo: {
         src: 'https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png',
       },
