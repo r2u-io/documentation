@@ -182,15 +182,12 @@ buttonChangeSku.addEventListener('click', () => {
   <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
   </p>
-  
+
   </div>
 
 </div>
 
 ## R2U.qrCode.create
-
-:::danger Known issue: Android users scanning the QR Code without having an opened browser will receive a fallback message stating that the device is not supported.
-:::
 
 Creates a QRCode that, when scanned, directs the user to the model in AR.
 
