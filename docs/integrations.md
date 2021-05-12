@@ -1,6 +1,5 @@
 ---
 title: Integração
-slug: /
 ---
 
 Com o SDK da R2U integrado ao site, terá acesso ao `Visualizador 3D`, ` Customizador 3D` e a `Experiência RA`.

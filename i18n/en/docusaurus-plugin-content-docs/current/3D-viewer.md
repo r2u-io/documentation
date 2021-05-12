@@ -4,6 +4,12 @@ title: 3D Viewer
 
 After adding a script tag to your website, methods for creating the 3D Viewer are available through the global object R2U.
 
+### Demonstration of the 3D viewer
+
+ <p float="left">
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
+  </p>
+
 ## R2U.viewer.create
 
 :::tip `mobile` `desktop`
@@ -142,11 +148,7 @@ interface R2U {
 
 </div>
 
-### Demonstration of the 3D viewer
 
- <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
-  </p>
 
 ## Change sku R2U.viewer.create
 
@@ -195,15 +197,15 @@ buttonChangeSku.addEventListener('click', () => {
 Creates a QRCode that, when scanned, directs the user to the model in AR.
 
 <div >
-<div>
+  <div>
 
-```typescript
-const element = document.getElementById('qrCode')
-R2U.qrCode.create({ element, sku })
-```
+  ```typescript
+  const element = document.getElementById('qrCode')
+  R2U.qrCode.create({ element, sku })
+  ```
 
-</div>
-<div>
+  </div>
+  <div>
 
   <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>

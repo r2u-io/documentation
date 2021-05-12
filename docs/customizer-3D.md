@@ -4,6 +4,14 @@ title: Customizador 3D
 
 Depois de adicionar a tag de script em seu site, os métodos para criar o Customizador 3D estarão disponíveis por meio do objeto global R2U.
 
+## Demonstração do Customizador 3D
+<div>
+  <p float="left">
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/customizer.gif" title="customizer" width="600"/>
+  </p>
+
+</div>
+
 ## R2U.viewer.create
 
 :::tip `mobile` `desktop`
@@ -20,11 +28,4 @@ R2U.customizer.create({ element, onConfirm })
 
 A função `onConfirm` é acionada após o clique do usuário no botão "Confirmar" na tela do Customizador. Ela retorna um mapa chave-valor contendo a customização do produto (ex: chave "modelo" valor "Cadeira Eames", chave "cor" valor "Preto", etc.).
 
-<div>
-  <strong> Exemplo do customizador 3D: </strong>
 
-  <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/customizer.gif" title="customizer" width="600"/>
-  </p>
-
-</div>

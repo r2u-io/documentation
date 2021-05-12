@@ -1,6 +1,7 @@
 module.exports = {
   docs: 
        [
+         'introduction',
          'integrations',
          'inicialization',
          'analytics',
