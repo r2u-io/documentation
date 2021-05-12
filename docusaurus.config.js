@@ -25,13 +25,14 @@ module.exports = {
       logo: {
         src: 'https://real2u-public-assets.s3.amazonaws.com/images/logo-r2u.png',
       },
+      items: [
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+      ],
     },
-    items: [
-      {
-        type: 'localeDropdown',
-        position: 'left',
-      },
-    ],
+   
     
   },
   presets: [
