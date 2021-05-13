@@ -20,23 +20,20 @@ jobs:
       - run: yarn build
   deploy:
     name: Deploy
-    needs: [build]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
-      - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v2
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@master
         with:
-          node-version: '12'
-      - run: yarn install
-      - run: yarn build
-      - name: Configure GH credentials
-        uses: webfactory/ssh-agent@v0.5.0
-        with:
-          ssh-private-key: ${{ secrets.R2U_BOT_SSH_KEY }}
-      - run: |
-          git config user.email 'bot@r2u.io'
-          git config user.name 'R2U Bot'
-      - run: yarn deploy
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      - name: config project
+        run: gcloud config set project docs-r2u
+      - name: Copy index to bucket
+        run: gsutil cp ./build gs://doc-r2u-bucket/index.html
+      - name: Set as main page
+        run: gsutil web set -m index.html gs://doc-r2u-bucket
+      - name: Invalidate cache
+        run: gcloud compute url-maps invalidate-cdn-cache doc-r2u-lb --path /* --async
