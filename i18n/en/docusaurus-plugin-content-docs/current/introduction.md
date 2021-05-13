@@ -1,17 +1,7 @@
 ---
-title: SDK R2U
+title:  Our Solutions
 slug: /
 ---
-
-The R2U SDK allows your website to have access to `augmented reality`, allowing elements, such as a table or appliance, to be designed in the physical world, facilitating tasks such as buying furniture over the internet, for example.
-
-Using his cell phone, the user of an online store can see several characteristics of the product sought with precision, including being able to design it in the real environment.
-
-For users who do not have a cell phone with AR support, we have the `3D viewer` that allows the user to view product details through the 3D model. 
-
-And with our `3D customizer` the user is able to test all the existing combinations of the product and test in augmented reality before making the purchase.
-
-## Our Solutions
 
 ### 3D viewer
 

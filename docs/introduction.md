@@ -1,21 +1,12 @@
 ---
-title: SDK R2U
+title: Nossas Soluções
 slug: /
 ---
 
-O SDK da R2U permite que seu site tenha acesso a `realidade aumentada` possibilitando que elementos, como uma mesa ou eletrodoméstico, sejam projetados no mundo físico, facilitando tarefas como a compra de um móvel pela internet, por exemplo. 
-
-Utilizando seu celular, o usuário de uma loja online consegue enxergar diversas características do produto buscado com precisão, inclusive podendo projetá-lo no ambiente real.
-
-Para usuários que não possuem celular com suporte a RA, temos o `visualizador 3D` que permite que o usuário visualize detalhadamente o produto através do modelo 3D. 
-
-E com o nosso `customizador 3D` o usuário consegue testar todas as combinações existente do produto e testar em realidade aumentada antes de efetuar a compra.
-
-## Nossas Soluções
 
 ### Visualizador 3D
 
-Nosso visualizador 3D permite que os usuários vejam todos os ângulos do produto, tornando a compra muito mais segura e precisa
+Nosso visualizador 3D permite que os usuários vejam todos os ângulos do produto, tornando a compra muito mais segura e precisa.
 
 
 <div>
