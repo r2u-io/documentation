@@ -4,7 +4,6 @@ title: Customizador 3D
 
 Depois de adicionar a tag de script em seu site, os métodos para criar o Customizador 3D estarão disponíveis por meio do objeto global R2U.
 
-## Demonstração do Customizador 3D
 <div>
   <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/customizer.gif" title="customizer" width="600"/>

@@ -4,7 +4,6 @@ title: 3D Viewer
 
 After adding a script tag to your website, methods for creating the 3D Viewer are available through the global object R2U.
 
-### Demonstration of the 3D viewer
 
  <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>

@@ -4,7 +4,6 @@ title: Realidade Aumentada
 
 Depois de adicionar a tag de script em seu site, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis por meio do objeto global R2U.
 
-## Demonstração da experiência de RA
 
  <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>

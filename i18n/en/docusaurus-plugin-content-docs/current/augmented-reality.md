@@ -4,7 +4,6 @@ title: Augmented Reality
 
 After adding the script tag to your website, methods for creating the Augmented Reality experience will be available through the global object R2U.
 
-## Demo of AR experience
 
  <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>
