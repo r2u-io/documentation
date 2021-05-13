@@ -1,6 +1,5 @@
 ---
 title: Integration
-slug: /
 ---
 
 With the R2U SDK integrated into the website, you will have access to the `3D Viewer`,` 3D Customizer` and the `AR Experience`.
