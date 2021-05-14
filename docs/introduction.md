@@ -33,3 +33,9 @@ Nosso personalizador 3D permite que seus clientes testem todas as combinações 
   </p>
 
 </div>
+
+<div>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/github.png"  width="20"/>
+    <a href="https://github.com/r2u-io/documentation" title="customizer" width="600" >  Contribuir</a>
+
+</div>
