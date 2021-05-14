@@ -38,7 +38,7 @@ jobs:
       - name: config project
         run: gcloud config set project r2u-sdk
       - name: Copy build to bucket
-        run: gsutil -m cp -r ./build gs://doc-r2u-bucket
+        run: gsutil -m cp -r ./build/* gs://doc-r2u-bucket
       - name: Set as index page
         run: gsutil web set -m index.html gs://doc-r2u-bucket
       - name: Invalidate cache
