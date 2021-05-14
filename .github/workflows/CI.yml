@@ -37,7 +37,7 @@ jobs:
           export_default_credentials: true
       - name: config project
         run: gcloud config set project sdk-r2u
-      - name: Copy index to bucket
+      - name: Copy build to bucket
         run: gsutil -m cp -r ./build gs://doc-r2u-bucket
       - name: Set as index page
         run: gsutil web set -m index.html gs://doc-r2u-bucket
