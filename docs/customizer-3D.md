@@ -1,8 +1,8 @@
 ---
-title: Customizador 3D
+title: 3D Customizer
 ---
 
-Depois de adicionar a tag de script em seu site, os métodos para criar o Customizador 3D estarão disponíveis por meio do objeto global R2U.
+After adding the script tag to your website, the methods for creating the 3D Customizer will be available through the global object R2U.
 
 <div>
   <p float="left">
@@ -16,15 +16,15 @@ Depois de adicionar a tag de script em seu site, os métodos para criar o Custom
 :::tip `mobile` `desktop`
 :::
 
-É o método para criar o customizador 3D de acordo com a posição do elemento HTML indicado.
+The method para creates a 3D customizer at the position of the HTML element indicated.
 
 ```typescript
 const element = document.getElementById('3d-customizer')
 const onConfirm = (productCustomization) =>
-  console.log('customização escolhida', productCustomization)
+  console.log('customization selected', productCustomization)
 R2U.customizer.create({ element, onConfirm })
 ```
 
-A função `onConfirm` é acionada após o clique do usuário no botão "Confirmar" na tela do Customizador. Ela retorna um mapa chave-valor contendo a customização do produto (ex: chave "modelo" valor "Cadeira Eames", chave "cor" valor "Preto", etc.).
+The onConfirm function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key "model" value "Eames chair", key "color" value "Black", etc.)
 
 
