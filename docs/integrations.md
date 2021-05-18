@@ -29,7 +29,7 @@ Add the SDK using npm or yarn on your JavaScript project.
   npm install @r2u/javascript-ar-sdk
 
   # using yarn
-  yarn add @r2u/javascript-ar-sdk">
+  yarn add @r2u/javascript-ar-sdk
 ```
 
 Then import the sdk into your project and unstructure the R2U object from within the window.

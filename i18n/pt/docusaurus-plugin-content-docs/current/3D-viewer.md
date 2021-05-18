@@ -4,11 +4,9 @@ title: Visualizador 3D
 
 Depois de adicionar a tag de script em seu site, os métodos para criar o Visualizador 3D estarão disponíveis por meio do objeto global R2U.
 
-
  <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D viewer" width="600"/>
   </p>
-
 
 ## R2U.viewer.create
 
@@ -148,7 +146,6 @@ interface R2U {
 
 </div>
 
-
 ## Mudar sku R2U.viewer.create
 
 O método setSku atualiza o SKU do produto.
@@ -195,10 +192,10 @@ Cria um QRCode que ao scannear direciona o usuário para o modelo em RA.
 <div >
   <div>
 
-  ```typescript
-  const element = document.getElementById('qrCode')
-  R2U.qrCode.create({ element, sku })
-  ```
+```typescript
+const element = document.getElementById('qrCode')
+R2U.qrCode.create({ element, sku })
+```
 
   </div>
   <div>

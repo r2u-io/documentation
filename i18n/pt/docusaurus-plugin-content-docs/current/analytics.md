@@ -10,8 +10,8 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 
 ### 1. Configuração Google Tag Manager (GTM)
 
-  * Faça download do arquivo de configuração [GTM-R2U-setup.json](https://raw.githubusercontent.com/r2u-io/documentation/master/gtm_setup/files/GTM-R2U-setup.json)
-  * Na aba Administrador clique em Importar contêiner
+- Faça download do arquivo de configuração [GTM-R2U-setup.json](https://raw.githubusercontent.com/r2u-io/documentation/master/gtm_setup/files/GTM-R2U-setup.json)
+- Na aba Administrador clique em Importar contêiner
 
   <div>
     <p float="left">
@@ -19,11 +19,11 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
     </p>
   </div>
 
-  * Escolha o arquivo de configuração (GTM-R2U-setup.json)
+- Escolha o arquivo de configuração (GTM-R2U-setup.json)
 
-  * Em Escolher área de trabalho, selecione Existente e use a área de trabalho com a variável do Google Analytics
+- Em Escolher área de trabalho, selecione Existente e use a área de trabalho com a variável do Google Analytics
 
-  * Selecione a opção Combinar e confirme
+- Selecione a opção Combinar e confirme
 
   <div>
     <p float="left">
@@ -31,7 +31,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
     </p>
   </div>
 
-  * Configure as tags UA - R2U attribution e UA - R2U events para usar a variável do Google Analytics
+- Configure as tags UA - R2U attribution e UA - R2U events para usar a variável do Google Analytics
 
    <div>
     <p float="left">
@@ -39,8 +39,8 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
     </p>
   </div>
 
-  * Publique as mudanças
+- Publique as mudanças
 
 ### 2. Configuração Google Analytics (GA)
 
-  * Importe os segmentos e report da R2U via este [link](https://analytics.google.com/analytics/web/provision/?authuser=0&utm_source&utm_medium&utm_term&utm_content&utm_campaign#/provision) e aplique na view com os dados do site
+- Importe os segmentos e report da R2U via este [link](https://analytics.google.com/analytics/web/provision/?authuser=0&utm_source&utm_medium&utm_term&utm_content&utm_campaign#/provision) e aplique na view com os dados do site

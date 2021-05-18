@@ -10,9 +10,9 @@ The necessary configuration steps are described bellow such that the data is ava
 
 ### 1. Google Tag Manager setup
 
-  * Download the setup file [GTM-R2U-setup.json](https://raw.githubusercontent.com/r2u-io/documentation/master/gtm_setup/files/GTM-R2U-setup.json)
+- Download the setup file [GTM-R2U-setup.json](https://raw.githubusercontent.com/r2u-io/documentation/master/gtm_setup/files/GTM-R2U-setup.json)
 
-  * In the Admin tab, click in Import container
+- In the Admin tab, click in Import container
 
   <div>
     <p float="left">
@@ -20,11 +20,11 @@ The necessary configuration steps are described bellow such that the data is ava
     </p>
   </div>
 
-  * Choose the configuration file (GTM-R2U-setup.json)
+- Choose the configuration file (GTM-R2U-setup.json)
 
-  * In Choose workspace, select Existing and use the workspace with the Google Analytics variable
+- In Choose workspace, select Existing and use the workspace with the Google Analytics variable
 
-  * Select Merge and confirm
+- Select Merge and confirm
 
   <div>
     <p float="left">
@@ -32,7 +32,7 @@ The necessary configuration steps are described bellow such that the data is ava
     </p>
   </div>
 
-  * Configure the tags UA - R2U attribution and UA - R2U events to use the Google Analytics variable
+- Configure the tags UA - R2U attribution and UA - R2U events to use the Google Analytics variable
 
    <div>
     <p float="left">
@@ -40,8 +40,8 @@ The necessary configuration steps are described bellow such that the data is ava
     </p>
   </div>
 
-  * Publish the changes
+- Publish the changes
 
 ### 2. Google Analytics setup
 
-  * Import the R2U segments and report via this [link](https://analytics.google.com/analytics/web/provision/?authuser=0&utm_source&utm_medium&utm_term&utm_content&utm_campaign#/provision) and apply to the view with the website data
+- Import the R2U segments and report via this [link](https://analytics.google.com/analytics/web/provision/?authuser=0&utm_source&utm_medium&utm_term&utm_content&utm_campaign#/provision) and apply to the view with the website data

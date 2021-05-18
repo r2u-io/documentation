@@ -1,5 +1,5 @@
 ---
-title:  Our Solutions
+title: Our Solutions
 slug: /
 ---
 
@@ -23,6 +23,7 @@ Our augmented reality solution allows the user to try the product at home, both 
   </p>
 
 ### 3D Customizer
+
 Our 3D customizer allows your customers to test all combinations and possibilities of your product.
 
 <div>

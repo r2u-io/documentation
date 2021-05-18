@@ -26,5 +26,3 @@ R2U.customizer.create({ element, onConfirm })
 ```
 
 The onConfirm function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key "model" value "Eames chair", key "color" value "Black", etc.)
-
-

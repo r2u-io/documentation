@@ -26,5 +26,3 @@ R2U.customizer.create({ element, onConfirm })
 ```
 
 A função `onConfirm` é acionada após o clique do usuário no botão "Confirmar" na tela do Customizador. Ela retorna um mapa chave-valor contendo a customização do produto (ex: chave "modelo" valor "Cadeira Eames", chave "cor" valor "Preto", etc.).
-
-

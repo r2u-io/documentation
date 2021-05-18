@@ -42,4 +42,4 @@ jobs:
       - name: Set as index page
         run: gsutil web set -m index.html gs://doc-r2u-bucket
       - name: Invalidate cache
-        run: gcloud compute url-maps invalidate-cdn-cache doc-r2u-lb --async --path=/* 
+        run: gcloud compute url-maps invalidate-cdn-cache doc-r2u-lb --async --path=/*

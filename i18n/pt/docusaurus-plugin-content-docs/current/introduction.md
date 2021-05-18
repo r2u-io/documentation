@@ -3,11 +3,9 @@ title: Nossas Soluções
 slug: /
 ---
 
-
 ### Visualizador 3D
 
 Nosso visualizador 3D permite que os usuários vejam todos os ângulos do produto, tornando a compra muito mais segura e precisa.
-
 
 <div>
   <p float="left">
@@ -25,6 +23,7 @@ Nossa solução de realidade aumentada permite que o usuário experimente o prod
   </p>
 
 ### Customizador 3D
+
 Nosso personalizador 3D permite que seus clientes testem todas as combinações e possibilidades de seu produto.
 
 <div>

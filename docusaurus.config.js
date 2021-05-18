@@ -1,23 +1,24 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'Documentation R2U',
-  tagline: 'O SDK de Realidade Aumentada da R2U permite exibir modelos 3D interativos na web e em Realidade Aumentada (RA).',
+  tagline:
+    'O SDK de Realidade Aumentada da R2U permite exibir modelos 3D interativos na web e em Realidade Aumentada (RA).',
   url: 'https://docs.r2u-io',
   baseUrl: '/',
-  favicon:'https://storage.googleapis.com/r2u-sdk-bucket/documentation/favicon-32x32.png',
+  favicon: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/favicon-32x32.png',
   organizationName: 'R2U', // Usually your GitHub org/user name.
   projectName: 'documentação', // Usually your repo name.
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "pt"],
+    defaultLocale: 'en',
+    locales: ['en', 'pt'],
     localeConfigs: {
       pt: {
-        label: "Português",
+        label: 'Português'
       },
       en: {
-        label: "English",
-      },
-    },
+        label: 'English'
+      }
+    }
   },
   themeConfig: {
     navbar: {
@@ -29,13 +30,10 @@ module.exports = {
       items: [
         {
           type: 'localeDropdown',
-          position: 'right',
+          position: 'right'
         }
-      ],
-      
-    },
-   
-    
+      ]
+    }
   },
   presets: [
     [
@@ -43,12 +41,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          routeBasePath: '/'
           // Please change this to your repo.
-          
         },
-        themes: ['@docusaurus/theme-live-codeblock'],
-      },
-    ],
-  ],
-};
+        themes: ['@docusaurus/theme-live-codeblock']
+      }
+    ]
+  ]
+}

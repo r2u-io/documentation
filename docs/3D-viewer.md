@@ -4,7 +4,6 @@ title: 3D Viewer
 
 After adding a script tag to your website, methods for creating the 3D Viewer are available through the global object R2U.
 
-
  <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
   </p>
@@ -147,8 +146,6 @@ interface R2U {
 
 </div>
 
-
-
 ## Change sku R2U.viewer.create
 
 The setSku method updates the product SKU.
@@ -195,10 +192,10 @@ Creates a QRCode that, when scanned, directs the user to the model in AR.
 <div >
   <div>
 
-  ```typescript
-  const element = document.getElementById('qrCode')
-  R2U.qrCode.create({ element, sku })
-  ```
+```typescript
+const element = document.getElementById('qrCode')
+R2U.qrCode.create({ element, sku })
+```
 
   </div>
   <div>
