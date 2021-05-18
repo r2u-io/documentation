@@ -1,38 +1,38 @@
 ---
-title: Integração
+title: Integration
 ---
 
-Com o SDK da R2U integrado ao site, terá acesso ao `Visualizador 3D`, ` Customizador 3D` e a `Experiência RA`.
-A integração do SDK de Realidade Aumentada da R2U pode ser feita de duas maneiras equivalentes:
+With the R2U SDK integrated into the website, you will have access to the `3D Viewer`,` 3D Customizer` and the `AR Experience`.
+The integration of the R2U Augmented Reality SDK can be done in two equivalent ways:
 
-## Integração via JavaScript tag
+## JavaScript tag integration
 
-Para utilizar o SDK, adicione a tag no header do HTML do website. Isso pode ser feito através de um sistema gerenciador de tags como o Google Tag Manager ou através da plataforma do seu e-commerce.
+To use this SDK, add the tag below on the HTML header of your website. This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
 
 ```typescript
-  <html lang=pt-br>
+  <html lang=en>
     <head>
-      <title>Como fazer a integração do SDK da R2U</title>
+      <title>How to integrate the R2U SDK</title>
       <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.2.4/dist/index.js'></script>
     </head>
 
-      <body> /*Seu código HTML*/ </body>
+      <body> /* Your HTML code */ </body>
   </html>
 ```
 
-## Integração via JavaScript Package manager
+## JavaScript package manager integration
 
-Adicione o SDK através de npm ou yarn no seu projeto JavaScript.
+Add the SDK using npm or yarn on your JavaScript project.
 
 ```typescript
-  # usando npm
+  # using npm
   npm install @r2u/javascript-ar-sdk
 
-  # usando yarn
+  # using yarn
   yarn add @r2u/javascript-ar-sdk">
 ```
 
-Depois importe o sdk no seu projeto e desestruture o objeto R2U de dentro da window
+Then import the sdk into your project and unstructure the R2U object from within the window.
 
 ```typescript
 import '@r2u/javascript-ar-sdk'

@@ -1,8 +1,8 @@
 ---
-title: Augmented Reality
+title: Realidade Aumentada
 ---
 
-After adding the script tag to your website, methods for creating the Augmented Reality experience will be available through the global object R2U.
+Depois de adicionar a tag de script em seu site, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis por meio do objeto global R2U.
 
 
  <p float="left">
@@ -10,23 +10,22 @@ After adding the script tag to your website, methods for creating the Augmented 
   </p>
 
 
-
 ## R2U.ar.attach
 
 :::tip `mobile`
 :::
 
-The ar.attach method creates an "eventListener" to open the AR viewer on mobile devices (e.g.: on a button click).
+O método ar.attach cria um "eventListener" para abrir o visualizador de RA em dispositivos mobile (e.g.: clique de um botão).
 
 ```typescript
-// test SKU -- remember to use your product information
+// SKU teste -- lembre de usar informação do seu produto
 const arButton = document.getElementById('ar-button')
 const sku = 'RE000001'
-// creates an unsupported device alert
+// cria um alerta de dispositivo não compatível
 const fallbackOptions = {
-  //add message in the alert
-  alertMessage: 'AR not supported by device',
-  //opens a 3D viewer on the warning screen
+  //add mensagem no alerta
+  alertMessage: 'RA não suportada pelo dispositivo',
+  //abre um visualizador 3D na tela de aviso
   fallback: 'viewer'
 }
 
@@ -40,7 +39,7 @@ R2U.ar.attach({
 
 ### element
 
-It is the element that will activate the AR experience through an event.
+É o elemento que irá ativa experiência de RA através de algum evento.
 
 ```typescript
 interface R2U {
@@ -52,7 +51,7 @@ interface R2U {
 
 ### SKU
 
-It is the SKU of the product you want to see in AR.
+É o SKU do produto que deseja ver em RA .
 
 ```typescript
 interface R2U {
@@ -64,7 +63,7 @@ interface R2U {
 
 ### event
 
-It is the event that will activate the AR experience.
+É o evento que ativará experiência de RA.
 
 ```typescript
 interface R2U {
@@ -76,7 +75,7 @@ interface R2U {
 
 ### resize
 
-Option to resize 3D model on AR experience
+Opção para redimensionar modelo 3D em experiência de RA
 
 ```typescript
 interface R2U {
@@ -88,18 +87,16 @@ interface R2U {
 
 ### showInstructions
 
-### showInstructions
-
 :::info Default `once`
 :::
 
-When rendered, shows a full-screen panel explaining how to place and manipulate a 3D object, before proceeding to the AR experience.
+Quando renderizada, dispõe um modal em tela cheia com explicações para posicionamento e manipulação do objeto 3D, antes de carregar a experiência de AR.
 
-| value  | effect                                                                            |
-| ------ | --------------------------------------------------------------------------------- |
-| once   | The instructions screen will render only on the user's first AR experience.       |
-| always | The instructions screen will render every time the user interacts with the button |
-| never  | The instructions screen will never render                                         |
+| valor  | efeito                                                                         |
+| ------ | ------------------------------------------------------------------------------ |
+| once   | A tela de instruções será renderizada na primeira interação do usuário com AR  |
+| always | A tela de instruções será renderizada em todas as interações do usuário com AR |
+| never  | A tela de instruções não será renderizada                                      |
 
 <div >
 <div >
@@ -118,19 +115,19 @@ interface R2U {
 
 </div>
 <div>
-<strong> Instructions example: </strong>
+<strong> Exemplo das instruções: </strong>
 
 <p float="left">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/instruction-en.png" title="Instruction screen" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/instructions.png" title="Instruction screen" width="200"/>
 </p>
 </div>
 </div>
 
 ### fallbackOptions
 
-:::tip The `alertMessage` message can be customized
+:::tip A mensagem do `alertMessage` pode ser customizada
 :::
-Shows an image when the mobile device does not support the AR experience. If the instructions are entered, the fallback is displayed only when you click on the "See at your home" button.
+Mostra uma imagem quando o dispositivo móvel não suporta a experiência de RA. Se as instruções estiver inserida o fallback é visualizado apenas quando clicar no botão de "Veja na sua casa".
 
 <div >
 <div >
@@ -141,19 +138,19 @@ interface R2U {
     attach: (params: {
       element: HTMLElement
       sku: string
-      //device warning not compatible with AR
+      //aviso de dispositivo não compatível com RA
       fallbackOptions?: {
-        //add alert message
+        //add mensagem de alerta
         alertMessage?: string
-        //opens a 3D viewer on the warning screen
+        //abre um visualizador 3D na tela de aviso
         fallback?: 'viewer' | 'full'
-        //modify the fallback text
+        //modifica o texto do fallback
         text?: {
-          //change the page title
+          //altera o título da página
           title?: string
-          //changes the top text of the page
+          //altera o texto superior da página
           top?: string
-          //change bottom page text
+          //altera texto inferior da página
           bottom?: string
         }
       }
@@ -164,7 +161,7 @@ interface R2U {
 
 </div>
 <div>
-<strong> Fallback example: </strong>
+<strong> Exemplo do fallback: </strong>
 
 <p float="left">
   <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/fallback-pt.png" title="Fallback" width="200"/>
@@ -173,7 +170,7 @@ interface R2U {
 
 </div>
 
-### AR demo on _iOS_
+### Demostração da RA no _iOS_
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="200"/>
@@ -181,7 +178,7 @@ interface R2U {
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="200"/>
 </p>
 
-### AR demo on _Android_
+### Desmonstração da RA no _Android_
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
@@ -194,9 +191,9 @@ interface R2U {
 :::tip `mobile` `desktop`
 :::
 
-The method returns a shareable URL for the AR experience.
+É o método retorna a URL para compartilhamento na experiência de RA.
 
 ```typescript
-//remember to use your product information
+// Lembre de usar informação do seu produto
 R2U.ar.getLink('RE000001').then((url) => console.log(url))
 ```

@@ -1,13 +1,11 @@
 ---
-title: Nossas Soluções
+title:  Our Solutions
 slug: /
 ---
 
+### 3D viewer
 
-### Visualizador 3D
-
-Nosso visualizador 3D permite que os usuários vejam todos os ângulos do produto, tornando a compra muito mais segura e precisa.
-
+Our 3D viewer allows users to see all angles of the product, making a much safer and more accurate purchase
 
 <div>
   <p float="left">
@@ -16,16 +14,16 @@ Nosso visualizador 3D permite que os usuários vejam todos os ângulos do produt
 
 </div>
 
-### Experiência de Realidade Aumentada
+### Augmented Reality Experience
 
-Nossa solução de realidade aumentada permite que o usuário experimente o produto em casa, tanto no iOS quanto no Android, diretamente pelo navegador, sem a necessidade de um aplicativo.
+Our augmented reality solution allows the user to try the product at home, both on iOS and Android directly through the browser, without the need for an app.
 
  <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>
   </p>
 
-### Customizador 3D
-Nosso personalizador 3D permite que seus clientes testem todas as combinações e possibilidades de seu produto.
+### 3D Customizer
+Our 3D customizer allows your customers to test all combinations and possibilities of your product.
 
 <div>
   <p float="left">
@@ -36,6 +34,6 @@ Nosso personalizador 3D permite que seus clientes testem todas as combinações 
 
 <div>
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/github.png"  width="20"/>
-    <a href="https://github.com/r2u-io/documentation" title="customizer" width="600" >  Contribuir</a>
+    <a href="https://github.com/r2u-io/documentation" title="customizer" width="600" >  Contribute</a>
 
 </div>

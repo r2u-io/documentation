@@ -1,43 +1,44 @@
 ---
-title: 3D Viewer
+title: Visualizador 3D
 ---
 
-After adding a script tag to your website, methods for creating the 3D Viewer are available through the global object R2U.
+Depois de adicionar a tag de script em seu site, os métodos para criar o Visualizador 3D estarão disponíveis por meio do objeto global R2U.
 
 
  <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D viewer" width="600"/>
   </p>
+
 
 ## R2U.viewer.create
 
 :::tip `mobile` `desktop`
 :::
 
-It is method for creates a 3D model viewer at the position of the HTML element indicated, by default expandable via popup
+É o método para criar o visualizador 3D no site de acordo com a posição do elemento HTML indicado.
 
 ```typescript
-// test SKU -- remember to use your product information
+//Lembre de substituir pelas informações do seu produto
 
-//HTML element that will receive the 3D model
+//elemento HTML que irá receber o modelo 3D
 const element = document.getElementById('3d-viewer')
-//Desired product SKU
+//SKU do produto desejado
 const sku = 'RE000001'
-//name of the product that will be rendered
+//nome do produto que será renderizado
 const name = 'Cadeira Eames'
-//expandable 3D viewer
+//visualizador 3D expansível
 const popup = false
-//3D model loading bar position
+//posição da barra de carregamento do modelo 3D
 const progressBarPosition = 'middle'
-//insert an image on top of the 3D model while loading the model
+//inserir uma imagem sobre o modelo 3D durante o carregamento do modelo
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
 R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
 ```
 
-### Parameter popup
+### Parâmetro popup
 
-Enables and disables the button to open the expandable 3D viewer with the model.
+Habilita e desabilita o botão para abrir o visualizador 3D expansível com o modelo.
 
 <div style={{display: 'flex', flexDirection: 'column'}}>
 <div>
@@ -57,7 +58,7 @@ interface R2U {
 
 </div>
 <div>
-  <strong> Popup example: </strong>
+  <strong> Exemplo do popup: </strong>
 
  <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-popup.gif" title="popup" width="600"/>
@@ -66,9 +67,9 @@ interface R2U {
 
 </div>
 
-### Parameter progressBarPosition
+### Parâmetro progressBarPosition
 
-Defines the position in which the progress bar will be inserted.
+Define a posição que o progress bar será inserido.
 
 <div style={{display: 'flex', flexDirection: 'column'}}>
 <div >
@@ -87,7 +88,7 @@ interface R2U {
 
 </div>
 <div style={{ marginTop: '20px'}}>
-  <strong> ProgressBarPosition example on the desktop: </strong>
+  <strong> Exemplo do progressBarPosition no desktop: </strong>
 
 <p float="left" style={{display: 'flex', flexDirection: 'row'}}>
   <div  style={{display: 'flex', flexDirection: 'column', marginLeft: '15px', marginRight: '15px'}} >
@@ -108,9 +109,9 @@ interface R2U {
 
 </div>
 
-### Parameter progressBarColor
+### Parâmetro progressBarColor
 
-Sets the color of the progressBarPosition
+Define a cor do progressBarPosition
 
 <div>
 
@@ -128,9 +129,9 @@ interface R2U {
 
 </div>
 
-### Parameter poster
+### Parâmetro poster
 
-Define an image on top of the 3D model that will be displayed when loading the model.
+Define uma imagem sobre o modelo 3D que será exibida durante o carregamento do modelo.
 
 <div>
 <div>
@@ -148,20 +149,19 @@ interface R2U {
 </div>
 
 
+## Mudar sku R2U.viewer.create
 
-## Change sku R2U.viewer.create
-
-The setSku method updates the product SKU.
+O método setSku atualiza o SKU do produto.
 
 <div >
 <div>
 
 ```typescript
-// test SKU -- remember to use your product information
+// SKU de teste -- lembre de substituir pelas informações do seu produto
 const buttonChangeSku = document.getElementById('button-changeSku')
 const changeSku = document.getElementById('viewer-changeSku')
 
-// create will return a handler with function to change  sku
+// O create irá retornar um objeto que terá o método setSku
 const handler = R2U.viewer.create({
   element: changeSku,
   sku,
@@ -170,7 +170,7 @@ const handler = R2U.viewer.create({
   progressBarPosition,
   poster
 })
-//change the sku at the click of the button
+//muda o sku no click do botão
 buttonChangeSku.addEventListener('click', () => {
   handler.setSku('RE000002')
 })
@@ -178,10 +178,10 @@ buttonChangeSku.addEventListener('click', () => {
 
 </div>
 <div>
-  <strong> SetSku example: </strong>
+  <strong> Exemplo do setSku: </strong>
 
   <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
+    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setSku" width="600"/>
   </p>
 
   </div>
@@ -190,7 +190,7 @@ buttonChangeSku.addEventListener('click', () => {
 
 ## R2U.qrCode.create
 
-Creates a QRCode that, when scanned, directs the user to the model in AR.
+Cria um QRCode que ao scannear direciona o usuário para o modelo em RA.
 
 <div >
   <div>
@@ -202,10 +202,8 @@ Creates a QRCode that, when scanned, directs the user to the model in AR.
 
   </div>
   <div>
-
   <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
   </p>
   </div>
-
 </div>
