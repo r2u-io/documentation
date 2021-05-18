@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Documentação R2U',
+  title: 'Documentation R2U',
   tagline: 'O SDK de Realidade Aumentada da R2U permite exibir modelos 3D interativos na web e em Realidade Aumentada (RA).',
   url: 'https://docs.r2u-io',
   baseUrl: '/',
@@ -21,7 +21,7 @@ module.exports = {
   },
   themeConfig: {
     navbar: {
-      title: 'DOCUMENTAÇÃO ',
+      title: 'DOCUMENTATION ',
       logo: {
         src: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/logo.png',
         href: 'https://r2u.io/'
