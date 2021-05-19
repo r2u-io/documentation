@@ -13,7 +13,7 @@ Para utilizar o SDK, adicione a tag no header do HTML do website. Isso pode ser 
   <html lang=pt-br>
     <head>
       <title>Como fazer a integração do SDK da R2U</title>
-      <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.2.4/dist/index.js'></script>
+      <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.4.6/dist/index.js'></script>
     </head>
 
       <body> /*Seu código HTML*/ </body>
