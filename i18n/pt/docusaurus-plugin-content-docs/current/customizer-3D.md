@@ -34,4 +34,4 @@ const onConfirm = (productCustomization) =>
 const resultContainer = document.getElementById('createViewerCustomization')
 R2U.customizer.create({ element, onConfirm, resultContainer})
 ```
-O elemento `resultContainer` (opcional) é criado após o clique do usuário no botão "Confirmar" na tela do Customizador. Ele retorna um elemento HTML que recebe o viewer 3D com a customização do produto.
+O elemento `resultContainer` (opcional) é criado após o clique do usuário no botão "Confirmar" na tela do Customizador. Ele retorna um elemento HTML que renderiza o 3D do resultado da customização.
