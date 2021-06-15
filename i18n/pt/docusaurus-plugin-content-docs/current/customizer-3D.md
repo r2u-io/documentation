@@ -22,7 +22,7 @@ Depois de adicionar a tag de script em seu site, os métodos para criar o Custom
 const element = document.getElementById('3d-customizer')
 const onConfirm = (productCustomization) =>
   console.log('customização escolhida', productCustomization)
-R2U.customizer.create({ element, onConfirm})
+R2U.customizer.create({ element, onConfirm })
 ```
 
 A função `onConfirm` é acionada após o clique do usuário no botão "Confirmar" na tela do Customizador. Ela retorna um mapa chave-valor contendo a customização do produto (ex: chave "modelo" valor "Cadeira Eames", chave "cor" valor "Preto", etc.).
@@ -34,4 +34,4 @@ const onConfirm = (productCustomization) =>
 const resultContainer = document.getElementById('createViewerCustomization')
 R2U.customizer.create({ element, onConfirm, resultContainer})
 ```
-O elemento `resultContainer` (opcional) é criado após o clique do usuário no botão "Confirmar" na tela do Customizador. Ele retorna um elemento HTML que recebe o viewer 3D com a customização do produto escolhida.
+O elemento `resultContainer` (opcional) é criado após o clique do usuário no botão "Confirmar" na tela do Customizador. Ele retorna um elemento HTML que recebe o viewer 3D com a customização do produto.
