@@ -2,7 +2,7 @@
 title: Checking status
 ---
 
-On this page, you can check every product you sent us and its status.  To go there, access the Products page on R2U App.
+On this page, you can check every product you sent us and its status. To go there, access the Products page on R2U App.
 
 ![](./assets/sidebar.png 'Sidebar')
 

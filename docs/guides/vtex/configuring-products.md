@@ -19,7 +19,7 @@ To make our 3D Viewer and AR Experience Button to appear in your products page, 
   "children": ["r2u-model-viewer"]
 }
 ```
-Note that the AR button must be displayed only on the desktop.
+Note that the Viewer 3D must be displayed only on the desktop.
 
 
 ### AR Experience
