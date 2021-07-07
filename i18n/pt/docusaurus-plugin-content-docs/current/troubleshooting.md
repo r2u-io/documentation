@@ -30,13 +30,11 @@ Algumas vezes o erro pode ser causado pela versão do SDK. Quando for chamar o s
 
 ### R2U.viewer.create / R2U.ar.attach
 
-Lembre-se de que essas funções possuem parâmetros específicos. A próxima linha:
+Lembre-se de que essas funções possuem parâmetros específicos.
 ```typescript
+// A próxima linha:
 R2U.viewer.create({ element, ... })
-```
-
-é equivalente a:
-```typescript
+// é equivalente a:
 R2U.viewer.create({ element: element, ... })
 ```
 

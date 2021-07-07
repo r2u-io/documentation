@@ -30,13 +30,11 @@ Sometimes you might end up in some trouble by getting an older version of the SD
 
 ### R2U.viewer.create / R2U.ar.attach
 
-Remember that these functions have specific parameters. This next line
+Remember that these functions have specific parameters.
 ```typescript
+// The next line:
 R2U.viewer.create({ element, ... })
-```
-
-is equivalent to:
-```typescript
+// is equivalent to:
 R2U.viewer.create({ element: element, ... })
 ```
 
