@@ -50,7 +50,7 @@ R2U.viewer.create({ element: fooBar, ... })
 
 ### Uncaught TypeError: Cannot read property 'assets' of undefined
 
-This error means that the SKU that you are calling isn't in our database. If you think the SKU you are calling are correct, some common causes are listed here:
+This error means that the SKU that you are calling isn't in our database. If you think the SKU you are calling is correct, some common causes are listed here:
 
 - the SKU wasn't created yet on our database
 - the SKU you are calling doesn't match the one we have
