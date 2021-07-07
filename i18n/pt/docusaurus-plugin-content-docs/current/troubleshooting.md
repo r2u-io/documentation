@@ -28,6 +28,12 @@ Algumas vezes o erro pode ser causado pela versão do SDK. Quando for chamar o s
 <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
 ```
 
+- Adicionar o pacote com `yarn`
+```bash
+yarn add @r2u/javascript-ar-sdk
+```
+
+
 ### R2U.viewer.create / R2U.ar.attach
 
 Lembre-se de que essas funções possuem parâmetros específicos.

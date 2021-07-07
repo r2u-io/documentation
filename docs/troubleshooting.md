@@ -28,6 +28,11 @@ Sometimes you might end up in some trouble by getting an older version of the SD
 <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
 ```
 
+- Add the package with `yarn`
+```bash
+yarn add @r2u/javascript-ar-sdk
+```
+
 ### R2U.viewer.create / R2U.ar.attach
 
 Remember that these functions have specific parameters.
