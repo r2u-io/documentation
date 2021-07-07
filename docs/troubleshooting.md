@@ -4,7 +4,7 @@ title: Troubleshooting
 
 ### Initialization
 
-If you bump into an error in the initialization, you may have forgotten that the `R2U.init` function is asynchronous. The solution is to `await` the method before calling the others. Here are two possibilities:
+If you bump into an error in the initialization, you may have forgotten that the `R2U.init` function is asynchronous. The solution is to `await` the method before calling the others. Here are two implementation possibilities:
 
 ```typescript
 await R2U.init(...)
@@ -40,7 +40,7 @@ is equivalent to:
 R2U.viewer.create({ element: element, ... })
 ```
 
-The solution is simply explicit the parameter:
+The correct implementation is to simply explicit the parameters:
 ```typescript
 R2U.viewer.create({ element: fooBar, ... })
 ```
@@ -53,7 +53,7 @@ Erro 404 no arquivo customer.json  - Quer dizer que o cliente não tem nenhum te
 
 This error means that the SKU that you are calling isn't in our database. If you think the SKU you are calling are correct, some common causes are listed here:
 
-- it wasn't created yet
+- the SKU wasn't created yet on our database
 - the SKU you are calling doesn't match the one we have
 
 Please enter in contact (contato@r2u.io) to have these aligned.
