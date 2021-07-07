@@ -43,10 +43,6 @@ The correct implementation is to simply explicit the parameters:
 R2U.viewer.create({ element: fooBar, ... })
 ```
 
-### Error 404 - customer.json
-
-Erro 404 no arquivo customer.json  - Quer dizer que o cliente não tem nenhum texto que sobrepõe ao nosso default. Podemos trocar os textos ou criar o arquivo vazio para dar erro (na real erro meu de nunca ter colocado de criar esse JSON quando cria um customer, vou fazer uma task assim). Mas pessoal ficava preocupado que tava com erro no SDK
-
 ### Uncaught TypeError: Cannot read property 'assets' of undefined
 
 This error means that the SKU that you are calling isn't in our database. If you think the SKU you are calling are correct, some common causes are listed here:
