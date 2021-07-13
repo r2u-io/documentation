@@ -195,3 +195,67 @@ interface R2U {
 // Lembre de usar informação do seu produto
 R2U.ar.getLink('RE000001').then((url) => console.log(url))
 ```
+
+## Exemplo completo
+
+In your HTML we will need this basic structure:
+```html
+<html>
+  <head>
+    <title>Como integrar o SDK R2U</title>
+    <!-- adicionando o script do sdk -->
+    <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
+    <script src='integration-mobile.js'></script>
+  </head>
+
+  <body> 
+    <h1>Como integrar o SDK R2U</h1>
+    <!-- um container para o nome -->
+    <h2 id="name">Eames</h2>
+    <div style="display: block; height: 300px">
+      <img src="eames.jpg" style="width: 100%; border: 1px solid black" />
+      <!-- um container para o SKU -->
+      <div id="sku" style="font-size: xx-large;">RE000001</div>
+      <!-- um container para o preço -->
+      <div id="price" style="font-size: xx-large;">100</div>
+      <!-- um botão ou link para abrir a RA -->
+      <button id="r2u-ar" style="width: 100%; font-size: xx-large;" >VIEW IN YOUR SPACE</button>
+      <!-- um botão ou link de compra -->
+      <button class="buy-button" style="width: 100%; font-size: xx-large;">BUY</button>
+    </div>
+  </body>
+</html>
+```
+
+And then, on your JS file, you can add this snippet:
+```typescript
+document.addEventListener('DOMContentLoaded', async (event) => { 
+  // inicializando 
+  await R2U.init({ customerId: '5e8e7580404328000882f4ae' })
+    .then(() => console.log('Client active'))
+    .catch((err) => console.error('Client inactive'))
+
+  const sku = document.getElementById('sku').innerHTML
+  const isActive = R2U.sku.isActive(sku)
+  if (!sku || !isActive) return
+
+  // adicionando analytics
+  const addToCartButton  = document.querySelector('.buy-button')
+  const price = document.getElementById('price').innerHTML
+  addToCartButton.addEventListener('click', () =>
+    R2U.analytics.send({
+      event: 'add_to_cart',
+      data: { price: price }
+    })
+  )
+
+  // adicionando botão de AR
+  const arButton = document.getElementById('r2u-ar')
+  await R2U.ar.attach({
+    element: arButton,
+    sku: sku
+  })
+})
+```
+
+![](./assets/mobile.png 'Exemplo mobile')
