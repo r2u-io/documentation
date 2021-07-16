@@ -210,7 +210,7 @@ In your HTML file you will need this basic structure:
     <script src='integration-mobile.js'></script>
   </head>
 
-  <body> 
+  <body style="font-family: sans-serif;"> 
     <h1>How to integrate the R2U SDK</h1>
     <!-- a container for the name -->
     <h2 id="name">Eames</h2>
@@ -229,7 +229,7 @@ In your HTML file you will need this basic structure:
 </html>
 ```
 
-And then, on your JS file, you can add this snippet:
+And then, on your JS file (called `integration-mobile.js` in this example), you can add this snippet:
 ```typescript
 document.addEventListener('DOMContentLoaded', async (event) => { 
   //init 

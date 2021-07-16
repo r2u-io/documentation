@@ -217,7 +217,7 @@ No arquivo HTML, a seguinte estrutura mínima é necessária:
     <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
     <script src='integration-web.js'></script>
   </head>
-  <body> 
+  <body style="font-family: sans-serif;"> 
     <h1>Como integrar o SDK R2U</h1>
     <!-- um container para o nome -->
     <h2 id="name">Eames</h2>
@@ -244,14 +244,14 @@ No arquivo HTML, a seguinte estrutura mínima é necessária:
         <!-- um container para o visializador -->
         <div id="r2u-viewer"></div>
         <!-- um botão ou link de compra -->
-      <button class="buy-button" style="width: 100%">BUY</button>
+      <button class="buy-button" style="width: 100%">COMPRAR</button>
       </div>
     </div>
   </body>
 </html>
 ```
 
-E no script JS, pode-se adicionar o seguinte snippet:
+E no script JS (chamado `integration-web.js` nesse exemplo), pode-se adicionar o seguinte snippet:
 ```typescript
 document.addEventListener('DOMContentLoaded', async (event) => { 
   // inicializando

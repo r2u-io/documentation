@@ -198,7 +198,7 @@ R2U.ar.getLink('RE000001').then((url) => console.log(url))
 
 ## Exemplo completo
 
-In your HTML we will need this basic structure:
+No arquivo HTML, a seguinte estrutura mínima é necessária:
 ```html
 <html>
   <head>
@@ -208,7 +208,7 @@ In your HTML we will need this basic structure:
     <script src='integration-mobile.js'></script>
   </head>
 
-  <body> 
+  <body style="font-family: sans-serif;"> 
     <h1>Como integrar o SDK R2U</h1>
     <!-- um container para o nome -->
     <h2 id="name">Eames</h2>
@@ -219,15 +219,15 @@ In your HTML we will need this basic structure:
       <!-- um container para o preço -->
       <div id="price" style="font-size: xx-large;">100</div>
       <!-- um botão ou link para abrir a RA -->
-      <button id="r2u-ar" style="width: 100%; font-size: xx-large;" >VIEW IN YOUR SPACE</button>
+      <button id="r2u-ar" style="width: 100%; font-size: xx-large;" >VEJA NO SEU ESPAÇO</button>
       <!-- um botão ou link de compra -->
-      <button class="buy-button" style="width: 100%; font-size: xx-large;">BUY</button>
+      <button class="buy-button" style="width: 100%; font-size: xx-large;">COMPRAR</button>
     </div>
   </body>
 </html>
 ```
 
-And then, on your JS file, you can add this snippet:
+E no script JS (chamado `integration-mobile.js` nesse exemplo), pode-se adicionar o seguinte snippet:
 ```typescript
 document.addEventListener('DOMContentLoaded', async (event) => { 
   // inicializando 
