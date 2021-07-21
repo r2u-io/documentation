@@ -201,38 +201,48 @@ R2U.ar.getLink('RE000001').then((url) => console.log(url))
 ## Full example
 
 In your HTML file you will need this basic structure:
+
 ```html
 <html>
   <head>
     <title>How to integrate the R2U SDK</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/vml3ezi.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- add sdk script -->
-    <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
-    <script src='integration-mobile.js'></script>
+    <script src="https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js"></script>
+    <script src="integration-mobile.js"></script>
   </head>
 
-  <body style="font-family: sans-serif;"> 
+  <body style="font-family: sans-serif">
     <h1>How to integrate the R2U SDK</h1>
     <!-- a container for the name -->
     <h2 id="name">Eames</h2>
     <div style="display: block; height: 300px">
       <img src="eames.jpg" style="width: 100%; border: 1px solid black" />
       <!-- a container for the SKU -->
-      <div id="sku" style="font-size: xx-large;">RE000001</div>
+      <div id="sku">RE000001</div>
       <!-- a container for the price -->
-      <div id="price" style="font-size: xx-large;">100</div>
+      <div id="price">100</div>
       <!-- a button or link to open AR -->
-      <button id="r2u-ar" style="width: 100%; font-size: xx-large;" >VIEW IN YOUR SPACE</button>
+      <button id="r2u-ar" class="btn btn-secondary" style="width: 100%">VIEW IN YOUR SPACE</button>
       <!-- a button or link to buy -->
-      <button class="buy-button" style="width: 100%; font-size: xx-large;">BUY</button>
+      <button id="buy-button" class="btn btn-primary" style="width: 100%">BUY</button>
     </div>
   </body>
 </html>
 ```
 
 And then, on your JS file (called `integration-mobile.js` in this example), you can add this snippet:
+
 ```typescript
-document.addEventListener('DOMContentLoaded', async (event) => { 
-  //init 
+document.addEventListener('DOMContentLoaded', async (event) => {
+  //init
   await R2U.init({ customerId: '5e8e7580404328000882f4ae' })
     .then(() => console.log('Client active'))
     .catch((err) => console.error('Client inactive'))
@@ -242,7 +252,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
   if (!sku || !isActive) return
 
   // add analytics
-  const addToCartButton  = document.querySelector('.buy-button')
+  const addToCartButton = document.getElementById('buy-button')
   const price = document.getElementById('price').innerHTML
   addToCartButton.addEventListener('click', () =>
     R2U.analytics.send({
