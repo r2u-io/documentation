@@ -215,7 +215,7 @@ In your HTML file you will need this basic structure:
     <link rel="stylesheet" href="https://use.typekit.net/vml3ezi.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- add sdk script -->
-    <script src="https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js"></script>
+    <script src="https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js"></script>
     <script src="integration-mobile.js"></script>
   </head>
 
