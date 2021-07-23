@@ -205,84 +205,41 @@ R2U.qrCode.create({ element, sku })
   </div>
 </div>
 
-## Full example
+## Example with viewer and qrcode on modal
 
-In your HTML file you will need this basic structure:
+If you want to add a button to you viewer with the qrCode in some sort of modal, you can follow this simple example:
 ```html
-<html>
-  <head>
-    <title>How to integrate the R2U SDK</title>
-    <!-- add sdk script -->
-    <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
-    <script src='integration-web.js'></script>
-  </head>
-  <body style="font-family: sans-serif;"> 
-    <h1>How to integrate the R2U SDK</h1>
-    <!-- a container for the name -->
-    <h2 id="name">Eames</h2>
-    <div style="height: 300px">
-      <div style="float: left; padding: 10px">
-        <img src="eames.jpg" style="width: 100%; border: 1px solid black" />
-      </div>
-      <div style="width: 40%; float: left; padding: 10px">
-        <!-- a container for the SKU -->
-        <div id="sku">RE000001</div>
-        <!-- a container for the price -->
-        <div id="price">100</div>
-        <!-- modal to show qrcode -->
-        <div style="position: absolute; z-index: 2; width: 200px">
-          <img id="ar-button" src="ar.png" width="30" height="30" />
-          <div id="modal" style="background-color: grey; padding: 10px" hidden>
-              <span>
-                Scan the QR code bellow and see the product at your home!
-              </span>
-              <!-- a container for the qrcode -->
-              <div id="r2u-qrcode"></div>
-          </div>
-        </div>
-        <!-- a container for the viewer -->
-        <div id="r2u-viewer"></div>
-        <!-- a button or link to buy -->
-      <button class="buy-button" style="width: 100%">BUY</button>
-      </div>
+<div class="product-info">
+  <!-- modal to show qrcode -->
+  <div class="modal">
+    <img id="ar-button" src="ar.png" width="30" height="30" />
+    <div id="modal" hidden>
+        <span>
+          Scan the QR code bellow and see the product at your home!
+        </span>
+        <!-- a container for the qrcode -->
+        <div id="r2u-qrcode"></div>
     </div>
-  </body>
-</html>
+  </div>
+  <!-- a container for the viewer -->
+  <div id="r2u-viewer"></div>
+</div>
 ```
 
-And then, on your JS file (called `integration-web.js` in this example), you can add this snippet:
+And then, on your JS file, you can add this snippet:
 ```typescript
 document.addEventListener('DOMContentLoaded', async (event) => { 
   // init
   await R2U.init({ customerId: '5e8e7580404328000882f4ae' })
-    .then(() => console.log('Client active'))
-    .catch((err) => console.error('Client inactive'))
 
-  const sku = document.getElementById('sku').innerHTML
-  const name = document.getElementById('name').innerHTML
-  const isActive = R2U.sku.isActive(sku)
-  if (!sku || !isActive) {
-    document.getElementById('ar-icon').remove()
-    return
-  }
-
-  // add analytics
-  const addToCartButton  = document.querySelector('.buy-button')
-  const price = document.getElementById('price').innerHTML
-  addToCartButton.addEventListener('click', () =>
-    R2U.analytics.send({
-      event: 'add_to_cart',
-      data: { price: price }
-    })
-  )
+  const sku = 'RE000001'
 
   // add viewer
   const viewerPosition = document.getElementById('r2u-viewer')
   await R2U.viewer.create({
     element: viewerPosition,
     popup: true,
-    sku: sku,
-    name: name
+    sku: sku
   })
   
   // add qrcode
@@ -292,7 +249,7 @@ document.addEventListener('DOMContentLoaded', async (event) => {
     sku: sku
   })
 
-  // add open/close
+  // open/close
   document.getElementById('ar-button').addEventListener('click', (e) => {
     const modal = document.getElementById('modal')
     modal.hidden = !modal.hidden
@@ -300,5 +257,4 @@ document.addEventListener('DOMContentLoaded', async (event) => {
 })
 ```
 
-![](./assets/web.png 'Webpage example')
-![](./assets/web-modal.png 'Webpage example with QRCode modal')
+![](./assets/modal.png 'Viewer with modal qrCode')
