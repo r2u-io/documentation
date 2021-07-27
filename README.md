@@ -1,5 +1,5 @@
 # R2U Documentation
 
-R2U JavaScript Augmented Reality SDK docs
+R2U SDK docs
 
 https://docs.r2u.io

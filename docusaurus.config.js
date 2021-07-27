@@ -1,23 +1,23 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Documentation R2U',
+  title: 'R2U Documentation',
   tagline:
-    'O SDK de Realidade Aumentada da R2U permite exibir modelos 3D interativos na web e em Realidade Aumentada (RA).',
-  url: 'https://docs.r2u-io',
+    "R2U's Augmented Reality SDK allows you to display interactive 3D models on the web and in Augmented Reality (AR).",
+  url: 'https://docs.r2u.io',
   baseUrl: '/',
   favicon: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/favicon-32x32.png',
-  organizationName: 'R2U', // Usually your GitHub org/user name.
-  projectName: 'documentação', // Usually your repo name.
+  organizationName: 'R2U',
+  projectName: 'documentation',
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'pt'],
     localeConfigs: {
+      en: {
+        label: 'English'
+      },
       pt: {
         label: 'Português'
       },
-      en: {
-        label: 'English'
-      }
     }
   },
   themeConfig: {
