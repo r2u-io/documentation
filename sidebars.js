@@ -2,7 +2,7 @@ module.exports = {
   docs: [
     'introduction',
     'integrations',
-    'inicialization',
+    'initialization',
     'analytics',
     '3D-viewer',
     'augmented-reality',
