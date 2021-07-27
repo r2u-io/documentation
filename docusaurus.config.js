@@ -1,8 +1,8 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'R2U Documentation',
+  title: 'R2U',
   tagline:
-    "R2U's Augmented Reality SDK allows you to display interactive 3D models on the web and in Augmented Reality (AR).",
+    "R2U helps e-commerce stores sell more by allowing users to try-out products at home with Augmented Reality",
   url: 'https://docs.r2u.io',
   baseUrl: '/',
   favicon: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/favicon-32x32.png',
@@ -22,7 +22,7 @@ module.exports = {
   },
   themeConfig: {
     navbar: {
-      title: 'DOCUMENTATION ',
+      title: 'Docs',
       logo: {
         src: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/logo.png',
         href: 'https://r2u.io/'
