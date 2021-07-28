@@ -2,7 +2,7 @@
 title: 3D Viewer
 ---
 
-After adding the script tag to your website, the methods for creating the 3D Viewer will be available through the global object R2U.
+After adding the script tag to your website, the methods for creating the 3D Viewer will be available through the global `R2U` object.
 
 <p float="left">
   <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
