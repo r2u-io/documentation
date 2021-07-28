@@ -55,7 +55,7 @@ This error means that the SKU that you are calling isn't in our database. If you
 - the SKU wasn't created yet on our database
 - the SKU you are calling doesn't match the one we have
 
-Please enter in contact (contato@r2u.io) to have these aligned.
+Please enter in contact (contat@r2u.io) to have these aligned.
 
 ### 3D Viewer and AR Button don't appear 
 
