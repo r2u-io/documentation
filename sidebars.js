@@ -22,8 +22,8 @@ module.exports = {
       ]
     },
     {
-      'iOS/Android SDK': [
-        'react-native/quickstart'
+      'Swift/Kotlin SDK': [
+        'swift-kotlin/quickstart'
       ]
     },
     {

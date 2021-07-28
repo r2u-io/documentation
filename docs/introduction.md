@@ -39,7 +39,7 @@ We offer [Augmented Reality](/augmented-reality), a [3D Viewer](/viewer) and a [
 
 ## What technologies does your SDKs support?
 
-We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and desktop websites, and  a [React Native](https://github.com/r2u-io/documentation-react-native) for mobile apps. If you wish to join our early access for our [iOS/Android SDKs](ios-android/quickstart), please send us a message.
+We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and desktop websites, and  a [React Native](https://github.com/r2u-io/documentation-react-native) for mobile apps. If you wish to join our early access wait list for our [Swift/Kotlin SDKs](swift-kotlin/quickstart), please send us a message.
 
 ## What is the size of your SDKs? What is the impact on load time and bundle size?
 
