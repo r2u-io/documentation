@@ -28,12 +28,12 @@ module.exports = {
         href: 'https://r2u.io/'
       },
       items: [
-        {
-          to: 'docs/introduction',
-          label: 'Showcase',
-          position: 'left',
-          activeBasePath: 'docs',
-        },
+        // {
+        //   to: 'docs/introduction',
+        //   label: 'Showcase',
+        //   position: 'left',
+        //   activeBasePath: 'docs',
+        // },
         // {
         //   type: 'localeDropdown',
         //   position: 'right'
