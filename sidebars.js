@@ -9,7 +9,7 @@ module.exports = {
         'javascript/viewer',
         'javascript/customizer',
         'javascript/analytics',
-        'troubleshooting'
+        'javascript/troubleshooting'
       ],
     },
     {
@@ -18,7 +18,8 @@ module.exports = {
         'react-native/methods',
         'react-native/augmented-reality',
         'react-native/viewer',
-        'react-native/analytics'
+        'react-native/analytics',
+        'react-native/troubleshooting'
       ]
     },
     {
