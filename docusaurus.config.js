@@ -29,8 +29,18 @@ module.exports = {
       },
       items: [
         {
+          to: 'docs/introduction',
+          label: 'Showcase',
+          position: 'left',
+          activeBasePath: 'docs',
+        },
+        {
           type: 'localeDropdown',
           position: 'right'
+        },
+        {
+          type: 'search',
+          position: 'right',
         }
       ]
     }

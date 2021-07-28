@@ -1,0 +1,65 @@
+---
+title: Quick Start
+---
+
+## Integration
+
+The JavaScript SDK can be added to your website in two equivalent ways:
+
+### JavaScript tag
+
+To use this SDK, add the tag below on the HTML header of your website. This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
+
+```html
+<html lang=en>
+  <head>
+    <title>How to integrate the R2U SDK</title>
+    <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
+  </head>
+
+  <body> Your HTML code </body>
+</html>
+```
+
+### JavaScript package manager integration
+
+Add the SDK using npm or yarn on your JavaScript project.
+
+```bash
+# using npm
+npm install @r2u/javascript-ar-sdk
+
+# using yarn
+yarn add @r2u/javascript-ar-sdk
+```
+
+Then import the sdk into your project and unstructure the R2U object from the window global object.
+
+```typescript
+import '@r2u/javascript-ar-sdk'
+const { R2U } = window
+```
+
+## Getting started
+
+```javascript
+
+;(async () => {
+  await R2U.init({ customerId: '5e8e7580404328000882f4ae' })
+  const isActive = await R2U.sku.isActive('RE000001')
+  if(isActive) {
+    const sku = 'RE000001'
+
+    const arButton = document.getElementById('ar-button')
+    await R2U.ar.attach({
+      element: arButton,
+      sku
+    })
+
+    const viewer = document.getElementById('3d-viewer')
+    await R2U.viewer.create({
+      element: viewer, sku
+    })
+  }
+})();
+```

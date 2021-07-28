@@ -2,18 +2,18 @@
 title: Augmented Reality
 ---
 
-After adding the script tag to your website, methods for creating the Augmented Reality experience will be available through the global object R2U.
+After adding the script tag to your website, the methods for creating the Augmented Reality experience will be available through the global R2U object.
 
  <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>
-  </p>
+  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>
+</p>
 
 ## R2U.ar.attach
 
 :::tip `mobile`
 :::
 
-The ar.attach method creates an "eventListener" to open the AR viewer on mobile devices (e.g.: on a button click).
+The `ar.attach` method attaches an event listener to open the AR experience on mobile devices (e.g.: on a button click). It will automatically track button clicks for analytics purposes.
 
 ```typescript
 // test SKU -- remember to use your product information
@@ -35,57 +35,25 @@ R2U.ar.attach({
 })
 ```
 
-### element
 
-It is the element that will activate the AR experience through an event.
+| parameter                          | description                                                                                                                                       | default              |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `element`                          | element that will trigger AR                                                                                                                      | `null`               |
+| `sku`                              | product SKU                                                                                                                                       | `''`                 |
+| `event`                            | event that triggers AR                                                                                                                            | `'click'`            |
+| `resize`                           | Option to resize 3D model on AR experience                                                                                                        | `false`              |
+| [`showInstructions`](#showinstructions) | When true, shows an image in full-screen view explaining how to place and manipulate a 3D object on AR before proceeding to the camera experience | `false`              |
+| [`fallbackOptions`](#fallbackoptions)                  | Behavior to reproduce when AR experience is not available on device                                                                               | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage`     | When defined, alerts user with chosen string                                                                                                      | `null`               |
+| `fallbackOptions.fallback`         | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`)                                                      | `null`               |
+| `fallbackOptions.text`             | When defined, modifies fallback text on `'viewer'` mode                                                                                           | `null`               |
+| `fallbackOptions.text.title`       | Changes the tittle on fallback page                                                                                                               | `null`               |
+| `fallbackOptions.text.top`         | Changes the top text on fallback page                                                                                                             | `null`               |
+| `fallbackOptions.text.bottom`      | Changes the bottom text on fallback page                                                                                                          | `null`               |
 
-```typescript
-interface R2U {
-  ar: {
-    attach: (params: { element: HTMLElement; sku: string }) => Promise<void>
-  }
-}
-```
+\* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
-### SKU
-
-It is the SKU of the product you want to see in AR.
-
-```typescript
-interface R2U {
-  ar: {
-    attach: (params: { element: HTMLElement; sku: string }) => Promise<void>
-  }
-}
-```
-
-### event
-
-It is the event that will activate the AR experience.
-
-```typescript
-interface R2U {
-  ar: {
-    attach: (params: { element: HTMLElement; sku: string; event?: string }) => Promise<void>
-  }
-}
-```
-
-### resize
-
-Option to resize 3D model on AR experience
-
-```typescript
-interface R2U {
-  ar: {
-    attach: (params: { element: HTMLElement; sku: string; resize?: boolean }) => Promise<void>
-  }
-}
-```
-
-### showInstructions
-
-### showInstructions
+#### showInstructions
 
 :::info Default `once`
 :::
