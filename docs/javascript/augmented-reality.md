@@ -4,7 +4,7 @@ title: Augmented Reality
 
 After adding the script tag to your website, the methods for creating the Augmented Reality experience will be available through the global R2U object.
 
- <p float="left">
+<p float="left">
   <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>
 </p>
 
@@ -95,7 +95,8 @@ interface R2U {
 
 :::tip The `alertMessage` message can be customized
 :::
-Shows an image when the mobile device does not support the AR experience. If the instructions are entered, the fallback is displayed only when you click on the "See at your home" button.
+
+Shows an image when the mobile device does not support the AR experience. If the instructions parameter is provided, the fallback is displayed only when you click on the "See at your place" button.
 
 <div >
 <div >

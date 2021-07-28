@@ -42,6 +42,8 @@ const { R2U } = window
 
 ## Getting started
 
+Here's a sample code that will get you up and running with minimal effort. Be sure to check the rest of the documentation for more detailed information.
+
 ```javascript
 
 ;(async () => {

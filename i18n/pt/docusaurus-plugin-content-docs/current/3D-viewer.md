@@ -4,9 +4,9 @@ title: Visualizador 3D
 
 Depois de adicionar a tag de script em seu site, os métodos para criar o Visualizador 3D estarão disponíveis por meio do objeto global R2U.
 
- <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D viewer" width="600"/>
-  </p>
+<p float="left">
+  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D viewer" width="600"/>
+</p>
 
 ## R2U.viewer.create
 

@@ -8,7 +8,6 @@ After adding the script tag to your website, the methods for creating the 3D Cus
   <p float="left">
     <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/customizer.gif" title="customizer" width="600"/>
   </p>
-
 </div>
 
 ## R2U.viewer.create
@@ -16,21 +15,19 @@ After adding the script tag to your website, the methods for creating the 3D Cus
 :::tip `mobile` `desktop`
 :::
 
-The method para creates a 3D customizer at the position of the HTML element indicated.
+Creates a 3D customizer on the website in the position of the indicated HTML element.
 
 ```typescript
 const element = document.getElementById('3d-customizer')
-const onConfirm = (productCustomization) =>
-  console.log('customization selected', productCustomization)
+const onConfirm = (productCustomization) => console.log('customization selected', productCustomization)
 R2U.customizer.create({ element, onConfirm })
 ```
 
-The onConfirm function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key "model" value "Eames chair", key "color" value "Black", etc.)
+The `onConfirm` function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key _model_ value _Eames chair_, key _color_ value _Black_, etc.)
 
 ```typescript
 const element = document.getElementById('3d-customizer')
-const onConfirm = (productCustomization) =>
-  console.log('customization selected', productCustomization)
+const onConfirm = (productCustomization) => console.log('customization selected', productCustomization)
 const resultContainer = document.getElementById('createViewerCustomization')
 R2U.customizer.create({ element, onConfirm, resultContainer})
 ```

@@ -10,7 +10,7 @@ module.exports = {
   projectName: 'documentation',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'pt'],
+    locales: ['en'],
     localeConfigs: {
       en: {
         label: 'English'
@@ -34,10 +34,10 @@ module.exports = {
           position: 'left',
           activeBasePath: 'docs',
         },
-        {
-          type: 'localeDropdown',
-          position: 'right'
-        },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right'
+        // },
         {
           type: 'search',
           position: 'right',
