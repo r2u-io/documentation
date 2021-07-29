@@ -3,7 +3,7 @@ title: Introduction
 slug: /
 ---
 
-👋 &nbsp; Welcome to R2U docs!
+👋    Welcome to the R2U docs!
 This documentation aims to provide a high-level overview of the company and its existing SDKs.
 
 ## What is R2U?
