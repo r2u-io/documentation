@@ -2,7 +2,7 @@
 title: Augmented Reality
 ---
 
-After adding the script tag to your app, the methods for creating the Augmented Reality experience will be available through the `R2U` object.
+After adding the dependency to your app, the methods for creating the Augmented Reality experience will be available through the `R2U` object.
 
 <p float="left">
   <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/react-native-ar.gif" title="AR" width="200"/>
@@ -43,4 +43,3 @@ The `ar.open` method displays the given `sku` model inside the AR experience. By
     disabled={!init || !isActive || !canOpenAR}
   ></Button>
 ```
-
