@@ -96,7 +96,7 @@ interface R2U {
 :::tip The `alertMessage` message can be customized
 :::
 
-Shows an image when the mobile device does not support the AR experience. If the instructions parameter is provided, the fallback is displayed only when you click on the "See at your place" button.
+Shows an image when the mobile device does not support the AR experience. If the instructions parameter is provided, the fallback is displayed only when you click on the attached button.
 
 <div >
 <div >
