@@ -29,8 +29,8 @@ const fallbackOptions = {
 
 R2U.ar.attach({
   element: arButton,
-  sku,
-  fallbackOptions
+  sku: sku,
+  fallbackOptions: fallbackOptions
   /* resize defaults to `false` */
 })
 ```
