@@ -1,36 +1,46 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Documentation R2U',
+  title: 'R2U',
   tagline:
-    'O SDK de Realidade Aumentada da R2U permite exibir modelos 3D interativos na web e em Realidade Aumentada (RA).',
-  url: 'https://docs.r2u-io',
+    "R2U helps e-commerce stores sell more by allowing users to try-out products at home with Augmented Reality",
+  url: 'https://docs.r2u.io',
   baseUrl: '/',
-  favicon: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/favicon-32x32.png',
-  organizationName: 'R2U', // Usually your GitHub org/user name.
-  projectName: 'documentação', // Usually your repo name.
+  favicon: 'https://sdk.r2u.io/documentation/favicon-32x32.png',
+  organizationName: 'R2U',
+  projectName: 'documentation',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'pt'],
+    locales: ['en'],
     localeConfigs: {
+      en: {
+        label: 'English'
+      },
       pt: {
         label: 'Português'
       },
-      en: {
-        label: 'English'
-      }
     }
   },
   themeConfig: {
     navbar: {
-      title: 'DOCUMENTATION ',
+      title: 'Docs',
       logo: {
-        src: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/logo.png',
+        src: 'https://sdk.r2u.io/documentation/logo.png',
         href: 'https://r2u.io/'
       },
       items: [
+        // {
+        //   to: 'docs/introduction',
+        //   label: 'Showcase',
+        //   position: 'left',
+        //   activeBasePath: 'docs',
+        // },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right'
+        // },
         {
-          type: 'localeDropdown',
-          position: 'right'
+          type: 'search',
+          position: 'right',
         }
       ]
     }

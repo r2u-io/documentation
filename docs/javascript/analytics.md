@@ -16,7 +16,7 @@ The necessary configuration steps are described bellow such that the data is ava
 
   <div>
     <p float="left">
-      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-01.png" title="GTM-setup-1" width="600"/>
+      <img src="https://sdk.r2u.io/documentation/GTM-setup-screen-01.png" title="GTM-setup-1" width="600"/>
     </p>
   </div>
 
@@ -28,7 +28,7 @@ The necessary configuration steps are described bellow such that the data is ava
 
   <div>
     <p float="left">
-      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-02.png" title="GTM-setup-2" width="600"/>
+      <img src="https://sdk.r2u.io/documentation/GTM-setup-screen-02.png" title="GTM-setup-2" width="600"/>
     </p>
   </div>
 
@@ -36,7 +36,7 @@ The necessary configuration steps are described bellow such that the data is ava
 
    <div>
     <p float="left">
-      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-03.png" title="GTM-setup-3" width="600"/>
+      <img src="https://sdk.r2u.io/documentation/GTM-setup-screen-03.png" title="GTM-setup-3" width="600"/>
     </p>
   </div>
 
