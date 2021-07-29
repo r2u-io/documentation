@@ -60,7 +60,8 @@ Here's a sample code that will get you up and running with minimal effort. Be su
 
     const viewer = document.getElementById('3d-viewer')
     await R2U.viewer.create({
-      element: viewer, sku
+      element: viewer,
+      sku
     })
   }
 })();
