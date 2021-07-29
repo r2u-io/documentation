@@ -18,7 +18,7 @@ R2U helps e-commerce stores sell more by allowing users to try-out products at h
 
 ## What solutions does R2U offer?
 
-We offer [Augmented Reality](/augmented-reality), a [3D Viewer](/viewer) and a [3D Customizer](/customizer).
+We offer [Augmented Reality](/javascript/augmented-reality), a [3D Viewer](/javascript/viewer) and a [3D Customizer](/javascript/customizer).
 
 
 <div>
