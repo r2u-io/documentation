@@ -2,7 +2,7 @@
 title: 3D Viewer
 ---
 
-After adding the script tag to your app, the methods for creating a 3D Viewer will be available through the `R2U` object.
+After adding the dependency to your app, the methods for creating a 3D Viewer will be available through the `R2U` object.
 
 <p float="left">
   <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/react-native-viewer.png" title="3D Viewer" width="200"/>
