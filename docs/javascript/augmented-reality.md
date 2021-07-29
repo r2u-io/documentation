@@ -5,7 +5,7 @@ title: Augmented Reality
 After adding the script tag to your website, the methods for creating the Augmented Reality experience will be available through the global `R2U` object.
 
 <p float="left">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/product-ar.gif" title="AR" width="200"/>
 </p>
 
 ## R2U.ar.attach
@@ -86,7 +86,7 @@ interface R2U {
 <strong> Instructions example: </strong>
 
 <p float="left">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/instruction-en.png" title="Instruction screen" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/instruction-en.png" title="Instruction screen" width="200"/>
 </p>
 </div>
 </div>
@@ -133,7 +133,7 @@ interface R2U {
 <strong> Fallback example: </strong>
 
 <p float="left">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/fallback-pt.png" title="Fallback" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/fallback-pt.png" title="Fallback" width="200"/>
 </p>
 </div>
 

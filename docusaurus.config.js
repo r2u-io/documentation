@@ -5,7 +5,7 @@ module.exports = {
     "R2U helps e-commerce stores sell more by allowing users to try-out products at home with Augmented Reality",
   url: 'https://docs.r2u.io',
   baseUrl: '/',
-  favicon: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/favicon-32x32.png',
+  favicon: 'https://sdk.r2u.io/documentation/favicon-32x32.png',
   organizationName: 'R2U',
   projectName: 'documentation',
   i18n: {
@@ -24,7 +24,7 @@ module.exports = {
     navbar: {
       title: 'Docs',
       logo: {
-        src: 'https://storage.googleapis.com/r2u-sdk-bucket/documentation/logo.png',
+        src: 'https://sdk.r2u.io/documentation/logo.png',
         href: 'https://r2u.io/'
       },
       items: [

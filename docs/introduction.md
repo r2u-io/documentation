@@ -12,9 +12,9 @@ R2U helps e-commerce stores sell more by allowing users to try-out products at h
 
 1. Use of native solutions for iOS (ARKit) and Android (ARCore) through our SDKs
 2. Storage and distribution of 3D models
-3. Organization and categorization of product information by product/EAN code
+3. Organization of product information by product/EAN code
 
-<img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/r2u-architecture.png" title="R2U architecture"  width="600"/>
+<img src="https://sdk.r2u.io/documentation/r2u-architecture.png" title="R2U architecture"  width="600"/>
 
 ## What solutions does R2U offer?
 
@@ -23,17 +23,17 @@ We offer [Augmented Reality](/augmented-reality), a [3D Viewer](/viewer) and a [
 
 <div>
   <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-ar.gif" title="AR" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/product-ar.gif" title="AR" width="200"/>
   </p>
 </div>
 <div>
   <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/product-3d-desktop.gif" title="customizer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/product-3d-desktop.gif" title="customizer" width="600"/>
   </p>
 </div>
 <div>
   <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/customizer.gif" title="customizer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/customizer.gif" title="customizer" width="600"/>
   </p>
 </div>
 
@@ -43,7 +43,7 @@ We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and
 
 ## What is the size of your SDKs? What is the impact on load time and bundle size?
 
-Our SDKs are optimized to facilitate the use of native applications already present on devices and communicate with our infrastructure, so it is lightweight (less than 200kB) and should not interfere with the user experience.
+Our SDKs are optimized to facilitate the use of native applications already present on devices and communicate with our infrastructure, so it is lightweight (less than 200kB transfer size when bundled) and should not interfere with the user experience.
 
 ## What do I need for my users to experience augmented reality?
 
@@ -63,6 +63,6 @@ Yes. We today have a proprietary database of 3D models that is ever growing with
 
 
 <a href="https://github.com/r2u-io/documentation">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/github.png" width="20"/> &nbsp;
+  <img src="https://sdk.r2u.io/documentation/github.png" width="20"/> &nbsp;
   Contribute
 </a>

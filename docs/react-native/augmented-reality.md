@@ -5,7 +5,7 @@ title: Augmented Reality
 After adding the script tag to your app, the methods for creating the Augmented Reality experience will be available through the `R2U` object.
 
 <p float="left">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/react-native-ar.gif" title="AR" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/react-native-ar.gif" title="AR" width="200"/>
 </p>
 
 ## R2U.ar.isSupported

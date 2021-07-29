@@ -5,7 +5,7 @@ title: 3D Viewer
 After adding the script tag to your website, the methods for creating the 3D Viewer will be available through the global `R2U` object.
 
 <p float="left">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
+  <img src="https://sdk.r2u.io/documentation/3D-viewer.gif" title="3D Viewer" width="600"/>
 </p>
 
 ## R2U.viewer.create
@@ -53,7 +53,7 @@ Enables and disables the button to open the expandable 3D viewer with the model.
 <div>
   <strong> Popup example: </strong>
   <p float="left">
-  <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-popup.gif" title="popup" width="600"/>
+  <img src="https://sdk.r2u.io/documentation/3D-viewer-popup.gif" title="popup" width="600"/>
   </p>
 </div>
 
@@ -113,7 +113,7 @@ buttonChangeSku.addEventListener('click', () => {
   <strong> setSku example:</strong>
 
   <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
   </p>
 
   </div>
@@ -136,7 +136,7 @@ R2U.qrCode.create({ element, sku })
 
   <div>
   <p float="left">
-    <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
   </p>
   </div>
 </div>
