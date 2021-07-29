@@ -4,7 +4,7 @@ title: Quick Start
 
 ## Integration
 
-The JavaScript SDK can be added to your website in two equivalent ways:
+The JavaScript SDK (also compatible with TypeScript) can be added to your website in two equivalent ways:
 
 ### JavaScript tag
 
