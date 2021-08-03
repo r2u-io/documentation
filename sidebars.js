@@ -4,7 +4,6 @@ module.exports = {
     {
       'JavaScript SDK': [
         'javascript/quickstart',
-        'javascript/methods',
         'javascript/augmented-reality',
         'javascript/viewer',
         'javascript/customizer',
@@ -15,7 +14,6 @@ module.exports = {
     {
       'React Native SDK': [
         'react-native/quickstart',
-        'react-native/methods',
         'react-native/augmented-reality',
         'react-native/viewer',
         'react-native/analytics',
