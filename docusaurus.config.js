@@ -21,6 +21,10 @@ module.exports = {
     }
   },
   themeConfig: {
+    algolia: {
+      apiKey: '118c8b4016ab9e4ebc990266e4b347c6',
+      indexName: 'r2u',
+    },
     navbar: {
       title: 'Docs',
       logo: {
