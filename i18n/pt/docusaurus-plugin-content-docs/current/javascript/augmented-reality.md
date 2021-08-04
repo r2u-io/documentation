@@ -1,8 +1,8 @@
 ---
-title: Augmented Reality
+title: Realidade Aumentada
 ---
 
-After adding the script tag to your website, the methods for creating the Augmented Reality experience will be available through the global `R2U` object.
+Após adicionar a tag de script ao seu site, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis através do objeto global `R2U`.
 
 <p float="left">
   <img src="https://sdk.r2u.io/documentation/product-ar.gif" title="AR" width="200"/>
@@ -13,17 +13,17 @@ After adding the script tag to your website, the methods for creating the Augmen
 :::tip `mobile`
 :::
 
-The `ar.attach` method attaches an event listener to open the AR experience on mobile devices (e.g.: on a button click). It will automatically track button clicks for analytics purposes.
+O método `ar.attach` anexa um listener de evento para abrir a experiência de RA em dispositivos móveis (por exemplo: com um clique de botão). Ele rastreará automaticamente os cliques em botões para fins de analytics.
 
 ```typescript
-// test SKU -- remember to use your product information
+// SKU teste -- lembre de usar as informações do seu produto
 const arButton = document.getElementById('ar-button')
 const sku = 'RE000001'
-// creates an unsupported device alert
+// cria um alerta para dispositivos não suportados
 const fallbackOptions = {
-  //add message in the alert
-  alertMessage: 'AR not supported by device',
-  //opens a 3D viewer on the warning screen
+  //adiciona a mensagem de alerta
+  alertMessage: 'AR não suportado por esse device',
+  //abre um visualizador 3D em uma tela de aviso
   fallback: 'viewer'
 }
 
@@ -31,25 +31,25 @@ R2U.ar.attach({
   element: arButton,
   sku: sku,
   fallbackOptions: fallbackOptions
-  /* resize defaults to `false` */
+  /* resize faz default para `false` */
 })
 ```
 
 
-| parameter                          | description                                                                                                                                       | default              |
+| parâmetro                          | descrição                                                                                                                                       | default              |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| `element`                          | element that will trigger AR                                                                                                                      | `null`               |
-| `sku`                              | product SKU                                                                                                                                       | `''`                 |
-| `event`                            | event that triggers AR                                                                                                                            | `'click'`            |
-| `resize`                           | Option to resize 3D model on AR experience                                                                                                        | `false`              |
-| [`showInstructions`](#showinstructions) | When true, shows an image in full-screen view explaining how to place and manipulate a 3D object on AR before proceeding to the camera experience | `false`              |
-| [`fallbackOptions`](#fallbackoptions)                  | Behavior to reproduce when AR experience is not available on device                                                                               | `{ alertMessage }`\* |
-| `fallbackOptions.alertMessage`     | When defined, alerts user with chosen string                                                                                                      | `null`               |
-| `fallbackOptions.fallback`         | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`)                                                      | `null`               |
-| `fallbackOptions.text`             | When defined, modifies fallback text on `'viewer'` mode                                                                                           | `null`               |
-| `fallbackOptions.text.title`       | Changes the tittle on fallback page                                                                                                               | `null`               |
-| `fallbackOptions.text.top`         | Changes the top text on fallback page                                                                                                             | `null`               |
-| `fallbackOptions.text.bottom`      | Changes the bottom text on fallback page                                                                                                          | `null`               |
+| `element`                          | elemento que inicia a experiência em RA                                                                                                                     | `null`               |
+| `sku`                              | SKU do produto                                                                                                                                       | `''`                 |
+| `event`                            | evento que inicia o AR                                                                                                                            | `'click'`            |
+| `resize`                           | Opção para redimensionar o modelo 3D na experience RA                                                                                                       | `false`              |
+| [`showInstructions`](#showinstructions) | Quando true, mostra uma imagem em tela cheia explicando como colocar e manipular o objeto 3D em realidade aumentada antes de entrar na experiência da câmera | `false`              |
+| [`fallbackOptions`](#fallbackoptions)                  | Comportamento a ser produzido quando a experiência de RA não estiver disponível no dispositivo                                                                               | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage`     | Quando definido, alerta o usuário com a string escolhida                                                                                                      | `null`               |
+| `fallbackOptions.fallback`         | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`' full'`)                                                      | `null`               |
+| `fallbackOptions.text`             | Quando definido, modifica o texto de fallback no modo `'viewer'`                                                                                           | `null`               |
+| `fallbackOptions.text.title`       | Muda o título na página fallback                                                                                                               | `null`               |
+| `fallbackOptions.text.top`         | Altera o texto principal na página de fallback                                                                                                             | `null`               |
+| `fallbackOptions.text.bottom`      | Altera o texto inferior na página de fallback                                                                                                          | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
@@ -58,13 +58,13 @@ R2U.ar.attach({
 :::info Default `once`
 :::
 
-When rendered, shows a full-screen panel explaining how to place and manipulate a 3D object, before proceeding to the AR experience.
+Quando renderizado, mostra um painel de tela cheia explicando como posicionar e manipular um objeto 3D, antes de prosseguir para a experiência de RA.
 
-| value  | effect                                                                            |
+| valor  |  efeito                                                                           |
 | ------ | --------------------------------------------------------------------------------- |
-| once   | The instructions screen will render only on the user's first AR experience.       |
-| always | The instructions screen will render every time the user interacts with the button |
-| never  | The instructions screen will never render                                         |
+| once   | A tela de instruções será renderizada apenas na primeira experiência de RA do usuário.      |
+| always | A tela de instruções será renderizada sempre que o usuário interagir com o botão |
+| never  | A tela de instruções nunca será renderizada                                          |
 
 <div >
 <div >
@@ -83,20 +83,20 @@ interface R2U {
 
 </div>
 <div>
-<strong> Instructions example: </strong>
+<strong> Exemplo de Instructions: </strong>
 
 <p float="left">
-  <img src="https://sdk.r2u.io/documentation/instruction-en.png" title="Instruction screen" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/instruction-pt.png" title="Tela de instruções" width="200"/>
 </p>
 </div>
 </div>
 
 ### fallbackOptions
 
-:::tip The `alertMessage` message can be customized
+:::tip A `alertMessage` pode ser personalizada
 :::
 
-Shows an image when the mobile device does not support the AR experience. If the instructions parameter is provided, the fallback is displayed only when you click on the attached button.
+Mostra uma imagem quando o dispositivo móvel não é compatível com a experiência de RA. Se o parâmetro de instruções for fornecido, o fallback será exibido apenas quando o usuário clicar no botão que foi `attach`.
 
 <div >
 <div >
@@ -107,19 +107,19 @@ interface R2U {
     attach: (params: {
       element: HTMLElement
       sku: string
-      //device warning not compatible with AR
+      // aviso de dispositivo não compatível com AR
       fallbackOptions?: {
-        //add alert message
+        // adicionar mensagem de alerta
         alertMessage?: string
-        //opens a 3D viewer on the warning screen
+        // abre um visualizador 3D na tela de aviso
         fallback?: 'viewer' | 'full'
-        //modify the fallback text
+        // altera a mensagem de fallback
         text?: {
-          //change the page title
+          // altera o título da página
           title?: string
-          //changes the top text of the page
+          // muda o texto superior da página
           top?: string
-          //change bottom page text
+          // alterar o texto da página inferior
           bottom?: string
         }
       }
@@ -130,7 +130,7 @@ interface R2U {
 
 </div>
 <div>
-<strong> Fallback example: </strong>
+<strong> Examplo de fallback: </strong>
 
 <p float="left">
   <img src="https://sdk.r2u.io/documentation/fallback-pt.png" title="Fallback" width="200"/>
@@ -139,7 +139,7 @@ interface R2U {
 
 </div>
 
-### AR demo on _iOS_
+### Demo de RA no _iOS_
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="200"/>
@@ -147,7 +147,7 @@ interface R2U {
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="200"/>
 </p>
 
-### AR demo on _Android_
+### Demo de RA no _Android_
 
 <p float="left">
   <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
@@ -160,9 +160,9 @@ interface R2U {
 :::tip `mobile` `desktop`
 :::
 
-The method returns a shareable URL for the AR experience.
+O método retorna um URL compartilhável para a experiência de AR.
 
 ```typescript
-//remember to use your product information
+// lembre-se de usar as informações do seu produto
 R2U.ar.getLink('RE000001').then((url) => console.log(url))
 ```
