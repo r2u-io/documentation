@@ -1,5 +1,5 @@
 ---
-title: Quick Start
+title: Início rápido
 ---
 
-Our Swift and Kotlin SDKs are still in R&D stage. If you wish to join our early access wait list, please send us a message.
+Nossos SDKs Swift e Kotlin ainda estão em fase de Pesquisa & Desenvolvimento. Se você deseja entrar em nossa lista de espera, envie-nos uma mensagem.
