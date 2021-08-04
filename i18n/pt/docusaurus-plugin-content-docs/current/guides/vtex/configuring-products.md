@@ -1,31 +1,31 @@
 ---
-title: Configuring your products
+title: Configurando seus produtos
 ---
 
 ## Importing our App
 
-Firstly you have to import our App to your store. On your `manifest.json` file, add the following dependency:
+Primeiramente, deve-se importar nosso App para a sua loja. No arquivo `manifest.json`, adicione a seguinte dependência:
 ```
 "r2ubr.r2u-vtex-integration": "0.x"
 ```
 
 ## Add our solutions to your product page
 
-To make our 3D Viewer and AR Experience Button to appear in your products page, you have to add some lines to your **products template json**.
+Para fazer nosso Visualizador 3D e o botão de Experiência RA aparecerem na sua página de produto, insira alguma linhas no arquivo de **template de produto json**.
 
-### 3D Viewer
+### Visualizador 3D
 ```
 "responsive-layout.desktop": {
   "children": ["r2u-model-viewer"]
 }
 ```
-Note that the Viewer 3D must be displayed only on the desktop.
+Observe que o visualizador 3D deve ser exibido somente em desktops.
 
 
-### AR Experience
+### Experiência RA
 ```
 "responsive-layout.phone": {
   "children": ["r2u-ar-button"]
 }
 ```
-Note that the AR button must be displayed only on the phone.
+Observe que o botão de RA deve ser exibido somente em dispositivos móveis.

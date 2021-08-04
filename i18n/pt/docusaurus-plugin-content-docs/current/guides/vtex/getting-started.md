@@ -1,19 +1,19 @@
 ---
-title: Getting started
+title: Introdução
 ---
 
-Once you add R2U VTEX Integration to your VTEX Store, you will be prompted with our settings page. You **don't** need to fill the R2U key in this page. It will be automatically filled later.
+Uma vez o App R2U VTEX Integration for adicionado a sua Loja VTEX, será solicitado, na página de Configurações, a sua R2U Key. **Não** preencha esse campo. Ele será preenchido automaticamente mais tarde.
 
-![](./assets/settings.png 'Settings')
+![](./assets/settings.png 'Configurações')
 
-On your admin page, a new tab R2U must have appeared on your sidebar, below the Products category.
+Na página de admin da sua loja, uma nova aba R2U deve ter aparecido na sua barra lateral, abaixo da categoria de produtos.
 
-![](./assets/sidebar.png 'Sidebar')
+![](./assets/sidebar.png 'Barra lateral')
 
-Access to the _Intro_ page and click the button _Let's Begin_. This action will initiate the process of the creation of your store at our side. You might have to wait a few moments before the conclusion of this procedure. After the process have finished, you should see a screen like this:
+Acesse a página _Intro_ e clique no botão _Vamos começar_. Isso irá iniciar o processo de criação da sua loja no nosso lado. Esse procedimento pode demorar alguns momentos. Depois de terminado, você deverá ver uma tela parecida com essa:
 
-![](./assets/success.png 'Success')
+![](./assets/success.png 'Sucesso')
 
-You can check your Settings page again and your R2U key will be there, automatically filled.
+É possível checar na página de Configurações de novo e sua chave R2U estará lá, preenchida automaticamente. 
 
 ![](./assets/r2u-key.png 'R2U Key')

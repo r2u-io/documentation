@@ -1,17 +1,17 @@
 ---
-title: Sending your products
+title: Enviando seus produtos
 ---
 
-On this page you can send your products to our team to develop the 3D model of the selected product. To go there, access the Products page on R2U App.
+Nessa página, é possível enviar seus produtos para o nosso time desenvolver o modelo 3D dos produtos selecionados. Para acessá-la, entre na página Produtos no App R2U.
 
-![](./assets/sidebar.png 'Sidebar')
+![](./assets/sidebar.png 'Barra lateral')
 
-On the _Send products_ Tab, can be seen every product of your store. Select the products wanted and click on _Send_ button. This will send your products along with some data needed to model the 3D asset. Keep in mind that this process take some time. 
+Na aba _Enviar produtos_, pode-se ver todos os produtos da sua loja. Selecione os produtos desejados e clique no botão _Send_. Isso irá enviar seus produtos juntamente com alguns dados necessários para modelá-lo em 3D. Tenha em mente que esse processo leva algum tempo.
 
-![](./assets/send-products.png 'Sending products')
+![](./assets/send-products.png 'Enviando produtos')
 
-Note that you will be prompted with a warning if you try to send a product with missing information we need.
+Note que um aviso será mostrado se forem enviados produtos com informações que precisamos.
 
-![](./assets/warning.png 'Warning')
+![](./assets/warning.png 'Aviso')
 
-If you already have the 3D model made by your company, please contact us. This process is still not fully developed on our VTEX App.
+Se a sua empresa já possuir o modelo 3D, por favor entre em contato. Esse procedimente ainda não foi desenvolvido completamente no nosso App VTEX.

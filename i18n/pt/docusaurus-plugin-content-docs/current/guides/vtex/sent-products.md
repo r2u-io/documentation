@@ -1,11 +1,11 @@
 ---
-title: Checking status
+title: Verificando o status
 ---
 
-On this page, you can check every product you sent us and its status. To go there, access the Products page on R2U App.
+Nessa página, é possível verificar todos os produtos que foram enviados para nós e seus estados. Para acessá-la, entre na página Produtos no App R2U.
 
-![](./assets/sidebar.png 'Sidebar')
+![](./assets/sidebar.png 'Barra lateral')
 
-On the _Sent products_ Tab, you can check if your product is already modeled or not.
+Na aba _Produtos enviados_, pode-se verificar se o produto já foi modelado ou não.
 
-![](./assets/sent-products.png 'Checking status')
+![](./assets/sent-products.png 'Verificando o status')
