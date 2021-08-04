@@ -1,51 +1,50 @@
 ---
-title: Quick Start
+title: Início rápido
 ---
 
-## Integration
+## Integração
 
-The JavaScript SDK (also compatible with TypeScript) can be added to your website in two equivalent ways:
+O SDK JavaScript (também compatível com TypeScript) pode ser adicionado ao seu site de duas maneiras equivalentes:
 
 ### JavaScript tag
 
-To use this SDK, add the tag below on the HTML header of your website. This can be done through a tag management system such as the Google Tag Manager or through your e-commerce platform interface.
+Para usar nosso SDK, adicione a tag abaixo no cabeçalho (*header*) do HTML do seu site. Isso pode ser feito por meio de um sistema de gerenciamento de tags, como o Google Tag Manager, ou por meio da interface da sua plataforma de e-comércio.
 
 ```html
 <html lang=en>
   <head>
-    <title>How to integrate the R2U SDK</title>
-    <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
+    <title>Integrando o SDK R2U</title>
+    <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
   </head>
 
-  <body> Your HTML code </body>
+  <body> Seu código HTML </body>
 </html>
 ```
 
-### JavaScript package manager integration
+### Package manager JavaScript
 
-Add the SDK using npm or yarn on your JavaScript project.
+Adicione o SDK usando `npm` ou `yarn` em seu projeto JavaScript.
 
 ```bash
-# using npm
+# usando npm
 npm install @r2u/javascript-ar-sdk
 
-# using yarn
+# usando yarn
 yarn add @r2u/javascript-ar-sdk
 ```
 
-Then import the sdk into your project and unstructure the R2U object from the window global object.
+Em seguida, importe o SDK para o seu projeto e desestruture o objeto R2U do objeto global `window`.
 
 ```typescript
 import '@r2u/javascript-ar-sdk'
 const { R2U } = window
 ```
 
-## Getting started
+## Primeiros passos
 
-Here's a sample code that will get you up and running with minimal effort. Be sure to check the rest of the documentation for more detailed information.
+Aqui está um código de exemplo que o ajudará a começar a trabalhar com o mínimo de esforço. Certifique-se de conferir o restante da documentação para obter informações mais detalhadas.
 
 ```javascript
-
 ;(async () => {
   await R2U.init({ customerId: '5e8e7580404328000882f4ae' })
   const isActive = await R2U.sku.isActive('RE000001')
