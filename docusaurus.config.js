@@ -10,7 +10,7 @@ module.exports = {
   projectName: 'documentation',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'pt'],
     localeConfigs: {
       en: {
         label: 'English'
@@ -38,10 +38,10 @@ module.exports = {
         //   position: 'left',
         //   activeBasePath: 'docs',
         // },
-        // {
-        //   type: 'localeDropdown',
-        //   position: 'right'
-        // },
+        {
+          type: 'localeDropdown',
+          position: 'right'
+        },
         {
           type: 'search',
           position: 'right',
@@ -56,7 +56,6 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/'
-          // Please change this to your repo.
         },
         themes: ['@docusaurus/theme-live-codeblock']
       }
