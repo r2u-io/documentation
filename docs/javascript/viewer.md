@@ -18,7 +18,7 @@ Creates a 3D viewer on the website in the position of the indicated HTML element
 ```typescript
 // test SKU -- remember to use your product information
 
-//HTML element that will receive the 3D model
+//HTML element that will receive the 3D viewer
 const element = document.getElementById('3d-viewer')
 //Desired product SKU
 const sku = 'RE000001'
