@@ -1,8 +1,8 @@
 ---
-title: Augmented Reality
+title: Realidade Aumentada
 ---
 
-After adding the dependency to your app, the methods for creating the Augmented Reality experience will be available through the `R2U` object.
+Após adicionar a dependência ao seu aplicativo, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis através do objeto `R2U`.
 
 <p float="left">
   <img src="https://sdk.r2u.io/documentation/react-native-ar.gif" title="AR" width="200"/>
@@ -13,15 +13,14 @@ After adding the dependency to your app, the methods for creating the Augmented 
 :::tip `mobile`
 :::
 
-Returns true if the device supports Augmented Reality. See list of supported devices for [iOS](https://www.apple.com/augmented-reality/) and [Android](https://developers.google.com/ar/devices).
-
+Retorna verdadeiro se o dispositivo suportar Realidade Aumentada. Veja a lista de dispositivos suportados para [iOS](https://www.apple.com/augmented-reality/) e [Android](https://developers.google.com/ar/devices).
 
 ## R2U.ar.open
 
 :::tip `mobile`
 :::
 
-The `ar.open` method displays the given `sku` model inside the AR experience. By default, the `resize` parameter is `false`.
+O método `ar.open` exibe o modelo `sku` fornecido dentro da experiência AR. Por padrão, o parâmetro `resize` é `false`.
 
 ```tsx
   const [init, setInit] = useState(false)
@@ -36,9 +35,9 @@ The `ar.open` method displays the given `sku` model inside the AR experience. By
   }, [])
 
 
-  // be sure to only display the AR button on supported devices
+  // certifique-se de exibir o botão RA apenas em dispositivos compatíveis
   <Button
-    title="View in your space"
+    title="Veja no seu espaço"
     onPress={() => R2U.ar.open({ sku })}
     disabled={!init || !isActive || !canOpenAR}
   ></Button>
