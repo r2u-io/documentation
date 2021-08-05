@@ -2,7 +2,7 @@
 title: Visualizador 3D
 ---
 
-Após adicionar a tag script ao seu site, os métodos de criação do visualizador 3D estarão disponíveis através do objeto global `R2U`.
+Após adicionar a tag JavaScript ao seu site, os métodos de criação do visualizador 3D estarão disponíveis através do objeto global `R2U`.
 
 <p float="left">
   <img src="https://sdk.r2u.io/documentation/3D-viewer.gif" title="Visualizador 3D" width="600"/>

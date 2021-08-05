@@ -122,7 +122,7 @@ buttonChangeSku.addEventListener('click', () => {
 
 ## R2U.qrCode.create
 
-Creates a QRCode that, when scanned, directs the user to the model in AR.
+Creates a QR Code that, when scanned, redirects the user to the model in AR.
 
 <div>
   <div>

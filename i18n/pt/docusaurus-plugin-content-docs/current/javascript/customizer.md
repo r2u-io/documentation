@@ -1,12 +1,12 @@
 ---
-title: 3D Customizer
+title: Customizador 3D
 ---
 
-After adding the script tag to your website, the methods for creating the 3D Customizer will be available through the global object R2U ([live demo](https://customizer.r2u.io)).
+Após adicionar a tag JavaScript ao seu site, os métodos de criação do Customizador 3D estarão disponíveis através do objeto global `R2U` ([demonstração ao vivo](https://customizer.r2u.io)).
 
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/customizer.gif" title="customizer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/customizer.gif" title="customizador" width="600"/>
   </p>
 </div>
 
@@ -15,7 +15,7 @@ After adding the script tag to your website, the methods for creating the 3D Cus
 :::tip `mobile` `desktop`
 :::
 
-Creates a 3D customizer on the website in the position of the indicated HTML element.
+Cria um customizador 3D no site na posição do elemento HTML indicado.
 
 ```typescript
 const element = document.getElementById('3d-customizer')
@@ -23,7 +23,7 @@ const onConfirm = (productCustomization) => console.log('customization selected'
 R2U.customizer.create({ element, onConfirm })
 ```
 
-The `onConfirm` function is triggered after the user clicks on the "Confirm" button on the Customizer screen. It returns a key-value pair containing the product customization (e.g. key _model_ value _Eames chair_, key _color_ value _Black_, etc.)
+A função `onConfirm` é acionada após o usuário clicar no botão "Confirmar" na tela do Customizador. Ele retorna um par de chave-valor contendo a personalização do produto (por exemplo, chave _modelo_ valor _Cadeira Eames, chave _cor_ valor _Preto_, etc.)
 
 ```typescript
 const element = document.getElementById('3d-customizer')
@@ -31,4 +31,5 @@ const onConfirm = (productCustomization) => console.log('customization selected'
 const resultContainer = document.getElementById('createViewerCustomization')
 R2U.customizer.create({ element, onConfirm, resultContainer})
 ```
-The `resultContainer` element (optional) is created after the user clicks the "Confirm" button in the Customizer screen. It returns an HTML element that renders the 3D customization result.
+
+O elemento `resultContainer` (opcional) é criado depois que o usuário clica no botão "Confirmar" na tela do Customizador. Ele retorna um elemento HTML que renderiza o resultado da personalização 3D.
