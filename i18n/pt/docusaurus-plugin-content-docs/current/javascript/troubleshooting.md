@@ -1,10 +1,10 @@
 ---
-title: Troubleshooting
+title: Solução de problemas
 ---
 
-### Initialization
+### Inicialização
 
-If you bump into an error in the initialization, you may have forgotten that the `R2U.init` function is asynchronous. The solution is to `await` the method before calling the others. Here are two implementation possibilities:
+Se um erro de inicialização aparecer, talvez você tenha se esquecido de que a função `R2U.init` é assíncrona. A solução é esperar (`await`) o método completar antes de chamar os outros. Aqui estão duas possibilidades de implementação:
 
 ```typescript
 await R2U.init(...)
@@ -14,49 +14,50 @@ await R2U.init(...)
 R2U.init(...).then(() => R2U.ar.attach(...))
 ```
 
-### SDK version
+### Versão do SDK
 
-Sometimes you might end up in some trouble by getting an older version of the SDK. There are two possible solutions when calling the script:
+Algumas vezes o erro pode ser causado pela versão do SDK. Quando for chamar o script, duas possíveis soluções são:
 
-- Manually get the latest version
+- Chamar pela última versão manualmente
 ```html
 <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
 ```
 
-- Don't put the version (this way you automatically get the latest version)
+- Não colocar a versão (assim, sempre será chamado a última versão)
 ```html
 <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
 ```
 
-- Add the package with `yarn`
+- Adicionar o pacote com `yarn`
 ```bash
 yarn add @r2u/javascript-ar-sdk
 ```
 
+
 ### R2U.viewer.create / R2U.ar.attach
 
-Remember that these functions have specific parameters.
+Lembre-se de que essas funções possuem parâmetros específicos.
 ```typescript
-// The next line:
+// A próxima linha:
 R2U.viewer.create({ element, ... })
-// is equivalent to:
+// é equivalente a:
 R2U.viewer.create({ element: element, ... })
 ```
 
-The correct implementation is to simply explicit the parameters:
+A implementação correta é simplesmente explicitar os parâmetros:
 ```typescript
 R2U.viewer.create({ element: fooBar, ... })
 ```
 
 ### Uncaught TypeError: Cannot read property 'assets' of undefined
 
-This error means that the SKU that you are calling isn't in our database. If you think the SKU you are calling is correct, some common causes are listed here:
+Esse erro significa que o SKU que está sendo chamado não está na nossa base de dados. Se você considera que o SKU chamado está correto, algumas causas comuns deste erro são:
 
-- the SKU wasn't created yet on our database
-- the SKU you are calling doesn't match the one we have
+- o SKU ainda não foi criado na nossa base
+- o SKU que foi chamado não corresponde àquele que nós temos
 
-Please get in touch (contact@r2u.io) to clear this issue.
+Por favor entre em contato (contato@r2u.io) para alinhar essas informações.
 
-### 3D Viewer and AR Button don't appear 
+### Visualizador 3D e Botão RA não aparecem 
 
-If you didn't get any errors cited here, you may not have approved the model yet on our [console](https://console.r2u.io/).
+Se este é o caso e nenhum dos erros citados aqui te ajudaram, talvez sua equipe ainda não tenha aprovado o modelo no nosso [console](https://console.r2u.io/).
