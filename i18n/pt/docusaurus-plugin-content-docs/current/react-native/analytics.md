@@ -2,8 +2,8 @@
 title: Analytics
 ---
 
-## Analytics Setup
+## Configuração do Analytics
 
-The R2U Augmented Reality SDK by default generates usage events, such as impressions and clicks.
+O SDK de realidade aumentada R2U, por padrão, gera eventos de uso, como impressões e cliques.
 
-For more information, please get in touch with our team.
+Para mais informações, entre em contato com nossa equipe.
