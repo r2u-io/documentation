@@ -44,3 +44,17 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 ### 2. Configuração Google Analytics (GA)
 
 - Importe os segmentos e report da R2U via este [link](https://analytics.google.com/analytics/web/provision/?authuser=0&utm_source&utm_medium&utm_term&utm_content&utm_campaign#/provision) e aplique na _view_ com os dados do site
+
+## Enviar analytics para a plataforma R2U
+
+O método analítico envia eventos para a plataforma analítica R2U, para identificar os resultados da integração do nosso SDK.
+
+```typescript
+const addToCartButton = document.getElementById('add-to-cart')
+addToCartButton.addEventListener('click', () =>
+  R2U.analytics.send({
+    event: 'add_to_cart',
+    data: { price: 30 }
+  })
+)
+```
