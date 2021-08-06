@@ -6,7 +6,7 @@ title: Quick Start
 
 The integration of R2U AR module in React Native is made by the library [@r2u/react-native-ar-sdk](https://www.npmjs.com/package/@r2u/react-native-ar-sdk)
 
-## Pre-installation
+## Requirements
 
 The SDK uses both `react-native-device-info` and `React Native Async Storage` packages to collect information and control session in order to send data to Analytics. Be sure to have them installed in your application:
 

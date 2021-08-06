@@ -4,6 +4,7 @@ slug: /
 ---
 
 👋    Welcome to the R2U docs!
+
 This documentation aims to provide a high-level overview of the company and its existing SDKs.
 
 ## What is R2U?
@@ -28,7 +29,7 @@ We offer [Augmented Reality](/javascript/augmented-reality), a [3D Viewer](/java
 </div>
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/product-3d-desktop.gif" title="customizer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/product-3d-desktop.gif" title="viewer" width="600"/>
   </p>
 </div>
 <div>
@@ -37,17 +38,17 @@ We offer [Augmented Reality](/javascript/augmented-reality), a [3D Viewer](/java
   </p>
 </div>
 
-## What technologies does your SDKs support?
+## What technologies does R2U support?
 
-We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and desktop websites, and  a [React Native](https://github.com/r2u-io/documentation-react-native) for mobile apps. If you wish to join our early access wait list for our [Swift/Kotlin SDKs](swift-kotlin/quickstart), please send us a message.
+We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and desktop websites, and  a [React Native](/react-native/quickstart) for mobile apps. If you wish to join our early access wait list for our [Swift/Kotlin SDKs](swift-kotlin/quickstart), please send us a message.
 
-## What is the size of your SDKs? What is the impact on load time and bundle size?
+## What is the size of the SDKs? What is the impact on load time and bundle size?
 
 Our SDKs are optimized to facilitate the use of native applications already present on devices and communicate with our infrastructure, so it is lightweight (less than 200kB transfer size when bundled) and should not interfere with the user experience.
 
 ## What do I need for my users to experience augmented reality?
 
-Simply put, any user can experience augmented reality if they have a device that supports the tecnology, in addition to the 3D model of the product they would like to view. R2U's role is to simplify this process at scale through our unified platform.
+Simply put, any user can experience augmented reality if they have a device that supports the technology, in addition to the 3D model of the product they would like to view. R2U's role is to simplify this process at scale through our unified platform.
 
 ## Which devices support augmented reality?
 

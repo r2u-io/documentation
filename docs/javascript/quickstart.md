@@ -14,7 +14,7 @@ To use this SDK, add the tag below on the HTML header of your website. This can 
 <html lang=en>
   <head>
     <title>How to integrate the R2U SDK</title>
-    <script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
+    <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
   </head>
 
   <body> Your HTML code </body>
@@ -23,7 +23,7 @@ To use this SDK, add the tag below on the HTML header of your website. This can 
 
 ### JavaScript package manager integration
 
-Add the SDK using npm or yarn on your JavaScript project.
+Add the SDK using `npm` or `yarn` on your JavaScript project.
 
 ```bash
 # using npm

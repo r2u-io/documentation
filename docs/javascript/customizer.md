@@ -2,7 +2,7 @@
 title: 3D Customizer
 ---
 
-After adding the script tag to your website, the methods for creating the 3D Customizer will be available through the global object R2U ([live demo](https://customizer.r2u.io)).
+After adding the script tag to your website, the methods for creating the 3D Customizer will be available through the global `R2U` object ([live demo](https://customizer.r2u.io)).
 
 <div>
   <p float="left">

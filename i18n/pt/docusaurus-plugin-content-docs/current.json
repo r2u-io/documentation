@@ -1,0 +1,10 @@
+{
+  "sidebar.docs.category.Guides": {
+    "message": "Guias",
+    "description": "Guias de integração"
+  },
+  "sidebar.docs.category.VTEX": {
+    "message": "VTEX",
+    "description": "VTEX"
+  }
+}
