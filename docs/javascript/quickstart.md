@@ -66,3 +66,5 @@ Here's a sample code that will get you up and running with minimal effort. Be su
   }
 })();
 ```
+
+We also have a Glitch project with a more detailed example. You can check the final result [here](https://r2u-example.glitch.me/). Or you can take a look at the code [here](https://glitch.com/edit/#!/r2u-example?path=README.md%3A15%3A14).
