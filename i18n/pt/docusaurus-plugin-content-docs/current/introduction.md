@@ -37,11 +37,11 @@ Nós oferecemos a [Realidade Aumentada](/javascript/augmented-reality), o [Visua
   </p>
 </div>
 
-## Quais tecnologias vocês suportam?
+## Quais tecnologias a R2U suporta?
 
 Atualmente, nós temos um [SDK JavaScript](/javascript/quickstart) para sites mobile e desktop e um [SDK React Native](/react-native/quickstart) para aplicativos mobile. Se você tiver interesse em entrar em nossa lista de espera para nossos [SDKs Swift/Kotlin](/swift-kotlin/quickstart), envie-nos uma mensagem.
 
-## Qual é o tamanho dos seus SDKs? Qual é o impacto no tempo de carregamento e no tamanho do bundle?
+## Qual é o tamanho dos SDKs? Qual é o impacto no tempo de carregamento e no tamanho do bundle?
 
 Nossos SDKs são otimizados para fazer uso de aplicativos nativos já presentes nos dispositivos iOS e Android e se comunicar com nossa infraestrutura, e por esse motivo ele é bastante leve e otimizado (tamanho de transferência inferior a 200kB, quando empacotado) e não deve interferir na experiência do usuário.
 

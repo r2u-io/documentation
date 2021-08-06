@@ -2,14 +2,14 @@
 title: Configurando seus produtos
 ---
 
-## Importing our App
+## Importando nosso App
 
 Primeiramente, deve-se importar nosso App para a sua loja. No arquivo `manifest.json`, adicione a seguinte dependência:
 ```
 "r2ubr.r2u-vtex-integration": "0.x"
 ```
 
-## Add our solutions to your product page
+## Adicionando nossas soluções à página do seu produto
 
 Para fazer nosso Visualizador 3D e o botão de Experiência RA aparecerem na sua página de produto, insira alguma linhas no arquivo de **template de produto json**.
 

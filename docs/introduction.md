@@ -38,11 +38,11 @@ We offer [Augmented Reality](/javascript/augmented-reality), a [3D Viewer](/java
   </p>
 </div>
 
-## What technologies do you support?
+## What technologies does R2U support?
 
 We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and desktop websites, and  a [React Native](/react-native/quickstart) for mobile apps. If you wish to join our early access wait list for our [Swift/Kotlin SDKs](swift-kotlin/quickstart), please send us a message.
 
-## What is the size of your SDKs? What is the impact on load time and bundle size?
+## What is the size of the SDKs? What is the impact on load time and bundle size?
 
 Our SDKs are optimized to facilitate the use of native applications already present on devices and communicate with our infrastructure, so it is lightweight (less than 200kB transfer size when bundled) and should not interfere with the user experience.
 
