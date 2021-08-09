@@ -45,3 +45,17 @@ The necessary configuration steps are described bellow such that the data is ava
 ### 2. Google Analytics setup
 
 - Import the R2U segments and report via this [link](https://analytics.google.com/analytics/web/provision/?authuser=0&utm_source&utm_medium&utm_term&utm_content&utm_campaign#/provision) and apply to the view with the website data
+
+## Send analytics to R2U platform
+
+The analytical method sends events to the R2U analytical platform, to identify the results of the integration of our SDK.
+
+```typescript
+const addToCartButton = document.getElementById('add-to-cart')
+addToCartButton.addEventListener('click', () =>
+  R2U.analytics.send({
+    event: 'add_to_cart',
+    data: { price: 30 }
+  })
+)
+```
