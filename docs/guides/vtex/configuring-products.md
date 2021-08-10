@@ -4,9 +4,11 @@ title: Configuring your products
 
 ## Importing our App
 
-Firstly you have to import our App to your store. On your `manifest.json` file, add the following dependency:
+Firstly you have to import our App to your store. On your `manifest.json` file, add the following dependency in `peerDependencies`:
 ```
-"r2ubr.r2u-vtex-integration": "0.x"
+  "peerDependencies": {
+    "r2ubr.r2u-vtex-integration": "1.x"
+  },
 ```
 
 ## Add our solutions to your product page
