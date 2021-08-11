@@ -103,26 +103,33 @@ const App: React.FC = () => {
   const [init, setInit] = useState(false)
   const [isActive, setIsActive] = useState(false)
   const [canOpenAR, setCanOpenAR] = useState(false)
+  const [opened, setOpened] = useState(false)
 
-  useEffect(async () => {
-    await R2U.init({ customerId })
-    const isSupported = await R2U.ar.isSupported()
-    setCanOpenAR(supported)
+  useEffect(() => {
+    R2U.init({ customerId }).then(() => {
+      setInit(true)
+    })
+    R2U.ar.isSupported().then((supported) => setCanOpenAR(supported))
   }, [])
 
-  useEffect(async () => {
+  useEffect(() => {
     if (!init) return
-    const active = await R2U.sku.isActive(sku)
-    setIsActive(active)
+    R2U.sku.isActive(sku).then((active) => {
+      setIsActive(active)
+    })
   }, [init])
+
+  useEffect(() => {
+    if (opened) R2U.ar.open({ sku, resize: false }).then(() => setOpened(false))
+  }, [opened])
 
   return (
     <SafeAreaView>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <Button
-          title="View in your space"
-          onPress={() => R2U.ar.open({ sku, resize: false })}
-          disabled={!init || !isActive || !canOpenAR}
+          title={opened ? 'Loading ...' : 'View in your space'}
+          onPress={() => setOpened(true)}
+          disabled={!init || !isActive || !canOpenAR || opened}
         ></Button>
       </ScrollView>
     </SafeAreaView>
