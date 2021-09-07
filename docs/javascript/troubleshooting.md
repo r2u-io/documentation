@@ -16,14 +16,9 @@ R2U.init(...).then(() => R2U.ar.attach(...))
 
 ### SDK version
 
-Sometimes you might end up in some trouble by getting an older version of the SDK. There are two possible solutions when calling the script:
+Sometimes you might end up in some trouble by getting an older version of the SDK. To fix this, either:
 
-- Manually get the latest version
-```html
-<script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
-```
-
-- Don't put the version (this way you automatically get the latest version)
+- Double check you are using the latest version latest version of the SDK
 ```html
 <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
 ```

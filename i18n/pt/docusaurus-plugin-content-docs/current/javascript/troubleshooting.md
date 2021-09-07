@@ -16,14 +16,9 @@ R2U.init(...).then(() => R2U.ar.attach(...))
 
 ### Versão do SDK
 
-Algumas vezes o erro pode ser causado pela versão do SDK. Quando for chamar o script, duas possíveis soluções são:
+Algumas vezes o erro pode ser causado por sua aplicação estar com uma versão muito antiga do SDK. Duas possíveis soluções são:
 
-- Chamar pela última versão manualmente
-```html
-<script src='https://unpkg.com/@r2u/javascript-ar-sdk@6.5.4/dist/index.js'></script>
-```
-
-- Não colocar a versão (assim, sempre será chamado a última versão)
+- Confira que você está usando a última versão do SDK
 ```html
 <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
 ```
