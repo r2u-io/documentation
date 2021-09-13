@@ -21,6 +21,15 @@ module.exports = {
       ]
     },
     {
+      'Flutter SDK': [
+        'flutter/quickstart',
+        'flutter/augmented-reality',
+        'flutter/viewer',
+        'flutter/analytics',
+        'flutter/troubleshooting'
+      ]
+    },
+    {
       'Swift/Kotlin SDK': [
         'swift-kotlin/quickstart'
       ]
