@@ -40,6 +40,7 @@ R2U.ar.attach({
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | `element`                          | elemento que inicia a experiência em RA                                                                                                                     | `null`               |
 | `sku`                              | SKU do produto                                                                                                                                       | `''`                 |
+| `price`                              | Preço do produto                                                                                                                                       | `''`                 |
 | `event`                            | evento que inicia o AR                                                                                                                            | `'click'`            |
 | `resize`                           | Opção para redimensionar o modelo 3D na experience RA                                                                                                       | `false`              |
 | [`showInstructions`](#showinstructions) | Quando true, mostra uma imagem em tela cheia explicando como colocar e manipular o objeto 3D em realidade aumentada antes de entrar na experiência da câmera | `false`              |

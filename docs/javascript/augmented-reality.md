@@ -40,6 +40,7 @@ R2U.ar.attach({
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | `element`                          | element that will trigger AR                                                                                                                      | `null`               |
 | `sku`                              | product SKU                                                                                                                                       | `''`                 |
+| `sku`                              | product  price                                                                                                                                      | `''`                 |
 | `event`                            | event that triggers AR                                                                                                                            | `'click'`            |
 | `resize`                           | Option to resize 3D model on AR experience                                                                                                        | `false`              |
 | [`showInstructions`](#showinstructions) | When true, shows an image in full-screen view explaining how to place and manipulate a 3D object on AR before proceeding to the camera experience | `false`              |
