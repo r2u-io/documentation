@@ -50,10 +50,13 @@ R2U.ar.attach({
 | `fallbackOptions.text.title`       | Changes the tittle on fallback page                                                                                                               | `null`               |
 | `fallbackOptions.text.top`         | Changes the top text on fallback page                                                                                                             | `null`               |
 | `fallbackOptions.text.bottom`      | Changes the bottom text on fallback page                                                                                                          | `null`               |
+| [`callToAction`](#calltoAction) | When defined, include a Call To Action inside the AR experience, such as an Add To Cart button	                                                                                                          | `null`               |
+| `callToAction.text`      | Call To Action button text                                                                                                          | `null`               |
+| `callToAction.onClick`      | Call To Action function to handle the button click inside the AR experience                                                                                                          | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
-#### showInstructions
+### showInstructions
 
 :::info Default `once`
 :::
@@ -66,8 +69,6 @@ When rendered, shows a full-screen panel explaining how to place and manipulate 
 | always | The instructions screen will render every time the user interacts with the button |
 | never  | The instructions screen will never render                                         |
 
-<div >
-<div >
 
 ```typescript
 interface R2U {
@@ -81,14 +82,12 @@ interface R2U {
 }
 ```
 
-</div>
 <div>
-<strong> Instructions example: </strong>
+  <strong> Instructions example: </strong>
 
-<p float="left">
-  <img src="https://sdk.r2u.io/documentation/instruction-en.png" title="Instruction screen" width="200"/>
-</p>
-</div>
+  <p float="left">
+    <img src="https://sdk.r2u.io/documentation/instruction-en.png" title="Instruction screen" width="200"/>
+  </p>
 </div>
 
 ### fallbackOptions
@@ -97,9 +96,6 @@ interface R2U {
 :::
 
 Shows an image when the mobile device does not support the AR experience. If the instructions parameter is provided, the fallback is displayed only when you click on the attached button.
-
-<div >
-<div >
 
 ```typescript
 interface R2U {
@@ -128,16 +124,36 @@ interface R2U {
 }
 ```
 
-</div>
 <div>
-<strong> Fallback example: </strong>
+  <strong> Fallback example: </strong>
 
-<p float="left">
-  <img src="https://sdk.r2u.io/documentation/fallback-pt.png" title="Fallback" width="200"/>
-</p>
+  <p float="left">
+    <img src="https://sdk.r2u.io/documentation/fallback-pt.png" title="Fallback" width="200"/>
+  </p>
 </div>
 
-</div>
+### callToAction
+
+:::tip The CTA button `text` can be customized
+:::
+
+Shows a call to action on the Augmented Reality experience, such as an Add To Cart button. The `onClick` function provided will dispatch when the user interacts with the CTA.
+
+```typescript
+interface R2U {
+  ar: {
+    attach: (params: {
+      element: HTMLElement
+      sku: string
+      callToAction?: {
+        text: string
+        onClick: () => void
+      }
+    }) => Promise<void>
+  }
+}
+```
+
 
 ### AR demo on _iOS_
 

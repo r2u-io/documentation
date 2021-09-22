@@ -50,10 +50,13 @@ R2U.ar.attach({
 | `fallbackOptions.text.title`       | Muda o título na página fallback                                                                                                               | `null`               |
 | `fallbackOptions.text.top`         | Altera o texto principal na página de fallback                                                                                                             | `null`               |
 | `fallbackOptions.text.bottom`      | Altera o texto inferior na página de fallback                                                                                                          | `null`               |
+| [`callToAction`](#calltoAction) | Quando definido, inclui um _call to action_ dentro da experiência de RA, como um botão Adicionar ao carrinho	                                                                                                          | `null`               |
+| `callToAction.text`      | Botão de _Call To Action_ text                                                                                                          | `null`               |
+| `callToAction.onClick`      | Função a ser executada no clique do botão dentro da experiência de AR                                                                                                          | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
-#### showInstructions
+### showInstructions
 
 :::info Default `once`
 :::
@@ -66,8 +69,6 @@ Quando renderizado, mostra um painel de tela cheia explicando como posicionar e 
 | always | A tela de instruções será renderizada sempre que o usuário interagir com o botão |
 | never  | A tela de instruções nunca será renderizada                                          |
 
-<div >
-<div >
 
 ```typescript
 interface R2U {
@@ -81,14 +82,12 @@ interface R2U {
 }
 ```
 
-</div>
 <div>
-<strong> Exemplo de Instructions: </strong>
+  <strong> Exemplo de Instructions: </strong>
 
-<p float="left">
-  <img src="https://sdk.r2u.io/documentation/instruction-pt.png" title="Tela de instruções" width="200"/>
-</p>
-</div>
+  <p float="left">
+    <img src="https://sdk.r2u.io/documentation/instruction-pt.png" title="Tela de instruções" width="200"/>
+  </p>
 </div>
 
 ### fallbackOptions
@@ -98,8 +97,6 @@ interface R2U {
 
 Mostra uma imagem quando o dispositivo móvel não é compatível com a experiência de RA. Se o parâmetro de instruções for fornecido, o fallback será exibido apenas quando o usuário clicar no botão que foi `attach`.
 
-<div >
-<div >
 
 ```typescript
 interface R2U {
@@ -128,16 +125,36 @@ interface R2U {
 }
 ```
 
-</div>
 <div>
-<strong> Examplo de fallback: </strong>
+  <strong> Examplo de fallback: </strong>
 
-<p float="left">
-  <img src="https://sdk.r2u.io/documentation/fallback-pt.png" title="Fallback" width="200"/>
-</p>
+  <p float="left">
+    <img src="https://sdk.r2u.io/documentation/fallback-pt.png" title="Fallback" width="200"/>
+  </p>
 </div>
 
-</div>
+### callToAction
+
+:::tip O parâmetro `text` no botão do CTA pode ser customizado
+:::
+
+Mostra um _call to action_ na experiência de Realidade Aumentada, como um botão Adicionar ao carrinho. A função `onClick` fornecida será disparada quando o usuário interagir com o CTA.
+
+```typescript
+interface R2U {
+  ar: {
+    attach: (params: {
+      element: HTMLElement
+      sku: string
+      callToAction?: {
+        text: string
+        onClick: () => void
+      }
+    }) => Promise<void>
+  }
+}
+```
+
 
 ### Demo de RA no _iOS_
 
