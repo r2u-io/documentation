@@ -156,6 +156,14 @@ interface R2U {
 }
 ```
 
+<div>
+  <strong> Exemplo de Call To Action: </strong>
+
+  <p float="left">
+    <img src="https://sdk.r2u.io/documentation/call-to-action-pt.png" title="Call To Action" width="200"/>
+  </p>
+</div>
+
 
 ### Demo de RA no _iOS_
 
