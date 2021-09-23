@@ -31,7 +31,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
     </p>
   </div>
 
-- Configure as tags UA - R2U attribution e UA - R2U events para usar a variável do Google Analytics
+- Configure a tag UA - R2U events para usar a variável do Google Analytics
 
    <div>
     <p float="left">

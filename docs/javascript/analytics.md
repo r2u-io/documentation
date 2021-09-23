@@ -32,7 +32,7 @@ The necessary configuration steps are described bellow such that the data is ava
     </p>
   </div>
 
-- Configure the tags UA - R2U attribution and UA - R2U events to use the Google Analytics variable
+- Configure the tag UA - R2U events to use the Google Analytics variable
 
    <div>
     <p float="left">
