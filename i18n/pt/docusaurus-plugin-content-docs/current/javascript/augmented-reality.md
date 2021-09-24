@@ -136,7 +136,7 @@ interface R2U {
 
 ### callToAction
 
-:::tip O parâmetro `text` no botão do CTA pode ser customizado
+:::tip Recomenda-se que o parâmetro `text` seja curto para não competir em espaço do nome do produto
 :::
 
 Mostra um _call to action_ na experiência de Realidade Aumentada, como um botão Adicionar ao carrinho. A função `onClick` fornecida será disparada quando o usuário interagir com o CTA.

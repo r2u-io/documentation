@@ -135,7 +135,7 @@ interface R2U {
 
 ### callToAction
 
-:::tip The CTA button `text` can be customized
+:::tip We recommend the CTA `text` parameter to be short so that it won't overflow into the product name
 :::
 
 Shows a call to action on the Augmented Reality experience, such as an Add To Cart button. The `onClick` function provided will dispatch when the user interacts with the CTA.
