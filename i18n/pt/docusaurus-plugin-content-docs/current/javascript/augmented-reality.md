@@ -136,6 +136,9 @@ interface R2U {
 
 ### callToAction
 
+:::info Atualmente apenas disponível no iOS Safari e Android WebXR
+:::
+
 :::tip Recomenda-se que o parâmetro `text` seja curto para não competir em espaço do nome do produto
 :::
 

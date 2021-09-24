@@ -135,6 +135,9 @@ interface R2U {
 
 ### callToAction
 
+:::info Currently only available on iOS Safari and Android WebXR
+:::
+
 :::tip We recommend the CTA `text` parameter to be short so that it won't overflow into the product name
 :::
 
