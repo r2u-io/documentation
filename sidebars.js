@@ -9,7 +9,7 @@ module.exports = {
         'javascript/customizer',
         'javascript/analytics',
         'javascript/troubleshooting'
-      ],
+      ]
     },
     {
       'React Native SDK': [
@@ -30,14 +30,12 @@ module.exports = {
       ]
     },
     {
-      'Swift/Kotlin SDK': [
-        'swift-kotlin/quickstart'
-      ]
+      'Swift/Kotlin SDK': ['swift-kotlin/quickstart']
     },
     {
-      'Guides': [
+      Guides: [
         {
-          'VTEX': [
+          VTEX: [
             'guides/vtex/getting-started',
             'guides/vtex/send-products',
             'guides/vtex/sent-products',

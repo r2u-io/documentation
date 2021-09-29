@@ -35,25 +35,24 @@ R2U.ar.attach({
 })
 ```
 
-
-| parâmetro                          | descrição                                                                                                                                       | default              |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| `element`                          | elemento que inicia a experiência em RA                                                                                                                     | `null`               |
-| `sku`                              | SKU do produto                                                                                                                                       | `''`                 |
-| `price`                              | Preço do produto                                                                                                                                       | `''`                 |
-| `event`                            | evento que inicia o AR                                                                                                                            | `'click'`            |
-| `resize`                           | Opção para redimensionar o modelo 3D na experience RA                                                                                                       | `false`              |
+| parâmetro                               | descrição                                                                                                                                                    | default              |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| `element`                               | elemento que inicia a experiência em RA                                                                                                                      | `null`               |
+| `sku`                                   | SKU do produto                                                                                                                                               | `''`                 |
+| `price`                                 | Preço do produto                                                                                                                                             | `''`                 |
+| `event`                                 | evento que inicia o AR                                                                                                                                       | `'click'`            |
+| `resize`                                | Opção para redimensionar o modelo 3D na experience RA                                                                                                        | `false`              |
 | [`showInstructions`](#showinstructions) | Quando true, mostra uma imagem em tela cheia explicando como colocar e manipular o objeto 3D em realidade aumentada antes de entrar na experiência da câmera | `false`              |
-| [`fallbackOptions`](#fallbackoptions)                  | Comportamento a ser produzido quando a experiência de RA não estiver disponível no dispositivo                                                                               | `{ alertMessage }`\* |
-| `fallbackOptions.alertMessage`     | Quando definido, alerta o usuário com a string escolhida                                                                                                      | `null`               |
-| `fallbackOptions.fallback`         | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`' full'`)                                                      | `null`               |
-| `fallbackOptions.text`             | Quando definido, modifica o texto de fallback no modo `'viewer'`                                                                                           | `null`               |
-| `fallbackOptions.text.title`       | Muda o título na página fallback                                                                                                               | `null`               |
-| `fallbackOptions.text.top`         | Altera o texto principal na página de fallback                                                                                                             | `null`               |
-| `fallbackOptions.text.bottom`      | Altera o texto inferior na página de fallback                                                                                                          | `null`               |
-| [`callToAction`](#calltoAction) | Quando definido, inclui um _call to action_ dentro da experiência de RA, como um botão Adicionar ao carrinho	                                                                                                          | `null`               |
-| `callToAction.text`      | Botão de _Call To Action_ text                                                                                                          | `null`               |
-| `callToAction.onClick`      | Função a ser executada no clique do botão dentro da experiência de AR                                                                                                          | `null`               |
+| [`fallbackOptions`](#fallbackoptions)   | Comportamento a ser produzido quando a experiência de RA não estiver disponível no dispositivo                                                               | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage`          | Quando definido, alerta o usuário com a string escolhida                                                                                                     | `null`               |
+| `fallbackOptions.fallback`              | Quando definido, abre um visualizador 3D em uma tela de aviso (`'viewer'`) ou em tela cheia (`' full'`)                                                      | `null`               |
+| `fallbackOptions.text`                  | Quando definido, modifica o texto de fallback no modo `'viewer'`                                                                                             | `null`               |
+| `fallbackOptions.text.title`            | Muda o título na página fallback                                                                                                                             | `null`               |
+| `fallbackOptions.text.top`              | Altera o texto principal na página de fallback                                                                                                               | `null`               |
+| `fallbackOptions.text.bottom`           | Altera o texto inferior na página de fallback                                                                                                                | `null`               |
+| [`callToAction`](#calltoAction)         | Quando definido, inclui um _call to action_ dentro da experiência de RA, como um botão Adicionar ao carrinho                                                 | `null`               |
+| `callToAction.text`                     | Botão de _Call To Action_ text                                                                                                                               | `null`               |
+| `callToAction.onClick`                  | Função a ser executada no clique do botão dentro da experiência de AR                                                                                        | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
@@ -64,12 +63,11 @@ R2U.ar.attach({
 
 Quando renderizado, mostra um painel de tela cheia explicando como posicionar e manipular um objeto 3D, antes de prosseguir para a experiência de RA.
 
-| valor  |  efeito                                                                           |
-| ------ | --------------------------------------------------------------------------------- |
-| once   | A tela de instruções será renderizada apenas na primeira experiência de RA do usuário.      |
-| always | A tela de instruções será renderizada sempre que o usuário interagir com o botão |
-| never  | A tela de instruções nunca será renderizada                                          |
-
+| valor  | efeito                                                                                 |
+| ------ | -------------------------------------------------------------------------------------- |
+| once   | A tela de instruções será renderizada apenas na primeira experiência de RA do usuário. |
+| always | A tela de instruções será renderizada sempre que o usuário interagir com o botão       |
+| never  | A tela de instruções nunca será renderizada                                            |
 
 ```typescript
 interface R2U {
@@ -97,7 +95,6 @@ interface R2U {
 :::
 
 Mostra uma imagem quando o dispositivo móvel não é compatível com a experiência de RA. Se o parâmetro de instruções for fornecido, o fallback será exibido apenas quando o usuário clicar no botão que foi `attach`.
-
 
 ```typescript
 interface R2U {
@@ -166,7 +163,6 @@ interface R2U {
     <img src="https://sdk.r2u.io/documentation/call-to-action-pt.png" title="Call To Action" width="200"/>
   </p>
 </div>
-
 
 ### Demo de RA no _iOS_
 

@@ -19,19 +19,21 @@ R2U.init(...).then(() => R2U.ar.attach(...))
 Algumas vezes o erro pode ser causado por sua aplicação estar com uma versão muito antiga do SDK. Duas possíveis soluções são:
 
 - Confira que você está usando a última versão do SDK
+
 ```html
-<script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js"></script>
 ```
 
 - Adicionar o pacote com `yarn`
+
 ```bash
 yarn add @r2u/javascript-ar-sdk
 ```
 
-
 ### R2U.viewer.create / R2U.ar.attach
 
 Lembre-se de que essas funções possuem parâmetros específicos.
+
 ```typescript
 // A próxima linha:
 R2U.viewer.create({ element, ... })
@@ -40,6 +42,7 @@ R2U.viewer.create({ element: element, ... })
 ```
 
 A implementação correta é simplesmente explicitar os parâmetros:
+
 ```typescript
 R2U.viewer.create({ element: fooBar, ... })
 ```
@@ -53,6 +56,6 @@ Esse erro significa que o SKU que está sendo chamado não está na nossa base d
 
 Por favor entre em contato (contato@r2u.io) para alinhar essas informações.
 
-### Visualizador 3D e Botão RA não aparecem 
+### Visualizador 3D e Botão RA não aparecem
 
 Se este é o caso e nenhum dos erros citados aqui te ajudaram, talvez sua equipe ainda não tenha aprovado o modelo no nosso [console](https://console.r2u.io/).

@@ -19,11 +19,13 @@ R2U.init(...).then(() => R2U.ar.attach(...))
 Sometimes you might end up in some trouble by getting an older version of the SDK. To fix this, either:
 
 - Double check you are using the latest version latest version of the SDK
+
 ```html
-<script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
+<script src="https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js"></script>
 ```
 
 - Add the package with `yarn`
+
 ```bash
 yarn add @r2u/javascript-ar-sdk
 ```
@@ -31,6 +33,7 @@ yarn add @r2u/javascript-ar-sdk
 ### R2U.viewer.create / R2U.ar.attach
 
 Remember that these functions have specific parameters.
+
 ```typescript
 // The next line:
 R2U.viewer.create({ element, ... })
@@ -39,6 +42,7 @@ R2U.viewer.create({ element: element, ... })
 ```
 
 The correct implementation is to simply explicit the parameters:
+
 ```typescript
 R2U.viewer.create({ element: fooBar, ... })
 ```
@@ -52,6 +56,6 @@ This error means that the SKU that you are calling isn't in our database. If you
 
 Please get in touch (contact@r2u.io) to clear this issue.
 
-### 3D Viewer and AR Button don't appear 
+### 3D Viewer and AR Button don't appear
 
 If you didn't get any errors cited here, you may not have approved the model yet on our [console](https://console.r2u.io/).

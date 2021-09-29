@@ -3,7 +3,7 @@ title: Introduction
 slug: /
 ---
 
-👋    Welcome to the R2U docs!
+👋 Welcome to the R2U docs!
 
 This documentation aims to provide a high-level overview of the company and its existing SDKs.
 
@@ -20,7 +20,6 @@ R2U helps e-commerce stores sell more by allowing users to try-out products at h
 ## What solutions does R2U offer?
 
 We offer [Augmented Reality](/javascript/augmented-reality), a [3D Viewer](/javascript/viewer) and a [3D Customizer](/javascript/customizer).
-
 
 <div>
   <p float="left">
@@ -40,7 +39,7 @@ We offer [Augmented Reality](/javascript/augmented-reality), a [3D Viewer](/java
 
 ## What technologies does R2U support?
 
-We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and desktop websites, and  a [React Native](/react-native/quickstart) for mobile apps. If you wish to join our early access wait list for our [Swift/Kotlin SDKs](swift-kotlin/quickstart), please send us a message.
+We currently have a [JavaScript SDK](/javascript/quickstart) for both mobile and desktop websites, and a [React Native](/react-native/quickstart) for mobile apps. If you wish to join our early access wait list for our [Swift/Kotlin SDKs](swift-kotlin/quickstart), please send us a message.
 
 ## What is the size of the SDKs? What is the impact on load time and bundle size?
 
@@ -56,12 +55,11 @@ Today around [90% of all smartphones](https://arinsider.co/2021/07/12/are-90-of-
 
 For iOS, devices starting from iPhone 6s and iPad 6 are supported. Official Apple supported devices list: [https://www.apple.com/us/augmented-reality/](https://www.apple.com/br/augmented-reality/)
 
-For Android, only devices approved by Google's approval process are compatible, as they have undergone processor, sensor and camera quality tests, among other device hardware. Among the *non-approved* models are some more *low-end* devices from Samsung and Motorola and some models from Xiaomi. Official Google supported device list: [https://developers.google.com/ar/devices](https://developers.google.com/ar/devices)
+For Android, only devices approved by Google's approval process are compatible, as they have undergone processor, sensor and camera quality tests, among other device hardware. Among the _non-approved_ models are some more _low-end_ devices from Samsung and Motorola and some models from Xiaomi. Official Google supported device list: [https://developers.google.com/ar/devices](https://developers.google.com/ar/devices)
 
 ## Does R2U host all 3D models?
 
 Yes. We today have a proprietary database of 3D models that is ever growing with new products. As we are in direct contact with the product manufacturers, we are able to produce 3D models directly in the industry and offer AR of these products in different channels. Therefore, it is more efficient to use models directly from our storage.
-
 
 <a href="https://github.com/r2u-io/documentation">
   <img src="https://sdk.r2u.io/documentation/github.png" width="20"/> &nbsp;

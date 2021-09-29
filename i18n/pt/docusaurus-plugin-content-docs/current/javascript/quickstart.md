@@ -16,16 +16,18 @@ O SDK JavaScript (também compatível com TypeScript) pode ser adicionado ao seu
 
 ### JavaScript tag
 
-Para usar nosso SDK, adicione a tag abaixo no cabeçalho (*header*) do HTML do seu site. Isso pode ser feito por meio de um sistema de gerenciamento de tags, como o Google Tag Manager, ou por meio da interface da sua plataforma de e-comércio.
+Para usar nosso SDK, adicione a tag abaixo no cabeçalho (_header_) do HTML do seu site. Isso pode ser feito por meio de um sistema de gerenciamento de tags, como o Google Tag Manager, ou por meio da interface da sua plataforma de e-comércio.
 
 ```html
-<html lang=en>
+<html lang="en">
   <head>
     <title>Integrando o SDK R2U</title>
-    <script src='https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js'></script>
+    <script src="https://unpkg.com/@r2u/javascript-ar-sdk/dist/index.js"></script>
   </head>
 
-  <body> Seu código HTML </body>
+  <body>
+    Seu código HTML
+  </body>
 </html>
 ```
 
@@ -56,7 +58,7 @@ Aqui está um código de exemplo que o ajudará a começar a trabalhar com o mí
 ;(async () => {
   await R2U.init({ customerId: '5e8e7580404328000882f4ae' })
   const isActive = await R2U.sku.isActive('RE000001')
-  if(isActive) {
+  if (isActive) {
     const sku = 'RE000001'
 
     const arButton = document.getElementById('ar-button')
@@ -71,7 +73,7 @@ Aqui está um código de exemplo que o ajudará a começar a trabalhar com o mí
       sku
     })
   }
-})();
+})()
 ```
 
 Nós também temos um projeto no [Glitch](https://glitch.com/) com um exemplo mais detalhado. Confira o resultado final [aqui](https://r2u-example.glitch.me/). Ou veja o código-fonte [aqui](https://glitch.com/edit/#!/r2u-example?path=README-pt.md%3A1%3A0).

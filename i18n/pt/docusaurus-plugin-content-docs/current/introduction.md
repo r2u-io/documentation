@@ -3,7 +3,7 @@ title: Introdução
 slug: /
 ---
 
-👋    Boas-vindas à documentação R2U!
+👋 Boas-vindas à documentação R2U!
 
 Esta documentação tem o objetivo de fornecer uma visão de alto nível da nossa empresa e dos SDKs que nós fornecemos.
 
@@ -55,7 +55,7 @@ Hoje, cerca de [90% de todos os smartphones](https://arinsider.co/2021/07/12/are
 
 Para iOS, há suporte para dispositivos a partir do iPhone 6s e iPad 6. Lista oficial de dispositivos suportados pela Apple: [https://www.apple.com/us/augmented-reality/](https://www.apple.com/br/augmented-reality/)
 
-Para o Android, apenas dispositivos aprovados pelo processo de homologação do Google são compatíveis, pois passaram por testes de processador, sensor e qualidade de câmera, entre outros hardwares. Entre os modelos *não aprovados*, estão alguns dispositivos mais *low-end* da Samsung e Motorola e alguns modelos da Xiaomi. Lista oficial de dispositivos suportados pelo Google: [https://developers.google.com/ar/devices](https://developers.google.com/ar/devices)
+Para o Android, apenas dispositivos aprovados pelo processo de homologação do Google são compatíveis, pois passaram por testes de processador, sensor e qualidade de câmera, entre outros hardwares. Entre os modelos _não aprovados_, estão alguns dispositivos mais _low-end_ da Samsung e Motorola e alguns modelos da Xiaomi. Lista oficial de dispositivos suportados pelo Google: [https://developers.google.com/ar/devices](https://developers.google.com/ar/devices)
 
 ## A R2U faz hospedagem de todos os modelos 3D?
 
