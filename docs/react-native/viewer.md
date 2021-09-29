@@ -16,45 +16,53 @@ After adding the dependency to your app, the methods for creating a 3D Viewer wi
 Returns the 3D model viewer URL, to be used in a webview such as [react-native-webview](https://github.com/react-native-webview/react-native-webview).
 
 ```tsx
-// Demo using React Hooks
-// import react, etc.
-import { WebView } from 'react-native-webview' // Needed to display the 3D model inside the app
+import React, { useEffect, useState } from 'react'
+import { StyleSheet, View } from 'react-native'
+
+import { WebView } from 'react-native-webview'
+
 import R2U from '@r2u/react-native-ar-sdk'
+
 const customerId = '5e8e7580404328000882f4ae' // Remember to use your ID
 const sku = 'RE000001' // Gather from your product page
 
-const App: React.FC = () => {
+const styles = StyleSheet.create({
+  webview: {
+    marginTop: 32,
+    width: 400,
+    height: 400,
+    margin: 'auto',
+    backgroundColor: '#ccc'
+  }
+})
+
+const Viewer3D: React.FC = () => {
   const [init, setInit] = useState(false)
   const [isActive, setIsActive] = useState(false)
-  const [canOpenAR, setCanOpenAR] = useState(false)
   const [uri, setUri] = useState('')
 
-  useEffect(async () => {
-    await R2U.init({ customerId })
-    const isSupported = await R2U.ar.isSupported()
-    setCanOpenAR(supported)
+  useEffect(() => {
+    R2U.init({ customerId }).then(() => {
+      setInit(true)
+    })
   }, [])
 
-  useEffect(async () => {
+  useEffect(() => {
     if (!init) return
-    const active = await R2U.sku.isActive(sku)
-    setIsActive(active)
+    R2U.sku.isActive(sku).then((active) => {
+      setIsActive(active)
+    })
   }, [init])
 
-  useEffect(async () => {
+  useEffect(() => {
     if (!init || !isActive) return
-    const link = await R2U.viewer.getLink(sku)
-    setUri(link)
+    R2U.viewer.getLink(sku).then((link) => {
+      setUri(link)
+    })
   }, [isActive])
 
-  return (
-    <SafeAreaView>
-      <ScrollView contentInsetAdjustmentBehavior='automatic'>
-        <View>{uri ? <WebView source={{ uri }} /> : null}</View>
-      </ScrollView>
-    </SafeAreaView>
-  )
+  return <View>{uri ? <WebView style={styles.webview} source={{ uri }} /> : null}</View>
 }
 
-export default App
+export default Viewer3D
 ```

@@ -23,22 +23,53 @@ Returns true if the device supports Augmented Reality. See list of supported dev
 The `ar.open` method displays the given `sku` model inside the AR experience. By default, the `resize` parameter is `false`.
 
 ```tsx
+import React, { useEffect, useState } from 'react'
+import { Alert, Button } from 'react-native'
+
+import R2U from '@r2u/react-native-ar-sdk'
+
+const customerId = '5e8e7580404328000882f4ae' // Remember to use your ID
+const sku = 'RE000001' // Gather from your product page
+
+const ARButton: React.FC = () => {
   const [init, setInit] = useState(false)
   const [isActive, setIsActive] = useState(false)
   const [canOpenAR, setCanOpenAR] = useState(false)
+  const [opened, setOpened] = useState(false)
 
-  useEffect(async () => {
-    await R2U.init({ customerId })
-    setInit(true)
-    const isSupported = await R2U.ar.isSupported()
-    setCanOpenAR(isSupported)
+  useEffect(() => {
+    R2U.init({ customerId }).then(() => {
+      setInit(true)
+    })
+    R2U.ar.isSupported().then((supported) => setCanOpenAR(supported))
   }, [])
 
+  useEffect(() => {
+    if (!init) return
+    R2U.sku.isActive(sku).then((active) => {
+      setIsActive(active)
+    })
+  }, [init])
 
-  // be sure to only display the AR button on supported devices
-  <Button
-    title="View in your space"
-    onPress={() => R2U.ar.open({ sku })}
-    disabled={!init || !isActive || !canOpenAR}
-  ></Button>
+  useEffect(() => {
+    if (opened)
+      R2U.ar
+        .open({ sku, resize: false })
+        .then(() => setOpened(false))
+        .catch(() => {
+          Alert.alert('An error has occurred')
+          setOpened(false)
+        })
+  }, [opened])
+
+  return (
+    <Button
+      title={opened ? 'Loading ...' : 'View in your space'}
+      onPress={() => setOpened(true)}
+      disabled={!init || !isActive || !canOpenAR || opened}
+    ></Button>
+  )
+}
+
+export default ARButton
 ```
