@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '12'
       - name: Run Prettier
-        run: npx prettier --write .
+        run: yarn prettier
       - name: Commit changes
         run: |
           git config user.email 'bot@r2u.io'
