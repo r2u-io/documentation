@@ -6,7 +6,7 @@ On this page you can send your products to our team to develop the 3D model of t
 
 ![](./assets/sidebar.png 'Sidebar')
 
-On the _Send products_ Tab, can be seen every product of your store. Select the products wanted and click on _Send_ button. This will send your products along with some data needed to model the 3D asset. Keep in mind that this process take some time. 
+On the _Send products_ Tab, can be seen every product of your store. Select the products wanted and click on _Send_ button. This will send your products along with some data needed to model the 3D asset. Keep in mind that this process take some time.
 
 ![](./assets/send-products.png 'Sending products')
 

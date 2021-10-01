@@ -11,6 +11,7 @@ The integration of R2U AR module in React Native is made by the library [@r2u/re
 The SDK uses both `react-native-device-info` and `React Native Async Storage` packages to collect information and control session in order to send data to Analytics. Be sure to have them installed in your application:
 
 - Add the packages with `yarn`
+
 ```bash
 yarn add react-native-device-info
 yarn add @react-native-async-storage/async-storage
@@ -19,6 +20,7 @@ yarn add @react-native-async-storage/async-storage
 - Linking the packages is made automatically using [CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md)
 
 - On iOS, use CocoaPods to add `RNAsyncStorage` to your project:
+
 ```bash
 npx pod-install
 ```
@@ -85,14 +87,7 @@ Here's a sample code that will get you up and running with minimal effort. Be su
 
 ```tsx
 import React, { useEffect, useState } from 'react'
-import {
-  Button,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  View,
-} from 'react-native'
+import { Button, SafeAreaView, ScrollView, StatusBar, StyleSheet, View } from 'react-native'
 
 import R2U from '@r2u/react-native-ar-sdk'
 
@@ -125,7 +120,7 @@ const App: React.FC = () => {
 
   return (
     <SafeAreaView>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
+      <ScrollView contentInsetAdjustmentBehavior='automatic'>
         <Button
           title={opened ? 'Loading ...' : 'View in your space'}
           onPress={() => setOpened(true)}

@@ -35,25 +35,24 @@ R2U.ar.attach({
 })
 ```
 
-
-| parameter                          | description                                                                                                                                       | default              |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| `element`                          | element that will trigger AR                                                                                                                      | `null`               |
-| `sku`                              | product SKU                                                                                                                                       | `''`                 |
-| `sku`                              | product  price                                                                                                                                      | `''`                 |
-| `event`                            | event that triggers AR                                                                                                                            | `'click'`            |
-| `resize`                           | Option to resize 3D model on AR experience                                                                                                        | `false`              |
+| parameter                               | description                                                                                                                                       | default              |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `element`                               | element that will trigger AR                                                                                                                      | `null`               |
+| `sku`                                   | product SKU                                                                                                                                       | `''`                 |
+| `sku`                                   | product price                                                                                                                                     | `''`                 |
+| `event`                                 | event that triggers AR                                                                                                                            | `'click'`            |
+| `resize`                                | Option to resize 3D model on AR experience                                                                                                        | `false`              |
 | [`showInstructions`](#showinstructions) | When true, shows an image in full-screen view explaining how to place and manipulate a 3D object on AR before proceeding to the camera experience | `false`              |
-| [`fallbackOptions`](#fallbackoptions)                  | Behavior to reproduce when AR experience is not available on device                                                                               | `{ alertMessage }`\* |
-| `fallbackOptions.alertMessage`     | When defined, alerts user with chosen string                                                                                                      | `null`               |
-| `fallbackOptions.fallback`         | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`)                                                      | `null`               |
-| `fallbackOptions.text`             | When defined, modifies fallback text on `'viewer'` mode                                                                                           | `null`               |
-| `fallbackOptions.text.title`       | Changes the tittle on fallback page                                                                                                               | `null`               |
-| `fallbackOptions.text.top`         | Changes the top text on fallback page                                                                                                             | `null`               |
-| `fallbackOptions.text.bottom`      | Changes the bottom text on fallback page                                                                                                          | `null`               |
-| [`callToAction`](#calltoAction) | When defined, include a Call To Action inside the AR experience, such as an Add To Cart button	                                                                                                          | `null`               |
-| `callToAction.text`      | Call To Action button text                                                                                                          | `null`               |
-| `callToAction.onClick`      | Call To Action function to handle the button click inside the AR experience                                                                                                          | `null`               |
+| [`fallbackOptions`](#fallbackoptions)   | Behavior to reproduce when AR experience is not available on device                                                                               | `{ alertMessage }`\* |
+| `fallbackOptions.alertMessage`          | When defined, alerts user with chosen string                                                                                                      | `null`               |
+| `fallbackOptions.fallback`              | When defined, opens a 3D viewer in a warning screen (`'viewer'`) or in fullscreen (`'full'`)                                                      | `null`               |
+| `fallbackOptions.text`                  | When defined, modifies fallback text on `'viewer'` mode                                                                                           | `null`               |
+| `fallbackOptions.text.title`            | Changes the tittle on fallback page                                                                                                               | `null`               |
+| `fallbackOptions.text.top`              | Changes the top text on fallback page                                                                                                             | `null`               |
+| `fallbackOptions.text.bottom`           | Changes the bottom text on fallback page                                                                                                          | `null`               |
+| [`callToAction`](#calltoAction)         | When defined, include a Call To Action inside the AR experience, such as an Add To Cart button                                                    | `null`               |
+| `callToAction.text`                     | Call To Action button text                                                                                                                        | `null`               |
+| `callToAction.onClick`                  | Call To Action function to handle the button click inside the AR experience                                                                       | `null`               |
 
 \* `alertMessage = 'Sentimos muito, mas infelizmente seu dispositivo não é compatível com a visualização em Realidade Aumentada'`
 
@@ -69,7 +68,6 @@ When rendered, shows a full-screen panel explaining how to place and manipulate 
 | once   | The instructions screen will render only on the user's first AR experience.       |
 | always | The instructions screen will render every time the user interacts with the button |
 | never  | The instructions screen will never render                                         |
-
 
 ```typescript
 interface R2U {
@@ -165,7 +163,6 @@ interface R2U {
     <img src="https://sdk.r2u.io/documentation/call-to-action-pt.png" title="Call To Action" width="200"/>
   </p>
 </div>
-
 
 ### AR demo on _iOS_
 

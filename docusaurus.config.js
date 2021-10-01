@@ -2,7 +2,7 @@
 module.exports = {
   title: 'R2U',
   tagline:
-    "R2U helps e-commerce stores sell more by allowing users to try-out products at home with Augmented Reality",
+    'R2U helps e-commerce stores sell more by allowing users to try-out products at home with Augmented Reality',
   url: 'https://docs.r2u.io',
   baseUrl: '/',
   favicon: 'https://sdk.r2u.io/documentation/favicon-32x32.png',
@@ -17,13 +17,13 @@ module.exports = {
       },
       pt: {
         label: 'Português'
-      },
+      }
     }
   },
   themeConfig: {
     algolia: {
       apiKey: '118c8b4016ab9e4ebc990266e4b347c6',
-      indexName: 'r2u',
+      indexName: 'r2u'
     },
     navbar: {
       title: 'Docs',
@@ -44,7 +44,7 @@ module.exports = {
         },
         {
           type: 'search',
-          position: 'right',
+          position: 'right'
         }
       ]
     }

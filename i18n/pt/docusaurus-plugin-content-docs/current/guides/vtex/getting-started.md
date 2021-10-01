@@ -14,6 +14,6 @@ Acesse a página _Intro_ e clique no botão _Vamos começar_. Isso irá iniciar 
 
 ![](./assets/success.png 'Sucesso')
 
-É possível checar na página de Configurações de novo e sua chave R2U estará lá, preenchida automaticamente. 
+É possível checar na página de Configurações de novo e sua chave R2U estará lá, preenchida automaticamente.
 
 ![](./assets/r2u-key.png 'R2U Key')

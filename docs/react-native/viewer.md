@@ -49,10 +49,8 @@ const App: React.FC = () => {
 
   return (
     <SafeAreaView>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          {uri ? <WebView source={{ uri }} /> : null}
-        </View>
+      <ScrollView contentInsetAdjustmentBehavior='automatic'>
+        <View>{uri ? <WebView source={{ uri }} /> : null}</View>
       </ScrollView>
     </SafeAreaView>
   )

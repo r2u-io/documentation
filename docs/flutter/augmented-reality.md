@@ -13,7 +13,6 @@ After adding the dependency to your app, the methods for creating the Augmented 
 
 Returns true if the device supports Augmented Reality. See list of supported devices for [iOS](https://www.apple.com/augmented-reality/) and [Android](https://developers.google.com/ar/devices).
 
-
 ## R2U.openAR
 
 :::tip `mobile`
