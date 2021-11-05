@@ -10,7 +10,7 @@ Após adicionar a tag JavaScript ao seu site, os métodos de criação do Custom
   </p>
 </div>
 
-## R2U.viewer.create
+## R2U.customizer.create
 
 :::tip `mobile` `desktop`
 :::
