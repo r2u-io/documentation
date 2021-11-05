@@ -10,7 +10,7 @@ After adding the script tag to your website, the methods for creating the 3D Cus
   </p>
 </div>
 
-## R2U.viewer.create
+## R2U.customizer.create
 
 :::tip `mobile` `desktop`
 :::
