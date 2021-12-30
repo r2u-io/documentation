@@ -43,7 +43,7 @@ module.exports = {
           ]
         },
         {
-          Iframe: ['guides/iframe/getting-started']
+          Embed: ['guides/embed/getting-started']
         }
       ]
     }
