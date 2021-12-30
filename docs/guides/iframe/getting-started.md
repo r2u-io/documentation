@@ -28,7 +28,7 @@ You just need provide the URL with the right parameters in the `src` property of
 ></iframe>
 ```
 
-We recommend that you use this properties of the iframe tag to enjoy a better experience:
+We recommend that you use these properties of the iframe tag to enjoy a better experience:
 
 - `width=100%`
 - `height=100%`
