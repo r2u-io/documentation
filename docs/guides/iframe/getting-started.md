@@ -6,7 +6,7 @@ You can easily integrate our solution on your website using the [iframe](https:/
 
 ## Viewer R2U
 
-Our Viewer allow you to render a 3D model in full screen by passing the `custumerId` and `sku` as query parameters to the URL.
+Our Viewer allows you to render a 3D model in full screen by passing the `custumerId` and the `sku` as query parameters to the URL.
 
 ```
 https://viewer.r2u.io/embed?customerId=:custumerId&sku=:sku
