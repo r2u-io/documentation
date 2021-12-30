@@ -2,7 +2,7 @@
 title: Primeiros passos
 ---
 
-Veja como é fácil integrar nossa solução em seu site usando uma tag [`<iframe>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe), tudo que você precisa são das informações de seu `CUSTOMER_ID` e `SKU` de seus produtos.
+Você pode facilmente integrar nossa solução em seu site usando uma tag [`<iframe>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe), tudo que você precisa são as informações sobre o seu `CUSTOMER_ID` e o `SKU` dos seus produtos.
 
 ## Viewer R2U
 
