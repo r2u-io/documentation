@@ -14,7 +14,7 @@ https://viewer.r2u.io/embed?customerId=CUSTOMER_ID&sku=SKU
 
 ## Integration
 
-You just need provide the URL with the right parameters in the `src` property of the `<iframe>` tag.
+You just need provide the URL with the right parameters (`CUSTOMER_ID` and `SKU`) in the `src` property of the `<iframe>` tag.
 
 ```html
 <iframe
