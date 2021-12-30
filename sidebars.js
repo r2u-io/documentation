@@ -41,6 +41,9 @@ module.exports = {
             'guides/vtex/sent-products',
             'guides/vtex/configuring-products'
           ]
+        },
+        {
+          Iframe: ['guides/iframe/getting-started']
         }
       ]
     }
