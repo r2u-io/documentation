@@ -28,7 +28,7 @@ Para realizar essa integração, você precisa preencher a propriedade `src` da 
 ></iframe>
 ```
 
-Nós recomendamos que você utilize essas propriedades, em sua tag `<iframe>`, para desfrutar de uma melhor experiência:
+Nós recomendamos que você utilize estas propriedades, em sua tag `<iframe>`, para desfrutar de uma melhor experiência:
 
 - `width=100%`
 - `height=100%`
