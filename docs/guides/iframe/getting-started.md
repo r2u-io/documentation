@@ -2,7 +2,7 @@
 title: Getting started
 ---
 
-You can easily integrated our solution on your website using [iframe](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) tag. All of you need is the informations about your `custumerId` and `sku` of your products.
+You can easily integrate our solution on your website using the [iframe](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) tag. All you need are the informations about your `custumerId` and your products' `sku`.
 
 ## Viewer R2U
 
