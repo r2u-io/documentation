@@ -6,9 +6,7 @@ Você pode facilmente integrar nossa solução em seu site usando uma tag [`<ifr
 
 ## Viewer R2U
 
-Nosso Viewer permite que você renderize um modelo 3D em tela cheia, passando dois parâmetros através da URL:
-- `CUSTOMER_ID`
-- `SKU`
+Nosso Viewer permite que você renderize um modelo 3D em tela cheia, passando  o `CUSTOMER_ID` e o `SKU` como parâmetros de consulta para a URL.
 
 ```
 https://viewer.r2u.io/embed?customerId=CUSTOMER_ID&sku=SKU
