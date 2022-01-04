@@ -12,7 +12,7 @@ Nosso Viewer permite que você renderize um modelo 3D em tela cheia, passando  o
 https://viewer.r2u.io/embed?customerId=CUSTOMER_ID&sku=SKU
 ```
 
-## Integração com Iframe
+## Integração
 
 Para realizar essa integração, você precisa preencher a propriedade `src` da tag `<iframe>` com a URL do Viewer, lembrando de passar os parâmetros (`CUSTOMER_ID` e `SKU`) preenchidos corretamente.
 
