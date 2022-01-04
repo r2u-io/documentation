@@ -37,5 +37,4 @@ We recommend that you use these properties of the `<iframe>` tag to enjoy a bett
 - `allowxr="yes"`
 - `allow="xr-spatial-tracking;fullscreen;camera"`
 
-
 **Obs:** some of these properties will not affect the experience now, but we recommend that you keep them for future updates.
