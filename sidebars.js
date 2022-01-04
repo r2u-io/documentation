@@ -41,6 +41,9 @@ module.exports = {
             'guides/vtex/sent-products',
             'guides/vtex/configuring-products'
           ]
+        },
+        {
+          Embed: ['guides/embed/getting-started']
         }
       ]
     }
