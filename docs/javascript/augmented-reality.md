@@ -27,7 +27,7 @@ const fallbackOptions = {
   fallback: 'viewer'
 }
 
-R2U.ar.attach({
+await R2U.ar.attach({
   element: arButton,
   sku: sku,
   fallbackOptions: fallbackOptions
@@ -189,5 +189,5 @@ The method returns a shareable URL for the AR experience.
 
 ```typescript
 //remember to use your product information
-R2U.ar.getLink('RE000001').then((url) => console.log(url))
+await R2U.ar.getLink('RE000001').then((url) => console.log(url))
 ```
