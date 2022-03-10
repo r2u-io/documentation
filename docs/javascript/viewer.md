@@ -91,7 +91,7 @@ const buttonChangeSku = document.getElementById('button-changeSku')
 const changeSku = document.getElementById('viewer-changeSku')
 
 // create will return a handler with function to change  sku
-const handler = R2U.viewer.create({
+const handler = await R2U.viewer.create({
   element: changeSku,
   sku,
   name,
