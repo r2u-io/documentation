@@ -31,7 +31,7 @@ const progressBarPosition = 'middle'
 //insert an image on top of the 3D model while loading the model
 const poster = 'https://real2u-public-assets.s3.amazonaws.com/images/cadeira.png'
 
-R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
+await R2U.viewer.create({ element, sku, name, popup, progressBarPosition, poster })
 ```
 
 | parameter                                     | description                                                              | default                      |
@@ -91,7 +91,7 @@ const buttonChangeSku = document.getElementById('button-changeSku')
 const changeSku = document.getElementById('viewer-changeSku')
 
 // create will return a handler with function to change  sku
-const handler = R2U.viewer.create({
+const handler = await R2U.viewer.create({
   element: changeSku,
   sku,
   name,
@@ -127,7 +127,7 @@ Creates a QR Code that, when scanned, redirects the user to the model in AR.
 
 ```typescript
 const element = document.getElementById('qrCode')
-R2U.qrCode.create({ element, sku })
+await R2U.qrCode.create({ element, sku })
 ```
 
   </div>
