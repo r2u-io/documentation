@@ -59,3 +59,7 @@ Por favor entre em contato (contato@r2u.io) para alinhar essas informações.
 ### Visualizador 3D e Botão RA não aparecem
 
 Se este é o caso e nenhum dos erros citados aqui te ajudaram, talvez sua equipe ainda não tenha aprovado o modelo no nosso [console](https://console.r2u.io/).
+
+### Performance SDK
+
+Se você quiser saber mais sobre o tamanho do nosso SDK e como ele afeta o carregamento inicial da página web, cheque nossa página do notion que detalha isso [aqui](https://r2u.notion.site/Performance-SDK-af7a42626ba14c1bb264633f8932a222).

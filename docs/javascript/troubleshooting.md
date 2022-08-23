@@ -59,3 +59,7 @@ Please get in touch (contact@r2u.io) to clear this issue.
 ### 3D Viewer and AR Button don't appear
 
 If you didn't get any errors cited here, you may not have approved the model yet on our [console](https://console.r2u.io/).
+
+### Performance SDK
+
+If you want to check more about the size of our SDK and how it affects the loading performance of the webpage, see our notion page that details it [here](https://r2u.notion.site/Performance-SDK-af7a42626ba14c1bb264633f8932a222).
