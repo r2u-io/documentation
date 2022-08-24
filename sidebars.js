@@ -8,7 +8,12 @@ module.exports = {
         'javascript/viewer',
         'javascript/customizer',
         'javascript/analytics',
-        'javascript/troubleshooting'
+        'javascript/troubleshooting',
+        {
+          type: 'link',
+          label: 'Performance SDK',
+          href: 'https://r2u.notion.site/Performance-SDK-af7a42626ba14c1bb264633f8932a222'
+        }
       ]
     },
     {
