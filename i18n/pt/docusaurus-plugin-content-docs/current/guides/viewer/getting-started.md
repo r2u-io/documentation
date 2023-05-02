@@ -15,7 +15,7 @@ Também é possível passar parâmetros de consulta para personalizar a experiê
 
 | Parâmetro | Descrição | Tipo | Padrão |
 | :-: | - | :-: | :-: |
-| `showPdpButton` | Define se o viewer deve ou não exibir um botão de página de produto. Caso nenhum link de página de produto seja especificado nem no cadastro do produto na plataforma nem pelo parâmetro `pdpUrl`, o botão nunca será mostrado. | *booleano* <br /> `0` \| `1` | `1`
+| `showPdpButton` | Define se o viewer deve ou não exibir um botão de página de produto. Caso nenhum link de página de produto seja especificado nem no cadastro do produto na plataforma nem pelo parâmetro `pdpUrl`, o botão não será mostrado. | *booleano* <br /> `0` \| `1` | `1`
 | `pdpUrl` | Define a URL para onde o botão de página de produto deve direcionar. | *link* | *cadastrado na plataforma*
 | `pdpButtonText` | Personaliza o texto dentro do botão da página de produto. Caso não seja informado, utilizará o valor padrão na língua utilizada (Espanhol, Português ou Inglês) | *texto* | Ver página de produto
 | `logoUrl` | Personaliza a logo que é exibida no Viewer. | *link para imagem* | *cadastrado na plataforma*
