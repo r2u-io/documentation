@@ -18,12 +18,7 @@ module.exports = {
     {
       Guides: [
         {
-          VTEX: [
-            'guides/vtex/getting-started',
-            'guides/vtex/send-products',
-            'guides/vtex/sent-products',
-            'guides/vtex/configuring-products'
-          ]
+          Viewer: ['guides/viewer/getting-started']
         },
         {
           Embed: ['guides/embed/getting-started']
