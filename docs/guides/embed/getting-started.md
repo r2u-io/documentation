@@ -54,4 +54,4 @@ It's also possible to pass some query parameters to customize the experience via
 | `pdpButtonPositionV` | Specifies the vertical position of the product page button. | `top` \| `bottom` | `top` |
 The following example displays a product page button with a logo and the text "See product":
 
-`viewer.r2u.io/?customerId=...&sku=...&showPdpButton=1&showLogo=1&pdpButtonText=See%20product`
+`viewer.r2u.io/embed?customerId=...&sku=...&showPdpButton=1&showLogo=1&pdpButtonText=See%20product`

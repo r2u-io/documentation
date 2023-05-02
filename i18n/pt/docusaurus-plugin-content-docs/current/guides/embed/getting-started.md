@@ -53,4 +53,4 @@ Também é possível passar alguns parâmetros de consulta para personalizar a e
 | `pdpButtonPositionV` | Especifica a posição vertical do botão de página de produto. |  `top` \| `bottom` | `top` |
 O exemplo a seguir exibe um botão de página de produto com logo e escrito "Ver produto":
 
-`viewer.r2u.io/?customerId=...&sku=...&showPdpButton=1&showLogo=1&pdpButtonText=Ver%20produto`
+`viewer.r2u.io/embed?customerId=...&sku=...&showPdpButton=1&showLogo=1&pdpButtonText=Ver%20produto`
