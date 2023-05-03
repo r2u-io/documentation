@@ -38,3 +38,20 @@ We recommend that you use these properties of the `<iframe>` tag to enjoy a bett
 - `allow="xr-spatial-tracking;fullscreen;camera"`
 
 **Obs:** some of these properties will not affect the experience now, but we recommend that you keep them for future updates.
+
+
+## Customization parameters
+It's also possible to pass some query parameters to customize the experience via iframe:
+
+| Parameter | Description | Type | Default |
+| :-: | - | :-: | :-: |
+| `showPdpButton` | Defines whether the viewer should display a product page button or not. If no product page link is specified either in the product registration on the platform or via query parameters, the button will not be shown. | *boolean* <br /> `0` \| `1` | `0` |
+| `pdpUrl` | Defines the URL to which the product page button should direct to. | *link* | *registered on the platform* |
+| `pdpButtonText` | Customizes the text inside the product page button. If not informed, it will use the default value in the language used (Spanish, Portuguese, or English). | *text* | See product page |
+| `logoUrl` | Customizes the client logo displayed alongside the product page button. | *link to image* | *registered on the platform* |
+| `showLogo` | Defines whether a logo should or should not appear inside the product page button. By default, it displays if there is any specified link, either by platform registration or by the `logoUrl` parameter; otherwise, it does not display. If no link has been specified but the `showLogo` parameter is still true (`1`), the Viewer generates a logo. | *boolean* <br /> `0` \| `1` | *see description* |
+| `pdpButtonPositionH` | Specifies the horizontal position of the product page button. | `left` \| `center` \| `right` | `right` |
+| `pdpButtonPositionV` | Specifies the vertical position of the product page button. | `top` \| `bottom` | `top` |
+The following example displays a product page button with a logo and the text "See product":
+
+`viewer.r2u.io/embed?customerId=...&sku=...&showPdpButton=1&showLogo=1&pdpButtonText=See%20product`

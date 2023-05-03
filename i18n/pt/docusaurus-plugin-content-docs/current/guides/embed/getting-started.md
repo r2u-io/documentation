@@ -38,3 +38,19 @@ Nós recomendamos que você utilize estas propriedades, em sua tag `<iframe>`, p
 - `allow="xr-spatial-tracking;fullscreen;camera"`
 
 **Obs:** algumas dessas propriedades não surtirão efeito no momento, porém, recomendamos que você as mantenha para futuras atualizações.
+
+## Parâmetros de consulta de customização
+Também é possível passar alguns parâmetros de consulta para personalizar a experiência via iframe:
+
+| Parâmetro | Descrição | Tipo | Padrão |
+| :-: | - | :-: | :-: |
+| `showPdpButton` | Define se o viewer deve ou não exibir um botão de página de produto. Caso nenhum link de página de produto seja especificado nem no cadastro do produto na plataforma nem via parâmetros de consulta, o botão não será mostrado. | *booleano* <br /> `0` \| `1` | `0`
+| `pdpUrl` | Define a URL para onde o botão de página de produto deve direcionar. | *link* | *cadastrado na plataforma*
+| `pdpButtonText` | Personaliza o texto dentro do botão da página de produto. Caso não seja informado, utilizará o valor padrão na língua utilizada (Espanhol, Português ou Inglês) | *texto* | Ver página de produto
+| `logoUrl` | Personaliza a logo de cliente que é exibida junto ao botão da página de produto. | *link para imagem* | *cadastrado na plataforma*
+| `showLogo` | Define se uma logo deverá ou não aparecer dentro do botão de página de produto. Por padrão, exibe se existir algum link especificado, seja pelo cadastro na plataforma ou por parâmetro `logoUrl`; caso contrário, não exibe. Caso nenhum link tenha sido especificado mas ainda assim o parâmetro showLogo seja verdadeiro (`1`), o Viewer gera uma logo. | *booleano* <br /> `0` \| `1` | *ver descrição* |
+| `pdpButtonPositionH` | Especifica a posição horizontal do botão de página de produto. |  `left` \| `center` \| `right` | `right` |
+| `pdpButtonPositionV` | Especifica a posição vertical do botão de página de produto. |  `top` \| `bottom` | `top` |
+O exemplo a seguir exibe um botão de página de produto com logo e escrito "Ver produto":
+
+`viewer.r2u.io/embed?customerId=...&sku=...&showPdpButton=1&showLogo=1&pdpButtonText=Ver%20produto`
