@@ -30,11 +30,12 @@ jobs:
           node-version: '12'
       - run: yarn install
       - run: yarn build
-      - name: Set up Cloud DOC
-        uses: google-github-actions/setup-gcloud@main
+      - name: Auth GCP
+        uses: 'google-github-actions/auth@v1'
         with:
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
-          export_default_credentials: true
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+      - name: Set up Cloud DOC
+        uses: google-github-actions/setup-gcloud@v1
       - name: config project
         run: gcloud config set project r2u-sdk
       - name: Copy build to bucket
