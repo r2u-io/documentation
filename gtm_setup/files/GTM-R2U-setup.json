@@ -1,26 +1,42 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2020-12-10 21:29:11",
+  "exportTime": "2023-05-31 12:18:46",
   "containerVersion": {
-    "path": "accounts/6002276789/containers/35868546/versions/0",
-    "accountId": "6002276789",
-    "containerId": "35868546",
-    "containerVersionId": "0",
+    "path": "accounts/6093023340/containers/113088543/versions/12",
+    "accountId": "6093023340",
+    "containerId": "113088543",
+    "containerVersionId": "12",
     "container": {
-      "path": "accounts/6002276789/containers/35868546",
-      "accountId": "6002276789",
-      "containerId": "35868546",
-      "name": "R2U tracking template",
-      "publicId": "GTM-KBG2J89",
+      "path": "accounts/6093023340/containers/113088543",
+      "accountId": "6093023340",
+      "containerId": "113088543",
+      "name": "r2u-site-config",
+      "publicId": "GTM-N8M63PG",
       "usageContext": ["WEB"],
-      "fingerprint": "1606446506816",
-      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6002276789/containers/35868546/workspaces?apiLink=container"
+      "fingerprint": "1681905378782",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6093023340/containers/113088543/workspaces?apiLink=container",
+      "features": {
+        "supportUserPermissions": true,
+        "supportEnvironments": true,
+        "supportWorkspaces": true,
+        "supportGtagConfigs": false,
+        "supportBuiltInVariables": true,
+        "supportClients": false,
+        "supportFolders": true,
+        "supportTags": true,
+        "supportTemplates": true,
+        "supportTriggers": true,
+        "supportVariables": true,
+        "supportVersions": true,
+        "supportZones": true
+      },
+      "tagIds": ["GTM-N8M63PG"]
     },
     "tag": [
       {
-        "accountId": "6002276789",
-        "containerId": "35868546",
-        "tagId": "8",
+        "accountId": "6093023340",
+        "containerId": "113088543",
+        "tagId": "10",
         "name": "UA - R2U events",
         "type": "ua",
         "parameter": [
@@ -52,7 +68,7 @@
           {
             "type": "TEMPLATE",
             "key": "gaSettings",
-            "value": "{{UA - Settings}}"
+            "value": "{{UA - Google Analytics Settings}}"
           },
           {
             "type": "TEMPLATE",
@@ -65,20 +81,151 @@
             "value": "{{DLV - Event Label}}"
           }
         ],
-        "fingerprint": "1606448435570",
-        "firingTriggerId": ["6", "11"],
+        "fingerprint": "1681917207029",
+        "firingTriggerId": ["8", "6"],
         "parentFolderId": "3",
         "tagFiringOption": "ONCE_PER_EVENT",
         "monitoringMetadata": {
           "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
+        }
+      },
+      {
+        "accountId": "6093023340",
+        "containerId": "113088543",
+        "tagId": "12",
+        "name": "GA4 - R2U events",
+        "type": "gaawe",
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "sendEcommerceData",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "eventName",
+            "value": "{{DLV - Event Action}}"
+          },
+          {
+            "type": "LIST",
+            "key": "eventParameters",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "name",
+                    "value": "action"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{DLV - Event Action}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "name",
+                    "value": "label"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{DLV - Event Label}}"
+                  }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  {
+                    "type": "TEMPLATE",
+                    "key": "name",
+                    "value": "value"
+                  },
+                  {
+                    "type": "TEMPLATE",
+                    "key": "value",
+                    "value": "{{DLV - Event Value}}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "TAG_REFERENCE",
+            "key": "measurementId",
+            "value": "GA4 - R2U configs"
+          }
+        ],
+        "fingerprint": "1682444260852",
+        "firingTriggerId": ["6", "8"],
+        "parentFolderId": "3",
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "monitoringMetadata": {
+          "type": "MAP"
+        },
+        "consentSettings": {
+          "consentStatus": "NOT_SET"
         }
       }
     ],
     "trigger": [
       {
-        "accountId": "6002276789",
-        "containerId": "35868546",
+        "accountId": "6093023340",
+        "containerId": "113088543",
         "triggerId": "6",
+        "name": "CE - R2U click",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "R2U.*"
+              }
+            ]
+          }
+        ],
+        "filter": [
+          {
+            "type": "CONTAINS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{DLV - Event Action}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "click"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1681907469259",
+        "parentFolderId": "3"
+      },
+      {
+        "accountId": "6093023340",
+        "containerId": "113088543",
+        "triggerId": "8",
         "name": "CE - R2U view",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
@@ -120,85 +267,15 @@
             ]
           }
         ],
-        "fingerprint": "1606447189009",
-        "parentFolderId": "3"
-      },
-      {
-        "accountId": "6002276789",
-        "containerId": "35868546",
-        "triggerId": "11",
-        "name": "CE - R2U click",
-        "type": "CUSTOM_EVENT",
-        "customEventFilter": [
-          {
-            "type": "MATCH_REGEX",
-            "parameter": [
-              {
-                "type": "TEMPLATE",
-                "key": "arg0",
-                "value": "{{_event}}"
-              },
-              {
-                "type": "TEMPLATE",
-                "key": "arg1",
-                "value": "R2U.*"
-              }
-            ]
-          }
-        ],
-        "filter": [
-          {
-            "type": "CONTAINS",
-            "parameter": [
-              {
-                "type": "TEMPLATE",
-                "key": "arg0",
-                "value": "{{DLV - Event Action}}"
-              },
-              {
-                "type": "TEMPLATE",
-                "key": "arg1",
-                "value": "click"
-              }
-            ]
-          }
-        ],
-        "fingerprint": "1606448435569",
+        "fingerprint": "1681907469260",
         "parentFolderId": "3"
       }
     ],
     "variable": [
       {
-        "accountId": "6002276789",
-        "containerId": "35868546",
+        "accountId": "6093023340",
+        "containerId": "113088543",
         "variableId": "4",
-        "name": "DLV - Event Action",
-        "type": "v",
-        "parameter": [
-          {
-            "type": "INTEGER",
-            "key": "dataLayerVersion",
-            "value": "2"
-          },
-          {
-            "type": "BOOLEAN",
-            "key": "setDefaultValue",
-            "value": "false"
-          },
-          {
-            "type": "TEMPLATE",
-            "key": "name",
-            "value": "eventAction"
-          }
-        ],
-        "fingerprint": "1606446334069",
-        "parentFolderId": "3",
-        "formatValue": {}
-      },
-      {
-        "accountId": "6002276789",
-        "containerId": "35868546",
-        "variableId": "5",
         "name": "DLV - Event Label",
         "type": "v",
         "parameter": [
@@ -218,13 +295,40 @@
             "value": "eventLabel"
           }
         ],
-        "fingerprint": "1606446334070",
+        "fingerprint": "1681907469258",
         "parentFolderId": "3",
         "formatValue": {}
       },
       {
-        "accountId": "6002276789",
-        "containerId": "35868546",
+        "accountId": "6093023340",
+        "containerId": "113088543",
+        "variableId": "5",
+        "name": "DLV - Event Action",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "eventAction"
+          }
+        ],
+        "fingerprint": "1681907469259",
+        "parentFolderId": "3",
+        "formatValue": {}
+      },
+      {
+        "accountId": "6093023340",
+        "containerId": "113088543",
         "variableId": "7",
         "name": "DLV - Event Value",
         "type": "v",
@@ -245,21 +349,21 @@
             "value": "eventValue"
           }
         ],
-        "fingerprint": "1606446334071",
+        "fingerprint": "1681907469260",
         "parentFolderId": "3",
         "formatValue": {}
       }
     ],
     "folder": [
       {
-        "accountId": "6002276789",
-        "containerId": "35868546",
+        "accountId": "6093023340",
+        "containerId": "113088543",
         "folderId": "3",
         "name": "R2U SDK tracking",
-        "fingerprint": "1606446334068"
+        "fingerprint": "1681907469258"
       }
     ],
-    "fingerprint": "1607635751900",
-    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6002276789/containers/35868546/versions/0?apiLink=version"
+    "fingerprint": "1685535507861",
+    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6093023340/containers/113088543/versions/12?apiLink=version"
   }
 }
