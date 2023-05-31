@@ -40,6 +40,14 @@ The necessary configuration steps are described bellow such that the data is ava
     </p>
   </div>
 
+- Configure the tag GA4 - R2U events to use the GA4 Tag configuration
+
+   <div>
+    <p float="left">
+      <img src={require('./assets/GTM-setup-screen-04.png').default} title="GTM-setup-4" width="600"/>
+    </p>
+  </div>
+
 - Publish the changes
 
 ### 2. Google Analytics setup
