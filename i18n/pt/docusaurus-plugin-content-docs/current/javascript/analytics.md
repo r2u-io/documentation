@@ -4,7 +4,7 @@ title: Analytics
 
 ## Configuração do Analytics
 
-O SDK de Realidade Aumentada R2U por padrão gera eventos de utlização, como impressões e cliques dos viusalizadores 3D.
+O SDK de Realidade Aumentada R2U por padrão gera eventos de utilização, como impressões e cliques dos visualizadores 3D.
 
 Os passos a seguir descrevem as configurações para que esses dados estejam disponíveis no Google Analytics.
 
@@ -36,6 +36,14 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
    <div>
     <p float="left">
       <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-03-pt-br.png" title="GTM-setup-3" width="600"/>
+    </p>
+  </div>
+
+- Configure a tag GA4 - R2U events para usar a configuração de Tag do GA4
+
+   <div>
+    <p float="left">
+      <img src={require('./assets/GTM-setup-screen-04-pt-br.png').default} title="GTM-setup-4" width="600"/>
     </p>
   </div>
 
