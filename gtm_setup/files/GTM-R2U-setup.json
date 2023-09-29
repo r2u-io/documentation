@@ -164,6 +164,11 @@
             "type": "TAG_REFERENCE",
             "key": "measurementId",
             "value": "GA4 - R2U configs"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "measurementIdOverride",
+            "value": "G-XXXXXXXXXX"
           }
         ],
         "fingerprint": "1682444260852",

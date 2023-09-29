@@ -39,7 +39,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
     </p>
   </div>
 
-- Configure a tag GA4 - R2U events para usar a configuração de Tag do GA4
+- Configure a tag GA4 - R2U events com o Measurement ID do GA4 para enviar os eventos
 
    <div>
     <p float="left">

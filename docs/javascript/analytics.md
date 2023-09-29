@@ -40,7 +40,7 @@ The necessary configuration steps are described bellow such that the data is ava
     </p>
   </div>
 
-- Configure the tag GA4 - R2U events to use the GA4 Tag configuration
+- Configure the tag GA4 - R2U events with the GA4 Measurement ID to send the events
 
    <div>
     <p float="left">
