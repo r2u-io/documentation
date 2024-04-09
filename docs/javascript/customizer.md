@@ -6,7 +6,7 @@ After adding the script tag to your website, the methods for creating the 3D Cus
 
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/customizer.gif" title="customizer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/customizer.gif" alt="customizer" title="customizer" width="600"/>
   </p>
 </div>
 
