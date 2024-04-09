@@ -15,7 +15,7 @@ R2U helps e-commerce stores sell more by allowing users to try-out products at h
 2. Storage and distribution of 3D models
 3. Organization of product information by product/EAN code
 
-<img src="https://sdk.r2u.io/documentation/r2u-architecture.png" title="R2U architecture"  width="600"/>
+<img src="https://sdk.r2u.io/documentation/r2u-architecture.png" alt="R2U architecture" title="R2U architecture"  width="600"/>
 
 ## What solutions does R2U offer?
 
@@ -23,17 +23,17 @@ We offer [Augmented Reality](/javascript/augmented-reality), a [3D Viewer](/java
 
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/product-ar.gif" title="AR" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/product-ar.gif" alt="AR" title="AR" width="200"/>
   </p>
 </div>
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/product-3d-desktop.gif" title="viewer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/product-3d-desktop.gif" alt="viewer" title="viewer" width="600"/>
   </p>
 </div>
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/customizer.gif" title="customizer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/customizer.gif" alt="customizer" title="customizer" width="600"/>
   </p>
 </div>
 
@@ -62,6 +62,6 @@ For Android, only devices approved by Google's approval process are compatible, 
 Yes. We today have a proprietary database of 3D models that is ever growing with new products. As we are in direct contact with the product manufacturers, we are able to produce 3D models directly in the industry and offer AR of these products in different channels. Therefore, it is more efficient to use models directly from our storage.
 
 <a href="https://github.com/r2u-io/documentation">
-  <img src="https://sdk.r2u.io/documentation/github.png" width="20"/> &nbsp;
+  <img src="https://sdk.r2u.io/documentation/github.png" alt="contribute github" width="20"/> &nbsp;
   Contribute
 </a>
