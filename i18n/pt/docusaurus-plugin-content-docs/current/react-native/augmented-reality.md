@@ -5,7 +5,7 @@ title: Realidade Aumentada
 Após adicionar a dependência ao seu aplicativo, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis através do objeto `R2U`.
 
 <p float="left">
-  <img src="https://sdk.r2u.io/documentation/react-native-ar.gif" title="AR" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/react-native-ar.gif" alt="AR" title="AR" width="200"/>
 </p>
 
 ## R2U.ar.isSupported

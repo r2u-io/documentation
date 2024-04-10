@@ -6,7 +6,7 @@ Após adicionar a tag JavaScript ao seu site, os métodos de criação do Custom
 
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/customizer.gif" title="customizador" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/customizer.gif" alt="customizador" title="customizador" width="600"/>
   </p>
 </div>
 

@@ -15,7 +15,7 @@ A R2U ajuda e-commerces a venderem mais permitindo que usuários experimentem pr
 2. Armazenamento e distribuição de modelos 3D
 3. Organização das informações do produto por produto / código EAN
 
-<img src="https://sdk.r2u.io/documentation/r2u-architecture.png" title="Arquitetura R2U"  width="600"/>
+<img src="https://sdk.r2u.io/documentation/r2u-architecture.png" alt="Arquitetura R2U" title="Arquitetura R2U"  width="600"/>
 
 ## Que soluções a R2U oferece?
 
@@ -23,17 +23,17 @@ Nós oferecemos a [Realidade Aumentada](/javascript/augmented-reality), o [Visua
 
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/product-ar.gif" title="AR" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/product-ar.gif" alt="AR" title="AR" width="200"/>
   </p>
 </div>
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/product-3d-desktop.gif" title="viewer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/product-3d-desktop.gif" alt="viewer" title="viewer" width="600"/>
   </p>
 </div>
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/customizer.gif" title="customizer" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/customizer.gif" alt="customizer" title="customizer" width="600"/>
   </p>
 </div>
 
@@ -62,6 +62,6 @@ Para o Android, apenas dispositivos aprovados pelo processo de homologação do 
 Sim. Hoje temos um banco de dados proprietário de modelos 3D que está sempre crescendo com novos produtos. Como estamos em contato direto com os fabricantes dos produtos, podemos produzir modelos 3D diretamente na indústria e oferecer RA desses produtos em diferentes canais. Portanto, é mais eficiente usar modelos diretamente da nossa database.
 
 <a href="https://github.com/r2u-io/documentation">
-  <img src="https://sdk.r2u.io/documentation/github.png" width="20"/> &nbsp;
+  <img src="https://sdk.r2u.io/documentation/github.png" alt="contribute github" width="20"/> &nbsp;
   Contribuir
 </a>
