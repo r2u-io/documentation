@@ -15,7 +15,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '18'
       - run: yarn install
       - run: yarn build
   deploy:
@@ -27,7 +27,7 @@ jobs:
       - name: Set up Cloud SDK
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '18'
       - run: yarn install
       - run: yarn build
       - name: Auth GCP
