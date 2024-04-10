@@ -13,15 +13,18 @@ module.exports = {
     locales: ['en', 'pt'],
     localeConfigs: {
       en: {
-        label: 'English'
+        label: 'English',
+        htmlLang: 'en-US'
       },
       pt: {
-        label: 'Português'
+        label: 'Português',
+        htmlLang: 'pt-BR'
       }
     }
   },
   themeConfig: {
     algolia: {
+      appId: 'r2u',
       apiKey: '118c8b4016ab9e4ebc990266e4b347c6',
       indexName: 'r2u'
     },
@@ -32,12 +35,6 @@ module.exports = {
         href: 'https://r2u.io/'
       },
       items: [
-        // {
-        //   to: 'docs/introduction',
-        //   label: 'Showcase',
-        //   position: 'left',
-        //   activeBasePath: 'docs',
-        // },
         {
           type: 'localeDropdown',
           position: 'right'
@@ -49,6 +46,7 @@ module.exports = {
       ]
     }
   },
+  themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -56,8 +54,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/'
-        },
-        themes: ['@docusaurus/theme-live-codeblock']
+        }
       }
     ]
   ]

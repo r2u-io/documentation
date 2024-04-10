@@ -50,7 +50,7 @@ R2U.ar.attach({
 | `fallbackOptions.text.title`            | Muda o título na página fallback                                                                                                                             | `null`               |
 | `fallbackOptions.text.top`              | Altera o texto principal na página de fallback                                                                                                               | `null`               |
 | `fallbackOptions.text.bottom`           | Altera o texto inferior na página de fallback                                                                                                                | `null`               |
-| [`callToAction`](#calltoAction)         | Quando definido, inclui um _call to action_ dentro da experiência de RA, como um botão Adicionar ao carrinho                                                 | `null`               |
+| [`callToAction`](#calltoaction)         | Quando definido, inclui um _call to action_ dentro da experiência de RA, como um botão Adicionar ao carrinho                                                 | `null`               |
 | `callToAction.text`                     | Botão de _Call To Action_ text                                                                                                                               | `null`               |
 | `callToAction.onClick`                  | Função a ser executada no clique do botão dentro da experiência de AR                                                                                        | `null`               |
 

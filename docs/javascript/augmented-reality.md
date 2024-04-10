@@ -50,7 +50,7 @@ await R2U.ar.attach({
 | `fallbackOptions.text.title`            | Changes the tittle on fallback page                                                                                                               | `null`               |
 | `fallbackOptions.text.top`              | Changes the top text on fallback page                                                                                                             | `null`               |
 | `fallbackOptions.text.bottom`           | Changes the bottom text on fallback page                                                                                                          | `null`               |
-| [`callToAction`](#calltoAction)         | When defined, include a Call To Action inside the AR experience, such as an Add To Cart button                                                    | `null`               |
+| [`callToAction`](#calltoaction)         | When defined, include a Call To Action inside the AR experience, such as an Add To Cart button                                                    | `null`               |
 | `callToAction.text`                     | Call To Action button text                                                                                                                        | `null`               |
 | `callToAction.onClick`                  | Call To Action function to handle the button click inside the AR experience                                                                       | `null`               |
 
