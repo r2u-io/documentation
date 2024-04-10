@@ -5,7 +5,7 @@ title: Visualizador 3D
 Após adicionar a dependência ao seu aplicativo, os métodos de criação de um visualizador 3D estarão disponíveis através do objeto `R2U`.
 
 <p float="left">
-  <img src="https://sdk.r2u.io/documentation/react-native-viewer.png" title="Visualizador 3D" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/react-native-viewer.png" alt="Visualizador 3D" title="Visualizador 3D" width="200"/>
 </p>
 
 ## R2U.viewer.getLink

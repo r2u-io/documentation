@@ -15,7 +15,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 
   <div>
     <p float="left">
-      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-01-pt-br.png" title="GTM-setup-1" width="600"/>
+      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-01-pt-br.png" alt="GTM-setup-1" title="GTM-setup-1" width="600"/>
     </p>
   </div>
 
@@ -27,7 +27,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 
   <div>
     <p float="left">
-      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-02-pt-br.png" title="GTM-setup-2" width="600"/>
+      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-02-pt-br.png" alt="GTM-setup-2" title="GTM-setup-2" width="600"/>
     </p>
   </div>
 
@@ -35,7 +35,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 
    <div>
     <p float="left">
-      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-03-pt-br.png" title="GTM-setup-3" width="600"/>
+      <img src="https://storage.googleapis.com/r2u-sdk-bucket/documentation/GTM-setup-screen-03-pt-br.png" alt="GTM-setup-3" title="GTM-setup-3" width="600"/>
     </p>
   </div>
 
@@ -43,7 +43,7 @@ Os passos a seguir descrevem as configurações para que esses dados estejam dis
 
    <div>
     <p float="left">
-      <img src={require('./assets/GTM-setup-screen-04-pt-br.png').default} title="GTM-setup-4" width="600"/>
+      <img src={require('./assets/GTM-setup-screen-04-pt-br.png').default} alt="GTM-setup-4" title="GTM-setup-4" width="600"/>
     </p>
   </div>
 

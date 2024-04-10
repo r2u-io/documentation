@@ -5,7 +5,7 @@ title: Realidade Aumentada
 Após adicionar a tag de script ao seu site, os métodos para criar a experiência de Realidade Aumentada estarão disponíveis através do objeto global `R2U`.
 
 <p float="left">
-  <img src="https://sdk.r2u.io/documentation/product-ar.gif" title="AR" width="200"/>
+  <img src="https://sdk.r2u.io/documentation/product-ar.gif" alt="AR" title="AR" width="200"/>
 </p>
 
 ## R2U.ar.attach
@@ -85,7 +85,7 @@ interface R2U {
   <strong> Exemplo de Instructions: </strong>
 
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/instruction-pt.png" title="Tela de instruções" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/instruction-pt.png" alt="Tela de instruções" title="Tela de instruções" width="200"/>
   </p>
 </div>
 
@@ -127,7 +127,7 @@ interface R2U {
   <strong> Examplo de fallback: </strong>
 
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/fallback-pt.png" title="Fallback" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/fallback-pt.png" alt="Fallback" title="Fallback" width="200"/>
   </p>
 </div>
 
@@ -160,24 +160,24 @@ interface R2U {
   <strong> Exemplo de Call To Action: </strong>
 
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/call-to-action-pt.png" title="Call To Action" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/call-to-action-pt.png" alt="Call To Action" title="Call To Action" width="200"/>
   </p>
 </div>
 
 ### Demo de RA no _iOS_
 
 <p float="left">
-  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" title="iOS 1" width="200"/>
-  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-2.png" title="iOS 2" width="200"/>
-  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" title="iOS 3" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-1.png" alt="iOS 1" title="iOS 1" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-2.png" alt="iOS 2" title="iOS 2" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/ios-3.png" alt="iOS 3" title="iOS 3" width="200"/>
 </p>
 
 ### Demo de RA no _Android_
 
 <p float="left">
-  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" title="Android 1" width="200"/>
-  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" title="Android 2" width="200"/>
-  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" title="Android 3" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-1.png" alt="Android 1" title="Android 1" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-2.png" alt="Android 2" title="Android 2" width="200"/>
+  <img src="https://scripts-ignition.real2u.com.br/real2u-integration/android-3.png" alt="Android 3" title="Android 3" width="200"/>
 </p>
 
 ## R2U.ar.getLink

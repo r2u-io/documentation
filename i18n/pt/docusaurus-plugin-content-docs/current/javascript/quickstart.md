@@ -6,7 +6,7 @@ Confira como é fácil integrar nossa solução com o seu site!
 
 <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/example-integration.gif" title="example" width="800"/>
+    <img src="https://sdk.r2u.io/documentation/example-integration.gif" alt="example" title="example" width="800"/>
   </p>
 </div>
 

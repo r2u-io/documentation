@@ -5,7 +5,7 @@ title: Visualizador 3D
 Após adicionar a tag JavaScript ao seu site, os métodos de criação do visualizador 3D estarão disponíveis através do objeto global `R2U`.
 
 <p float="left">
-  <img src="https://sdk.r2u.io/documentation/3D-viewer.gif" title="Visualizador 3D" width="600"/>
+  <img src="https://sdk.r2u.io/documentation/3D-viewer.gif" alt="Visualizador 3D" title="Visualizador 3D" width="600"/>
 </p>
 
 ## R2U.viewer.create
@@ -49,7 +49,7 @@ Ativa e desativa o botão para abrir o visualizador 3D expansível com o modelo.
 <div>
   <strong> Popup example: </strong>
   <p float="left">
-  <img src="https://sdk.r2u.io/documentation/3D-viewer-popup.gif" title="popup" width="600"/>
+  <img src="https://sdk.r2u.io/documentation/3D-viewer-popup.gif" alt="popup" title="popup" width="600"/>
   </p>
 </div>
 
@@ -63,15 +63,15 @@ Define a posição em que a barra de progresso será inserida.
   <p float="left" style={{display: 'flex', flexDirection: 'row'}}>
     <div  style={{display: 'flex', flexDirection: 'column', marginLeft: '15px', marginRight: '15px'}} >
       <a>top</a>
-      <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-top.png" title="Progress bar top" height="150"/>
+      <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-top.png" alt="Progress bar top" title="Progress bar top" height="150"/>
     </div>
     <div  style={{display: 'flex', flexDirection: 'column'}} >
       <a>middle</a>
-      <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-middle.png" title="Progress bar middle" height="150"/>
+      <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-middle.png" alt="Progress bar middle" title="Progress bar middle" height="150"/>
     </div>
     <div  style={{display: 'flex', flexDirection: 'column'}} >
       <a>bottom</a>
-      <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-bottom.png" title="Progress bar bottom" height="150"/>
+      <img src="https://real2u-public-assets.s3.amazonaws.com/images/cadeira-progressbar-bottom.png" alt="Progress bar bottom" title="Progress bar bottom" height="150"/>
     </div>
   </p>
 </div>
@@ -108,7 +108,7 @@ buttonChangeSku.addEventListener('click', () => {
   <strong> Exemplo de setSku:</strong>
 
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/3D-viewer-setSku.gif" title="3D viewer setsku" width="600"/>
+    <img src="https://sdk.r2u.io/documentation/3D-viewer-setSku.gif" alt="3D viewer setsku" title="3D viewer setsku" width="600"/>
   </p>
 
   </div>
@@ -131,7 +131,7 @@ R2U.qrCode.create({ element, sku })
 
   <div>
   <p float="left">
-    <img src="https://sdk.r2u.io/documentation/3D-viewer-qrcode.png" title="qrcode" width="200"/>
+    <img src="https://sdk.r2u.io/documentation/3D-viewer-qrcode.png" alt="qrcode" title="qrcode" width="200"/>
   </p>
   </div>
 </div>
